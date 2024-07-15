@@ -230,9 +230,9 @@ export default function Tabs() {
                             />
                           </a>
                         </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
+                        <div className="w-full bottom-0 px-6 py-3 bg-rocks-500 opacity-90 dark:bg-gray-900 flex justify-between items-center">
                           <a
-                            className="text-gray-900 dark:text-gray-400 font-medium"
+                            className="text-white dark:text-gray-400 font-medium"
                             href="#0"
                           >
                             Using index pages
