@@ -25,6 +25,7 @@
     "aos": "^3.0.0-beta.6",
     "contentlayer": "^0.3.2",
     "date-fns": "^3.6.0",
+    "firebase": "^10.12.3",
     "next": "^14.0.3",
     "next-contentlayer": "^0.3.4",
     "next-mdx-remote": "^5.0.0",
