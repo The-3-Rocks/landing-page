@@ -28,7 +28,7 @@ export default function Home() {
       <Stats />
       <Carousel />
       <Tabs />
-      <Process />
+      {/* <Process /> */}
       {/* <PricingTables /> */}
       <TestimonialsBlocks />
       <FeaturesBlocks />

@@ -21,11 +21,12 @@ export default function Contact() {
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             {/* Page header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h1 font-red-hat-display mb-4">
-                Get started with Appy in seconds
-              </h1>
+            <h1 className="h3 font-red-hat-display mb-4">
+    Get started with <span className="h1 font-red-hat-display mb-4"> the<span className="text-teal-500">3</span>Rocks </span> in Seconds
+  </h1>
+
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                We'll send you a text with a link to download the app.
+              We'll reach out soon with exclusive details about our premium raw materials and exceptional services.
               </p>
             </div>
 
@@ -114,6 +115,37 @@ export default function Contact() {
               </div>
               <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full px-3">
+                  <div className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-3">
+                  In which products are you interested? <span className="text-red-600">*</span>
+                  </div>
+                  <label className="flex items-center mb-2">
+                    <input type="checkbox" className="form-checkbox" name="role" />
+                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
+                      Lead
+                    </span>
+                  </label>
+                  <label className="flex items-center mb-2">
+                    <input type="checkbox" className="form-checkbox" name="role" />
+                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
+                      Barite
+                    </span>
+                  </label>
+                  <label className="flex items-center mb-2">
+                    <input type="checkbox" className="form-checkbox" name="role" />
+                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
+                      Zinc
+                    </span>
+                  </label>
+                  <label className="flex items-center mb-2">
+                    <input type="checkbox" className="form-checkbox" name="role" />
+                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
+                      Iron
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-5">
+                <div className="w-full px-3">
                   <div className="flex justify-between items-center mb-1">
                     <label
                       className="block text-gray-800 dark:text-gray-300 text-sm font-medium"
@@ -127,39 +159,8 @@ export default function Contact() {
                     id="message"
                     rows={4}
                     className="form-textarea w-full"
-                    placeholder="What do you want to build with Appy?"
+                    placeholder="What do you want to achieve with our premium raw materials and exceptional services?"
                   ></textarea>
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <div className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-3">
-                    Tell us about your role
-                  </div>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
-                      CO-founder
-                    </span>
-                  </label>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
-                      Developer
-                    </span>
-                  </label>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
-                      Design / Marketing
-                    </span>
-                  </label>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">
-                      Other
-                    </span>
-                  </label>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">

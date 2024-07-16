@@ -246,7 +246,7 @@ export default function Footer() {
             </div>
 
             {/* Copyrights note */}
-            <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; Cruip.com. All rights reserved.</div>
+            <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; The<span className='text-teal-400'>3</span>rocks. All rights reserved.</div>
           </div>
         </div>
       </div>

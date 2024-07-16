@@ -5,7 +5,7 @@ import TestimonialImage03 from "@/public/images/testimonial-03.png";
 import TestimonialImage04 from "@/public/images/testimonial-04.png";
 
 export default function TestimonialsBlocks() {
-  const size = 200;
+  const size = 180;
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -29,7 +29,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-purple-500"
+                    className="fill-current text-teal-500"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
@@ -43,12 +43,11 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">Lead Guardian</cite>,{" "}
-                <a
-                  className="text-teal-500 transition duration-150 ease-in-out"
-                  href="#0"
+                <cite
+                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
                 >
                   Ancient Rome
-                </a>
+                </cite>
               </div>
             </div>
 
@@ -69,7 +68,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-purple-500"
+                    className="fill-current text-teal-500"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
@@ -83,12 +82,11 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">Zinc Shiny</cite>,{" "}
-                <a
-                  className="text-teal-500 transition duration-150 ease-in-out"
-                  href="#0"
+                <cite
+                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
                 >
                   Earth's Crust
-                </a>
+                </cite>
               </div>
             </div>
 
@@ -109,7 +107,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-purple-500"
+                    className="fill-current text-teal-500"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
@@ -124,12 +122,11 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">—Bary Rock</cite>,{" "}
-                <a
-                  className="text-teal-500 transition duration-150 ease-in-out"
-                  href="#0"
+                <cite
+                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
                 >
                   Veins
-                </a>
+                </cite>
               </div>
             </div>
 
@@ -150,7 +147,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-purple-500"
+                    className="fill-current text-teal-500"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
@@ -164,12 +161,12 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">—Iron Strong</cite>,{" "}
-                <a
-                  className="text-teal-500 transition duration-150 ease-in-out"
-                  href="#0"
+                <cite
+                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
+                  
                 >
                   Earth's Core
-                </a>
+                </cite>
               </div>
             </div>
           </div>
