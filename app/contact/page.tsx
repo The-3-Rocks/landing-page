@@ -116,7 +116,7 @@ export default function Contact() {
               <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full px-3">
                   <div className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-3">
-                  In which products are you interested? <span className="text-red-600">*</span>
+                  In which products are you interested? <span className="text-red-600">*</span> 
                   </div>
                   <label className="flex items-center mb-2">
                     <input type="checkbox" className="form-checkbox" name="role" />
