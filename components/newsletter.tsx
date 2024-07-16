@@ -5,24 +5,24 @@ export default function Newsletter() {
       data-aos="fade-down"
     >
       <div className="text-xl font-medium mb-6">
-        Sign up to our newsletter for more articles like this.
+      Connect with us and experience seamless communication tailored to your needs.
       </div>
       <form>
         <div className="relative flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-sm sm:px-4">
-          <input
+          {/* <input
             type="email"
             className="form-input w-full px-4 py-2 mb-2 sm:mb-0 sm:mr-2"
             placeholder="Your email"
             aria-label="Your email"
-          />
+          /> */}
           <a
             className="btn-sm text-white bg-teal-500 hover:bg-teal-400 shrink-0"
-            href="#0"
+            href="/contact"
           >
-            Subscribe
+            Get in Touch with Us!
           </a>
           <svg
-            className="hidden sm:block absolute left-full -mt-3"
+            className="hidden sm:block absolute bottom-6 left-80 -mt-3"
             width="42"
             height="44"
             viewBox="0 0 42 44"
@@ -38,7 +38,7 @@ export default function Newsletter() {
         {/* Success message */}
         {/* <p className="text-sm mt-2 opacity-80">Thanks for subscribing!</p> */}
         <p className="text-sm text-gray-400 italic mt-3">
-          No spam. No ads. Only great content.
+        Quick responses. No hassle. Just excellent service.
         </p>
       </form>
     </div>
