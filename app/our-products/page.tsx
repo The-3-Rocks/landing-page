@@ -7,8 +7,8 @@ import PostItem from "@/components/post-item";
 import Sidebar from "./sidebar";
 
 export const metadata = {
-  title: "Blog - Appy",
-  description: "Page description",
+  title: "Articles",
+  description: "Discover our raw materials",
 };
 
 export default function Blog() {
@@ -149,7 +149,6 @@ export default function Blog() {
                   </a>
                 </div> */}
               </div>
-
             </div>
           </div>
         </div>
