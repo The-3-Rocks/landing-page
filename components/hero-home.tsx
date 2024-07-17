@@ -16,7 +16,7 @@ export default function HeroHome() {
                 className="h1 lg:text-6xl mb-4 font-red-hat-display font-black"
                 data-aos="fade-down"
               >
-                Mining Deals, Transformed
+                Raw Materials Deals
               </h1>
               <p
                 className="text-xl text-gray-600 dark:text-gray-400"
