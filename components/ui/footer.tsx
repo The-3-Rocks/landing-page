@@ -91,7 +91,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/our-products/lead"
                     >
                       Lead ore
                     </a>
@@ -99,7 +99,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/our-products/zinc"
                     >
                       Zinc ore
                     </a>
@@ -107,7 +107,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/our-products/barite"
                     >
                       Barite
                     </a>
@@ -115,7 +115,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/our-products/iron"
                     >
                       Iron
                     </a>
@@ -177,7 +177,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/about"
                     >
                       About us
                     </a>
@@ -185,7 +185,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/contact"
                     >
                       Contact us
                     </a>
@@ -200,15 +200,16 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/our-products" 
+                      
                     >
-                      Documentation
+                      Articles
                     </a>
                   </li>
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="/faq"
                     >
                       FAQs
                     </a>
@@ -222,7 +223,7 @@ export default function Footer() {
           <div className="md:flex md:items-center md:justify-between">
             {/* Social links */}
             <ul className="flex mb-4 md:order-2 md:ml-4 md:mb-0">
-              <li>
+              {/* <li>
                 <a
                   className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
                   href="#0"
@@ -236,7 +237,7 @@ export default function Footer() {
                     <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
                   </svg>
                 </a>
-              </li>
+              </li> */}
               {/* <li className="ml-4">
                 <a
                   className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
@@ -284,7 +285,7 @@ export default function Footer() {
                   </svg>
                 </a>
               </li> */}
-              <li className="ml-4">
+              {/* <li className="ml-4">
                 <a
                   className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
                   href="#0"
@@ -298,11 +299,9 @@ export default function Footer() {
                     <path d="M23.3 8H8.7c-.4 0-.7.3-.7.7v14.7c0 .3.3.6.7.6h14.7c.4 0 .7-.3.7-.7V8.7c-.1-.4-.4-.7-.8-.7zM12.7 21.6h-2.3V14h2.4v7.6h-.1zM11.6 13c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4-.1.7-.7 1.4-1.4 1.4zm10 8.6h-2.4v-3.7c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.8h-2.4V14h2.3v1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4.2h.1z" />
                   </svg>
                 </a>
-              </li>
-            </ul>
+              </li> */}
 
-            {/* Middle links */}
-            <div className="text-sm md:order-1 text-gray-700 mb-2 md:mb-0">
+<div className="text-sm md:order-1 text-gray-700 mb-2 md:mb-0">
               <a
                 className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
                 href="/our-terms"
@@ -317,6 +316,24 @@ export default function Footer() {
                 Privacy Policy
               </a>
             </div>
+            </ul>
+
+            {/* Middle links */}
+            {/* <div className="text-sm md:order-1 text-gray-700 mb-2 md:mb-0">
+              <a
+                className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                href="/our-terms"
+              >
+                Terms
+              </a>{" "}
+              ·{" "}
+              <a
+                className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                href="/our-privacy-policy"
+              >
+                Privacy Policy
+              </a>
+            </div> */}
 
             {/* Copyrights note */}
             <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">

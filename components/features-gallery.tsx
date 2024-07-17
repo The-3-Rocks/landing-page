@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import AboutImage01 from '@/public/images/about-grid-01.jpg'
-import AboutImage02 from '@/public/images/about-grid-02.jpg'
-import AboutImage03 from '@/public/images/about-grid-03.jpg'
-import AboutImage04 from '@/public/images/about-grid-04.jpg'
-import AboutImage05 from '@/public/images/about-grid-05.jpg'
-import AboutImage06 from '@/public/images/about-grid-06.jpg'
+import AboutImage01 from '@/public/images/about-grid-01.png'
+import AboutImage02 from '@/public/images/about-grid-02.png'
+import AboutImage03 from '@/public/images/about-grid-03.png'
+import AboutImage04 from '@/public/images/about-grid-04.png'
+import AboutImage05 from '@/public/images/about-grid-05.png'
+import AboutImage06 from '@/public/images/about-grid-06.png'
 
 export default function FeaturesGallery() {
   return (

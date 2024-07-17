@@ -16,9 +16,8 @@ export default function FeaturesBlocks() {
             data-aos-id-featbl
           >
             {/* 1st item */}
-            <a
-              className="flex flex-col p-5 group text-white bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 shadow-2xl"
-              href="#0"
+            <cite
+              className="flex flex-col not-italic p-5 group text-white bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 shadow-2xl"
               data-aos="fade-down"
               data-aos-anchor="[data-aos-id-featbl]"
             >
@@ -49,12 +48,12 @@ export default function FeaturesBlocks() {
                   d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
                 />
               </svg>
-            </a>
+            </cite>
 
             {/* 2nd item */}
-            <a
-              className="flex flex-col p-5 group text-white bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl"
-              href="#0"
+            <cite
+              className="flex flex-col not-italic p-5 group text-white bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl"
+              
               data-aos="fade-down"
               data-aos-anchor="[data-aos-id-featbl]"
               data-aos-delay="100"
@@ -86,12 +85,12 @@ export default function FeaturesBlocks() {
                   d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
                 />
               </svg>
-            </a>
+            </cite>
 
             {/* 3rd item */}
-            <a
-              className="flex flex-col p-5 group text-white bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 shadow-2xl"
-              href="#0"
+            <cite
+              className="flex flex-col not-italic p-5 group text-white bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 shadow-2xl"
+             
               data-aos="fade-down"
               data-aos-anchor="[data-aos-id-featbl]"
               data-aos-delay="200"
@@ -123,12 +122,12 @@ export default function FeaturesBlocks() {
                   d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
                 />
               </svg>
-            </a>
+            </cite>
 
             {/* 4th item */}
-            <a
-              className="flex flex-col p-5 group text-white bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 shadow-2xl"
-              href="#0"
+            <cite
+              className="flex flex-col not-italic p-5 group text-white bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 shadow-2xl"
+            
               data-aos="fade-down"
               data-aos-anchor="[data-aos-id-featbl]"
               data-aos-delay="300"
@@ -160,7 +159,7 @@ export default function FeaturesBlocks() {
                   d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
                 />
               </svg>
-            </a>
+            </cite>
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ export default function Blog() {
                 <header>
                   {/* Title and excerpt */}
                   <div className="text-center md:text-left">
-                    <Link href={`/blog/${featuredPost.slug}`}>
+                    <Link href={`/our-products/${featuredPost.slug}`}>
                       <h1 className="h1 font-red-hat-display mb-4">
                         {featuredPost.metadata.title}
                       </h1>
@@ -130,7 +130,7 @@ export default function Blog() {
                 </div>
 
                 {/* Load more button */}
-                <div className="flex justify-center mt-12 md:mt-16">
+                {/* <div className="flex justify-center mt-12 md:mt-16">
                   <a
                     className="btn-sm text-gray-300 hover:text-gray-100 bg-gray-800 flex items-center"
                     href="#0"
@@ -147,10 +147,9 @@ export default function Blog() {
                       />
                     </svg>
                   </a>
-                </div>
+                </div> */}
               </div>
 
-              <Sidebar />
             </div>
           </div>
         </div>
