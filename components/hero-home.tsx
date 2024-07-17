@@ -13,7 +13,7 @@ export default function HeroHome() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = process.env.PUBLIC_URL + "/public/docs/brochure.pdf"; // Path to your PDF file
+    link.href = "/docs/brochure.pdf"; // Path to your PDF file
     link.setAttribute("download", "brochure.pdf");
     document.body.appendChild(link);
     link.click();
