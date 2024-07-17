@@ -22,7 +22,7 @@ export default function Tabs() {
   }, []);
 
   return (
-    <section className="relative border-t border-transparent dark:border-gray-800">
+    <section id="services" className="relative border-t border-transparent dark:border-gray-800">
       {/* Background gradient */}
       <div
         className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none"

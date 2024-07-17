@@ -80,8 +80,7 @@ export default function FAQs() {
                     <h3>How can I reach customer support?</h3>
                     <p>
                       You can reach our customer support team through the
-                      contact form on our website or by emailing
-                      support@the3rocks.com.
+                      contact form on our website or by emailing <span className="text-teal-500">info@the3rocks.com</span>.
                     </p>
                   </article>
                 </div>
