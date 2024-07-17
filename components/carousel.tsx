@@ -8,6 +8,7 @@ import CarouselImage02 from "@/public/images/raw-material-lead.png";
 import CarouselImage03 from "@/public/images/raw-material-barite.png";
 import CarouselImage04 from "@/public/images/raw-material-iron.png";
 import CarouselImage05 from "@/public/images/raw-material-antimony.png";
+import CarouselImage06 from "@/public/images/raw-material-amber.png";
 
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from "swiper";
@@ -104,6 +105,33 @@ export default function Carousel() {
                     href="#0"
                   >
                     The purity can reach up to 86%
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="swiper-slide max-w-lg">
+              <Image
+                className="transition-opacity duration-300"
+                src={CarouselImage06}
+                width={540}
+                height={460}
+                alt="Carousel item 02"
+              />
+              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
+                <div className="flex grow">
+                  <a
+                    className="inline-flex btn-sm text-white bg-rocks-400 hover:bg-rocks-500 mx-auto self-center"
+                    href="/our-products/amber"
+                  >
+                    Learn more
+                  </a>
+                </div>
+                <div className="absolute bottom-0 right-0 p-6">
+                  <a
+                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
+                    href="#0"
+                  >
+                    Less than 120 UFC/mL of aerobic mesophilic bacteria
                   </a>
                 </div>
               </div>
