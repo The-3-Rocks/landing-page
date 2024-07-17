@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle({
@@ -7,7 +8,14 @@ export default function ThemeToggle({
 }: {
   className?: string;
 }) {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  // Set dark theme as default when component mounts
+  useEffect(() => {
+    if (resolvedTheme === "system") {
+      setTheme("dark");
+    }
+  }, []); // Only run this effect once on mount
 
   return (
     <div className={`form-switch flex flex-col justify-center ${className}`}>
