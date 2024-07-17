@@ -1,15 +1,15 @@
-import Link from 'next/link'
-import Logo from './logo'
-import Dropdown from '@/components/utils/dropdown'
-import ThemeToggle from './theme-toggle'
-import MobileMenu from './mobile-menu'
+import Link from "next/link";
+import Logo from "./logo";
+import Dropdown from "@/components/utils/dropdown";
+import ThemeToggle from "./theme-toggle";
+import MobileMenu from "./mobile-menu";
+
 
 export default function Header() {
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
-
           {/* Site branding */}
           <div className="shrink-0 mr-5">
             <Link href="/" className="block" aria-label="Cruip">
@@ -26,28 +26,43 @@ export default function Header() {
                   href="/about"
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
-                  About
+                  Who Are We
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="/#products"
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
-                  Blog
+                  Products
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/testimonials"
+                  href="/#services"
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
-                  Testimonials
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-products"
+                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                >
+                  Articles
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                >
+                  Contact
                 </Link>
               </li>
               {/* 1st level: hover */}
-              <Dropdown title="Resources">
-                {/* 2nd level: hover */}
+              {/* <Dropdown title="Resources">
                 <li>
                   <Link
                     href="/help"
@@ -64,7 +79,7 @@ export default function Header() {
                     404
                   </Link>
                 </li>
-              </Dropdown>
+              </Dropdown> */}
             </ul>
 
             {/* Desktop lights switch */}
@@ -73,17 +88,19 @@ export default function Header() {
             {/* Desktop CTA on the right */}
             <ul className="flex justify-end flex-wrap items-center">
               <li>
-                <Link href="/contact" className="btn-sm text-white bg-teal-500 hover:bg-teal-400 ml-6">
-                  Request code
+                <Link
+                  href="/contact"
+                  className="btn-sm text-white bg-teal-902 hover:bg-teal-901 ml-6"
+                >
+                  Unlock Mining Potential
                 </Link>
               </li>
             </ul>
           </nav>
 
           <MobileMenu />
-
         </div>
       </div>
     </header>
-  )
+  );
 }

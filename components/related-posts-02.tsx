@@ -1,85 +1,156 @@
-import Image from 'next/image'
-import RelatedImage01 from '@/public/images/related-post-01.jpg'
-import RelatedImage02 from '@/public/images/related-post-02.jpg'
-import Author01 from '@/public/images/news-author-04.jpg'
-import Author02 from '@/public/images/news-author-03.jpg'
+"use client";
+import Image from "next/image";
+import RelatedImage01 from "@/public/images/lead-product.jpg";
+import RelatedImage02 from "@/public/images/iron-product.png";
+import RelatedImage03 from "@/public/images/zinc-product.png";
+import RelatedImage04 from "@/public/images/barite-product.png";
+import { usePathname } from "next/navigation";
 
 export default function RelatedPosts02() {
+  const currentPath = usePathname();
+
   return (
     <aside>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           <div className="max-w-3xl mx-auto">
-
-            <h4 className="h4 font-red-hat-display mb-8">Related articles</h4>
+            <h4 className="h4 font-red-hat-display mb-8">Related products</h4>
 
             {/* Articles container */}
-            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2" data-aos-id-relposts>
-
-              {/* 1st article */}
-              <article className="relative group p-6 text-white" data-aos="fade-down" data-aos-anchor="[data-aos-id-relposts]">
-                <figure>
-                  <Image className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out" src={RelatedImage01} alt="Related post 01" />
-                  <div className="absolute inset-0 bg-teal-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out" aria-hidden="true"></div>
-                </figure>
-                <div className="relative flex flex-col h-full">
-                  <header className="grow">
-                    <a className="hover:underline" href="#0">
-                      <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                        How to talk about yourself in the best possible way
-                      </h3>
-                    </a>
-                    <div className="text-sm opacity-80">Nov 16, 2020</div>
-                  </header>
-                  <footer>
-                    {/* Author meta */}
-                    <div className="flex items-center text-sm mt-5">
-                      <a href="#0">
-                        <Image className="rounded-full shrink-0 mr-3" src={Author01} width={32} height={32} alt="Author 04" />
+            <div
+              className="grid gap-4 sm:gap-6 sm:grid-cols-3"
+              data-aos-id-relposts
+            >
+              {/* Lead article */}
+              {currentPath !== "/our-products/lead" && (
+                <article
+                  className="relative group p-6 text-white"
+                  data-aos="fade-down"
+                  data-aos-anchor="[data-aos-id-relposts]"
+                >
+                  <figure>
+                    <Image
+                      className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out"
+                      src={RelatedImage01}
+                      alt="Lead product"
+                    />
+                    <div
+                      className="absolute inset-0 bg-teal-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out"
+                      aria-hidden="true"
+                    ></div>
+                  </figure>
+                  <div className="relative flex flex-col h-full">
+                    <header className="grow">
+                      <a className="hover:underline" href="/our-products/lead">
+                        <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
+                          What makes lead indispensable across various industries, and how does The<span className="text-teal-400">3</span>rocks provide versatile and reliable lead solutions to meet these needs?
+                        </h3>
                       </a>
-                      <div>
-                        <span className="opacity-75">By </span>
-                        <a className="font-medium hover:underline" href="#0">Mari Champ</a>
-                      </div>
-                    </div>
-                  </footer>
-                </div>
-              </article>
+                      <div className="text-sm opacity-80">Nov 16, 2020</div>
+                    </header>
+                  </div>
+                </article>
+              )}
 
-              {/* 2nd article */}
-              <article className="relative group p-6 text-white" data-aos="fade-down" data-aos-anchor="[data-aos-id-relposts]" data-aos-delay="200">
-                <figure>
-                  <Image className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out" src={RelatedImage02} alt="Related post 02" />
-                  <div className="absolute inset-0 bg-purple-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out" aria-hidden="true"></div>
-                </figure>
-                <div className="relative flex flex-col h-full">
-                  <header className="grow">
-                    <a className="hover:underline" href="#0">
-                      <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                        How I Park Inc make $5,000 every month by sellings gifts
-                      </h3>
-                    </a>
-                    <div className="text-sm opacity-80">Nov 12, 2020</div>
-                  </header>
-                  <footer>
-                    {/* Author meta */}
-                    <div className="flex items-center text-sm mt-5">
-                      <a href="#0">
-                        <Image className="rounded-full shrink-0 mr-3" src={Author02} width={32} height={32} alt="Author 03" />
+              {/* Barite article */}
+              {currentPath !== "/our-products/barite" && (
+                <article
+                  className="relative group p-6 text-white"
+                  data-aos="fade-down"
+                  data-aos-anchor="[data-aos-id-relposts]"
+                  data-aos-delay="200"
+                >
+                  <figure>
+                    <Image
+                      className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out"
+                      src={RelatedImage04}
+                      alt="Barite product"
+                    />
+                    <div
+                      className="absolute inset-0 bg-pink-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out"
+                      aria-hidden="true"
+                    ></div>
+                  </figure>
+                  <div className="relative flex flex-col h-full">
+                    <header className="grow">
+                      <a className="hover:underline" href="/our-products/barite">
+                        <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
+                          What makes barite essential for industries like oil and gas, healthcare, and construction, and how does The<span className="text-teal-400">3</span>rocks supply premium barite products?
+                        </h3>
                       </a>
-                      <div>
-                        <span className="opacity-75">By </span>
-                        <a className="font-medium hover:underline" href="#0">Lisa Allison Champ</a>
-                      </div>
-                    </div>
-                  </footer>
-                </div>
-              </article>
+                      <div className="text-sm opacity-80">Nov 12, 2020</div>
+                    </header>
+                  </div>
+                </article>
+              )}
 
+              {/* Iron article */}
+              {currentPath !== "/our-products/iron" && (
+                <article
+                  className="relative group p-6 text-white"
+                  data-aos="fade-down"
+                  data-aos-anchor="[data-aos-id-relposts]"
+                  data-aos-delay="400"
+                >
+                  <figure>
+                    <Image
+                      className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out"
+                      src={RelatedImage02}
+                      alt="Iron product"
+                    />
+                    <div
+                      className="absolute inset-0 bg-purple-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out"
+                      aria-hidden="true"
+                    ></div>
+                  </figure>
+                  <div className="relative flex flex-col h-full">
+                    <header className="grow">
+                      <a className="hover:underline" href="/our-products/iron">
+                        <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
+                          What makes iron indispensable for construction, manufacturing, and infrastructure, and how does The<span className="text-teal-400">3</span>rocks provide high-quality iron products for these applications?
+                        </h3>
+                      </a>
+                      <div className="text-sm opacity-80">Nov 12, 2020</div>
+                    </header>
+                  </div>
+                </article>
+              )}
+
+              {/* Zinc article */}
+              {currentPath !== "/our-products/zinc" && (
+                <article
+                  className="relative group p-6 text-white"
+                  data-aos="fade-down"
+                  data-aos-anchor="[data-aos-id-relposts]"
+                  data-aos-delay="600"
+                >
+                  <figure>
+                    <Image
+                      className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out"
+                      src={RelatedImage03}
+                      alt="Zinc product"
+                    />
+                    <div
+                      className="absolute inset-0 bg-indigo-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out"
+                      aria-hidden="true"
+                    ></div>
+                  </figure>
+                  <div className="relative flex flex-col h-full">
+                    <header className="grow">
+                      <a className="hover:underline" href="/our-products/zinc">
+                        <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
+                          What makes zinc indispensable in modern industries, and how does The<span className="text-teal-400">3</span>rocks provide top-quality zinc products to meet diverse industrial needs?
+                        </h3>
+                      </a>
+                      <div className="text-sm opacity-80">Nov 12, 2020</div>
+                    </header>
+                  </div>
+                </article>
+              )}
             </div>
           </div>
         </div>
       </div>
     </aside>
-  )
+  );
 }

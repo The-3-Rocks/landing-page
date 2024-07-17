@@ -41,7 +41,7 @@ export default function Blog() {
                 <header>
                   {/* Title and excerpt */}
                   <div className="text-center md:text-left">
-                    <Link href={`/blog/${featuredPost.slug}`}>
+                    <Link href={`/our-products/${featuredPost.slug}`}>                    
                       <h1 className="h1 font-red-hat-display mb-4">{featuredPost.metadata.title}</h1>
                     </Link>
                     <p className="text-xl text-gray-600 dark:text-gray-400">{featuredPost.metadata.summary}</p>
@@ -103,9 +103,6 @@ export default function Blog() {
                 </div>
 
               </div>
-
-              <Sidebar />
-
             </div>
           </div>
         </div>

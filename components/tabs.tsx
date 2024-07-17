@@ -1,254 +1,483 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-
-import Image from 'next/image'
-import VideoThumb from '@/public/images/video-thumb.jpg'
-import PlayBtn from '@/public/images/play-button.svg'
+import { SetStateAction, useEffect, useState } from "react";
+import {
+  FaTools,
+  FaGem,
+  FaHandshake,
+  FaSearch,
+  FaHeadset,
+} from "react-icons/fa";
 
 export default function Tabs() {
+  const [category, setCategory] = useState<string>("1");
 
-  const [category, setCategory] = useState<string>('1')
+  const setCateg = (num: SetStateAction<string>) => {
+    console.log("🚀 ~ setCateg ~ num:", num);
+    setCategory(num);
+  };
+
+  useEffect(() => {
+    setCateg("1");
+  }, []);
 
   return (
-    <section className="relative border-t border-transparent dark:border-gray-800">
+    <section id="services" className="relative border-t border-transparent dark:border-gray-800">
       {/* Background gradient */}
-      <div className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none" aria-hidden="true"></div>
+      <div
+        className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none"
+        aria-hidden="true"
+      ></div>
       {/* End background gradient */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
-
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="h2 font-red-hat-display mb-4">Turn your ideas into reality in seconds</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <h2 className="h2 font-red-hat-display mb-4">
+              Exceptional Quality and Transparent Services
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Delivering top-quality raw materials with unwavering transparency
+              and compliance. Discover the reliability and integrity that sets
+              us apart.
+            </p>
           </div>
 
           {/* Section content */}
           <div>
             <div className="grid lg:grid-cols-3 gap-12 lg:gap-6">
-
               {/* Category buttons */}
-              <div className="lg:col-span-1 lg:pr-16 flex flex-wrap justify-center lg:flex-col lg:justify-start -m-1 lg:mx-0">
+              <div className="lg:col-span-1 lg:pr-16 flex flex-wrap lg:flex-col justify-center lg:justify-start -m-1 lg:mx-0">
                 <button
-                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '1' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
-                  onClick={() => setCategory('1')}
+                  className={`w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center m-1 lg:mx-0 ${
+                    category === "1" &&
+                    "!bg-rocks-500 hover:bg-rocks-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                  }`}
+                  onClick={() => setCateg("1")}
                 >
-                  <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path className={`fill-current ${category === '1' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M5 16H4a4 4 0 01-4-4v-1h2v1a2 2 0 002 2h1v2zM13 10h-1.686l-1.207-1.207L14.37 4.63a2.121 2.121 0 00-3-3L7.207 5.793 5.99 4.576 5.98 3.02 3.038.079 0 3.117 3 6h1.586l1.207 1.207L4 9l3 3 1.793-1.793L10 11.414V13l3.01 3.01 2.98-2.979L13 10z" />
-                  </svg>
-                  <span className={category === '1' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Getting Started</span>
+                  <FaTools
+                    className={`w-4 h-4 shrink-0 mr-2 ${
+                      category === "1"
+                        ? "text-white dark:text-white-400"
+                        : "text-rocks-500 dark:text-gray-400"
+                    }`}
+                  />
+                  <span
+                    className={`flex-1 text-center ${
+                      category === "1"
+                        ? "text-white dark:text-white-400"
+                        : "text-gray-600 dark:text-gray-300"
+                    }`}
+                  >
+                    All Services
+                  </span>
+                </button>
+
+                <button
+                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
+                    category === "2" &&
+                    "!bg-rocks-500 hover:bg-rocks-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                  }`}
+                  onClick={() => setCateg("2")}
+                >
+                  <FaGem
+                    className={`w-4 h-4 shrink-0 mr-2 ${
+                      category === "2"
+                        ? "text-white dark:text-white-400"
+                        : "text-rocks-500 dark:text-gray-400"
+                    }`}
+                  />
+                  <span
+                    className={
+                      category === "2"
+                        ? "text-white dark:text-white-400"
+                        : "text-gray-600 dark:text-gray-300"
+                    }
+                  >
+                    High-Quality Raw Material Supply
+                  </span>
                 </button>
                 <button
-                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '2' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
-                  onClick={() => setCategory('2')}
+                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
+                    category === "3" &&
+                    "!bg-rocks-500 hover:bg-rocks-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                  }`}
+                  onClick={() => setCateg("3")}
                 >
-                  <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path className={`fill-current ${category === '2' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M8 3l4 4H4zM8 13L4 9h8zM1 0h14v2H1zM1 14h14v2H1z" />
-                  </svg>
-                  <span className={category === '2' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Collection list</span>
+                  <FaHandshake
+                    className={`w-4 h-4 shrink-0 mr-2 ${
+                      category === "3"
+                        ? "text-white dark:text-white-400"
+                        : "text-rocks-500 dark:text-gray-400"
+                    }`}
+                  />
+                  <span
+                    className={
+                      category === "3"
+                        ? "text-white dark:text-white-400"
+                        : "text-gray-600 dark:text-gray-300"
+                    }
+                  >
+                    Supplier Collaboration with Rigorous Standards
+                  </span>
                 </button>
                 <button
-                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '3' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
-                  onClick={() => setCategory('3')}
+                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
+                    category === "4" &&
+                    "!bg-rocks-500 hover:bg-rocks-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                  }`}
+                  onClick={() => setCateg("4")}
                 >
-                  <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path className={`fill-current ${category === '3' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M6 0H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V1a1 1 0 00-1-1zM5 5H2V2h3v3zM15 9h-5a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5h-3v-3h3v3zM6 9H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5H2v-3h3v3zM12.5 7a1 1 0 01-.707-.293l-2.5-2.5a1 1 0 010-1.414l2.5-2.5a1 1 0 011.414 0l2.5 2.5a1 1 0 010 1.414l-2.5 2.5A1 1 0 0112.5 7z" />
-                  </svg>
-                  <span className={category === '3' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Element Hierarchy</span>
+                  <FaSearch
+                    className={`w-4 h-4 shrink-0 mr-2 ${
+                      category === "4"
+                        ? "text-white dark:text-white-400"
+                        : "text-rocks-500 dark:text-gray-400"
+                    }`}
+                  />
+                  <span
+                    className={
+                      category === "4"
+                        ? "text-white dark:text-white-400"
+                        : "text-gray-600 dark:text-gray-300"
+                    }
+                  >
+                    Transparent Tracking and Compliance
+                  </span>
                 </button>
                 <button
-                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '4' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
-                  onClick={() => setCategory('4')}
+                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
+                    category === "5" &&
+                    "!bg-rocks-500 hover:bg-rocks-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                  }`}
+                  onClick={() => setCateg("5")}
                 >
-                  <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path className={`fill-current ${category === '4' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M15.4.6c-.84-.8-2.16-.8-3 0L8.7 4.3c.73.252 1.388.68 1.916 1.244.469.515.83 1.119 1.065 1.775L15.4 3.6c.8-.84.8-2.16 0-3zM4.937 6.9c-1.2 1.2-1.4 5.7-1.4 5.7s4.4-.4 5.6-1.5a2.987 2.987 0 000-4.2 2.9 2.9 0 00-4.2 0z" />
-                  </svg>
-                  <span className={category === '4' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Styling Basics</span>
-                </button>
-                <button
-                  className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '5' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
-                  onClick={() => setCategory('5')}
-                >
-                  <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path className={`fill-current ${category === '5' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M11 16v-5h5V0H5v5H0v11h11zM2 7h7v7H2V7z" />
-                  </svg>
-                  <span className={category === '5' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Image Field</span>
+                  <FaHeadset
+                    className={`w-4 h-4 shrink-0 mr-2 ${
+                      category === "5"
+                        ? "text-white dark:text-white-400"
+                        : "text-rocks-500 dark:text-gray-400"
+                    }`}
+                  />
+                  <span
+                    className={
+                      category === "5"
+                        ? "text-white dark:text-white-400"
+                        : "text-gray-600 dark:text-gray-300"
+                    }
+                  >
+                    Dedicated Customer Support and Transparency
+                  </span>
                 </button>
               </div>
 
-              {/* Videos */}
+              {/* Content */}
               <div className="lg:col-span-2 max-w-sm mx-auto md:max-w-3xl lg:max-w-none">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className={['1'].includes(category) ? undefined : 'hidden'}>
+                <div>
+                  <div
+                    className={["1"].includes(category) ? undefined : "hidden"}
+                  >
+                    {/* Items */}
+                    <div
+                      className="  md:max-w-xl lg:max-w-none grid sm:grid-cols-2 gap-4 lg:gap-6 lg:grid-cols-2"
+                      data-aos-id-featbl
+                    >
+                      {/* 1st item */}
+                      <a
+                        className="flex flex-col p-5 group text-white bg-gradient-to-br from-rocks-400 to-rocks-500 dark:from-rocks-400 dark:to-rocks-500 shadow-2xl rounded-lg"
+                        href="#0"
+                        data-aos="fade-down"
+                        data-aos-anchor="[data-aos-id-featbl]"
+                        onClick={() => setCateg("2")}
+                      >
+                        <FaGem
+                          className={`w-8 h-8 mb-3 text-white dark:text-white-400`}
+                        />
+                        <div className="font-red-hat-display text-xl font-black tracking-tighter mb-1">
+                          High-Quality Raw Material Supply
+                        </div>
+                        <div className="grow opacity-80 mb-4">
+                          Delivering the highest quality lead, zinc, barite, and
+                          iron with stringent quality control.
+                        </div>
+                        <svg
+                          className="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            className="fill-current"
+                            d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                          />
+                        </svg>
+                      </a>
+
+                      {/* 2nd item */}
+                      <a
+                        className="flex flex-col p-5 group text-white bg-gradient-to-bl from-rocks-400 to-rocks-500 dark:from-rocks-400 dark:to-rocks-500 shadow-2xl rounded-lg"
+                        href="#0"
+                        data-aos="fade-down"
+                        data-aos-anchor="[data-aos-id-featbl]"
+                        data-aos-delay="100"
+                        onClick={() => setCateg("3")}
+                      >
+                        <FaHandshake
+                          className={`w-8 h-8 mb-3 text-white dark:text-white-400`}
+                        />
+                        <div className="font-red-hat-display text-xl font-black tracking-tighter mb-1">
+                          Supplier Collaboration with Rigorous Standards
+                        </div>
+                        <div className="grow opacity-80 mb-4">
+                          Collaborating with trusted suppliers under strict
+                          guidelines to ensure superior standards.
+                        </div>
+                        <svg
+                          className="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            className="fill-current"
+                            d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                          />
+                        </svg>
+                      </a>
+
+                      {/* 3rd item */}
+                      <a
+                        className="flex flex-col p-5 group text-white bg-gradient-to-tr from-rocks-400 to-rocks-500 dark:from-rocks-400 dark:to-rocks-500 shadow-2xl rounded-lg"
+                        href="#0"
+                        data-aos="fade-down"
+                        data-aos-anchor="[data-aos-id-featbl]"
+                        data-aos-delay="200"
+                        onClick={() => setCateg("4")}
+                      >
+                        <FaSearch
+                          className={`w-8 h-8 mb-3 text-white dark:text-white-400`}
+                        />
+                        <div className="font-red-hat-display text-xl font-black tracking-tighter mb-1">
+                          Transparent Tracking and Compliance
+                        </div>
+                        <div className="grow opacity-80 mb-4">
+                          Maintaining meticulous manual tracking and alignment
+                          with legal regulations for complete transparency.
+                        </div>
+                        <svg
+                          className="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            className="fill-current"
+                            d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                          />
+                        </svg>
+                      </a>
+
+                      {/* 4th item */}
+                      <a
+                        className="flex flex-col p-5 group text-white bg-gradient-to-tl from-rocks-400 to-rocks-500 dark:from-rocks-400 dark:to-rocks-500 shadow-2xl rounded-lg"
+                        href="#0"
+                        data-aos="fade-down"
+                        data-aos-anchor="[data-aos-id-featbl]"
+                        data-aos-delay="300"
+                        onClick={() => setCateg("5")}
+                      >
+                        <FaHeadset
+                          className={`w-8 h-8 mb-3 text-white dark:text-white`}
+                        />
+                        <div className="font-red-hat-display text-xl font-black tracking-tighter mb-1">
+                          Dedicated Customer Support and Transparency
+                        </div>
+                        <div className="grow opacity-80 mb-4">
+                          Providing dedicated customer support and open
+                          communication for a seamless client experience.
+                        </div>
+                        <svg
+                          className="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            className="fill-current"
+                            d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className={["2"].includes(category) ? undefined : "hidden"}
+                  >
                     <div className="relative">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Using index pages</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">2 Min</div>
-                        </div>
-                      </div>
+                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
+                        <FaGem className=" w-16 h-16 mr-6" /> High-Quality Raw Material
+                        Supply
+                      </h1>
+
+                      <p className="text-gray-700 dark:text-gray-300">
+                        At our mining company, we take pride in delivering the
+                        highest quality raw materials, including lead, zinc,
+                        barite, and iron. We adhere to stringent quality control
+                        measures to ensure that every shipment meets the highest
+                        industry standards. Our commitment to excellence
+                        guarantees that our clients receive only the best
+                        materials for their needs, ensuring the success and
+                        reliability of their projects.
+                      </p>
+                      <br></br>
+                      <ul className="text-gray-700 dark:text-gray-300 list-disc pl-5">
+                        <li>Strict quality control for all materials</li>
+                        <li>Assurance of industry-standard compliance</li>
+                        <li>Reliable and consistent material supply</li>
+                        <li>Commitment to client satisfaction</li>
+                      </ul>
+                      <p className="text-gray-700 dark:text-gray-300 mt-4">
+                        For more information about our high-quality raw
+                        materials, reach out to our sales team today.
+                      </p>
+                      <br></br>
+                      <a
+                        href="/contact"
+                        className="bg-rocks-500 text-white py-2 px-4 rounded hover:bg-teal-600"
+                      >
+                        Contact Us
+                      </a>
                     </div>
                   </div>
-                  <div className={['1', '2'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Working with content</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">4 Min</div>
-                        </div>
-                      </div>
+                  <div
+                    className={["3"].includes(category) ? undefined : "hidden"}
+                  >
+                    <div className="relative">
+                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
+                        <FaHandshake className="w-20 h-20 mr-6" /> Supplier
+                        Collaboration with Rigorous Standards
+                      </h1>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        While we occasionally collaborate with trusted
+                        suppliers, our rigorous guidelines ensure that every
+                        partner adheres to our high standards. We conduct
+                        thorough assessments and maintain strict oversight to
+                        ensure that all supplied materials match our quality
+                        benchmarks. This dedication to maintaining superior
+                        standards allows our clients to have complete confidence
+                        in the materials they receive, knowing they meet our
+                        exacting criteria.
+                      </p>
+                      <br></br>
+                      <ul className="text-gray-700 dark:text-gray-300 list-disc pl-5">
+                        <li>Collaboration with trusted, vetted suppliers</li>
+                        <li>Rigorous assessment and oversight processes</li>
+                        <li>
+                          Assurance of high-quality materials from all suppliers
+                        </li>
+                        <li>
+                          Confidence in the reliability of all received
+                          materials
+                        </li>
+                      </ul>
+                      <p className="text-gray-700 dark:text-gray-300 mt-4">
+                        To learn more about our supplier collaboration and
+                        quality standards, get in touch with our procurement
+                        team.
+                      </p>
+                      <br></br>
+                      <a
+                        href="/contact"
+                        className="bg-rocks-500 text-white py-2 px-4 rounded hover:bg-teal-600"
+                      >
+                        Contact Us
+                      </a>
                     </div>
                   </div>
-                  <div className={['1', '3'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Using cover pages</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">7 Min</div>
-                        </div>
-                      </div>
+                  <div
+                    className={["4"].includes(category) ? undefined : "hidden"}
+                  >
+                    <div className="relative">
+                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
+                        <FaSearch className="w-16 h-16 mr-6" />{" "}
+                        Transparent Tracking and Compliance
+                      </h1>
+
+                      <p className="text-gray-700 dark:text-gray-300">
+                        Even though we do not currently utilize a software tool
+                        for tracking, we employ meticulous manual tracking
+                        methods to oversee all operations and transactions. We
+                        are committed to transparency in all aspects of our
+                        business, providing clients with clear, detailed records
+                        of our processes. Our alignment with legal regulations
+                        further assures clients that all dealings are conducted
+                        with the utmost integrity and compliance.
+                      </p>
+                      <br></br>
+                      <ul className="text-gray-700 dark:text-gray-300 list-disc pl-5">
+                        <li>
+                          Meticulous manual tracking of operations and
+                          transactions
+                        </li>
+                        <li>
+                          Commitment to transparency in business processes
+                        </li>
+                        <li>Detailed records available for client review</li>
+                        <li>Full compliance with legal regulations</li>
+                      </ul>
+                      <p className="text-gray-700 dark:text-gray-300 mt-4">
+                        For any inquiries about our tracking methods and
+                        compliance, please contact our operations team.
+                      </p>
+                      <br></br>
+                      <a
+                        href="/contact"
+                        className="bg-rocks-500 text-white py-2 px-4 rounded hover:bg-teal-600"
+                      >
+                        Contact Us
+                      </a>
                     </div>
                   </div>
-                  <div className={['1', '4'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Intro to the style model</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">9 Min</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={['2', '5'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Exploring collections</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">12 Min</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={['2', '3'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Understand hierarchy</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">3 Min</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={['2', '4'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Customisations</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">11 Min</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={['3', '5'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Image galleries</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">6 Min</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={['5'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Sorting images</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">4 Min</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={['5'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                      <Image className="w-full" src={VideoThumb} width={352} height={264} alt="Video thumbnail 01" />
-                      <div className="absolute inset-0 flex flex-col">
-                        <div className="grow flex justify-center items-center">
-                          <a className="hover:opacity-75 transition duration-150 ease-in-out" href="#0">
-                            <Image src={PlayBtn} width={72} height={72} alt="Play icon" />
-                          </a>
-                        </div>
-                        <div className="w-full bottom-0 px-6 py-3 bg-white opacity-90 dark:bg-gray-900 flex justify-between items-center">
-                          <a className="text-gray-900 dark:text-gray-400 font-medium" href="#0">Filters</a>
-                          <div className="inline-flex px-3 py-1 text-xs font-medium text-white bg-gray-900 bg-opacity-50 dark:text-teal-400 dark:bg-teal-600 dark:bg-opacity-25 rounded-full">9 Min</div>
-                        </div>
-                      </div>
+                  <div
+                    className={["5"].includes(category) ? undefined : "hidden"}
+                  >
+                    <div className="relative">
+                    <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
+  <FaHeadset className="w-16 h-16 mr-6 mb-3" /> Dedicated Customer Support and Transparency
+</h1>
+
+                      <p className="text-gray-700 dark:text-gray-300">
+                        Our company values open communication and transparency.
+                        We believe in building strong, trusting relationships
+                        with our clients through dedicated customer support. Our
+                        team is always available to address any concerns,
+                        provide detailed information, and ensure that clients
+                        are fully informed at every stage of their projects.
+                        This commitment to transparency helps to create a
+                        seamless and stress-free experience for our clients.
+                      </p>
+                      <br></br>
+                      <ul className="text-gray-700 dark:text-gray-300 list-disc pl-5">
+                        <li>Open communication channels with clients</li>
+                        <li>Comprehensive support for all client concerns</li>
+                        <li>Detailed and transparent information sharing</li>
+                        <li>Building strong, trusting client relationships</li>
+                      </ul>
+                      <p className="text-gray-700 dark:text-gray-300 mt-4">
+                        To experience our dedicated customer support, contact
+                        our customer service team today.
+                      </p>
+                      <br></br>
+                      <a
+                        href="/contact"
+                        className="bg-rocks-500 text-white py-2 px-4 rounded hover:bg-teal-600"
+                      >
+                        Contact Us
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
