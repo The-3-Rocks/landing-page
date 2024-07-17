@@ -1,19 +1,19 @@
-"use client"
+"use client";
 import { useState, useEffect, useRef } from "react";
-import { Transition } from '@headlessui/react';
+import { Transition } from "@headlessui/react";
 
 export default function StatsCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autorotate, setAutorotate] = useState(true);
   const [autorotateTiming] = useState(3000);
-  
+
   const slides = [
     { name: "Lead", content: "+70 %", stock: "+800", clients: "79" },
     { name: "Amber", content: "Pure", stock: "+60", clients: "2" },
     { name: "Barite", content: "+4", stock: "+400", clients: "113" },
     { name: "Zinc", content: "+37", stock: "+120", clients: "26" },
-    { name: "Iron", content: "+70 %", stock: "+40000", clients: "52" },
-    { name: "Antimony", content: "+30 %", stock: "+700", clients: "14" },
+    { name: "Iron", content: "+70 %", stock: "+40K", clients: "52" },
+    { name: "Sb", content: "+30 %", stock: "+700", clients: "14" },
   ];
 
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -28,8 +28,11 @@ export default function StatsCarousel() {
 
   const heightFix = () => {
     if (carouselRef.current) {
-      const activeSlide = carouselRef.current.children[currentSlide] as HTMLElement;
-      activeSlide && (carouselRef.current.style.height = `${activeSlide.offsetHeight}px`);
+      const activeSlide = carouselRef.current.children[
+        currentSlide
+      ] as HTMLElement;
+      activeSlide &&
+        (carouselRef.current.style.height = `${activeSlide.offsetHeight}px`);
     }
   };
 
@@ -48,7 +51,10 @@ export default function StatsCarousel() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           <div className="relative">
-            <div className="relative flex flex-col items-start z-10 transition-all duration-300 ease-in-out" ref={carouselRef}>
+            <div
+              className="relative flex flex-col items-start z-10 transition-all duration-300 ease-in-out"
+              ref={carouselRef}
+            >
               {slides.map((slide, index) => (
                 <Transition
                   key={index}
@@ -122,7 +128,10 @@ export default function StatsCarousel() {
             </div>
 
             {/* Skewed borders */}
-            <div className="absolute inset-0 transform -skew-x-3 border-2 border-gray-200 dark:border-gray-800 pointer-events-none" aria-hidden="true"></div>
+            <div
+              className="absolute inset-0 transform -skew-x-3 border-2 border-gray-200 dark:border-gray-800 pointer-events-none"
+              aria-hidden="true"
+            ></div>
 
             {/* Arrows */}
             {/* <div className="absolute inset-0 flex items-center justify-between">

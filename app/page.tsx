@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Appy",
-  description: "Page description",
+  title: "The 3 Rocks",
+  description: "The leader of raw materials",
 };
 
 import PageIllustration from "@/components/page-illustration";
