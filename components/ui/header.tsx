@@ -31,26 +31,18 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/#products"
+                  href="/blog"
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
-                  Products
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/testimonials"
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/our-products"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                >
-                  Articles
+                  Testimonials
                 </Link>
               </li>
               <li>

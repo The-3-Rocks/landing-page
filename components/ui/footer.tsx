@@ -200,8 +200,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products" 
-                      
+                      href="#0"
                     >
                       Articles
                     </a>
