@@ -11,14 +11,14 @@ export default function HeroHome() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/docs/brochure.pdf"; // Path to your PDF file
-    link.setAttribute("download", "brochure.pdf");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const handleDownload = () => {
+  //   const link = document.createElement("a");
+  //   link.href = "/docs/brochure.pdf"; // Path to your PDF file
+  //   link.setAttribute("download", "brochure.pdf");
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -144,9 +144,10 @@ export default function HeroHome() {
                   <p className="text-center md:text-left mt-2 opacity-75 text-sm">
                     Download our mining products catalog now!{" "}
                     <a
+                      href="/docs/brochure.pdf"
                       rel="noopener noreferrer"
                       className="underline"
-                      onClick={handleDownload}
+                      download= "brochure.pdf"
                     >
                       Download PDF
                     </a>

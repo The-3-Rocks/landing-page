@@ -29,12 +29,12 @@ export default function CtaContact() {
           <div className="relative max-w-3xl mx-auto text-center">
 
             {/* CTA header */}
-            <h3 className="h3 font-red-hat-display text-gray-100 mb-2">We want to talk to you</h3>
-            <p className="text-gray-400 text-xl">Do not worry too about picking exactly the right role; we can always give you more options after starting the conversation.</p>
+            <h3 className="h3 font-red-hat-display text-gray-100 mb-2">Reach Out to Us for the Best Options and Solutions</h3>
+            <p className="text-gray-400 text-xl">At the<span className="text-teal-500">3</span>rocks, we are committed to providing exceptional services tailored to your needs. Our team of experts is ready to assist you in finding the best options and solutions. Whether you need consultation, support, or customized solutions, we are here to help.</p>
 
             {/* CTA button */}
             <div className="flex justify-center mt-8">
-              <a className="btn text-white bg-teal-500 hover:bg-teal-400" href="#0">Send us a message</a>
+              <a className="btn text-white bg-teal-500 hover:bg-teal-400" href="/contact">Send us a message</a>
             </div>
 
           </div>
