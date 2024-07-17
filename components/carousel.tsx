@@ -7,7 +7,7 @@ import CarouselImage01 from "@/public/images/raw-material-zinc.png";
 import CarouselImage02 from "@/public/images/raw-material-lead.png";
 import CarouselImage03 from "@/public/images/raw-material-barite.png";
 import CarouselImage04 from "@/public/images/raw-material-iron.png";
-// import CarouselImage05 from "@/public/images/carousel-item-05.jpg";
+import CarouselImage05 from "@/public/images/raw-material-antimony.png";
 
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from "swiper";
@@ -162,7 +162,7 @@ export default function Carousel() {
                 </div>
               </div>
             </div>
-            {/* <div className="swiper-slide max-w-lg">
+            <div className="swiper-slide max-w-lg">
               <Image
                 className="transition-opacity duration-300"
                 src={CarouselImage05}
@@ -174,7 +174,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
-                    href="#0"
+                    href="our-products/antimony"
                   >
                     Learn more
                   </a>
@@ -184,11 +184,11 @@ export default function Carousel() {
                     className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
                     href="#0"
                   >
-                    Creative Services
+                    high density and excellent corrosion resistance
                   </a>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
 
