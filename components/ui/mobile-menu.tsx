@@ -3,8 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
-import Logo from "./logo";
 import ThemeToggle from "./theme-toggle";
+import LogoBig from "./logo-big";
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
@@ -81,11 +81,11 @@ export default function MobileMenu() {
             {/* Logo */}
             <Link
               href="/"
-              className="inline-block mb-4"
+              className="flex justify-center mb-4"
               aria-label="Cruip"
               onClick={() => setMobileNavOpen(false)}
             >
-              <Logo />
+              <LogoBig />
             </Link>
             {/* Links */}
             <ul>
@@ -134,35 +134,10 @@ export default function MobileMenu() {
                   Contact
                 </Link>
               </li>
-              {/* <li className="py-2 my-2 border-t border-b border-gray-200 dark:border-gray-800">
-                <span className="flex text-gray-600 dark:text-gray-400 py-2">
-                  Resources
-                </span>
-                <ul className="pl-4">
-                  <li>
-                    <Link
-                      href="/help"
-                      className="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2"
-                      onClick={() => setMobileNavOpen(false)}
-                    >
-                      Help center
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/404"
-                      className="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2"
-                      onClick={() => setMobileNavOpen(false)}
-                    >
-                      404
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
               <li>
                 <Link
                   href="/contact"
-                  className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded text-white bg-teal-500 hover:bg-teal-400 transition duration-150 ease-in-out"
+                  className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded text-white bg-rocks-400 hover:bg-rocks-400 transition duration-150 ease-in-out"
                   onClick={() => setMobileNavOpen(false)}
                 >
                   Unlock Mining Potential
