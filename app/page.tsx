@@ -1,7 +1,7 @@
 export const metadata = {
   title: "The 3 Rocks",
   description: "The leader of raw materials",
-  image: "@/public/images/the3rocks.png",
+  image: "@/public/images/the3rocks-1.png",
 };
 
 import PageIllustration from "@/components/page-illustration";
