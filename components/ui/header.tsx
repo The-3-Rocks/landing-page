@@ -3,6 +3,8 @@ import Logo from "./logo";
 import Dropdown from "@/components/utils/dropdown";
 import ThemeToggle from "./theme-toggle";
 import MobileMenu from "./mobile-menu";
+import imageLogo from "@/public/images/logo-4.png";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -13,6 +15,7 @@ export default function Header() {
           <div className="shrink-0 mr-5">
             <Link href="/" className="block" aria-label="Cruip">
               <Logo />
+              {/* <Image src={imageLogo} alt="Logo" width={80} height={80} /> */}
             </Link>
           </div>
 

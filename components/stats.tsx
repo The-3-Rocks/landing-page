@@ -8,12 +8,48 @@ export default function StatsCarousel() {
   const [autorotateTiming] = useState(3000);
 
   const slides = [
-    { name: "Lead", content: "+70 %", stock: "+800", clients: "79" },
-    { name: "Amber", content: "Pure", stock: "+60", clients: "2" },
-    { name: "Barite", content: "+4", stock: "+400", clients: "113" },
-    { name: "Zinc", content: "+37", stock: "+120", clients: "26" },
-    { name: "Iron", content: "+70 %", stock: "+40K", clients: "52" },
-    { name: "Sb", content: "+30 %", stock: "+700", clients: "14" },
+    {
+      name: "Lead",
+      content: "+70 %",
+      stock: "+800",
+      clients: "79",
+      periodicTable: "Pb",
+    },
+    {
+      name: "Amber",
+      content: "Pure",
+      stock: "+60",
+      clients: "2",
+      periodicTable: "Am",
+    },
+    {
+      name: "Barite",
+      content: "+4",
+      stock: "+400",
+      clients: "113",
+      periodicTable: "Ba",
+    },
+    {
+      name: "Zinc",
+      content: "+37",
+      stock: "+120",
+      clients: "26",
+      periodicTable: "Zn",
+    },
+    {
+      name: "Iron",
+      content: "+70 %",
+      stock: "+40K",
+      clients: "52",
+      periodicTable: "Fe",
+    },
+    {
+      name: "Antimony",
+      content: "+30 %",
+      stock: "+700",
+      clients: "14",
+      periodicTable: "Sb",
+    },
   ];
 
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -76,7 +112,7 @@ export default function StatsCarousel() {
                         data-aos-anchor="[data-aos-id-stats]"
                       >
                         <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
-                          {slide.name}
+                          {slide.periodicTable}
                         </div>
                         <div className="text-gray-600 dark:text-gray-400">
                           Raw material
