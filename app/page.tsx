@@ -1,7 +1,28 @@
 export const metadata = {
-  title: "The 3 Rocks",
-  description: "The leader of raw materials",
-  image: "@/public/images/the3rocks-1.png",
+  title: {
+    template: "%s | The 3 Rocks",
+    default: "The 3 Rocks",
+  },
+  description:
+    "Discover the leader in raw materials with our innovative solutions and exceptional quality. Our website offers comprehensive information on our extensive range of products, from precious metals to industrial minerals. We are committed to transparency, sustainability, and excellence, providing you with the highest standards in the industry. Explore our services, learn about our impact, and see why we are the preferred choice for businesses worldwide seeking top-tier raw materials.",
+  keywords: ["Raw materials", "Lead", "buy raw materials", "Mining"],
+  openGraph: {
+    title: "The 3 Rocks",
+    description:
+      "The leader in raw materials with innovative solutions and exceptional quality.",
+    url: "https://the-3rocks.com",
+    siteName: "The 3 Rocks",
+    images: [
+      {
+        url: "https://the-3rocks.com/images/the3rocks-1.png", // Must be an absolute URL
+        width: 500,
+        height: 500,
+        alt: "The 3 Rocks",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 import PageIllustration from "@/components/page-illustration";
