@@ -10,13 +10,13 @@ export const metadata = {
     title: "The 3 Rocks",
     description:
       "The leader in raw materials with innovative solutions and exceptional quality.",
-    url: "https://the-3rocks.com",
+    url: "https://www.the-3rocks.com",
     siteName: "The 3 Rocks",
     images: [
       {
-        url: "https://the-3rocks.com/images/the3rocks-1.png", // Must be an absolute URL
-        width: 500,
-        height: 500,
+        url: "https://the-3rocks.com/images/og-the3rocks.png", // Must be an absolute URL
+        width: 800,
+        height: 600,
         alt: "The 3 Rocks",
       },
     ],
