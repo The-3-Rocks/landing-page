@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Frequently Asked Questions",
+  description:
+    "Discover frequently asked questions about raw materials supplying and more by The 3 Rocks.",
+};
+
 export default function FAQs() {
   return (
     <>
@@ -80,7 +86,8 @@ export default function FAQs() {
                     <h3>How can I reach customer support?</h3>
                     <p>
                       You can reach our customer support team through the
-                      contact form on our website or by emailing <span className="text-teal-500">info@the3rocks.com</span>.
+                      contact form on our website or by emailing{" "}
+                      <span className="text-teal-500">info@the3rocks.com</span>.
                     </p>
                   </article>
                 </div>
