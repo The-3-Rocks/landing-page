@@ -2,6 +2,12 @@ import Image from "next/image";
 import Newsletter from "@/components/newsletter";
 import RelatedPosts from "@/components/related-posts-02";
 
+export const metadata = {
+  title: "Privacy Policy",
+  description:
+    "Learn about our privacy practices at The 3 Rocks, including how we collect, use, and protect your information.",
+};
+
 export default function PrivacyPolicy() {
   return (
     <>

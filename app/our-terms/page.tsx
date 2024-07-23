@@ -2,6 +2,12 @@ import Image from "next/image";
 import Newsletter from "@/components/newsletter";
 import RelatedPosts from "@/components/related-posts-02";
 
+export const metadata = {
+  title: "Terms and Conditions",
+  description:
+    "Read our terms and conditions carefully before using our website. Learn about our policies regarding intellectual property, privacy, liability, and more.",
+};
+
 export default function Terms() {
   return (
     <>
