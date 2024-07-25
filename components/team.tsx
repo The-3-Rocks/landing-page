@@ -2,13 +2,7 @@ import Image from "next/image";
 import TeamImage01 from "@/public/images/badr.png";
 import TeamImage02 from "@/public/images/shym.png";
 import TeamImage03 from "@/public/images/zack.png";
-import TeamImage04 from "@/public/images/team-member-01.jpg";
-import TeamImage05 from "@/public/images/team-member-05.jpg";
-import TeamImage06 from "@/public/images/team-member-06.jpg";
-import TeamImage07 from "@/public/images/team-member-07.jpg";
-import TeamImage08 from "@/public/images/team-member-08.jpg";
-import TeamImage09 from "@/public/images/team-member-09.jpg";
-import TeamImage10 from "@/public/images/team-member-10.jpg";
+import TeamImage04 from "@/public/images/marina.png";
 
 export default function Team() {
   return (
@@ -22,26 +16,25 @@ export default function Team() {
             </h2>
             <br></br>
             <p className="text-xl text-gray-600 dark:text-gray-400 text-left">
-              A family mining business, passed down through generations,
-              combines traditional methods with modern techniques. This enduring
-              enterprise adapts to technological and market changes while
-              preserving inherited practices and values.
+              A mining business that combines traditional methods with modern
+              techniques. This enduring enterprise adapts to technological and
+              market changes while preserving inherited practices and values.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
               <span className="text-teal-500 font-bold">
                 Structure and Management:
               </span>
               <br></br>
-              The mine is family-owned, with each member contributing based on
-              experience and skills. Three heads of the last generation manage
-              operations, making key decisions collectively.
+              The mine is managed by a skilled team, with each member
+              contributing based on experience and skills. The management team
+              makes key decisions collectively.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
               <span className="text-teal-500 font-bold">
                 Generational Transition:
               </span>
               <br></br>
-              Management passes from one generation to the next, maintaining
+              Management transitions are handled carefully, maintaining
               traditional values while encouraging innovation.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
@@ -49,14 +42,14 @@ export default function Team() {
                 Extraction Methods:
               </span>
               <br></br>
-              Honoring ancestors, the mine uses some traditional techniques and
-              tools alongside advanced machinery like excavators and modern
-              drills to enhance efficiency and safety.
+              Honoring the legacy of the past, the mine uses some traditional
+              techniques and tools alongside advanced machinery like excavators
+              and modern drills to enhance efficiency and safety.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
               <span className="text-teal-500 font-bold">Diversification:</span>
               <br></br>
-              Beyond extraction, the family invests in sectors like mining
+              Beyond extraction, the company invests in sectors like mining
               tourism, offering guided tours to educate the public about mining
               history and processes.
             </p>
@@ -75,7 +68,7 @@ export default function Team() {
               </span>
               <br></br>
               Facing fluctuating mineral prices, regulations, and climate
-              changes, the family plans long-term. They aim to integrate
+              changes, the company plans long-term. They aim to integrate
               emerging technologies, expand into new markets, and train future
               generations.
             </p>
@@ -102,7 +95,7 @@ export default function Team() {
                     alt="Team member 01"
                   />
                   <h4 className="dark:text-gray-300 text-lg font-medium text-center">
-                    Badr GADI
+                    Badr Gadi
                   </h4>
                   <h6 className="text-center">
                     <strong>CEO</strong> of The
@@ -127,7 +120,7 @@ export default function Team() {
                     alt="Team member 02"
                   />
                   <h4 className="dark:text-gray-300 text-lg font-medium">
-                    Shym HAZIM
+                    Shym Hazim
                   </h4>
                   <h6 className="text-center">
                     <strong>COO</strong> of The
@@ -152,7 +145,7 @@ export default function Team() {
                     alt="Team member 03"
                   />
                   <h4 className="dark:text-gray-300 text-lg font-medium text-center">
-                    Zack HAMEDOUN
+                    Zakariae Hamedoun
                   </h4>
                   <h6 className="text-center">
                     <strong>CTO</strong> of The
@@ -162,6 +155,28 @@ export default function Team() {
               </div>
 
               {/* 4th member */}
+              <div
+                className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
+                data-aos="fade-down"
+                data-aos-delay="200"
+                data-aos-anchor="[data-aos-id-team]"
+              >
+                <div className="flex flex-col items-center">
+                  <Image
+                    className="cover rounded-full mb-2"
+                    src={TeamImage04}
+                    width={100}
+                    height={100}
+                    alt="Team member 03"
+                  />
+                  <h4 className="dark:text-gray-300 text-lg font-medium text-center">
+                    Marina Sherbakova
+                  </h4>
+                  <h6 className="text-center">
+                    <h6>International Logistics Manager</h6>
+                  </h6>
+                </div>
+              </div>
               {/* <div className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7" data-aos="fade-down" data-aos-delay="300" data-aos-anchor="[data-aos-id-team]">
                 <div className="flex flex-col items-center">
                   <Image className="rounded-full mb-2" src={TeamImage04} width={80} height={80} alt="Team member 04" />
