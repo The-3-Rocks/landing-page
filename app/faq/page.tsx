@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FAQPage, WithContext, Question } from "schema-dts";
 
 export const metadata = {
   title: "Frequently Asked Questions",
@@ -6,9 +7,55 @@ export const metadata = {
     "Discover frequently asked questions about raw materials supplying and more by The 3 Rocks.",
 };
 
+// FAQ items list
+const faqs = [
+  {
+    question: "What types of raw materials do you sell?",
+    answer: "We sell zinc, lead, barite, and iron.",
+  },
+  {
+    question: "What are the applications of these materials?",
+    answer:
+      "Each material has various industrial applications, such as in construction, manufacturing, and more.",
+  },
+  {
+    question: "How can I place an order?",
+    answer:
+      "You can place an order by contacting us through our website or email.",
+  },
+  {
+    question: "What is the delivery timeframe?",
+    answer:
+      "Delivery times vary depending on location and product availability. Please contact us for specific details.",
+  },
+  {
+    question: "How can I reach customer support?",
+    answer:
+      "You can reach our customer support team through the contact form on our website or by emailing info@the3rocks.com.",
+  },
+];
+
+// Schema.org structured data
+const jsonLd: WithContext<FAQPage> = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function FAQs() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="relative">
         {/* Background image */}
         <div className="absolute inset-0 h-128 pt-16 box-content">
@@ -59,36 +106,12 @@ export default function FAQs() {
                 {/* Article content */}
                 <div className="mb-8" data-aos="fade-up" data-aos-delay="450">
                   <article className="prose text-lg text-gray-600 dark:text-gray-400 max-w-none prose-lg prose-p:leading-normal prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-strong:font-medium prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:italic prose-blockquote:pl-4 prose-blockquote:border-l-2 prose-blockquote:border-teal-500 dark:prose-blockquote:border-gray-400 prose-blockquote:font-normal prose-blockquote:text-inherit">
-                    <h2>Product Questions</h2>
-                    <h3>What types of raw materials do you sell?</h3>
-                    <p>We sell zinc, lead, barite, and iron.</p>
-
-                    <h3>What are the applications of these materials?</h3>
-                    <p>
-                      Each material has various industrial applications, such as
-                      in construction, manufacturing, and more.
-                    </p>
-
-                    <h2>Ordering and Delivery</h2>
-                    <h3>How can I place an order?</h3>
-                    <p>
-                      You can place an order by contacting us through our
-                      website or email.
-                    </p>
-
-                    <h3>What is the delivery timeframe?</h3>
-                    <p>
-                      Delivery times vary depending on location and product
-                      availability. Please contact us for specific details.
-                    </p>
-
-                    <h2>Customer Support</h2>
-                    <h3>How can I reach customer support?</h3>
-                    <p>
-                      You can reach our customer support team through the
-                      contact form on our website or by emailing{" "}
-                      <span className="text-teal-500">info@the3rocks.com</span>.
-                    </p>
+                    {faqs.map((faq, index) => (
+                      <div key={index}>
+                        <h3>{faq.question}</h3>
+                        <p>{faq.answer}</p>
+                      </div>
+                    ))}
                   </article>
                 </div>
               </article>
