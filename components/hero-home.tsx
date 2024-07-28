@@ -3,7 +3,7 @@ import VideoThumb from "@/public/images/hero-image.jpg";
 import ModalVideoIphone from "@/components/modal-video-iphone";
 import { useState } from "react";
 import Image from "next/image";
-import rock from "@/public/images/hero-rock.png";
+import rock from "@/public/images/hero-rock.webp";
 
 export default function HeroHome() {
   const [email, setEmail] = useState("");
