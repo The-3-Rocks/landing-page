@@ -147,7 +147,7 @@ export default function HeroHome() {
                       href="/docs/brochure.pdf"
                       rel="noopener noreferrer"
                       className="underline"
-                      download= "brochure.pdf"
+                      download="brochure.pdf"
                     >
                       Download PDF
                     </a>
@@ -211,6 +211,7 @@ export default function HeroHome() {
               <Image
                 className="rounded-full shrink-0 mr-3"
                 src={rock}
+                fetchPriority="high"
                 // width={32}
                 // height={32}
                 alt="rock"
