@@ -105,7 +105,7 @@ export default function Team() {
               </div>
 
               {/* 2nd member */}
-              <div
+              {/* <div
                 className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
                 data-aos="fade-down"
                 data-aos-delay="100"
@@ -127,7 +127,7 @@ export default function Team() {
                     <span className="text-teal-500">3</span>Rocks
                   </h6>
                 </div>
-              </div>
+              </div> */}
 
               {/* 3rd member */}
               <div
@@ -155,7 +155,7 @@ export default function Team() {
               </div>
 
               {/* 4th member */}
-              <div
+              {/* <div
                 className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
                 data-aos="fade-down"
                 data-aos-delay="200"
@@ -176,7 +176,7 @@ export default function Team() {
                     <h6>International Logistics Manager</h6>
                   </h6>
                 </div>
-              </div>
+              </div> */}
               {/* <div className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7" data-aos="fade-down" data-aos-delay="300" data-aos-anchor="[data-aos-id-team]">
                 <div className="flex flex-col items-center">
                   <Image className="rounded-full mb-2" src={TeamImage04} width={80} height={80} alt="Team member 04" />
