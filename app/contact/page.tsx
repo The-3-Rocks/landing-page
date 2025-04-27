@@ -235,8 +235,9 @@ const popularCountries = popularCountryCodes
 interface FormData {
   firstName: string;
   lastName: string;
+  email: string; // Added email field
   company: string;
-  phoneCode: string; // Phone code field
+  phoneCode: string;
   phone: string;
   country: string;
   interestedProducts: string[];
@@ -248,6 +249,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
+    email: "", // Added email field with empty initial value
     company: "",
     phoneCode: "+1", // Default phone code
     phone: "",
@@ -413,6 +415,7 @@ const Contact: React.FC = () => {
       setFormData({
         firstName: "",
         lastName: "",
+        email: "", // Reset email field
         company: "",
         phoneCode: "+1",
         phone: "",
@@ -506,6 +509,29 @@ const Contact: React.FC = () => {
                   />
                 </div>
               </div>
+
+              {/* Email field */}
+              <div className="flex flex-wrap -mx-3 mb-5">
+                <div className="w-full px-3">
+                  <label
+                    className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1"
+                    htmlFor="email"
+                  >
+                    Email <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    className="form-input w-full"
+                    placeholder="Enter your email address"
+                    required
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
               <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full px-3">
                   <label
