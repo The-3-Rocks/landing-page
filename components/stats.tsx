@@ -31,14 +31,14 @@ export default function StatsCarousel() {
     },
     {
       name: "Zinc",
-      content: "+37",
+      content: "+30",
       stock: "+120",
       clients: "26",
       periodicTable: "Zn",
     },
     {
       name: "Iron",
-      content: "+70 %",
+      content: "+50 %",
       stock: "+40K",
       clients: "52",
       periodicTable: "Fe",
@@ -49,6 +49,13 @@ export default function StatsCarousel() {
       stock: "+700",
       clients: "14",
       periodicTable: "Sb",
+    },
+    {
+      name: "Cobalt",
+      content: "+40 %",
+      stock: "+84",
+      clients: "New",
+      periodicTable: "CoAsS",
     },
   ];
 

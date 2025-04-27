@@ -9,6 +9,9 @@ import CarouselImage03 from "@/public/images/raw-material-barite.png";
 import CarouselImage04 from "@/public/images/raw-material-iron.png";
 import CarouselImage05 from "@/public/images/raw-material-antimony.png";
 import CarouselImage06 from "@/public/images/raw-material-amber.png";
+import CarouselImage07 from "@/public/images/raw-cobalt.png";
+import CarouselImage08 from "@/public/images/raw-copper.png";
+import CarouselImage09 from "@/public/images/raw-material-amber.png";
 
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from "swiper";
@@ -35,7 +38,10 @@ export default function Carousel() {
   }, []);
 
   return (
-    <section id="products" className="border-t border-transparent dark:border-gray-800">
+    <section
+      id="products"
+      className="border-t border-transparent dark:border-gray-800"
+    >
       <div className="py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Section header */}
@@ -73,15 +79,13 @@ export default function Carousel() {
                   </a>
                 </div>
                 <div className="absolute bottom-0 right-0 p-6">
-                  <a
-                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
-                    href="#0"
-                  >
-                    The purity can reach up to 70%
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
+                    The purity can reach up to 30%
                   </a>
                 </div>
               </div>
             </div>
+
             <div className="swiper-slide max-w-lg">
               <Image
                 className="transition-opacity duration-300"
@@ -100,11 +104,32 @@ export default function Carousel() {
                   </a>
                 </div>
                 <div className="absolute bottom-0 right-0 p-6">
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
+                    The purity can reach up to 60%
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="swiper-slide max-w-lg">
+              <Image
+                className="transition-opacity duration-300"
+                src={CarouselImage08}
+                width={540}
+                height={460}
+                alt="Carousel item 05"
+              />
+              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
+                <div className="flex grow">
                   <a
-                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
-                    href="#0"
+                    className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
+                    href="our-products/copper"
                   >
-                    The purity can reach up to 86%
+                    Learn more
+                  </a>
+                </div>
+                <div className="absolute bottom-0 right-0 p-6">
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
+                    The purity can reach up to 8%
                   </a>
                 </div>
               </div>
@@ -127,10 +152,7 @@ export default function Carousel() {
                   </a>
                 </div>
                 <div className="absolute bottom-0 right-0 p-6">
-                  <a
-                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
-                    href="#0"
-                  >
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
                     Less than 120 UFC/mL of aerobic mesophilic bacteria
                   </a>
                 </div>
@@ -154,10 +176,7 @@ export default function Carousel() {
                   </a>
                 </div>
                 <div className="absolute bottom-0 right-0 p-6">
-                  <a
-                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
-                    href="#0"
-                  >
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
                     The density ranges from 4.18 to 4.28
                   </a>
                 </div>
@@ -181,11 +200,8 @@ export default function Carousel() {
                   </a>
                 </div>
                 <div className="absolute bottom-0 right-0 p-6">
-                  <a
-                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
-                    href="#0"
-                  >
-                    The purity can reach up to 73%
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
+                    The purity can reach up to 52%
                   </a>
                 </div>
               </div>
@@ -208,15 +224,63 @@ export default function Carousel() {
                   </a>
                 </div>
                 <div className="absolute bottom-0 right-0 p-6">
-                  <a
-                    className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out"
-                    href="#0"
-                  >
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
                     high density and excellent corrosion resistance
                   </a>
                 </div>
               </div>
             </div>
+            <div className="swiper-slide max-w-lg">
+              <Image
+                className="transition-opacity duration-300"
+                src={CarouselImage07}
+                width={540}
+                height={460}
+                alt="Carousel item 07"
+              />
+              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
+                <div className="flex grow">
+                  <a
+                    className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
+                    href="our-products/cobalt"
+                  >
+                    Learn more
+                  </a>
+                </div>
+                <div className="absolute bottom-0 right-0 p-6">
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
+                    high density and excellent corrosion resistance
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* ------------ */}
+
+            {/* <div className="swiper-slide max-w-lg">
+              <Image
+                className="transition-opacity duration-300"
+                src={CarouselImage05}
+                width={540}
+                height={460}
+                alt="Carousel item 05"
+              />
+              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
+                <div className="flex grow">
+                  <a
+                    className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
+                    href="our-products/antimony"
+                  >
+                    Learn more
+                  </a>
+                </div>
+                <div className="absolute bottom-0 right-0 p-6">
+                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out">
+                    high density and excellent corrosion resistance
+                  </a>
+                </div>
+              </div>
+            </div> */}
+            {/* ------------ */}
           </div>
         </div>
 
