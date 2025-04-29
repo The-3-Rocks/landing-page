@@ -122,7 +122,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
-                    href="our-products/copper"
+                    href="our-products/acopper"
                   >
                     Learn more
                   </a>
@@ -134,7 +134,7 @@ export default function Carousel() {
                 </div>
               </div>
             </div>
-            <div className="swiper-slide max-w-lg">
+            {/* <div className="swiper-slide max-w-lg">
               <Image
                 className="transition-opacity duration-300"
                 src={CarouselImage06}
@@ -157,7 +157,7 @@ export default function Carousel() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="swiper-slide max-w-lg">
               <Image
                 className="transition-opacity duration-300"

@@ -46,7 +46,15 @@ export default function Footer() {
               <Link className="flex justify-center" href="/" aria-label="Cruip">
                 <LogoBig />
               </Link>
-              {/* <Image src={imageLogo} alt="Logo" width={200} height={200} /> */}
+              {/* Contact Information */}
+              <div className="mt-4 text-sm text-center text-gray-600 dark:text-gray-400">
+                <a
+                  href="mailto:info@the-3rocks.com"
+                  className="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition duration-150 ease-in-out"
+                >
+                  info@the-3rocks.com
+                </a>
+              </div>
             </div>
 
             {/* 2nd, 3rd, 4th and 5th blocks */}
@@ -61,6 +69,14 @@ export default function Footer() {
                       href="/our-products/lead"
                     >
                       Lead ore
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      href="/our-products/copper"
+                    >
+                      Copper
                     </a>
                   </li>
                   <li className="mb-1">
@@ -87,55 +103,57 @@ export default function Footer() {
                       Iron
                     </a>
                   </li>
+                  <li className="mb-1">
+                    <a
+                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      href="/our-products/cobalt"
+                    >
+                      Cobalt
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      href="/our-products/antimony"
+                    >
+                      Antimony
+                    </a>
+                  </li>
                 </ul>
               </div>
 
               {/* 3rd block */}
-              {/* <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2">Resources</h6>
+              <div className="text-sm">
+                <h6 className="font-medium uppercase mb-2">Contact Us</h6>
                 <ul>
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="mailto:info@the-3rocks.com"
                     >
-                      Industries and tools
+                      Email: info@the-3rocks.com
                     </a>
                   </li>
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="tel:+212612151391"
                     >
-                      Use cases
+                      Phone: +212 612 151 391
                     </a>
                   </li>
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
+                      href="https://www.linkedin.com/company/the-3rocks"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Blog
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      Online events
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      Nostrud exercitation
+                      LinkedIn
                     </a>
                   </li>
                 </ul>
-              </div> */}
+              </div>
 
               {/* 4th block */}
               <div className="text-sm">
@@ -189,69 +207,6 @@ export default function Footer() {
           <div className="md:flex md:items-center md:justify-between">
             {/* Social links */}
             <ul className="flex mb-4 md:order-2 md:ml-4 md:mb-0">
-              {/* <li>
-                <a
-                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
-                  href="#0"
-                  aria-label="Twitter"
-                >
-                  <svg
-                    className="w-8 h-8 fill-current"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
-                  </svg>
-                </a>
-              </li> */}
-              {/* <li className="ml-4">
-                <a
-                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
-                  href="#0"
-                  aria-label="Github"
-                >
-                  <svg
-                    className="w-8 h-8 fill-current"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
-                  </svg>
-                </a>
-              </li> */}
-              {/* <li className="ml-4">
-                <a
-                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
-                  href="#0"
-                  aria-label="Facebook"
-                >
-                  <svg
-                    className="w-8 h-8 fill-current"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z" />
-                  </svg>
-                </a>
-              </li>
-              <li className="ml-4">
-                <a
-                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
-                  href="#0"
-                  aria-label="Instagram"
-                >
-                  <svg
-                    className="w-8 h-8 fill-current"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="20.145" cy="11.892" r="1" />
-                    <path d="M16 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" />
-                    <path d="M20 24h-8c-2.056 0-4-1.944-4-4v-8c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zm-8-14c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2v-8c0-.935-1.065-2-2-2h-8z" />
-                  </svg>
-                </a>
-              </li> */}
-
               <div className="text-sm md:order-1 text-gray-700 mb-2 md:mb-0">
                 <a
                   className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
@@ -273,9 +228,10 @@ export default function Footer() {
               <li className="ml-4">
                 <a
                   className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
-                  href="https://www.linkedin.com/company/the-3-rocks"
+                  href="https://www.linkedin.com/company/the-3rocks"
                   aria-label="Linkedin"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     className="w-8 h-8 fill-current"
@@ -283,6 +239,21 @@ export default function Footer() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path d="M23.3 8H8.7c-.4 0-.7.3-.7.7v14.7c0 .3.3.6.7.6h14.7c.4 0 .7-.3.7-.7V8.7c-.1-.4-.4-.7-.8-.7zM12.7 21.6h-2.3V14h2.4v7.6h-.1zM11.6 13c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4-.1.7-.7 1.4-1.4 1.4zm10 8.6h-2.4v-3.7c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.8h-2.4V14h2.3v1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4.2h.1z" />
+                  </svg>
+                </a>
+              </li>
+              <li className="ml-4">
+                <a
+                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
+                  href="mailto:info@the-3rocks.com"
+                  aria-label="Email"
+                >
+                  <svg
+                    className="w-8 h-8 fill-current"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M25.6 9.6v12.8c0 .88-.72 1.6-1.6 1.6H8c-.88 0-1.6-.72-1.6-1.6V9.6c0-.88.72-1.6 1.6-1.6h16c.88 0 1.6.72 1.6 1.6zm-8 7.28l8-5.12V9.6c0-.08-.08-.16-.16-.16H8.16c-.08 0-.16.08-.16.16v2.16l8 5.12c.16.08.4.08.56 0zM8 13.28V22.4c0 .08.08.16.16.16h15.68c.08 0 .16-.08.16-.16v-9.12l-7.52 4.72c-.32.24-.8.24-1.12 0L8 13.28z" />
                   </svg>
                 </a>
               </li>

@@ -1,10 +1,13 @@
 import Image from "next/image";
-import MockupImage02 from "@/public/images/mockup-image-02.jpg";
-import MockupImage03 from "@/public/images/mockup-image-03.jpg";
-import MockupImage04 from "@/public/images/mockup-image-04.jpg";
-import IphoneMockup from "@/public/images/iphone-mockup.png";
+import Link from "next/link";
 
-export default function Process() {
+// Import process images - replace these with your actual mining process images
+import ExtractionImage from "@/public/images/extraction1.png";
+import ProcessingImage from "@/public/images/process.png";
+import ExportImage from "@/public/images/export1.png";
+import AnalysisImage from "@/public/images/analyses11.png";
+
+export default function MiningProcess() {
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -12,12 +15,12 @@ export default function Process() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-red-hat-display mb-4">
-              Build and style every element to perfection
+              Our <span className="text-rocks-400">Premium</span> Raw Materials
+              Process
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-              cupidatat.
+              From extraction to final export, we ensure the highest quality
+              through our rigorous and sustainable process.
             </p>
           </div>
 
@@ -37,10 +40,10 @@ export default function Process() {
                 fx="50%"
                 fy="50%"
                 r="39.386%"
-                id="iphonesill__a"
+                id="processglow__a"
               >
-                <stop stopColor="#667EEA" offset="0%" />
-                <stop stopColor="#667EEA" stopOpacity="0" offset="100%" />
+                <stop stopColor="#3ABAB4" offset="0%" />
+                <stop stopColor="#3ABAB4" stopOpacity="0" offset="100%" />
               </radialGradient>
               <radialGradient
                 cx="50%"
@@ -48,23 +51,23 @@ export default function Process() {
                 fx="50%"
                 fy="50%"
                 r="39.386%"
-                id="iphonesill__b"
+                id="processglow__b"
               >
-                <stop stopColor="#9F7AEA" offset="0%" />
-                <stop stopColor="#9F7AEA" stopOpacity="0" offset="100%" />
+                <stop stopColor="#3ABAB4" offset="0%" />
+                <stop stopColor="#3ABAB4" stopOpacity="0" offset="100%" />
               </radialGradient>
             </defs>
             <g transform="translate(-64 -64)" fill="none" fillRule="evenodd">
               <circle
                 fillOpacity=".64"
-                fill="url(#iphonesill__a)"
+                fill="url(#processglow__a)"
                 cx="300"
                 cy="300"
                 r="300"
               />
               <circle
                 fillOpacity=".72"
-                fill="url(#iphonesill__b)"
+                fill="url(#processglow__b)"
                 cx="729"
                 cy="384"
                 r="240"
@@ -72,116 +75,163 @@ export default function Process() {
             </g>
           </svg>
 
-          {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-12 md:gap-x-6 lg:gap-x-12 md:grid-cols-3 items-start md:max-w-none">
-            {/* 1st item */}
-            <div className="relative flex flex-col items-center">
-              {/* Line connecting (1) and (2) */}
+          {/* Process steps - horizontal timeline */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Connecting line */}
+            <div
+              className="absolute h-1 bg-rocks-200 dark:bg-rocks-900 hidden md:block"
+              style={{ top: "65px", left: "15%", right: "15%" }}
+            ></div>
+
+            {/* Process steps */}
+            <div className="grid md:grid-cols-4 gap-8 md:gap-12">
+              {/* Step 1: Extraction */}
               <div
-                aria-hidden="true"
-                className="absolute h-px opacity-50 bg-gradient-to-r from-white via-rocks-400 to-white dark:from-gray-900 dark:via-rocks-400 dark:to-gray-900 hidden md:block"
-                style={{
-                  width: "calc(100% - 48px)",
-                  left: "calc(50% + 48px)",
-                  top: "24px",
-                }}
+                className="relative flex flex-col items-center"
+                data-aos="fade-up"
               >
-                <div className="absolute inset-0 border-t border-dashed border-white dark:border-gray-900"></div>
+                {/* Number */}
+                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                  1
+                </div>
+                {/* Image */}
+                <div className="relative w-full h-56 mb-6 shadow-lg rounded-lg overflow-hidden">
+                  <Image
+                    className="object-cover w-full h-full"
+                    src={ExtractionImage}
+                    width={300}
+                    height={225}
+                    alt="Raw material extraction"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                    <h3 className="text-xl font-bold text-white p-4">
+                      Extraction
+                    </h3>
+                  </div>
+                </div>
+                {/* Description */}
+                <div className="text-center">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    We extract raw materials using sustainable methods that
+                    minimize environmental impact while maximizing resource
+                    quality.
+                  </p>
+                </div>
               </div>
-              {/* Number */}
-              <div className="w-12 h-12 rounded-full bg-rocks-400 dark:bg-rocks-600 dark:bg-opacity-25 flex justify-center items-center text-white dark:text-rocks-400 font-medium mb-8 lg:mb-12">
-                1
+
+              {/* Step 2: Processing & Analysis */}
+              <div
+                className="relative flex flex-col items-center"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                {/* Number */}
+                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                  2
+                </div>
+                {/* Image */}
+                <div className="relative w-full h-56 mb-6 shadow-lg rounded-lg overflow-hidden">
+                  <Image
+                    className="object-cover w-full h-full"
+                    src={AnalysisImage}
+                    width={300}
+                    height={225}
+                    alt="Material analysis"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                    <h3 className="text-xl font-bold text-white p-4">
+                      Analysis
+                    </h3>
+                  </div>
+                </div>
+                {/* Description */}
+                <div className="text-center">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Each batch undergoes rigorous testing and analysis to verify
+                    purity levels and ensure compliance with quality standards.
+                  </p>
+                </div>
               </div>
-              {/* Mobile mockup */}
-              <div className="inline-flex relative justify-center items-center">
-                {/* Image inside mockup size: 290x624px (or 580x1248px for Retina devices) */}
-                <Image
-                  className="absolute"
-                  src={MockupImage02}
-                  width={290}
-                  height="624"
-                  style={{ maxWidth: "84.33%" }}
-                  alt="App screen 02"
-                />
-                {/* iPhone mockup */}
-                <Image
-                  className="relative max-w-full mx-auto h-auto pointer-events-none"
-                  src={IphoneMockup}
-                  width={344}
-                  height="674"
-                  alt="iPhone mockup"
-                  aria-hidden="true"
-                />
+
+              {/* Step 3: Processing */}
+              <div
+                className="relative flex flex-col items-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                {/* Number */}
+                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                  3
+                </div>
+                {/* Image */}
+                <div className="relative w-full h-56 mb-6 shadow-lg rounded-lg overflow-hidden">
+                  <Image
+                    className="object-cover w-full h-full"
+                    src={ProcessingImage}
+                    width={300}
+                    height={225}
+                    alt="Material processing"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                    <h3 className="text-xl font-bold text-white p-4">
+                      Processing
+                    </h3>
+                  </div>
+                </div>
+                {/* Description */}
+                <div className="text-center">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Materials are carefully processed and prepared according to
+                    client specifications and international standards.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 4: Export */}
+              <div
+                className="relative flex flex-col items-center"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                {/* Number */}
+                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                  4
+                </div>
+                {/* Image */}
+                <div className="relative w-full h-56 mb-6 shadow-lg rounded-lg overflow-hidden">
+                  <Image
+                    className="object-cover w-full h-full"
+                    src={ExportImage}
+                    width={300}
+                    height={225}
+                    alt="Material export"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                    <h3 className="text-xl font-bold text-white p-4">Export</h3>
+                  </div>
+                </div>
+                {/* Description */}
+                <div className="text-center">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    We handle all documentation, logistics, and shipping
+                    requirements to ensure timely delivery to your destination.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* 2nd item */}
-            <div className="relative flex flex-col items-center">
-              {/* Line connecting (2) and (3) */}
-              <div
-                aria-hidden="true"
-                className="absolute h-px opacity-50 bg-gradient-to-r from-white via-rocks-400 to-white dark:from-gray-900 dark:via-rocks-400 dark:to-gray-900 hidden md:block"
-                style={{
-                  width: "calc(100% - 48px)",
-                  left: "calc(50% + 48px)",
-                  top: "24px",
-                }}
+            {/* Call to action */}
+            <div className="text-center mt-12 md:mt-20">
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                Discover how our comprehensive process ensures quality,
+                reliability, and transparency at every stage.
+              </p>
+              <Link
+                href="/our-process"
+                className="btn text-white bg-rocks-400 hover:bg-rocks-500"
               >
-                <div className="absolute inset-0 border-t border-dashed border-white dark:border-gray-900"></div>
-              </div>
-              {/* Number */}
-              <div className="w-12 h-12 rounded-full bg-rocks-400 dark:bg-rocks-600 dark:bg-opacity-25 flex justify-center items-center text-white dark:text-rocks-400 font-medium mb-8 lg:mb-12">
-                2
-              </div>
-              {/* Mobile mockup */}
-              <div className="inline-flex relative justify-center items-center">
-                {/* Image inside mockup size: 290x624px (or 580x1248px for Retina devices) */}
-                <Image
-                  className="absolute"
-                  src={MockupImage03}
-                  width={290}
-                  height="624"
-                  style={{ maxWidth: "84.33%" }}
-                  alt="App screen 03"
-                />
-                {/* iPhone mockup */}
-                <Image
-                  className="relative max-w-full mx-auto h-auto pointer-events-none"
-                  src={IphoneMockup}
-                  width={344}
-                  height="674"
-                  alt="iPhone mockup"
-                  aria-hidden="true"
-                />
-              </div>
-            </div>
-
-            {/* 3rd item */}
-            <div className="relative flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-rocks-400 dark:bg-rocks-600 dark:bg-opacity-25 flex justify-center items-center text-white dark:text-rocks-400 font-medium mb-8 lg:mb-12">
-                3
-              </div>
-              {/* Mobile mockup */}
-              <div className="inline-flex relative justify-center items-center">
-                {/* Image inside mockup size: 290x624px (or 580x1248px for Retina devices) */}
-                <Image
-                  className="absolute"
-                  src={MockupImage04}
-                  width={290}
-                  height="624"
-                  style={{ maxWidth: "84.33%" }}
-                  alt="App screen 04"
-                />
-                {/* iPhone mockup */}
-                <Image
-                  className="relative max-w-full mx-auto h-auto pointer-events-none"
-                  src={IphoneMockup}
-                  width={344}
-                  height="674"
-                  alt="iPhone mockup"
-                  aria-hidden="true"
-                />
-              </div>
+                View Full Process Details
+              </Link>
             </div>
           </div>
         </div>

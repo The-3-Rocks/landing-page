@@ -30,7 +30,7 @@ import Hero from "@/components/hero-home";
 import Stats from "@/components/stats";
 import Carousel from "@/components/carousel";
 import Tabs from "@/components/tabs";
-import Process from "@/components/process";
+import MiningProcess from "@/components/process";
 import PricingTables from "@/components/pricing-tables";
 import TestimonialsBlocks from "@/components/testimonials-blocks";
 import FeaturesBlocks from "@/components/features-blocks";
@@ -50,7 +50,7 @@ export default function Home() {
       <Stats />
       <Carousel />
       <Tabs />
-      {/* <Process /> */}
+      <MiningProcess />
       {/* <PricingTables /> */}
       <TestimonialsBlocks />
       <FeaturesBlocks />

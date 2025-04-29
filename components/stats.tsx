@@ -15,13 +15,13 @@ export default function StatsCarousel() {
       clients: "79",
       periodicTable: "Pb",
     },
-    {
-      name: "Amber",
-      content: "Pure",
-      stock: "+60",
-      clients: "2",
-      periodicTable: "Am",
-    },
+    // {
+    //   name: "Amber",
+    //   content: "Pure",
+    //   stock: "+60",
+    //   clients: "2",
+    //   periodicTable: "Am",
+    // },
     {
       name: "Barite",
       content: "+4",

@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import RelatedImage03 from '@/public/images/related-post-03.jpg';
-import RelatedImage04 from '@/public/images/related-post-04.jpg';
-import RelatedImage05 from '@/public/images/related-post-05.jpg';
-import RelatedImage06 from '@/public/images/related-post-06.jpg';
+import Image from "next/image";
+import RelatedImage03 from "@/public/images/related-post-03.jpg";
+import RelatedImage04 from "@/public/images/related-post-04.jpg";
+import RelatedImage05 from "@/public/images/related-post-05.jpg";
+import RelatedImage06 from "@/public/images/related-post-06.jpg";
 
 export default function RelatedPosts01() {
   return (
     <section>
-            <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           <div
             className="grid grid-cols-2 gap-4 lg:gap-6 md:grid-cols-4 text-center"
@@ -20,7 +20,7 @@ export default function RelatedPosts01() {
               data-aos-anchor="[data-aos-id-stats]"
             >
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
-              Amber
+                Copper
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Raw material
@@ -34,7 +34,7 @@ export default function RelatedPosts01() {
               data-aos-delay="100"
             >
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
-                Pure
+                +8%
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 The Amber content
@@ -48,10 +48,10 @@ export default function RelatedPosts01() {
               data-aos-delay="200"
             >
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
-                +60
+                +150
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                Our stock (Kg)
+                Our stock (T)
               </div>
             </div>
             {/* 4th item */}

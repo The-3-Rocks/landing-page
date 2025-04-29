@@ -22,10 +22,13 @@ export default function Tabs() {
   }, []);
 
   return (
-    <section id="services" className="relative border-t border-transparent dark:border-gray-800">
+    <section
+      id="services"
+      className="relative border-t border-transparent dark:border-gray-800 bg-gray-100 dark:bg-gray-900"
+    >
       {/* Background gradient */}
       <div
-        className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none"
+        className="absolute inset-0 h-128 bg-gray-100 dark:opacity-25 dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-900 pointer-events-none"
         aria-hidden="true"
       ></div>
       {/* End background gradient */}
@@ -311,8 +314,8 @@ export default function Tabs() {
                   >
                     <div className="relative">
                       <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
-                        <FaGem className=" w-16 h-16 mr-6" /> High-Quality Raw Material
-                        Supply
+                        <FaGem className=" w-16 h-16 mr-6" /> High-Quality Raw
+                        Material Supply
                       </h1>
 
                       <p className="text-gray-700 dark:text-gray-300">
@@ -395,8 +398,8 @@ export default function Tabs() {
                   >
                     <div className="relative">
                       <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
-                        <FaSearch className="w-16 h-16 mr-6" />{" "}
-                        Transparent Tracking and Compliance
+                        <FaSearch className="w-16 h-16 mr-6" /> Transparent
+                        Tracking and Compliance
                       </h1>
 
                       <p className="text-gray-700 dark:text-gray-300">
@@ -438,9 +441,10 @@ export default function Tabs() {
                     className={["5"].includes(category) ? undefined : "hidden"}
                   >
                     <div className="relative">
-                    <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
-  <FaHeadset className="w-16 h-16 mr-6 mb-3" /> Dedicated Customer Support and Transparency
-</h1>
+                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-rocks-500">
+                        <FaHeadset className="w-16 h-16 mr-6 mb-3" /> Dedicated
+                        Customer Support and Transparency
+                      </h1>
 
                       <p className="text-gray-700 dark:text-gray-300">
                         Our company values open communication and transparency.

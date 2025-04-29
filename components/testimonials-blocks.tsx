@@ -7,7 +7,7 @@ import TestimonialImage04 from "@/public/images/testimonial-04.png";
 export default function TestimonialsBlocks() {
   const size = 180;
   return (
-    <section>
+    <section className="bg-gray-100 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-transparent dark:border-gray-800">
           {/* Testimonials */}
@@ -35,17 +35,15 @@ export default function TestimonialsBlocks() {
                 </svg>
               </div>
               <blockquote className="text-xl text-gray-600 dark:text-gray-400">
-                “ Hi, I am Lead, or as my pals call me, "Plumbum." I'm the
-                heavy-duty, laid-back metal with a bluish-gray complexion. I’m
+                " Hi, I am Lead, or as my pals call me, "Plumbum." I'm the
+                heavy-duty, laid-back metal with a bluish-gray complexion. I'm
                 great at shielding radiation, making batteries, and even showing
                 up in some make-up products. Just think of me as the sturdy
-                guardian of the metal world! “
+                guardian of the metal world! "
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">Lead Guardian</cite>,{" "}
-                <cite
-                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
-                >
+                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
                   Ancient Rome
                 </cite>
               </div>
@@ -74,17 +72,15 @@ export default function TestimonialsBlocks() {
                 </svg>
               </div>
               <blockquote className="text-xl text-gray-600 dark:text-gray-400">
-                “ Hi, I am Zinc, also known as "Zn the Shiny One." I'm the
+                " Hi, I am Zinc, also known as "Zn the Shiny One." I'm the
                 superhero of the metal world, fighting off rust and keeping
-                things fresh. I’m found in everything from sunscreen to
+                things fresh. I'm found in everything from sunscreen to
                 batteries. You can say I'm the multi-talented rockstar of the
-                periodic table! “
+                periodic table! "
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">Zinc Shiny</cite>,{" "}
-                <cite
-                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
-                >
+                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
                   Earth's Crust
                 </cite>
               </div>
@@ -113,18 +109,16 @@ export default function TestimonialsBlocks() {
                 </svg>
               </div>
               <blockquote className="text-xl text-gray-600 dark:text-gray-400">
-                “ Hi, I am Barite, but you can call me "Bary the Rock." I'm a
+                " Hi, I am Barite, but you can call me "Bary the Rock." I'm a
                 mineral made of barium sulfate, usually dressed in white or
                 colorless. My claim to fame? I hang out in the oil and gas
                 industry, where I help keep things cool and under control in
                 drilling muds. Think of me as the chill supervisor of the drill
-                party! “
+                party! "
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">—Bary Rock</cite>,{" "}
-                <cite
-                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
-                >
+                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
                   Veins
                 </cite>
               </div>
@@ -153,18 +147,15 @@ export default function TestimonialsBlocks() {
                 </svg>
               </div>
               <blockquote className="text-xl text-gray-600 dark:text-gray-400">
-                “ Hi, I am Iron, but my friends call me "Fe." I'm the strong,
+                " Hi, I am Iron, but my friends call me "Fe." I'm the strong,
                 silent type with a steely demeanor. You can find me in
-                everything from your cereal to your car! I’m the backbone of
+                everything from your cereal to your car! I'm the backbone of
                 construction and manufacturing. Think of me as the muscle behind
-                the metal. “
+                the metal. "
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">—Iron Strong</cite>,{" "}
-                <cite
-                  className="text-teal-500 transition duration-150 ease-in-out not-italic"
-                  
-                >
+                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
                   Earth's Core
                 </cite>
               </div>
