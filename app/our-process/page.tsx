@@ -394,11 +394,11 @@ export default function ProcessPage() {
                         <h3 className="h4 font-red-hat-display mb-1">
                           Financial Arrangements
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-2">
+                        {/* <p className="text-gray-600 dark:text-gray-400 mb-2">
                           The buyer establishes payment methods according to
                           agreed-upon terms. We offer flexible payment options
                           to accommodate different client needs:
-                        </p>
+                        </p> */}
                         <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
                           <li>
                             <span className="font-medium">
