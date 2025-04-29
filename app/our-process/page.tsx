@@ -277,278 +277,170 @@ export default function ProcessPage() {
 
             <div className="max-w-5xl mx-auto">
               <div className="relative">
-                {/* Vertical line */}
+                {/* Vertical line for desktop */}
                 <div
                   className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700"
                   aria-hidden="true"
                 ></div>
 
-                {/* Steps */}
-                <div className="relative z-10 space-y-6 md:space-y-0 md:space-y-0">
-                  {/* Step 1 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
+                {/* Steps container with improved mobile layout */}
+                <div className="space-y-8 md:space-y-0">
+                  {[
+                    {
+                      step: "01",
+                      title: "Contract Signing",
+                      description:
+                        "Both parties sign the sales contract to finalize terms and specifications for the raw materials.",
+                      align: "right",
+                    },
+                    {
+                      step: "02",
+                      title: "Material Collection",
+                      description:
+                        "The raw materials are transported to our depot within a maximum of three weeks for processing and preparation.",
+                      align: "left",
+                    },
+                    {
+                      step: "03",
+                      title: "Inspection & Approval",
+                      description:
+                        "The buyer has the option to visit our facilities to inspect the available stock before proceeding.",
+                      align: "right",
+                    },
+                    {
+                      step: "04",
+                      title: "Financial Arrangements",
+                      description:
+                        "Secure payment  Letter of Credit (LC) and Telegraphic Transfer (TT), with optional on-site stock inspection for buyer's confidence.",
+                      align: "left",
+                      special: true,
+                    },
+                    {
+                      step: "05",
+                      title: "Processing & Analysis",
+                      description:
+                        "The raw materials undergo processing as needed, and detailed analysis reports are prepared to verify quality and specifications.",
+                      align: "right",
+                    },
+                    {
+                      step: "06",
+                      title: "Packaging & Preparation",
+                      description:
+                        "The materials are properly packed and stored in containers according to international shipping standards, ready for export.",
+                      align: "left",
+                    },
+                    {
+                      step: "07",
+                      title: "Transportation & Shipping",
+                      description:
+                        "The containers are transported to the port and loaded onto the ship for export to the destination country.",
+                      align: "right",
+                    },
+                  ].map((item) => (
                     <div
-                      className="md:col-span-5 text-right md:pr-12 md:border-r md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-right"
+                      key={item.step}
+                      className="relative md:grid md:grid-cols-12 md:gap-8 items-center"
                     >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Contract Signing
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          Both parties sign the sales contract to finalize terms
-                          and specifications for the raw materials.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">01</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12"
-                      data-aos="fade-left"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                  </div>
+                      {/* Desktop Layout */}
+                      {item.align === "right" ? (
+                        <>
+                          <div className="md:col-span-5 md:text-right md:pr-12 md:border-r md:border-gray-200 dark:md:border-gray-700">
+                            <div className="hidden md:block mb-4 text-right">
+                              <h3 className="h4 font-red-hat-display mb-2">
+                                {item.title}
+                              </h3>
+                              <p className="text-gray-600 dark:text-gray-400">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="hidden md:flex md:col-span-2 justify-center">
+                            <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
+                              <span className="text-lg font-bold">
+                                {item.step}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="md:col-span-5 md:pl-12"></div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="md:col-span-5 md:text-right md:pr-12 hidden md:block"></div>
+                          <div className="md:col-span-2 hidden md:flex justify-center">
+                            <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
+                              <span className="text-lg font-bold">
+                                {item.step}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="md:col-span-5 md:pl-12 md:border-l md:border-gray-200 dark:md:border-gray-700">
+                            <div className="hidden md:block mb-4 text-left">
+                              <h3 className="h4 font-red-hat-display mb-2">
+                                {item.title}
+                              </h3>
+                              <p className="text-gray-600 dark:text-gray-400">
+                                {item.description}
+                              </p>
+                              {/* {item.special && (
+                                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1 mt-2">
+                                  <li>
+                                    <span className="font-medium">
+                                      Letter of Credit (LC):
+                                    </span>{" "}
+                                    Secure international payment with bank
+                                    guarantees
+                                  </li>
+                                  <li>
+                                    <span className="font-medium">
+                                      Telegraphic Transfer (TT):
+                                    </span>{" "}
+                                    Direct wire transfers for established
+                                    clients
+                                  </li>
+                                </ul>
+                              )} */}
+                            </div>
+                          </div>
+                        </>
+                      )}
 
-                  {/* Step 2 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12"
-                      data-aos="fade-right"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">02</span>
+                      {/* Mobile Layout */}
+                      <div className="md:hidden w-full">
+                        <div className="flex justify-center mb-4">
+                          <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
+                            <span className="text-lg font-bold">
+                              {item.step}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-center">
+                          <h3 className="h4 font-red-hat-display mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 mb-2">
+                            {item.description}
+                          </p>
+                          {/* {item.special && (
+                            <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1 inline-block text-left">
+                              <li>
+                                <span className="font-medium">
+                                  Letter of Credit (LC):
+                                </span>{" "}
+                                Secure international payment with bank
+                                guarantees
+                              </li>
+                              <li>
+                                <span className="font-medium">
+                                  Telegraphic Transfer (TT):
+                                </span>{" "}
+                                Direct wire transfers for established clients
+                              </li>
+                            </ul>
+                          )} */}
+                        </div>
                       </div>
                     </div>
-                    <div
-                      className="md:col-span-5 md:pl-12 md:border-l md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-left"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Material Collection
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          The raw materials are transported to our depot within
-                          a maximum of three weeks for processing and
-                          preparation.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12 md:border-r md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-right"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Inspection & Approval
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          The buyer has the option to visit our facilities to
-                          inspect the available stock before proceeding.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">03</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12"
-                      data-aos="fade-left"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                  </div>
-
-                  {/* Step 4 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12"
-                      data-aos="fade-right"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">04</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12 md:border-l md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-left"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Financial Arrangements
-                        </h3>
-                        {/* <p className="text-gray-600 dark:text-gray-400 mb-2">
-                          The buyer establishes payment methods according to
-                          agreed-upon terms. We offer flexible payment options
-                          to accommodate different client needs:
-                        </p> */}
-                        <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
-                          <li>
-                            <span className="font-medium">
-                              Letter of Credit (LC):
-                            </span>{" "}
-                            Secure international payment with bank guarantees
-                          </li>
-                          <li>
-                            <span className="font-medium">
-                              Telegraphic Transfer (TT):
-                            </span>{" "}
-                            Direct wire transfers for established clients
-                          </li>
-                          {/* <li>
-                            <span className="font-medium">
-                              Cash in Advance (CIA):
-                            </span>{" "}
-                            Available for smaller orders with expedited
-                            processing
-                          </li>
-                          <li>
-                            <span className="font-medium">
-                              Hybrid Solutions:
-                            </span>{" "}
-                            Customized payment structures for long-term
-                            partnerships
-                          </li> */}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Step 5 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12 md:border-r md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-right"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Processing & Analysis
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          The raw materials undergo processing as needed, and
-                          detailed analysis reports are prepared to verify
-                          quality and specifications.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">05</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12"
-                      data-aos="fade-left"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                  </div>
-
-                  {/* Step 6 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12"
-                      data-aos="fade-right"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">06</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12 md:border-l md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-left"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Packaging & Preparation
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          The materials are properly packed and stored in
-                          containers according to international shipping
-                          standards, ready for export.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Step 7 */}
-                  <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12 md:border-r md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-right"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Transportation & Shipping
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          The containers are transported to the port and loaded
-                          onto the ship for export to the destination country.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">07</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12"
-                      data-aos="fade-left"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                  </div>
-
-                  {/* Step 8 */}
-                  {/* <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-                    <div
-                      className="md:col-span-5 text-right md:pr-12"
-                      data-aos="fade-right"
-                    >
-                      <div className="hidden md:block"></div>
-                    </div>
-                    <div className="md:col-span-2 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-rocks-400 text-white flex items-center justify-center">
-                        <span className="text-lg font-bold">08</span>
-                      </div>
-                    </div>
-                    <div
-                      className="md:col-span-5 md:pl-12 md:border-l md:border-gray-200 dark:md:border-gray-700"
-                      data-aos="fade-left"
-                    >
-                      <div className="mb-4 md:mb-0">
-                        <h3 className="h4 font-red-hat-display mb-1">
-                          Documentation & Payment
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          All required documents are prepared and submitted for
-                          payment processing according to the agreed payment
-                          terms.
-                        </p>
-                      </div>
-                    </div>
-                  </div> */}
+                  ))}
                 </div>
               </div>
             </div>
