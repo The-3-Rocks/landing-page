@@ -7,8 +7,24 @@ import PostItem from "@/components/post-item";
 import Sidebar from "./sidebar";
 
 export const metadata = {
-  title: "Articles",
-  description: "Discover our raw materials",
+  title: "Moroccan Mining Insights & Industry Articles | The 3 Rocks Company",
+  description:
+    "Explore expert articles on Morocco's mining industry, mineral extraction, sustainability practices, and market trends from The 3 Rocks Company.",
+  keywords:
+    "Moroccan mining articles, mining insights Morocco, mineral industry news, Moroccan raw materials, cobalt mining, lead industry Morocco, sustainable mining Morocco",
+  openGraph: {
+    title: "Moroccan Mining Insights & Industry Articles",
+    description:
+      "Stay informed with in-depth articles covering Morocco’s mining sector, raw materials, and sustainability innovations.",
+    images: [
+      {
+        url: "/images/moroccan-mining-articles.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Moroccan Mining Articles by The 3 Rocks Company",
+      },
+    ],
+  },
 };
 
 export default function Blog() {
