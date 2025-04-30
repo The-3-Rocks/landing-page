@@ -6,9 +6,33 @@ import CtaContact from "@/components/cta-contact";
 import Cta from "@/components/cta";
 
 export const metadata = {
-  title: "Our Process | The 3 Rocks",
+  title:
+    "Our Mining Process | Premium Moroccan Minerals & Raw Materials | The 3 Rocks",
   description:
-    "Learn about The 3 Rocks' efficient and sustainable process for extracting, processing, and exporting premium raw materials worldwide.",
+    "Learn about The 3 Rocks' efficient and sustainable process for extracting, processing, and exporting premium Moroccan minerals and raw materials worldwide. Specializing in Morocco's diverse mining sector.",
+  keywords:
+    "Morocco mining, Moroccan minerals, mining process, raw materials Morocco, mineral export, Morocco mining sector, sustainable mining, Moroccan mineral resources, premium minerals, mining company Morocco",
+  openGraph: {
+    title: "Premium Moroccan Mining & Mineral Export Process | The 3 Rocks",
+    description:
+      "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
+    type: "website",
+    locale: "en_US",
+    siteName: "The 3 Rocks",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Moroccan Mining & Mineral Export Process | The 3 Rocks",
+    description:
+      "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
+  },
+  alternates: {
+    canonical: "https://the3rocks.com/our-process",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ProcessPage() {
