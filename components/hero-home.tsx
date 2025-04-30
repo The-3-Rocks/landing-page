@@ -106,7 +106,7 @@ export default function HeroHome() {
                   />
                   <button
                     type="submit"
-                    className={`btn text-white bg-teal-902 hover:bg-teal-901 shrink-0 ${
+                    className={`btn text-white bg-teal-600 hover:bg-teal-700 shrink-0 ${
                       submitting ? "opacity-50 pointer-events-none" : ""
                     }`}
                   >
@@ -162,7 +162,7 @@ export default function HeroHome() {
               >
                 <li className="flex items-center mb-2">
                   <svg
-                    className="w-3 h-3 fill-current text-teal-902 mr-2 shrink-0"
+                    className="w-3 h-3 fill-current text-teal-600 mr-2 shrink-0"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -172,7 +172,7 @@ export default function HeroHome() {
                 </li>
                 <li className="flex items-center mb-2">
                   <svg
-                    className="w-3 h-3 fill-current text-teal-902 mr-2 shrink-0"
+                    className="w-3 h-3 fill-current text-teal-600 mr-2 shrink-0"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -182,7 +182,7 @@ export default function HeroHome() {
                 </li>
                 <li className="flex items-center mb-2">
                   <svg
-                    className="w-3 h-3 fill-current text-teal-902 mr-2 shrink-0"
+                    className="w-3 h-3 fill-current text-teal-600 mr-2 shrink-0"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >

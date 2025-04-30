@@ -1,34 +1,105 @@
-import Image from 'next/image'
-import HeroBg from '@/public/images/hero-bg-03.jpg'
-import HeroImage from '@/public/images/about-hero.jpg'
+"use client";
+
+import React from "react";
+import Image from "next/image";
+
+// Import images
+import MiningHeroImage from "@/public/images/company.jpeg";
 
 export default function HeroAbout() {
   return (
     <section className="relative">
+      {/* Background gradient */}
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none -z-10"
+        aria-hidden="true"
+      ></div>
 
-      {/* Background image */}
-      <div className="absolute inset-0 h-128 pt-16 box-content -z-1">
-        <Image className="absolute inset-0 w-full h-full object-cover opacity-25" src={HeroBg} width={1440} height={577} priority alt="About" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
-      </div>
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-          <div className="text-center">
-            <div className="relative flex justify-center items-center">
-              <div className="relative inline-flex items-start" data-aos="fade-up">
-                <Image className="opacity-50" src={HeroImage} width={768} height={432} priority alt="About hero" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
+          {/* Hero content */}
+          <div className="relative max-w-xl mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">
+            {/* Content area */}
+            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+              <h1 className="h1 font-red-hat-display mb-4" data-aos="fade-up">
+                Morocco's Premier Mining Experts
+              </h1>
+              <p
+                className="text-xl text-gray-600 dark:text-gray-400 mb-8"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                The<span className="text-teal-400">3</span>Rocks Moroccan Mining
+                Company brings generations of expertise to mineral extraction in
+                Morocco's rich geological landscapes. Our commitment to
+                sustainable Moroccan mining practices has established us as
+                leaders in Morocco's mineral industry.
+              </p>
+              <div
+                className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <a
+                  className="btn text-white bg-teal-500 hover:bg-teal-400 w-full sm:w-auto"
+                  href="#mining-heritage"
+                >
+                  Our Moroccan Mining Heritage
+                </a>
+                <a
+                  className="btn text-white bg-gray-700 hover:bg-gray-600 w-full sm:w-auto"
+                  href="/contact"
+                >
+                  Contact Morocco's Mining Experts
+                </a>
               </div>
-              <div className="absolute" data-aos="fade-down">
-                <h1 className="h1 lg:text-6xl font-red-hat-display">Make your own <span className="text-teal-500">way</span></h1>
+            </div>
+
+            {/* Image area */}
+            <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="300">
+              <div className="relative">
+                <Image
+                  className="mx-auto md:max-w-none rounded-lg shadow-xl"
+                  src={MiningHeroImage}
+                  width={540}
+                  height={405}
+                  priority
+                  alt="The 3 Rocks mining operations in Morocco's mineral-rich mountains"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-teal-500 to-purple-500 opacity-15 rounded-lg"></div>
               </div>
-              <div className="absolute bottom-0 -mb-8 w-0.5 h-16 bg-gray-300 dark:bg-gray-700" aria-hidden="true"></div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-4 mt-8">
+                <div
+                  className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div className="text-3xl font-bold text-teal-500">+21</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    Years of Moroccan
+                    <br />
+                    Mining Excellence
+                  </div>
+                </div>
+                <div
+                  className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <div className="text-3xl font-bold text-teal-500">+7</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    Premium Moroccan
+                    <br />
+                    Minerals & Metals
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
-  )
+  );
 }

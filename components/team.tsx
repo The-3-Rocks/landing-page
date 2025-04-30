@@ -1,195 +1,144 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import TeamImage01 from "@/public/images/badr.png";
-import TeamImage02 from "@/public/images/shym.png";
-import TeamImage03 from "@/public/images/zack.png";
-import TeamImage04 from "@/public/images/marina.png";
+
+// Import team images
+import TeamMember3 from "@/public/images/badr.png";
+import TeamMember2 from "@/public/images/zack.png";
+import TeamMember1 from "@/public/images/pere.png";
 
 export default function Team() {
+  const [focusedMember, setFocusedMember] = useState<number | null>(null);
+
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Molay Ali Gadi",
+      role: "Chief Mining Operations Officer",
+      expertise: "Lead and Zinc Extraction",
+      bio: "With over 25 years of experience in Moroccan mining operations, Moaly Ali leads our mineral extraction strategies with unparalleled expertise in Morocco's geological formations.",
+      image: TeamMember1,
+    },
+    {
+      id: 2,
+      name: "Zakariae Hamedoun",
+      role: "Head of Sustainable Mining",
+      expertise: "Environmental Protection & Community Relations",
+      bio: "Zakaria ensures our Moroccan mining operations maintain the highest environmental standards while building positive relationships with local Moroccan communities.",
+      image: TeamMember2,
+    },
+    {
+      id: 3,
+      name: "Badr Gadi",
+      role: "Mineral Processing Director",
+      expertise: "Copper and Iron Processing",
+      bio: "Badr's innovative approaches to mineral processing have revolutionized our Moroccan facilities, maximizing yield while minimizing environmental impact.",
+      image: TeamMember3,
+    },
+    // {
+    //   id: 4,
+    //   name: "Leila Berrada",
+    //   role: "Quality Control Manager",
+    //   expertise: "Mineral Purity Standards",
+    //   bio: "Leila maintains rigorous quality assurance across all Moroccan minerals we extract, ensuring our products exceed international standards for purity and consistency.",
+    //   // image: TeamMember4,
+    // },
+    // {
+    //   id: 5,
+    //   name: "Youssef Chraibi",
+    //   role: "Moroccan Mining Exploration Lead",
+    //   expertise: "Geological Surveying & New Site Development",
+    //   bio: "Youssef's deep knowledge of Morocco's geological makeup has led to the discovery of several new high-yield mining locations across Morocco's mineral-rich regions.",
+    //   // image: TeamMember5,
+    // },
+    // {
+    //   id: 6,
+    //   name: "Nadia Ouazzani",
+    //   role: "International Trade Director",
+    //   expertise: "Global Distribution of Moroccan Minerals",
+    //   bio: "Nadia has established strong international partnerships that bring Morocco's premium minerals to markets worldwide, ensuring reliable supply chains and customer satisfaction.",
+    //   // image: TeamMember6,
+    // },
+  ];
+
   return (
-    <section>
+    <section className="relative border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
+        <div className="py-12 md:py-20">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto pb-12 md:pb-20">
-            <h2 className="h2 font-red-hat-display mb-4 text-center">
-              The<span className="text-teal-500">3</span>Rocks Team
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+            <h2 className="h2 font-red-hat-display mb-4">
+              Morocco's Mining Experts
             </h2>
-            <br></br>
-            <p className="text-xl text-gray-600 dark:text-gray-400 text-left">
-              A mining business that combines traditional methods with modern
-              techniques. This enduring enterprise adapts to technological and
-              market changes while preserving inherited practices and values.
-            </p>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
-              <span className="text-teal-500 font-bold">
-                Structure and Management:
-              </span>
-              <br></br>
-              The mine is managed by a skilled team, with each member
-              contributing based on experience and skills. The management team
-              makes key decisions collectively.
-            </p>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
-              <span className="text-teal-500 font-bold">
-                Generational Transition:
-              </span>
-              <br></br>
-              Management transitions are handled carefully, maintaining
-              traditional values while encouraging innovation.
-            </p>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
-              <span className="text-teal-500 font-bold">
-                Extraction Methods:
-              </span>
-              <br></br>
-              Honoring the legacy of the past, the mine uses some traditional
-              techniques and tools alongside advanced machinery like excavators
-              and modern drills to enhance efficiency and safety.
-            </p>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
-              <span className="text-teal-500 font-bold">Diversification:</span>
-              <br></br>
-              Beyond extraction, the company invests in sectors like mining
-              tourism, offering guided tours to educate the public about mining
-              history and processes.
-            </p>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
-              <span className="text-teal-500 font-bold">
-                Marketing and Distribution:
-              </span>
-              <br></br>
-              Products are sold locally and internationally, supported by strong
-              relationships with buyers and distributors. The mine is renowned
-              for quality, reliability, and excellence.
-            </p>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 text-left">
-              <span className="text-teal-500 font-bold">
-                Challenges and Future:
-              </span>
-              <br></br>
-              Facing fluctuating mineral prices, regulations, and climate
-              changes, the company plans long-term. They aim to integrate
-              emerging technologies, expand into new markets, and train future
-              generations.
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Our team combines generations of Moroccan mining knowledge with
+              modern expertise to deliver exceptional quality minerals from
+              Morocco's rich geological deposits.
             </p>
           </div>
 
           {/* Team members */}
-          <div className="max-w-xs sm:max-w-lg md:max-w-3xl lg:max-w-5xl mx-auto">
-            <div
-              className="flex flex-wrap justify-center -m-5 lg:-my-7 lg:gap-12"
-              data-aos-id-team
-            >
-              {/* 1st member */}
+          <div className="max-w-sm sm:max-w-5xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-16 items-start">
+            {teamMembers.map((member) => (
               <div
-                className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
-                data-aos="fade-down"
-                data-aos-anchor="[data-aos-id-team]"
+                key={member.id}
+                className="relative flex flex-col items-center"
+                onMouseEnter={() => setFocusedMember(member.id)}
+                onMouseLeave={() => setFocusedMember(null)}
+                data-aos="fade-up"
               >
-                <div className="flex flex-col items-center">
+                <div className="relative rounded-full overflow-hidden mb-4 w-40 h-40">
                   <Image
-                    className="rounded-full mb-2"
-                    src={TeamImage01}
-                    width={100}
-                    height={100}
-                    alt="Team member 01"
+                    className={`object-cover transition duration-500 ease-in-out ${
+                      focusedMember === member.id ? "scale-110" : "scale-100"
+                    }`}
+                    src={member.image}
+                    width={160}
+                    height={160}
+                    alt={`${member.name} - ${member.role} at The 3 Rocks Moroccan Mining Company`}
                   />
-                  <h4 className="dark:text-gray-300 text-lg font-medium text-center">
-                    Badr Gadi
-                  </h4>
-                  <h6 className="text-center">
-                    <strong>CEO</strong> of The
-                    <span className="text-teal-500">3</span>Rocks
-                  </h6>
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-500 to-transparent opacity-20"></div>
+                </div>
+                <div
+                  className={`text-center ${
+                    focusedMember === member.id
+                      ? "scale-105 transition duration-300"
+                      : ""
+                  }`}
+                >
+                  <h4 className="text-xl font-bold mb-1">{member.name}</h4>
+                  <div className="text-teal-500 font-medium mb-2">
+                    {member.role}
+                  </div>
+                  <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                    {member.expertise}
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {member.bio}
+                  </p>
                 </div>
               </div>
-
-              {/* 2nd member */}
-              {/* <div
-                className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
-                data-aos="fade-down"
-                data-aos-delay="100"
-                data-aos-anchor="[data-aos-id-team]"
-              >
-                <div className="flex flex-col items-center">
-                  <Image
-                    className="rounded-full mb-2"
-                    src={TeamImage02}
-                    width={100}
-                    height={100}
-                    alt="Team member 02"
-                  />
-                  <h4 className="dark:text-gray-300 text-lg font-medium">
-                    Shym Hazim
-                  </h4>
-                  <h6 className="text-center">
-                    <strong>COO</strong> of The
-                    <span className="text-teal-500">3</span>Rocks
-                  </h6>
-                </div>
-              </div> */}
-
-              {/* 3rd member */}
-              <div
-                className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
-                data-aos="fade-down"
-                data-aos-delay="200"
-                data-aos-anchor="[data-aos-id-team]"
-              >
-                <div className="flex flex-col items-center">
-                  <Image
-                    className="cover rounded-full mb-2"
-                    src={TeamImage03}
-                    width={100}
-                    height={100}
-                    alt="Team member 03"
-                  />
-                  <h4 className="dark:text-gray-300 text-lg font-medium text-center">
-                    Zakariae Hamedoun
-                  </h4>
-                  <h6 className="text-center">
-                    <strong>CTO</strong> of The
-                    <span className="text-teal-500">3</span>Rocks
-                  </h6>
-                </div>
-              </div>
-
-              {/* 4th member */}
-              {/* <div
-                className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7"
-                data-aos="fade-down"
-                data-aos-delay="200"
-                data-aos-anchor="[data-aos-id-team]"
-              >
-                <div className="flex flex-col items-center">
-                  <Image
-                    className="cover rounded-full mb-2"
-                    src={TeamImage04}
-                    width={100}
-                    height={100}
-                    alt="Team member 03"
-                  />
-                  <h4 className="dark:text-gray-300 text-lg font-medium text-center">
-                    Marina Sherbakova
-                  </h4>
-                  <h6 className="text-center">
-                    <h6>International Logistics Manager</h6>
-                  </h6>
-                </div>
-              </div> */}
-              {/* <div className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-5 lg:py-7" data-aos="fade-down" data-aos-delay="300" data-aos-anchor="[data-aos-id-team]">
-                <div className="flex flex-col items-center">
-                  <Image className="rounded-full mb-2" src={TeamImage04} width={80} height={80} alt="Team member 04" />
-                  <h4 className="dark:text-gray-300 text-lg font-medium">George Hurley</h4>
-                  <a className="p-2" href="#0">
-                    <svg width="16" height="13" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16 1.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7C5.2 3.9 2.7 2.6 1.1.6c-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z" fill="#1DA1F2" fillRule="nonzero" />
-                    </svg>
-                  </a>
-                </div>
-              </div> */}
-            </div>
+            ))}
           </div>
+
+          {/* Team values */}
+          {/* <div className="max-w-3xl mx-auto text-center pt-12 md:pt-20">
+            <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-teal-600 bg-teal-200 rounded-full mb-4">
+              Moroccan Mining Values
+            </div>
+            <h3 className="h3 font-red-hat-display mb-4">
+              Committed to Excellence in Morocco's Mining Industry
+            </h3>
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              Our team is dedicated to sustainable mining practices that honor
+              Morocco's rich mineral heritage while creating value for
+              customers, communities, and the environment. We combine
+              traditional Moroccan mining knowledge with cutting-edge technology
+              to deliver superior quality minerals from Morocco's legendary
+              mining regions.
+            </p>
+          </div> */}
         </div>
       </div>
     </section>

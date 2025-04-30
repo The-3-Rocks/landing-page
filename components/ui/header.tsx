@@ -13,7 +13,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
           <div className="shrink-0 mr-5">
-            <Link href="/" className="block" aria-label="Cruip">
+            <Link
+              href="/"
+              className="block"
+              aria-label="Moroccan Mining Company"
+            >
               <Logo />
               {/* <Image src={imageLogo} alt="Logo" width={80} height={80} /> */}
             </Link>
@@ -26,7 +30,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Who Are We
                 </Link>
@@ -34,7 +38,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/our-raw"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Products
                 </Link>
@@ -42,7 +46,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/#services"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Services
                 </Link>
@@ -50,7 +54,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/our-products"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Articles
                 </Link>
@@ -58,7 +62,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Contact
                 </Link>
@@ -92,9 +96,23 @@ export default function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="btn-sm text-white bg-teal-902 hover:bg-teal-901 ml-6"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-150 ml-6"
                 >
-                  Unlock Mining Potential
+                  <span>Moroccan Mining Solutions</span>
+                  <svg
+                    className="w-4 h-4 ml-1.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
                 </Link>
               </li>
             </ul>

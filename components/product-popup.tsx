@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ProductGridItem } from "app/types/product";
 
@@ -40,12 +40,12 @@ interface BariteDetail extends BaseProductDetail {
 
 type ProductDetail = LeadZincDetail | StandardProductDetail | BariteDetail;
 
-// Detailed product data including info from your PDF
+// Detailed product data including info from your PDF - enhanced with Morocco references
 const productDetails: Record<string, ProductDetail> = {
   lead: {
-    title: "Lead",
+    title: "Moroccan Lead",
     description:
-      "At The 3 Rocks Company, we pride ourselves on offering high-quality lead that stands out for its exceptional purity and unmatched durability.",
+      "At The 3 Rocks Company, we pride ourselves on offering high-quality Moroccan lead that stands out for its exceptional purity and unmatched durability, sourced from Morocco's historic mining regions.",
     purity: {
       concentrate: "86% pure lead",
       powder: "86% pure lead",
@@ -65,14 +65,14 @@ const productDetails: Record<string, ProductDetail> = {
       "Cosmetics manufacturing",
     ],
     qualityAssurance:
-      "Our lead meets the highest industry standards with strict quality control processes throughout extraction and processing.",
-    annualExtraction: "75,000 tons",
+      "Our Moroccan lead meets the highest industry standards with strict quality control processes throughout extraction and processing at our Morocco-based facilities.",
+    annualExtraction: "75,000 tons from Moroccan mines",
     purityLevel: "99.97%",
   },
   copper: {
-    title: "Copper",
+    title: "Moroccan Copper",
     description:
-      "Our copper stands out for its exceptional quality and versatility, making it indispensable for a variety of industrial applications.",
+      "Our Moroccan copper stands out for its exceptional quality and versatility, making it indispensable for a variety of industrial applications worldwide.",
     purity: "8% to 21% (with special permit for 40% high-purity copper)",
     stock: "+500 tons",
     applications: [
@@ -83,14 +83,14 @@ const productDetails: Record<string, ProductDetail> = {
       "Heat exchangers and cooling systems",
     ],
     qualityAssurance:
-      "Through meticulous quality control from extraction to processing, we guarantee copper that consistently delivers performance and reliability.",
-    annualExtraction: "60,000 tons",
+      "Through meticulous quality control from extraction in Morocco's copper-rich regions to processing, we guarantee copper that consistently delivers performance and reliability.",
+    annualExtraction: "60,000 tons from Morocco's mineral deposits",
     purityLevel: "99.9%",
   },
   zinc: {
-    title: "Zinc (Calamine)",
+    title: "Moroccan Zinc (Calamine)",
     description:
-      "Our high-quality zinc calamine offers exceptional purity and reliability for various applications, including cosmetics.",
+      "Our high-quality Moroccan zinc calamine offers exceptional purity and reliability for various applications, including cosmetics and industrial uses.",
     purity: {
       ore: "+37%",
       concentrate: "70%",
@@ -107,14 +107,14 @@ const productDetails: Record<string, ProductDetail> = {
       "Die-casting",
     ],
     qualityAssurance:
-      "With meticulous production and strict quality control, we meet the highest industry standards.",
-    annualExtraction: "50,000+ tons",
+      "With meticulous production and strict quality control at our Moroccan facilities, we meet the highest industry standards for zinc processing.",
+    annualExtraction: "50,000+ tons from Morocco's zinc deposits",
     purityLevel: "99.95%",
   },
   barite: {
-    title: "Barite",
+    title: "Moroccan Barite",
     description:
-      "Our Barite is renowned for its high quality and purity, making it indispensable for a wide range of industrial applications.",
+      "Our Moroccan Barite is renowned for its high quality and purity, making it indispensable for a wide range of industrial applications globally.",
     density: "4.18 - 4.28",
     stock: "400 tons",
     applications: [
@@ -125,14 +125,14 @@ const productDetails: Record<string, ProductDetail> = {
       "Pharmaceutical applications",
     ],
     qualityAssurance:
-      "With rigorous sourcing and manufacturing processes, we ensure that our Barytine meets stringent industry standards.",
-    annualExtraction: "80,000 tons",
+      "With rigorous sourcing from Morocco's barite-rich regions and manufacturing processes, we ensure that our Barytine meets stringent industry standards.",
+    annualExtraction: "80,000 tons from Morocco's mineral deposits",
     purityLevel: "4.2 specific gravity",
   },
   iron: {
-    title: "Iron",
+    title: "Moroccan Iron",
     description:
-      "Our iron is distinguished by its superior quality and adaptability, essential for a wide array of industrial uses.",
+      "Our Moroccan iron is distinguished by its superior quality and adaptability, essential for a wide array of industrial uses around the world.",
     purity: "≥ 56%",
     stock: "40,000 tons",
     applications: [
@@ -143,14 +143,14 @@ const productDetails: Record<string, ProductDetail> = {
       "Tools and hardware",
     ],
     qualityAssurance:
-      "With rigorous quality control from sourcing to production, we guarantee that our iron meets the most rigorous industry standards.",
-    annualExtraction: "120,000 tons",
+      "With rigorous quality control from sourcing to production in our Moroccan facilities, we guarantee that our iron meets the most rigorous industry standards.",
+    annualExtraction: "120,000 tons from Morocco's iron-rich mountains",
     purityLevel: "98.5%",
   },
   cobalt: {
-    title: "Cobalt",
+    title: "Moroccan Cobalt",
     description:
-      "Our high-quality cobalt is essential for modern technology and industrial applications.",
+      "Our high-quality Moroccan cobalt is essential for modern technology and industrial applications, sustainably sourced from Morocco's mineral wealth.",
     purity: "42%+",
     stock: "Available upon request",
     applications: [
@@ -161,14 +161,14 @@ const productDetails: Record<string, ProductDetail> = {
       "Healthcare applications",
     ],
     qualityAssurance:
-      "We source cobalt responsibly and ensure consistent quality for all technological and industrial uses.",
-    annualExtraction: "New",
+      "We source cobalt responsibly from Morocco's mining regions and ensure consistent quality for all technological and industrial uses.",
+    annualExtraction: "New addition to Morocco's mineral exports",
     purityLevel: "99.8%",
   },
   antimony: {
-    title: "Antimony",
+    title: "Moroccan Antimony",
     description:
-      "Our premium antimony provides exceptional quality for various industrial applications.",
+      "Our premium Moroccan antimony provides exceptional quality for various industrial applications, sourced from Morocco's exclusive mining operations.",
     purity: "30%+",
     stock: "+700 tons",
     applications: [
@@ -179,8 +179,8 @@ const productDetails: Record<string, ProductDetail> = {
       "Metal alloys",
     ],
     qualityAssurance:
-      "Our antimony undergoes strict quality control to meet the highest industry standards.",
-    annualExtraction: "25,000 tons",
+      "Our Moroccan antimony undergoes strict quality control to meet the highest industry standards in our state-of-the-art Moroccan facilities.",
+    annualExtraction: "25,000 tons from Morocco's antimony deposits",
     purityLevel: "99.65%",
   },
 };
@@ -233,9 +233,37 @@ export default function ProductPopup({
     id: product.id, // Add the ID from the product to the details
   };
 
+  // Handle Escape key press to close popup
+  useEffect(() => {
+    const handleEscapeKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    // Add event listener when component mounts
+    document.addEventListener("keydown", handleEscapeKey);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [onClose]);
+
+  // Handle background click to close popup
+  const handleBackgroundClick = () => {
+    onClose();
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75"
+      onClick={handleBackgroundClick}
+    >
+      <div
+        className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+      >
         {/* Close button */}
         <button
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
@@ -266,7 +294,7 @@ export default function ProductPopup({
               >
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={`Moroccan ${product.name} mineral`}
                   className="object-cover"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -281,7 +309,7 @@ export default function ProductPopup({
                   {details.title}
                 </h2>
                 <div className="inline-flex px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-sm font-medium dark:bg-teal-900 dark:text-teal-300">
-                  Premium Quality
+                  Premium Moroccan Quality
                 </div>
               </div>
 
@@ -291,11 +319,13 @@ export default function ProductPopup({
 
               {/* Key specifications */}
               <div className="mb-6">
-                <h3 className="font-bold text-lg mb-3">Key Specifications</h3>
+                <h3 className="font-bold text-lg mb-3">
+                  Moroccan Mining Specifications
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                     <span className="text-sm text-gray-500 dark:text-gray-400 block">
-                      Purity Level
+                      Moroccan Purity Level
                     </span>
                     <span className="text-xl font-bold block">
                       {"density" in details
@@ -307,7 +337,7 @@ export default function ProductPopup({
                   </div>
                   <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                     <span className="text-sm text-gray-500 dark:text-gray-400 block">
-                      Annual Extraction
+                      Annual Moroccan Extraction
                     </span>
                     <span className="text-xl font-bold block">
                       {details.annualExtraction}
@@ -315,7 +345,7 @@ export default function ProductPopup({
                   </div>
                   <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                     <span className="text-sm text-gray-500 dark:text-gray-400 block">
-                      Available Stock
+                      Available Moroccan Stock
                     </span>
                     <span className="text-xl font-bold block">
                       {"stock" in details
@@ -325,7 +355,7 @@ export default function ProductPopup({
                   </div>
                   <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                     <span className="text-sm text-gray-500 dark:text-gray-400 block">
-                      Industry Grade
+                      Morocco Industry Grade
                     </span>
                     <span className="text-xl font-bold block">
                       {details.purityLevel}
@@ -336,7 +366,9 @@ export default function ProductPopup({
 
               {/* Applications */}
               <div className="mb-6">
-                <h3 className="font-bold text-lg mb-3">Applications</h3>
+                <h3 className="font-bold text-lg mb-3">
+                  Moroccan Mining Applications
+                </h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {details.applications.map((app, index) => (
                     <li key={index} className="flex items-center">
@@ -360,7 +392,9 @@ export default function ProductPopup({
 
               {/* Quality Assurance */}
               <div className="mb-6">
-                <h3 className="font-bold text-lg mb-3">Quality Assurance</h3>
+                <h3 className="font-bold text-lg mb-3">
+                  Moroccan Quality Assurance
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   {details.qualityAssurance}
                 </p>
@@ -372,7 +406,7 @@ export default function ProductPopup({
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                 >
-                  Request Quote
+                  Request Moroccan Minerals Quote
                   <svg
                     className="ml-2 -mr-1 w-5 h-5"
                     fill="currentColor"

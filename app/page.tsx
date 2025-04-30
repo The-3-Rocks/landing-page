@@ -35,7 +35,7 @@ import PricingTables from "@/components/pricing-tables";
 import TestimonialsBlocks from "@/components/testimonials-blocks";
 import FeaturesBlocks from "@/components/features-blocks";
 import Cta from "@/components/cta";
-
+import MoroccanMaterialsCarousel from "@/components/MoroccanMaterialsCarousel";
 export default function Home() {
   return (
     <>
@@ -48,9 +48,12 @@ export default function Home() {
       </div>
       <Hero />
       <Stats />
-      <Carousel />
-      <Tabs />
+      {/* <Carousel /> */}
+      <MoroccanMaterialsCarousel />
+      {/* <MoroccanMaterialsCarousel /> */}
       <MiningProcess />
+      <Tabs />
+
       {/* <PricingTables /> */}
       <TestimonialsBlocks />
       <FeaturesBlocks />

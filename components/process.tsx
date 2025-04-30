@@ -9,13 +9,16 @@ import AnalysisImage from "@/public/images/analyses11.png";
 
 export default function MiningProcess() {
   return (
-    <section className="relative">
+    <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-600 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+              Morocco's Mining Excellence
+            </div>
             <h2 className="h2 font-red-hat-display mb-4">
-              Our <span className="text-rocks-400">Premium</span> Raw Materials
+              Our <span className="text-teal-500">Premium</span> Raw Materials
               Process
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
@@ -42,8 +45,8 @@ export default function MiningProcess() {
                 r="39.386%"
                 id="processglow__a"
               >
-                <stop stopColor="#3ABAB4" offset="0%" />
-                <stop stopColor="#3ABAB4" stopOpacity="0" offset="100%" />
+                <stop stopColor="#14b8a6" offset="0%" />
+                <stop stopColor="#14b8a6" stopOpacity="0" offset="100%" />
               </radialGradient>
               <radialGradient
                 cx="50%"
@@ -53,8 +56,8 @@ export default function MiningProcess() {
                 r="39.386%"
                 id="processglow__b"
               >
-                <stop stopColor="#3ABAB4" offset="0%" />
-                <stop stopColor="#3ABAB4" stopOpacity="0" offset="100%" />
+                <stop stopColor="#14b8a6" offset="0%" />
+                <stop stopColor="#14b8a6" stopOpacity="0" offset="100%" />
               </radialGradient>
             </defs>
             <g transform="translate(-64 -64)" fill="none" fillRule="evenodd">
@@ -79,7 +82,7 @@ export default function MiningProcess() {
           <div className="relative max-w-5xl mx-auto">
             {/* Connecting line */}
             <div
-              className="absolute h-1 bg-rocks-200 dark:bg-rocks-900 hidden md:block"
+              className="absolute h-1 bg-teal-200 dark:bg-teal-900 hidden md:block"
               style={{ top: "65px", left: "15%", right: "15%" }}
             ></div>
 
@@ -91,7 +94,7 @@ export default function MiningProcess() {
                 data-aos="fade-up"
               >
                 {/* Number */}
-                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
                   1
                 </div>
                 {/* Image */}
@@ -101,9 +104,9 @@ export default function MiningProcess() {
                     src={ExtractionImage}
                     width={300}
                     height={225}
-                    alt="Raw material extraction"
+                    alt="Moroccan raw material extraction"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">
                       Extraction
                     </h3>
@@ -112,9 +115,9 @@ export default function MiningProcess() {
                 {/* Description */}
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-400">
-                    We extract raw materials using sustainable methods that
-                    minimize environmental impact while maximizing resource
-                    quality.
+                    We extract raw materials from Morocco using sustainable
+                    methods that minimize environmental impact while maximizing
+                    resource quality.
                   </p>
                 </div>
               </div>
@@ -126,7 +129,7 @@ export default function MiningProcess() {
                 data-aos-delay="100"
               >
                 {/* Number */}
-                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
                   2
                 </div>
                 {/* Image */}
@@ -136,9 +139,9 @@ export default function MiningProcess() {
                     src={AnalysisImage}
                     width={300}
                     height={225}
-                    alt="Material analysis"
+                    alt="Moroccan material analysis"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">
                       Analysis
                     </h3>
@@ -148,7 +151,8 @@ export default function MiningProcess() {
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-400">
                     Each batch undergoes rigorous testing and analysis to verify
-                    purity levels and ensure compliance with quality standards.
+                    purity levels and ensure compliance with international
+                    quality standards.
                   </p>
                 </div>
               </div>
@@ -160,7 +164,7 @@ export default function MiningProcess() {
                 data-aos-delay="200"
               >
                 {/* Number */}
-                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
                   3
                 </div>
                 {/* Image */}
@@ -170,9 +174,9 @@ export default function MiningProcess() {
                     src={ProcessingImage}
                     width={300}
                     height={225}
-                    alt="Material processing"
+                    alt="Moroccan material processing"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">
                       Processing
                     </h3>
@@ -194,7 +198,7 @@ export default function MiningProcess() {
                 data-aos-delay="300"
               >
                 {/* Number */}
-                <div className="w-16 h-16 rounded-full bg-rocks-400 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
+                <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
                   4
                 </div>
                 {/* Image */}
@@ -204,9 +208,9 @@ export default function MiningProcess() {
                     src={ExportImage}
                     width={300}
                     height={225}
-                    alt="Material export"
+                    alt="Material export from Morocco"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rocks-900/70 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">Export</h3>
                   </div>
                 </div>
@@ -214,7 +218,8 @@ export default function MiningProcess() {
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-400">
                     We handle all documentation, logistics, and shipping
-                    requirements to ensure timely delivery to your destination.
+                    requirements to ensure timely delivery from Morocco to your
+                    destination.
                   </p>
                 </div>
               </div>
@@ -228,9 +233,21 @@ export default function MiningProcess() {
               </p>
               <Link
                 href="/our-process"
-                className="btn text-white bg-rocks-400 hover:bg-rocks-500"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
               >
                 View Full Process Details
+                <svg
+                  className="ml-2 -mr-1 w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
               </Link>
             </div>
           </div>
