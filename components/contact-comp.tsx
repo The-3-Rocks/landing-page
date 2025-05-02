@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { ref, push, set } from "firebase/database";
+import { ref, push, set, serverTimestamp } from "firebase/database";
 import { db } from "../app/firebaseConfig"; // Import your Firebase config
 import {
   FaCheck,
@@ -400,12 +400,29 @@ const Contact: React.FC = () => {
       setSubmitting(true);
       const newRef = push(ref(db, "clients")); // Create a new reference under 'clients'
 
+      const formatTimestamp = (timestamp: number): string => {
+        const date = new Date(timestamp);
+
+        // Get date components
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0"); // Month is 0-indexed
+        const year = date.getFullYear();
+
+        // Get time components
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const seconds = String(date.getSeconds()).padStart(2, "0");
+
+        // Return formatted date string
+        return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+      };
       // Combine phone code and phone number for storage
       const dataToSubmit = {
         ...formData,
         fullPhone: `${formData.phoneCode} ${formData.phone}`,
+        createdAt: formatTimestamp(Date.now()),
       };
-
+      console.log(formatTimestamp(Date.now()));
       await set(newRef, dataToSubmit); // Write the data to the new reference
 
       // Handle successful submission (e.g., show a success message)
