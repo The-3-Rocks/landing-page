@@ -7,6 +7,7 @@ import Image from "next/image";
 import TeamMember3 from "@/public/images/badr.png";
 import TeamMember2 from "@/public/images/zack.png";
 import TeamMember1 from "@/public/images/pere.png";
+import TeamMember5 from "@/public/images/khalii.png";
 
 export default function Team() {
   const [focusedMember, setFocusedMember] = useState<number | null>(null);
@@ -22,12 +23,21 @@ export default function Team() {
     },
     {
       id: 2,
+      name: "Si Mohamed Elgaoui",
+      role: "Moroccan Mining Exploration raw materials",
+      expertise: "Geological Surveying & New Site Development",
+      bio: "Mohamed's deep knowledge of Morocco's geological makeup has led to the discovery of several new high-yield mining locations across Morocco's mineral-rich regions.",
+      image: TeamMember5,
+    },
+    {
+      id: 4,
       name: "Zakariae Hamedoun",
       role: "Head of Sustainable Mining",
       expertise: "Environmental Protection & Community Relations",
       bio: "Zakaria ensures our Moroccan mining operations maintain the highest environmental standards while building positive relationships with local Moroccan communities.",
       image: TeamMember2,
     },
+
     {
       id: 3,
       name: "Badr Gadi",
@@ -44,14 +54,7 @@ export default function Team() {
     //   bio: "Leila maintains rigorous quality assurance across all Moroccan minerals we extract, ensuring our products exceed international standards for purity and consistency.",
     //   // image: TeamMember4,
     // },
-    // {
-    //   id: 5,
-    //   name: "Youssef Chraibi",
-    //   role: "Moroccan Mining Exploration Lead",
-    //   expertise: "Geological Surveying & New Site Development",
-    //   bio: "Youssef's deep knowledge of Morocco's geological makeup has led to the discovery of several new high-yield mining locations across Morocco's mineral-rich regions.",
-    //   // image: TeamMember5,
-    // },
+
     // {
     //   id: 6,
     //   name: "Nadia Ouazzani",
@@ -79,7 +82,7 @@ export default function Team() {
           </div>
 
           {/* Team members */}
-          <div className="max-w-sm sm:max-w-5xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-16 items-start">
+          <div className="max-w-sm sm:max-w-5xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:gap-16 items-start">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
