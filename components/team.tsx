@@ -24,7 +24,7 @@ export default function Team() {
     {
       id: 2,
       name: "Si Mohamed Elgaoui",
-      role: "Moroccan Mining Exploration raw materials",
+      role: "Moroccan Mining Exploration Raw Materials",
       expertise: "Geological Surveying & New Site Development",
       bio: "Mohamed's deep knowledge of Morocco's geological makeup has led to the discovery of several new high-yield mining locations across Morocco's mineral-rich regions.",
       image: TeamMember5,
