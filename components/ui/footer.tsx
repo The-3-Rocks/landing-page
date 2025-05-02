@@ -145,7 +145,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="https://www.linkedin.com/company/the-3rocks"
+                      href="https://www.linkedin.com/company/the-3-rocks/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -228,7 +228,7 @@ export default function Footer() {
               <li className="ml-4">
                 <a
                   className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
-                  href="https://www.linkedin.com/company/the-3rocks"
+                  href="https://www.linkedin.com/company/the-3-rocks/"
                   aria-label="Linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
