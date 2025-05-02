@@ -46,7 +46,7 @@ export default function MoroccoMaterialsCarousel() {
       name: "Copper",
       image: CarouselImage08,
       description: "Superior Moroccan copper resources",
-      link: "/our-products/copper",
+      link: "/our-products/acopper",
       purity: "Up to 8% purity",
       color: "from-amber-500 to-amber-700",
     },
