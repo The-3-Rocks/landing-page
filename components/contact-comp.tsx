@@ -422,7 +422,6 @@ const Contact: React.FC = () => {
         fullPhone: `${formData.phoneCode} ${formData.phone}`,
         createdAt: formatTimestamp(Date.now()),
       };
-      console.log(formatTimestamp(Date.now()));
       await set(newRef, dataToSubmit); // Write the data to the new reference
 
       // Handle successful submission (e.g., show a success message)
