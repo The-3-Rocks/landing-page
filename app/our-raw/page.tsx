@@ -10,7 +10,7 @@ export const metadata = {
       "Discover our extensive range of high-quality Moroccan minerals and raw materials sourced from Morocco's legendary mining regions.",
     images: [
       {
-        url: "/images/raw-material-lead.jpg",
+        url: "@/public/images/the3rocks.png",
         width: 1200,
         height: 630,
         alt: "Moroccan Premium Mining Materials",
