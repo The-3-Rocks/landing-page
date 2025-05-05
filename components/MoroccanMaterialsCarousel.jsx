@@ -260,7 +260,7 @@ export default function MoroccoMaterialsCarousel() {
                         href={material.link}
                         className="inline-flex items-center justify-center w-full px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors duration-200 dark:bg-teal-700 dark:hover:bg-teal-600"
                       >
-                        <span>Learn More</span>
+                        <span>Discover {material.name} Solutions</span>
                         <svg
                           className="w-4 h-4 ml-1.5"
                           fill="none"
