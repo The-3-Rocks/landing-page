@@ -83,7 +83,7 @@ export default function MiningProcess() {
             {/* Connecting line */}
             <div
               className="absolute h-1 bg-teal-200 dark:bg-teal-900 hidden md:block"
-              style={{ top: "65px", left: "15%", right: "15%" }}
+              style={{ top: "30px", left: "12%", right: "12%" }}
             ></div>
 
             {/* Process steps */}
