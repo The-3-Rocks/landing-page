@@ -137,9 +137,9 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="tel:+212612151391"
+                      href="tel:+212654352802"
                     >
-                      Phone: +212 612 151 391
+                      Phone: +212 654 352 802
                     </a>
                   </li>
                   <li className="mb-1">
