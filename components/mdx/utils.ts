@@ -56,5 +56,5 @@ export function getBlogPosts() {
 }
 
 export function getProductsPosts() {
-  return getMDXData(path.join(process.cwd(), "content/our-products"));
+  return getMDXData(path.join(process.cwd(), "content/articles"));
 }

@@ -22,7 +22,7 @@ export default function RelatedPosts02() {
               data-aos-id-relposts
             >
               {/* Lead article */}
-              {currentPath !== "/our-products/lead" && (
+              {currentPath !== "/articles/lead" && (
                 <article
                   className="relative group p-6 text-white"
                   data-aos="fade-down"
@@ -41,9 +41,13 @@ export default function RelatedPosts02() {
                   </figure>
                   <div className="relative flex flex-col h-full">
                     <header className="grow">
-                      <a className="hover:underline" href="/our-products/lead">
+                      <a className="hover:underline" href="/articles/lead">
                         <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                          What makes lead indispensable across various industries, and how does The<span className="text-teal-400">3</span>rocks provide versatile and reliable lead solutions to meet these needs?
+                          What makes lead indispensable across various
+                          industries, and how does The
+                          <span className="text-teal-400">3</span>rocks provide
+                          versatile and reliable lead solutions to meet these
+                          needs?
                         </h3>
                       </a>
                       <div className="text-sm opacity-80">Nov 16, 2020</div>
@@ -53,7 +57,7 @@ export default function RelatedPosts02() {
               )}
 
               {/* Barite article */}
-              {currentPath !== "/our-products/barite" && (
+              {currentPath !== "/articles/barite" && (
                 <article
                   className="relative group p-6 text-white"
                   data-aos="fade-down"
@@ -73,9 +77,12 @@ export default function RelatedPosts02() {
                   </figure>
                   <div className="relative flex flex-col h-full">
                     <header className="grow">
-                      <a className="hover:underline" href="/our-products/barite">
+                      <a className="hover:underline" href="/articles/barite">
                         <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                          What makes barite essential for industries like oil and gas, healthcare, and construction, and how does The<span className="text-teal-400">3</span>rocks supply premium barite products?
+                          What makes barite essential for industries like oil
+                          and gas, healthcare, and construction, and how does
+                          The<span className="text-teal-400">3</span>rocks
+                          supply premium barite products?
                         </h3>
                       </a>
                       <div className="text-sm opacity-80">Nov 12, 2020</div>
@@ -85,7 +92,7 @@ export default function RelatedPosts02() {
               )}
 
               {/* Iron article */}
-              {currentPath !== "/our-products/iron" && (
+              {currentPath !== "/articles/iron" && (
                 <article
                   className="relative group p-6 text-white"
                   data-aos="fade-down"
@@ -105,9 +112,12 @@ export default function RelatedPosts02() {
                   </figure>
                   <div className="relative flex flex-col h-full">
                     <header className="grow">
-                      <a className="hover:underline" href="/our-products/iron">
+                      <a className="hover:underline" href="/articles/iron">
                         <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                          What makes iron indispensable for construction, manufacturing, and infrastructure, and how does The<span className="text-teal-400">3</span>rocks provide high-quality iron products for these applications?
+                          What makes iron indispensable for construction,
+                          manufacturing, and infrastructure, and how does The
+                          <span className="text-teal-400">3</span>rocks provide
+                          high-quality iron products for these applications?
                         </h3>
                       </a>
                       <div className="text-sm opacity-80">Nov 12, 2020</div>
@@ -117,7 +127,7 @@ export default function RelatedPosts02() {
               )}
 
               {/* Zinc article */}
-              {currentPath !== "/our-products/zinc" && (
+              {currentPath !== "/articles/zinc" && (
                 <article
                   className="relative group p-6 text-white"
                   data-aos="fade-down"
@@ -137,9 +147,13 @@ export default function RelatedPosts02() {
                   </figure>
                   <div className="relative flex flex-col h-full">
                     <header className="grow">
-                      <a className="hover:underline" href="/our-products/zinc">
+                      <a className="hover:underline" href="/articles/zinc">
                         <h3 className="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                          What makes zinc indispensable in modern industries, and how does The<span className="text-teal-400">3</span>rocks provide top-quality zinc products to meet diverse industrial needs?
+                          What makes zinc indispensable in modern industries,
+                          and how does The
+                          <span className="text-teal-400">3</span>rocks provide
+                          top-quality zinc products to meet diverse industrial
+                          needs?
                         </h3>
                       </a>
                       <div className="text-sm opacity-80">Nov 12, 2020</div>

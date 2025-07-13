@@ -1,13 +1,12 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import Head from "next/head";
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import PageIllustration from "@/components/page-illustration";
-import { ProductGridItem } from "app/types/product";
-import ProductPopup from "@/components/product-popup"; // Import the popup component
+import ProductPopup from "@/components/product-popup";
 
-// Import images using require to maintain @/public paths
+// Import product images
 import leadImage from "@/public/images/raw-material-lead.jpg";
 import copperImage from "@/public/images/copper1.png";
 import zincImage from "@/public/images/zinc-product.png";
@@ -16,18 +15,30 @@ import ironImage from "@/public/images/iron-product.png";
 import cobaltImage from "@/public/images/cobaltt.png";
 import antimonyImage from "@/public/images/antimony11.jpg";
 
-// Product data with enhanced Moroccan mining SEO
-const products: ProductGridItem[] = [
+// Define Product type
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  image: StaticImageData;
+  purity: string;
+  stock: string;
+  color: string;
+  forms: string[];
+}
+
+// Product data without prices
+const products: Product[] = [
   {
     id: "lead",
     name: "Lead",
     description:
       "High-grade Moroccan lead with exceptional purity for various industrial applications, ethically sourced from Morocco's rich mineral deposits.",
     image: leadImage,
-    imagePath: "@/public/images/raw-material-lead.png",
     purity: "86%",
     stock: "400 tons concentrate, 150 tons powder, 300 tons ore",
     color: "bg-gray-700",
+    forms: ["Concentrate", "Powder", "Ore"],
   },
   {
     id: "copper",
@@ -35,10 +46,10 @@ const products: ProductGridItem[] = [
     description:
       "Premium Moroccan copper with exceptional quality extracted from Morocco's historic mining regions, offering versatility for industrial applications.",
     image: copperImage,
-    imagePath: "@/public/images/copper1.png",
     purity: "8% to 21%",
     stock: "500 tons",
     color: "bg-amber-600",
+    forms: ["Ore"],
   },
   {
     id: "zinc",
@@ -46,10 +57,10 @@ const products: ProductGridItem[] = [
     description:
       "High-quality zinc calamine from Morocco's mineral-rich mountains for various applications, including cosmetics and industrial uses.",
     image: zincImage,
-    imagePath: "@/public/images/raw-material-zinc.png",
     purity: "+37%",
     stock: "300 tons ore, 80 tons concentrate",
     color: "bg-slate-300",
+    forms: ["Ore", "Concentrate"],
   },
   {
     id: "barite",
@@ -57,10 +68,10 @@ const products: ProductGridItem[] = [
     description:
       "High-quality Moroccan barite sourced from premier mining regions of Morocco for drilling, medical, paint and construction applications.",
     image: bariteImage,
-    imagePath: "@/public/images/raw-material-barite.png",
     purity: "Density: 4.18 - 4.28",
     stock: "400 tons",
     color: "bg-white",
+    forms: ["Ore", "Powder", "Lumps"],
   },
   {
     id: "iron",
@@ -68,10 +79,10 @@ const products: ProductGridItem[] = [
     description:
       "Superior quality iron extracted from Morocco's ancient ore deposits for construction, manufacturing, and industrial uses worldwide.",
     image: ironImage,
-    imagePath: "@/public/images/raw-material-iron.png",
     purity: "≥ 56%",
     stock: "40,000 tons",
     color: "bg-slate-500",
+    forms: ["Ore"],
   },
   {
     id: "cobalt",
@@ -79,10 +90,10 @@ const products: ProductGridItem[] = [
     description:
       "High-quality Moroccan cobalt essential for modern battery technology and superalloys, sustainably mined from Morocco's mineral wealth.",
     image: cobaltImage,
-    imagePath: "@/public/images/raw-material-cobalt.png",
     purity: "42%+",
     stock: "Available upon request",
     color: "bg-blue-800",
+    forms: ["Ore", "Concentrate"],
   },
   {
     id: "antimony",
@@ -90,27 +101,146 @@ const products: ProductGridItem[] = [
     description:
       "Premium antimony from Morocco's exclusive mining operations for flame retardants, batteries, and electronic components with guaranteed quality.",
     image: antimonyImage,
-    imagePath: "@/public/images/raw-material-antimony.png",
     purity: "30%+",
     stock: "Available upon request",
     color: "bg-gray-600",
+    forms: ["Ore", "Concentrate"],
   },
 ];
 
-export default function ProductsPage() {
-  // State for popup control
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] =
-    useState<ProductGridItem | null>(null);
+// Generate Product Schema for SEO (without prices)
+const generateProductSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: products.map((product: Product, index: number) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: `Moroccan ${product.name}`,
+        description: product.description,
+        image: `https://www.the-3rocks.com${product.image.src}`,
+        brand: {
+          "@type": "Brand",
+          name: "The 3 Rocks Company",
+        },
+        offers: {
+          "@type": "Offer",
+          url: `https://www.the-3rocks.com/products#${product.id}`,
+          availability: product.stock.includes("Available upon request")
+            ? "https://schema.org/PreOrder"
+            : "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition",
+        },
+        material: product.name,
+        countryOfOrigin: {
+          "@type": "Country",
+          name: "Morocco",
+        },
+        additionalProperty: product.forms.map((form: string) => ({
+          "@type": "PropertyValue",
+          name: "form",
+          value: form,
+        })),
+      },
+    })),
+  };
+};
 
-  // Function to open popup with selected product
-  const openProductPopup = (product: ProductGridItem) => {
+// Generate Organization Schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "The 3 Rocks Company",
+  url: "https://www.the-3rocks.com",
+  logo: "https://www.the-3rocks.com/images/the3rocks.png",
+  description:
+    "Premium Moroccan mining materials supplier specializing in lead, zinc, copper, barite, iron, cobalt, and antimony",
+  sameAs: ["https://www.linkedin.com/company/the-3-rocks"],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "",
+    addressLocality: "Rabat",
+    addressRegion: "Rabat-Salé-Kénitra",
+    postalCode: "10000",
+    addressCountry: "Morocco",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+212-654-352802",
+    contactType: "customer service",
+    email: "info@the-3rocks.com",
+    availableLanguage: ["English", "French", "Arabic"],
+  },
+};
+
+export default function ProductsPage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const openProductPopup = (product: Product) => {
     setSelectedProduct(product);
     setIsPopupOpen(true);
   };
 
   return (
     <>
+      <Head>
+        <title>Premium Moroccan Mining Materials | The 3 Rocks Company</title>
+        <meta
+          name="description"
+          content="Discover high-quality Moroccan minerals including lead, zinc, copper, barite, iron, cobalt, and antimony, ethically sourced from Morocco's legendary mining regions."
+        />
+        <meta
+          name="keywords"
+          content="Morocco mining, Moroccan minerals, lead, zinc, copper, barite, iron, cobalt, antimony, raw materials Morocco, mining company Morocco, mineral supplier"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.the-3rocks.com/products" />
+        <meta
+          property="og:title"
+          content="Premium Moroccan Mining Materials | The 3 Rocks Company"
+        />
+        <meta
+          property="og:description"
+          content="Discover our extensive range of high-quality Moroccan minerals and raw materials sourced from Morocco's legendary mining regions."
+        />
+        <meta
+          property="og:image"
+          content="https://www.the-3rocks.com/images/the3rocks.png"
+        />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://www.the-3rocks.com/products"
+        />
+        <meta
+          property="twitter:title"
+          content="Premium Moroccan Mining Materials | The 3 Rocks Company"
+        />
+        <meta
+          property="twitter:description"
+          content="Discover our extensive range of high-quality Moroccan minerals and raw materials sourced from Morocco's legendary mining regions."
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.the-3rocks.com/images/the3rocks.png"
+        />
+
+        {/* Schema.org markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateProductSchema())}
+        </script>
+      </Head>
+
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"
@@ -122,7 +252,7 @@ export default function ProductsPage() {
       <section className="relative bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-            {/* Page header with SEO-enhanced content */}
+            {/* Page header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
               <h1 className="h1 font-red-hat-display mb-4">
                 Premium Moroccan Mining & Raw Materials
@@ -134,7 +264,7 @@ export default function ProductsPage() {
               </p>
             </div>
 
-            {/* Featured product - Lead with Moroccan mining references */}
+            {/* Featured product - Lead */}
             <div className="mb-16">
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                 <div className="md:flex">
@@ -146,6 +276,7 @@ export default function ProductsPage() {
                         width={600}
                         height={400}
                         alt="Moroccan Lead raw material"
+                        priority
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent opacity-50"></div>
                       <div className="absolute bottom-0 left-0 p-6">
@@ -172,8 +303,7 @@ export default function ProductsPage() {
                       exceptional purity and unmatched durability. Our lead is
                       carefully extracted from Morocco's mineral-rich mountains
                       and engineered to meet the specific demands of various
-                      industries, from construction and automotive to
-                      electronics, energy, and cosmetics.
+                      industries.
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
@@ -190,13 +320,13 @@ export default function ProductsPage() {
                       </div>
                       <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                         <span className="block text-sm text-gray-500 dark:text-gray-400">
-                          Moroccan Ore
+                          Available Forms
                         </span>
                         <span className="block text-xl font-bold text-gray-900 dark:text-white">
-                          +50% pure lead
+                          Multiple options
                         </span>
                         <span className="block text-sm text-teal-600 dark:text-teal-400">
-                          150 tons in stock
+                          Contact for details
                         </span>
                       </div>
                     </div>
@@ -215,12 +345,11 @@ export default function ProductsPage() {
             {/* Products grid */}
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-start">
               {products
-                .filter((product) => product.id !== "lead") // Exclude lead as it's featured above
+                .filter((product) => product.id !== "lead")
                 .map((product) => (
                   <div
                     key={product.id}
                     className="flex flex-col h-full p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition duration-300"
-                    data-aos="fade-up"
                   >
                     <div className="relative mb-5 overflow-hidden rounded-lg">
                       <div
@@ -264,7 +393,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Mining expertise section with Moroccan mining references */}
+      {/* Mining expertise section */}
       <section className="bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="py-12 md:py-20">
@@ -294,75 +423,51 @@ export default function ProductsPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                data-aos="fade-right"
-              >
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="h4 font-red-hat-display mb-3">
                   Moroccan Mining: Tradition & Innovation
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  The 3 Rocks is a Moroccan mining business that combines
-                  traditional methods with modern techniques. This enduring
-                  enterprise adapts to technological and market changes while
-                  preserving Morocco's inherited mining practices and values. We
-                  honor the legacy of Morocco's mining past by using some
-                  traditional techniques alongside advanced machinery like
-                  excavators and modern drills to enhance efficiency and safety
-                  in our Moroccan mineral operations.
+                  The 3 Rocks combines traditional Moroccan mining methods with
+                  modern techniques. We honor Morocco's mining heritage while
+                  implementing advanced technologies for enhanced efficiency and
+                  safety in our mineral operations.
                 </p>
               </div>
 
-              <div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                data-aos="fade-left"
-              >
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="h4 font-red-hat-display mb-3">
                   Moroccan Quality & Global Reliability
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Our Moroccan minerals and raw materials are sold locally and
-                  internationally, supported by strong relationships with buyers
-                  and distributors. Our Moroccan mines are renowned for quality,
-                  reliability, and excellence. We implement rigorous quality
-                  control processes throughout our entire operation, from
-                  extraction in Morocco's mineral-rich regions to final product
-                  delivery.
+                  Our Moroccan minerals are renowned worldwide for their quality
+                  and reliability. We implement rigorous quality control from
+                  extraction to final delivery, ensuring our products meet
+                  international standards.
                 </p>
               </div>
 
-              <div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                data-aos="fade-right"
-              >
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="h4 font-red-hat-display mb-3">
                   Sustainability in Moroccan Mining
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  We employ environmentally responsible Moroccan mining
-                  practices that minimize ecological impact while maximizing
-                  resource utilization. Our operations in Morocco follow strict
-                  environmental guidelines and we continuously invest in green
-                  technologies for a sustainable future in Moroccan mineral
-                  extraction and processing.
+                  We employ environmentally responsible mining practices that
+                  minimize ecological impact while maximizing resource
+                  utilization, following strict environmental guidelines in all
+                  our Moroccan operations.
                 </p>
               </div>
 
-              <div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                data-aos="fade-left"
-              >
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="h4 font-red-hat-display mb-3">
                   The Future of Moroccan Mining
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Facing fluctuating mineral prices, regulations, and climate
-                  changes, our Moroccan mining company plans for the long-term.
-                  We aim to integrate emerging technologies into Morocco's
-                  mining sector, expand into new markets, and train future
-                  generations of Moroccan mining professionals while maintaining
-                  our commitment to quality and sustainability in Morocco's
-                  mineral industry.
+                  We're committed to integrating emerging technologies into
+                  Morocco's mining sector while maintaining our dedication to
+                  quality and sustainability, training the next generation of
+                  Moroccan mining professionals.
                 </p>
               </div>
             </div>
@@ -370,7 +475,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* CTA with Moroccan references */}
+      {/* CTA section */}
       <section className="relative bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="py-12 md:py-20">
@@ -379,9 +484,9 @@ export default function ProductsPage() {
                 Ready to unlock Morocco's mining potential?
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                Contact us today to discuss your Moroccan raw material and
-                mineral needs and receive a personalized quote for premium
-                Moroccan mining products.
+                Contact us today to discuss your Moroccan raw material needs and
+                receive a personalized quote for premium Moroccan mining
+                products.
               </p>
               <div className="mt-8">
                 <Link

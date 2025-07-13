@@ -37,7 +37,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/our-raw"
+                  href="/products"
                   className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Products
@@ -45,15 +45,15 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/our-process"
                   className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
-                  Services
+                  Process
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/our-products"
+                  href="/articles"
                   className="text-gray-600 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Articles

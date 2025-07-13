@@ -69,7 +69,7 @@ export default function Blog() {
                 <header>
                   {/* Title and excerpt */}
                   <div className="text-center md:text-left">
-                    <Link href={`/our-products/${featuredPost.slug}`}>
+                    <Link href={`/articles/${featuredPost.slug}`}>
                       <h1 className="h1 font-red-hat-display mb-4">
                         {featuredPost.metadata.title}
                       </h1>

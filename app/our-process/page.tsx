@@ -10,28 +10,92 @@ export const metadata = {
     "Our Mining Process | Premium Moroccan Minerals & Raw Materials | The 3 Rocks",
   description:
     "Learn about The 3 Rocks' efficient and sustainable process for extracting, processing, and exporting premium Moroccan minerals and raw materials worldwide. Specializing in Morocco's diverse mining sector.",
-  keywords:
-    "Morocco mining, Moroccan minerals, mining process, raw materials Morocco, mineral export, Morocco mining sector, sustainable mining, Moroccan mineral resources, premium minerals, mining company Morocco",
+  keywords: [
+    // Original keywords
+    "Morocco mining",
+    "Moroccan minerals",
+    "mining process",
+    "raw materials Morocco",
+    "mineral export",
+    "Morocco mining sector",
+    "sustainable mining",
+    "Moroccan mineral resources",
+    "premium minerals",
+    "mining company Morocco",
+
+    // Enhanced keywords
+    "Moroccan mining operations",
+    "mineral extraction process",
+    "Morocco ore processing",
+    "mining logistics Morocco",
+    "mineral export procedure",
+    "Moroccan mining standards",
+    "sustainable mineral extraction",
+    "mining supply chain Morocco",
+    "Morocco mineral production",
+    "mining best practices",
+    "raw material processing",
+    "mineral quality control",
+    "Morocco mining regulations",
+    "mining export documentation",
+    "mineral transportation Morocco",
+    "mining industry Morocco",
+    "Moroccan geological resources",
+    "mining technology Morocco",
+    "mineral beneficiation process",
+    "Morocco mining infrastructure",
+    "mining safety standards",
+    "mineral export logistics",
+    "Moroccan mining expertise",
+    "mining environmental impact",
+    "mineral processing techniques",
+    "Morocco mining efficiency",
+    "mining export partners",
+    "mineral quality assurance",
+    "Moroccan mining heritage",
+    "mining sustainability practices",
+  ],
   openGraph: {
     title: "Premium Moroccan Mining & Mineral Export Process | The 3 Rocks",
     description:
       "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
+    url: "https://www.the-3rocks.com/our-process",
     type: "website",
-    locale: "en_US",
     siteName: "The 3 Rocks",
+    images: [
+      {
+        url: "https://www.the-3rocks.com/images/process-og.png",
+        width: 1200,
+        height: 630,
+        alt: "The 3 Rocks Mining Process - Premium Moroccan Minerals",
+      },
+    ],
+    locale: "en_US",
   },
-  twitter: {
-    card: "summary_large_image",
+  linkedin: {
     title: "Premium Moroccan Mining & Mineral Export Process | The 3 Rocks",
     description:
       "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
+    images: ["https://www.the-3rocks.com/images/process-linkedin.png"],
+    url: "https://www.the-3rocks.com/our-process",
+    company: "The 3 Rocks Company",
+    site: "The 3 Rocks Official Website",
   },
   alternates: {
-    canonical: "https://the3rocks.com/our-process",
+    canonical: "https://www.the-3rocks.com/our-process",
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
