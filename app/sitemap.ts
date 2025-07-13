@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: "https://www.the-3rocks.com/our-products/acopper",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: "https://www.the-3rocks.com/articles/acopper",
       lastModified: new Date(),
       changeFrequency: "monthly",
