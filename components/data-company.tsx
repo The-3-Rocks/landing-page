@@ -129,10 +129,10 @@ export default function ContactInfoSection() {
             <div className="text-gray-600 dark:text-gray-400 mb-4">
               <p className="mb-1">Main phone line:</p>
               <a
-                href="tel:+212612151391"
+                href="tel:+212654352802"
                 className="text-teal-500 hover:text-teal-700 font-medium text-xl"
               >
-                +212 612 151 391
+                +212 654 352 802
               </a>
               <p className="mt-3 mb-1">Business hours:</p>
               <p>Monday - Friday: 9AM - 5PM (GMT+1)</p>
