@@ -67,7 +67,7 @@ export default function Logo() {
         d="M248.5 252.5H256.5L249 249L248.5 252.5Z"
         fill="#20493C"
         stroke="#20493C"
-        stroke-width="0.5"
+        strokeWidth="0.5"
       />
     </svg>
   );
