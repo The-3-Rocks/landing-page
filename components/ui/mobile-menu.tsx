@@ -139,7 +139,7 @@ export default function MobileMenu() {
                   href="https://t3v.the-3rocks.com/"
                   className="inline-flex items-center px-6 py-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-150 ml-0 mt-4"
                 >
-                  <span>Explore The 3 Vegetables</span>
+                  <span>Explore The 3 Vegetable</span>
                   <svg
                     className="w-4 h-4 ml-1.5"
                     fill="none"
