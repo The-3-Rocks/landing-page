@@ -136,11 +136,24 @@ export default function MobileMenu() {
               </li>
               <li>
                 <Link
-                  href="/contact"
-                  className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded text-white bg-rocks-400 hover:bg-rocks-400 transition duration-150 ease-in-out"
-                  onClick={() => setMobileNavOpen(false)}
+                  href="https://t3v.the-3rocks.com/"
+                  className="inline-flex items-center px-6 py-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-150 ml-0 mt-4"
                 >
-                  Unlock Mining Potential
+                  <span>Explore The 3 Vegetables</span>
+                  <svg
+                    className="w-4 h-4 ml-1.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
                 </Link>
               </li>
             </ul>
