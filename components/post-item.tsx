@@ -34,7 +34,7 @@ export default function PostItem({ ...props }) {
         </a> */}
         {/* <div className="text-sm text-gray-500">
           By <a className="font-medium text-gray-800 dark:text-gray-400 hover:underline" href="#0">{props.metadata.author}</a> · <span className="text-gray-500"><PostDate dateString={props.metadata.publishedAt} /></span>
-        </div> */}
+        </div>  aa*/}
       </footer>
     </article>
   );
