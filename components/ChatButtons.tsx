@@ -19,7 +19,6 @@ export default function ChatButtons() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Toggle icons dynamically every 1s when not open
   useEffect(() => {
     const interval = setInterval(() => {
       if (!open) setShowWhatsApp((prev) => !prev);
@@ -27,18 +26,17 @@ export default function ChatButtons() {
     return () => clearInterval(interval);
   }, [open]);
 
+  // Sizes
   const mobileSize = "w-16 h-16";
   const mobileIconSize = "w-8 h-8";
-  const desktopSize = "lg:w-20 lg:h-20";
+  const desktopSize = "lg:w-16 lg:h-16"; // all desktop buttons same size
   const desktopIconSize = "lg:w-10 lg:h-10";
 
   return (
     <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
       {/* Expanded buttons */}
       {open && (
-        <div
-          className={`flex flex-col gap-4 mb-2 ${isMobile ? "items-end" : ""}`}
-        >
+        <div className="flex flex-col gap-4 mb-2 items-end">
           <a
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
@@ -67,7 +65,7 @@ export default function ChatButtons() {
         </div>
       )}
 
-      {/* Single dynamic icon before opening */}
+      {/* Single dynamic icon */}
       {!open && (
         <div
           className={`flex items-center justify-center ${mobileSize} ${desktopSize} bg-teal-600 text-white rounded-full shadow-lg transition cursor-pointer`}
