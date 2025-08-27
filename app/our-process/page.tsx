@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
 import CtaContact from "@/components/cta-contact";
 import Cta from "@/components/cta";
+import ChatButtons from "@/components/ChatButtons";
 
 export const metadata = {
   title:
@@ -102,6 +103,7 @@ export const metadata = {
 export default function ProcessPage() {
   return (
     <>
+      <ChatButtons />
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"

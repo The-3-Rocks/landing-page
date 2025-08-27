@@ -27,10 +27,12 @@ import FeaturesAnimation from "@/components/features-animation";
 import Team from "@/components/team";
 import CtaContact from "@/components/cta-contact";
 import ContactInfoSection from "@/components/data-company";
+import ChatButtons from "@/components/ChatButtons";
 
 export default function About() {
   return (
     <>
+      <ChatButtons />
       {/* Hero section showcasing Moroccan mining heritage */}
       <Hero />
 

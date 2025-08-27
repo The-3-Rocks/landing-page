@@ -6,6 +6,7 @@ import PostDate from "@/components/post-date";
 import { CustomMDX } from "@/components/mdx/mdx";
 import Newsletter from "@/components/newsletter";
 import RelatedPosts from "@/components/related-posts-02";
+import ChatButtons from "@/components/ChatButtons";
 
 export async function generateStaticParams() {
   const allBlogs = getProductsPosts();
@@ -138,7 +139,7 @@ export default async function SinglePost({
                     <CustomMDX source={post.content} />
                   </article>
                 </div>
-
+                <ChatButtons />
                 {/* Article footer */}
                 <footer>
                   <Newsletter />

@@ -102,8 +102,13 @@ export const metadata = {
   },
 };
 
+import ChatButtons from "@/components/ChatButtons";
 import ProductsPage from "@/components/raw";
 
 export default function OurRawPage() {
-  return <ProductsPage />;
+  return (
+    <>
+      <ProductsPage /> <ChatButtons />{" "}
+    </>
+  );
 }

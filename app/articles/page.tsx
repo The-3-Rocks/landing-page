@@ -5,6 +5,7 @@ import PostDate from "@/components/post-date";
 import RelatedPosts from "@/components/related-posts-01";
 import PostItem from "@/components/post-item";
 import Sidebar from "./sidebar";
+import ChatButtons from "@/components/ChatButtons";
 
 export const metadata = {
   title: "Moroccan Mining Insights & Industry Articles | The 3 Rocks Company",
@@ -42,6 +43,7 @@ export default function Blog() {
 
   return (
     <>
+      <ChatButtons />
       {/* Featured post */}
       <section className="relative">
         {/* Background image */}
