@@ -83,9 +83,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.the-3rocks.com",
     languages: {
-      "en-US": "https://www.the-3rocks.com/en-US",
-      "fr-FR": "https://www.the-3rocks.com/fr-FR",
-      "ar-MA": "https://www.the-3rocks.com/ar-MA",
+      "en-US": "https://www.the-3rocks.com/",
+      "fr-FR": "https://www.the-3rocks.com/",
+      "ar-MA": "https://www.the-3rocks.com/",
     },
   },
   category: "Moroccan Mining & Raw Materials",
@@ -101,10 +101,8 @@ export const metadata = {
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
 import Stats from "@/components/stats";
-import Carousel from "@/components/carousel";
 import Tabs from "@/components/tabs";
 import MiningProcess from "@/components/process";
-import PricingTables from "@/components/pricing-tables";
 import TestimonialsBlocks from "@/components/testimonials-blocks";
 import FeaturesBlocks from "@/components/features-blocks";
 import Cta from "@/components/cta";
