@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Disallow: / _next/static/
+
+# Host
+Host: https://www.the-3rocks.com
+
+# Sitemaps
+Sitemap: https://www.the-3rocks.com/sitemap.xml

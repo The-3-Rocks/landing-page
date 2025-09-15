@@ -54,7 +54,7 @@
 
 /* Light switch */
 .form-switch input[type="checkbox"].light-switch + label {
-  @apply bg-rocks-500;
+  @apply bg-teal-600;
 }
 
 .dark
