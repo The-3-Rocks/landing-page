@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { ref, push, set, serverTimestamp } from "firebase/database";
-import { db } from "../app/firebaseConfig"; // Import your Firebase config
+import { ref, push, set } from "firebase/database";
+import { db } from "../app/firebaseConfig";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   FaCheck,
   FaChevronDown,
@@ -9,8 +10,6 @@ import {
 } from "react-icons/fa";
 
 import PageIllustration from "@/components/page-illustration";
-
-// Don't forget to import the flag-icons CSS in your app
 import "flag-icons/css/flag-icons.min.css";
 
 // Complete list of countries with flags and dial codes using flag-icons
@@ -235,7 +234,7 @@ const popularCountries = popularCountryCodes
 interface FormData {
   firstName: string;
   lastName: string;
-  email: string; // Added email field
+  email: string;
   company: string;
   phoneCode: string;
   phone: string;
@@ -249,11 +248,11 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
-    email: "", // Added email field with empty initial value
+    email: "",
     company: "",
-    phoneCode: "+1", // Default phone code
+    phoneCode: "+1",
     phone: "",
-    country: "United States", // Default to United States
+    country: "United States",
     interestedProducts: [],
     otherProduct: "",
     details: "",
@@ -264,7 +263,15 @@ const Contact: React.FC = () => {
   const [showPhoneDropdown, setShowPhoneDropdown] = useState(false);
   const [filteredCountries, setFilteredCountries] = useState(popularCountries);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showCaptcha, setShowCaptcha] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
   const phoneDropdownRef = useRef<HTMLDivElement>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Replace this with your actual reCAPTCHA site key
+  const RECAPTCHA_SITE_KEY = "6LcoBPkrAAAAAI1uDhSAG3s7JMtrwgfyBarYtMco";
 
   // Find country data based on selected country name or code
   const findCountryByName = (name: string) => {
@@ -273,7 +280,6 @@ const Contact: React.FC = () => {
 
   // Updated find country by dial code function to handle North American countries
   const findCountryByDialCode = (dialCode: string, countryName?: string) => {
-    // If we have a country name, prioritize exact match by name and dial code
     if (countryName) {
       const exactMatch = allCountries.find(
         (country) =>
@@ -282,9 +288,7 @@ const Contact: React.FC = () => {
       if (exactMatch) return exactMatch;
     }
 
-    // Handle special case for +1 (North America)
     if (dialCode === "+1") {
-      // Default to US unless another country is specifically selected
       const northAmericanCountry = countryName
         ? allCountries.find((country) => country.name === countryName)
         : allCountries.find((country) => country.code === "us");
@@ -292,7 +296,6 @@ const Contact: React.FC = () => {
       if (northAmericanCountry) return northAmericanCountry;
     }
 
-    // General case - find by dial code
     return allCountries.find((country) => country.dialCode === dialCode);
   };
 
@@ -365,17 +368,14 @@ const Contact: React.FC = () => {
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
-
-    // Create a copy of the array to safely modify
     let updatedProducts = [...formData.interestedProducts];
 
     if (checked && !updatedProducts.includes(name)) {
-      updatedProducts.push(name); // Add the product if checked and not already in the array
+      updatedProducts.push(name);
     } else if (!checked && updatedProducts.includes(name)) {
-      updatedProducts = updatedProducts.filter((product) => product !== name); // Remove the product if unchecked and currently in the array
+      updatedProducts = updatedProducts.filter((product) => product !== name);
     }
 
-    // Update the state with the new array of interested products
     setFormData({
       ...formData,
       interestedProducts: updatedProducts,
@@ -393,60 +393,110 @@ const Contact: React.FC = () => {
     setSearchQuery("");
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Prevent default form submission
-
+  const submitToFirebase = async () => {
     try {
       setSubmitting(true);
-      const newRef = push(ref(db, "clients")); // Create a new reference under 'clients'
+      const newRef = push(ref(db, "clients"));
 
       const formatTimestamp = (timestamp: number): string => {
         const date = new Date(timestamp);
-
-        // Get date components
         const day = String(date.getDate()).padStart(2, "0");
-        const month = String(date.getMonth() + 1).padStart(2, "0"); // Month is 0-indexed
+        const month = String(date.getMonth() + 1).padStart(2, "0");
         const year = date.getFullYear();
-
-        // Get time components
         const hours = String(date.getHours()).padStart(2, "0");
         const minutes = String(date.getMinutes()).padStart(2, "0");
         const seconds = String(date.getSeconds()).padStart(2, "0");
-
-        // Return formatted date string
         return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
       };
-      // Combine phone code and phone number for storage
+
       const dataToSubmit = {
         ...formData,
         fullPhone: `${formData.phoneCode} ${formData.phone}`,
         createdAt: formatTimestamp(Date.now()),
+        isHuman: true, // Mark as human verified
+        captchaVerified: true,
       };
-      await set(newRef, dataToSubmit); // Write the data to the new reference
 
-      // Handle successful submission (e.g., show a success message)
+      await set(newRef, dataToSubmit);
+
       console.log("Form submitted successfully!");
 
-      // Clear the form after submission
+      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
-        email: "", // Reset email field
+        email: "",
         company: "",
         phoneCode: "+1",
         phone: "",
-        country: "United States", // Keep default as United States
+        country: "United States",
         interestedProducts: [],
         otherProduct: "",
         details: "",
       });
 
       setSubmitted(true);
+      setShowCaptcha(false);
+      setCaptchaVerified(false);
+      if (captchaRef.current) {
+        captchaRef.current.reset();
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("There was an error submitting the form. Please try again.");
     } finally {
-      setTimeout(() => setSubmitting(false), 1000); // Reset submitting state after 1 second
-      setTimeout(() => setSubmitted(false), 3000); // Reset submitted state after 3 seconds
+      setSubmitting(false);
+      setTimeout(() => setSubmitted(false), 3000);
+    }
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // First, show the CAPTCHA
+    if (!showCaptcha) {
+      setShowCaptcha(true);
+      return;
+    }
+
+    // If CAPTCHA is shown but not verified, don't proceed
+    if (!captchaVerified) {
+      alert("Please complete the reCAPTCHA verification to prove you're human");
+      return;
+    }
+
+    // Submit to Firebase
+    await submitToFirebase();
+  };
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaVerified(!!value);
+  };
+
+  const handleCaptchaExpired = () => {
+    setCaptchaVerified(false);
+  };
+
+  const handleCaptchaError = () => {
+    setCaptchaVerified(false);
+    console.error("reCAPTCHA error occurred");
+  };
+
+  const closeCaptchaModal = () => {
+    setShowCaptcha(false);
+    setCaptchaVerified(false);
+    if (captchaRef.current) {
+      captchaRef.current.reset();
+    }
+  };
+
+  const proceedWithSubmission = async () => {
+    if (captchaVerified) {
+      closeCaptchaModal();
+      // Directly submit to Firebase instead of trying to trigger form submission
+      await submitToFirebase();
+    } else {
+      alert("Please complete the reCAPTCHA verification");
     }
   };
 
@@ -486,7 +536,11 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Contact form */}
-            <form className="max-w-xl mx-auto" onSubmit={handleSubmit}>
+            <form
+              className="max-w-xl mx-auto"
+              onSubmit={handleSubmit}
+              ref={formRef}
+            >
               <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                   <label
@@ -590,7 +644,6 @@ const Contact: React.FC = () => {
                         }}
                       >
                         <div className="flex items-center">
-                          {/* Try both flag-icon and emoji flag as fallback */}
                           {selectedCountry && (
                             <>
                               <span
@@ -965,6 +1018,62 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </form>
+
+            {/* reCAPTCHA Modal */}
+            {showCaptcha && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                      Verify You're Human
+                    </h3>
+                    <button
+                      onClick={closeCaptchaModal}
+                      className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl"
+                    >
+                      ×
+                    </button>
+                  </div>
+
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                    Please complete the verification to prove you're not a robot
+                    and submit your form.
+                  </p>
+
+                  <div className="flex justify-center mb-4">
+                    <ReCAPTCHA
+                      ref={captchaRef}
+                      sitekey={RECAPTCHA_SITE_KEY}
+                      onChange={handleCaptchaChange}
+                      onExpired={handleCaptchaExpired}
+                      onErrored={handleCaptchaError}
+                    />
+                  </div>
+
+                  <div className="flex justify-end space-x-3">
+                    <button
+                      type="button"
+                      onClick={closeCaptchaModal}
+                      className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="button"
+                      onClick={proceedWithSubmission}
+                      className={`px-4 py-2 text-sm font-medium text-white rounded ${
+                        captchaVerified
+                          ? "bg-teal-500 hover:bg-teal-400"
+                          : "bg-gray-400 cursor-not-allowed"
+                      }`}
+                      disabled={!captchaVerified}
+                    >
+                      Verify and Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
