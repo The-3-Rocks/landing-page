@@ -66,7 +66,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/lead"
+                      href="/articles/lead"
                     >
                       Lead ore
                     </a>
@@ -74,7 +74,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/acopper"
+                      href="/articles/acopper"
                     >
                       Copper
                     </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/zinc"
+                      href="/articles/zinc"
                     >
                       Zinc ore
                     </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/barite"
+                      href="/articles/barite"
                     >
                       Barite
                     </a>
@@ -98,7 +98,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/iron"
+                      href="/articles/iron"
                     >
                       Iron
                     </a>
@@ -106,7 +106,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/cobalt"
+                      href="/articles/cobalt"
                     >
                       Cobalt
                     </a>
@@ -114,7 +114,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products/antimony"
+                      href="/articles/antimony"
                     >
                       Antimony
                     </a>
@@ -185,7 +185,7 @@ export default function Footer() {
                   <li className="mb-1">
                     <a
                       className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                      href="/our-products"
+                      href="/articles"
                     >
                       Articles
                     </a>

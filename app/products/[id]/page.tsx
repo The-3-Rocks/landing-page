@@ -1,4 +1,4 @@
-// app/our-products/[id]/page.tsx
+// app/products/[id]/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
@@ -652,7 +652,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 The product you're looking for doesn't exist or has been moved.
               </p>
               <Link
-                href="/our-products"
+                href="/articles"
                 className="btn text-white bg-teal-500 hover:bg-teal-400"
               >
                 View All Products
@@ -913,7 +913,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 Request Quote
               </Link>
               <Link
-                href="/our-products"
+                href="/articles"
                 className="btn text-teal-500 bg-teal-100 hover:bg-teal-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-teal-400"
               >
                 View All Products

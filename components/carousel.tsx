@@ -73,7 +73,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-400 hover:bg-rocks-500 mx-auto self-center"
-                    href="/our-products/zinc"
+                    href="/articles/zinc"
                   >
                     Learn more
                   </a>
@@ -98,7 +98,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-400 hover:bg-rocks-500 mx-auto self-center"
-                    href="/our-products/lead"
+                    href="/articles/lead"
                   >
                     Learn more
                   </a>
@@ -122,7 +122,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
-                    href="our-products/acopper"
+                    href="/articles/acopper"
                   >
                     Learn more
                   </a>
@@ -146,7 +146,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-400 hover:bg-rocks-500 mx-auto self-center"
-                    href="/our-products/amber"
+                    href="/articles/amber"
                   >
                     Learn more
                   </a>
@@ -170,7 +170,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-400 hover:bg-rocks-500 mx-auto self-center"
-                    href="/our-products/barite"
+                    href="/articles/barite"
                   >
                     Learn more
                   </a>
@@ -194,7 +194,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-400 hover:bg-rocks-500 mx-auto self-center"
-                    href="/our-products/iron"
+                    href="/articles/iron"
                   >
                     Learn more
                   </a>
@@ -218,7 +218,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
-                    href="our-products/antimony"
+                    href="/articles/antimony"
                   >
                     Learn more
                   </a>
@@ -242,7 +242,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
-                    href="our-products/cobalt"
+                    href="/articles/cobalt"
                   >
                     Learn more
                   </a>
@@ -268,7 +268,7 @@ export default function Carousel() {
                 <div className="flex grow">
                   <a
                     className="inline-flex btn-sm text-white bg-rocks-500 hover:bg-rocks-400 mx-auto self-center"
-                    href="our-products/antimony"
+                    href="/articles/antimony"
                   >
                     Learn more
                   </a>
