@@ -56,7 +56,7 @@ const productDetails: Record<string, ProductDetail> = {
       powder: "150 tons",
       ore: "300 tons",
     },
-    monthlyCapacity: "150+ tons each month",
+    monthlyCapacity: "700 tons each month",
     applications: [
       "Construction materials",
       "Automotive industry",
@@ -66,7 +66,7 @@ const productDetails: Record<string, ProductDetail> = {
     ],
     qualityAssurance:
       "Our Moroccan lead meets the highest industry standards with strict quality control processes throughout extraction and processing at our Morocco-based facilities.",
-    annualExtraction: "75,000 tons from Moroccan mines",
+    annualExtraction: "8400 tons from Moroccan mines",
     purityLevel: "99.97%",
   },
   copper: {

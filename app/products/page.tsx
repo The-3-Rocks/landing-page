@@ -74,16 +74,6 @@ export const metadata = {
     ],
     locale: "en_US",
   },
-  linkedin: {
-    title: "Premium Moroccan Mining Materials Supplier | The 3 Rocks Company",
-    description:
-      "Ethically sourced Moroccan minerals for global industries. Specializing in lead, zinc, copper, barite, iron, cobalt, and antimony from Morocco's legendary mines.",
-    url: "https://www.the-3rocks.com/products",
-    images: ["https://www.the-3rocks.com/images/the3rocks-linkedin.png"],
-    company: "The 3 Rocks Company",
-    site: "Official Website",
-    type: "website",
-  },
   alternates: {
     canonical: "https://www.the-3rocks.com/products",
   },

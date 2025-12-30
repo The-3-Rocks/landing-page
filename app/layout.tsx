@@ -1,15 +1,7 @@
-"use client";
-
-import { useEffect } from "react";
-
+import type { Metadata } from "next";
 import "./css/style.css";
-
 import { Inter, Red_Hat_Display } from "next/font/google";
-import Theme from "./theme-provider";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
-
+import RootLayoutClient from "./root-layout-client";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 
@@ -25,33 +17,28 @@ const redhat = Red_Hat_Display({
   display: "swap",
 });
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.the-3rocks.com"),
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      disable: "phone",
-      duration: 600,
-      easing: "ease-out-sine",
-    });
-  });
-
   return (
     <html lang="en" suppressHydrationWarning>
       {/* suppressHydrationWarning: https://github.com/vercel/next.js/issues/44343 */}
       <body
         className={`${inter.variable} ${redhat.variable} font-inter antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 tracking-tight`}
       >
-        <Theme>
+        <RootLayoutClient>
           <div className="flex flex-col min-h-screen overflow-hidden">
             <Header />
             <main className="grow">{children}</main>
             <Footer />
           </div>
-        </Theme>
+        </RootLayoutClient>
       </body>
     </html>
   );

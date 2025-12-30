@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import PostLink from "./link";
 import PostImage from "./image";
 import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 
 const transformToSlug = (input: string) => {
   return input
@@ -38,6 +39,33 @@ const mdxComponents = {
   h4: generateHeading(4),
   Link: PostLink,
   Image: PostImage,
+  // Add Table Components
+  table: (props: any) => (
+    <div className="overflow-x-auto my-8 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+      <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700" {...props} />
+    </div>
+  ),
+  thead: (props: any) => (
+    <thead className="bg-gray-50 dark:bg-gray-800" {...props} />
+  ),
+  tbody: (props: any) => (
+    <tbody className="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900" {...props} />
+  ),
+  tr: (props: any) => (
+    <tr className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors" {...props} />
+  ),
+  th: (props: any) => (
+    <th 
+      className="px-6 py-3 text-left text-xs font-semibold text-gray-700 dark:text-gray-200 uppercase tracking-wider" 
+      {...props} 
+    />
+  ),
+  td: (props: any) => (
+    <td 
+      className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300" 
+      {...props} 
+    />
+  ),
 };
 
 export function CustomMDX(props: any) {
@@ -45,18 +73,14 @@ export function CustomMDX(props: any) {
     theme: "one-dark-pro",
     keepBackground: false,
     onVisitLine(node: any) {
-      // Prevent lines from collapsing in `display: grid` mode, and
-      // allow empty lines to be copy/pasted
       if (node.children.length === 0) {
         node.children = [{ type: "text", value: " " }];
       }
     },
     onVisitHighlightedLine(node: any) {
-      // Each line node by default has `class="line"`.
       node.properties.className.push("line--highlighted");
     },
     onVisitHighlightedWord(node: any) {
-      // Each word node has no className by default.
       node.properties.className = ["word--highlighted"];
     },
   };
@@ -67,6 +91,7 @@ export function CustomMDX(props: any) {
       components={{ ...mdxComponents, ...(props.components || {}) }}
       options={{
         mdxOptions: {
+          remarkPlugins: [remarkGfm],
           rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
         },
       }}

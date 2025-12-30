@@ -3,636 +3,604 @@ import Image from "next/image";
 import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
 import React from "react";
-import {
-  ProductData,
-  ProductsDataMap,
-  IconName,
-  ProductPageProps,
-  MetadataParams,
-  Specification,
-  Application,
-  ExtractionStep,
-} from "app/types/product";
+import { products } from "@/lib/products";
 
-// Product data
-const productsData: ProductsDataMap = {
+// Detailed product information including data from ProductPopup
+const productDetails: Record<string, any> = {
   lead: {
-    name: "Lead",
-    title: "Lead | The 3 Rocks",
+    title: "Moroccan Lead",
     description:
-      "High-grade lead with exceptional purity and durability for various industrial applications, available as concentrate, powder, and ore.",
-    mainImage: "/images/products/lead.jpg",
-    intro:
-      "At The 3 Rocks Company, we pride ourselves on offering high-quality lead that stands out for its exceptional purity and unmatched durability. Our lead is carefully engineered to meet the specific demands of various industries, from construction and automotive to electronics, energy, and cosmetics.",
+      "At The 3 Rocks Company, we pride ourselves on offering high-quality Moroccan lead that stands out for its exceptional purity and unmatched durability, sourced from Morocco's historic mining regions.",
+    purityDetails: {
+      concentrate: "86% pure lead",
+      powder: "76% pure lead",
+      ore: "More than 50%",
+    },
+    stockDetails: {
+      concentrate: "400 tons",
+      powder: "150 tons",
+      ore: "300 tons",
+    },
+    monthlyCapacity: "700 tons each month",
+    applications: [
+      "Construction materials",
+      "Automotive industry",
+      "Electronics and energy storage",
+      "Radiation shielding",
+      "Cosmetics manufacturing",
+    ],
+    qualityAssurance:
+      "Our Moroccan lead meets the highest industry standards with strict quality control processes throughout extraction and processing at our Morocco-based facilities.",
+    annualExtraction: "8400 tons from Moroccan mines",
+    purityLevel: "99.97%",
     specs: [
-      { name: "Concentrate Purity", value: "86% pure lead" },
-      { name: "Powder Purity", value: "86% pure lead" },
-      { name: "Ore Purity", value: "More than 50%" },
-      { name: "Monthly Production", value: "150+ tons" },
-      {
-        name: "Available Stock",
-        value: "400 tons concentrate, 150 tons powder, 300 tons ore",
-      },
+      { name: "Lead Concentrate Purity", value: "86% pure" },
+      { name: "Lead Powder Purity", value: "76% pure" },
+      { name: "Lead Ore Purity", value: "More than 50%" },
+      { name: "Monthly Production", value: "700 tons" },
+      { name: "Industry Grade", value: "99.97%" },
       { name: "Density", value: "11.34 g/cm³" },
       { name: "Melting Point", value: "327.5°C (621.5°F)" },
     ],
-    applications: [
-      {
-        name: "Batteries",
-        description:
-          "Lead-acid batteries for automotive, industrial, and backup power storage applications.",
-        icon: "battery",
-      },
-      {
-        name: "Radiation Shielding",
-        description:
-          "Protection from radiation in medical facilities, nuclear plants, and scientific research.",
-        icon: "shield",
-      },
-      {
-        name: "Construction",
-        description:
-          "Roofing, sound insulation, vibration dampening, and historical building restoration.",
-        icon: "building",
-      },
-      {
-        name: "Electronics",
-        description:
-          "Solder, circuit boards, and various electronic components requiring high stability.",
-        icon: "chip",
-      },
-      {
-        name: "Cosmetics",
-        description:
-          "Specialized cosmetic applications requiring high-quality lead compounds.",
-        icon: "sparkles",
-      },
-    ],
-    extractionProcess: [
-      {
-        step: 1,
-        name: "Mining",
-        description:
-          "Extraction of lead ore (galena) from underground or open-pit mines",
-      },
-      {
-        step: 2,
-        name: "Crushing",
-        description: "Breaking down the ore into smaller pieces for processing",
-      },
-      {
-        step: 3,
-        name: "Concentration",
-        description:
-          "Separation of lead minerals from waste rock through flotation",
-      },
-      {
-        step: 4,
-        name: "Smelting",
-        description:
-          "High-temperature processing to separate lead from other minerals",
-      },
-      {
-        step: 5,
-        name: "Refining",
-        description:
-          "Purification to achieve the desired lead grade and quality",
-      },
-    ],
   },
   copper: {
-    name: "Copper",
-    title: "Copper | The 3 Rocks",
+    title: "Moroccan Copper",
     description:
-      "Premium copper with exceptional quality and versatility, available for a variety of industrial applications.",
-    mainImage: "/images/products/copper.jpg",
-    intro:
-      "Our copper stands out for its exceptional quality and versatility, making it indispensable for a variety of industrial applications. With copper purity levels ranging from 8% to 21%, we ensure that our product meets stringent industry requirements. Through meticulous quality control from extraction to processing, we guarantee copper that consistently delivers performance and reliability.",
+      "Our Moroccan copper stands out for its exceptional quality and versatility, making it indispensable for a variety of industrial applications worldwide.",
+    purity: "8% to 21% (with special permit for 40% high-purity copper)",
+    stock: "500 tons",
+    applications: [
+      "Electrical systems and wiring",
+      "Electronics manufacturing",
+      "Construction components",
+      "Telecommunications infrastructure",
+      "Heat exchangers and cooling systems",
+    ],
+    qualityAssurance:
+      "Through meticulous quality control from extraction in Morocco's copper-rich regions to processing, we guarantee copper that consistently delivers performance and reliability.",
+    annualExtraction: "17,000 tons from Moroccan mines",
+    purityLevel: "99.9%",
     specs: [
       { name: "Purity Range", value: "8% to 21%" },
-      { name: "Special Grade", value: "40% purity (with permit for sale)" },
       { name: "Available Stock", value: "500 tons" },
-      { name: "Melting Point", value: "1,085°C (1,985°F)" },
-      { name: "Density", value: "8.96 g/cm³" },
-      { name: "Electrical Conductivity", value: "Excellent" },
-      { name: "Thermal Conductivity", value: "High" },
-    ],
-    applications: [
-      {
-        name: "Electrical Systems",
-        description:
-          "Wiring, cables, busbars and electrical components due to high conductivity.",
-        icon: "bolt",
-      },
-      {
-        name: "Construction",
-        description:
-          "Plumbing, roofing, architectural elements, and building hardware.",
-        icon: "building",
-      },
-      {
-        name: "Manufacturing",
-        description:
-          "Industrial machinery, equipment components, and production tools.",
-        icon: "cog",
-      },
-      {
-        name: "Electronics",
-        description: "Circuit boards, semiconductors, and electronic devices.",
-        icon: "chip",
-      },
-      {
-        name: "Renewable Energy",
-        description: "Solar panels, wind turbines, and energy storage systems.",
-        icon: "sun",
-      },
-    ],
-    extractionProcess: [
-      {
-        step: 1,
-        name: "Mining",
-        description:
-          "Extraction of copper ore from open-pit or underground mines",
-      },
-      {
-        step: 2,
-        name: "Crushing & Grinding",
-        description: "Breaking down the ore into small pieces",
-      },
-      {
-        step: 3,
-        name: "Concentration",
-        description: "Flotation process to separate copper from other minerals",
-      },
-      {
-        step: 4,
-        name: "Smelting",
-        description: "High-temperature treatment to produce copper matte",
-      },
-      {
-        step: 5,
-        name: "Converting & Refining",
-        description: "Further processing to achieve desired purity levels",
-      },
+      { name: "Industry Grade", value: "99.9%" },
     ],
   },
   zinc: {
-    name: "Zinc",
-    title: "Zinc | The 3 Rocks",
+    title: "Moroccan Zinc (Calamine)",
     description:
-      "High-quality zinc calamine offering exceptional purity and reliability for various applications, including cosmetics.",
-    mainImage: "/images/products/zinc.jpg",
-    intro:
-      "Our high-quality zinc calamine offers exceptional purity and reliability for various applications, including cosmetics. With meticulous production and strict quality control, we meet the highest industry standards. Whether for manufacturing, pharmaceuticals, or skincare products, our superior zinc calamine delivers the quality you need.",
+      "Our high-quality Moroccan zinc calamine offers exceptional purity and reliability for various applications, including cosmetics and industrial uses.",
+    purityDetails: {
+      ore: "+37%",
+      concentrate: "70%",
+    },
+    stockDetails: {
+      ore: "300 tons",
+      concentrate: "80 tons",
+    },
+    applications: [
+      "Manufacturing processes",
+      "Pharmaceuticals",
+      "Cosmetics and skincare products",
+      "Galvanizing steel",
+      "Die-casting",
+    ],
+    qualityAssurance:
+      "With meticulous production and strict quality control at our Moroccan facilities, we meet the highest industry standards for zinc processing.",
+    annualExtraction: "50,000+ tons from Morocco's zinc deposits",
+    purityLevel: "99.95%",
     specs: [
       { name: "Ore Purity", value: "+37%" },
       { name: "Concentrate Purity", value: "70%" },
       { name: "Available Stock (Ore)", value: "300 tons" },
       { name: "Available Stock (Concentrate)", value: "80 tons" },
+      { name: "Industry Grade", value: "99.95%" },
       { name: "Density", value: "7.14 g/cm³" },
       { name: "Melting Point", value: "419.5°C (787.1°F)" },
     ],
-    applications: [
-      {
-        name: "Galvanization",
-        description:
-          "Protecting steel and iron from corrosion in construction and automotive industries.",
-        icon: "shield",
-      },
-      {
-        name: "Cosmetics",
-        description:
-          "Valued for its soothing properties in skincare products and personal care formulations.",
-        icon: "sparkles",
-      },
-      {
-        name: "Pharmaceuticals",
-        description:
-          "Active ingredient in medicinal products and health supplements.",
-        icon: "pill",
-      },
-      {
-        name: "Die Casting",
-        description:
-          "Creating precise metal components for various industries.",
-        icon: "cog",
-      },
-      {
-        name: "Batteries",
-        description: "Essential component in various battery technologies.",
-        icon: "battery",
-      },
-    ],
-    extractionProcess: [
-      {
-        step: 1,
-        name: "Mining",
-        description:
-          "Extraction of zinc-containing minerals like sphalerite or calamine",
-      },
-      {
-        step: 2,
-        name: "Crushing & Grinding",
-        description: "Breaking down the ore into fine particles",
-      },
-      {
-        step: 3,
-        name: "Flotation",
-        description: "Separating zinc minerals from other minerals",
-      },
-      {
-        step: 4,
-        name: "Roasting",
-        description: "Converting zinc sulfide to zinc oxide",
-      },
-      {
-        step: 5,
-        name: "Refining",
-        description: "Final purification to achieve desired zinc quality",
-      },
-    ],
   },
   barite: {
-    name: "Barite",
-    title: "Barite | The 3 Rocks",
+    title: "Moroccan Barite",
     description:
-      "High-quality barite renowned for its purity and density, ideal for various industrial applications.",
-    mainImage: "/images/products/barite.jpg",
-    intro:
-      "Our Barite is renowned for its high quality and purity, making it indispensable for a wide range of industrial applications. With rigorous sourcing and manufacturing processes, we ensure that our Barytine meets stringent industry standards. Whether used in drilling fluids, paints, or pharmaceuticals, our Barytine delivers consistent performance and reliability.",
+      "Our Moroccan Barite is renowned for its high quality and purity, making it indispensable for a wide range of industrial applications globally.",
+    density: "4.18 - 4.28",
+    stock: "400 tons",
+    applications: [
+      "Drilling fluids for oil and gas industry",
+      "Medical applications (X-ray and radiation protection)",
+      "Paint and coatings",
+      "Construction materials",
+      "Pharmaceutical applications",
+    ],
+    qualityAssurance:
+      "With rigorous sourcing from Morocco's barite-rich regions and manufacturing processes, we ensure that our Barytine meets stringent industry standards.",
+    annualExtraction: "80,000 tons from Morocco's mineral deposits",
+    purityLevel: "4.2 specific gravity",
     specs: [
       { name: "Density", value: "4.18 - 4.28" },
       { name: "Available Stock", value: "400 tons" },
+      { name: "Specific Gravity", value: "4.2" },
       { name: "Chemical Formula", value: "BaSO₄" },
       { name: "Color", value: "White to light gray" },
       { name: "Hardness", value: "3-3.5 on Mohs scale" },
     ],
-    applications: [
-      {
-        name: "Drilling Fluids",
-        description:
-          "Critical component in oil and gas drilling operations for its high density.",
-        icon: "drill",
-      },
-      {
-        name: "Medical Imaging",
-        description:
-          "Used as a contrast medium in X-ray and CT scan diagnostics.",
-        icon: "xray",
-      },
-      {
-        name: "Paints & Coatings",
-        description:
-          "Provides brightness, weight, and corrosion resistance in industrial coatings.",
-        icon: "paintbrush",
-      },
-      {
-        name: "Radiation Shielding",
-        description:
-          "Natural radiation barrier in medical and nuclear facilities.",
-        icon: "shield",
-      },
-      {
-        name: "Construction",
-        description:
-          "Component in high-density concrete and sound-dampening materials.",
-        icon: "building",
-      },
-    ],
-    extractionProcess: [
-      {
-        step: 1,
-        name: "Mining",
-        description:
-          "Extraction from barite deposits through open-pit or underground methods",
-      },
-      {
-        step: 2,
-        name: "Crushing & Screening",
-        description: "Breaking down raw barite and sorting by size",
-      },
-      {
-        step: 3,
-        name: "Washing",
-        description: "Removing impurities and contaminants",
-      },
-      {
-        step: 4,
-        name: "Grinding",
-        description:
-          "Reducing to required particle size for specific applications",
-      },
-      {
-        step: 5,
-        name: "Classification",
-        description: "Sorting by density and quality for different uses",
-      },
-    ],
   },
   iron: {
-    name: "Iron",
-    title: "Iron | The 3 Rocks",
+    title: "Moroccan Iron",
     description:
-      "Superior quality iron essential for a wide array of industrial applications, offering exceptional durability and reliability.",
-    mainImage: "/images/products/iron.jpg",
-    intro:
-      "Our iron is distinguished by its superior quality and adaptability, essential for a wide array of industrial uses. With rigorous quality control from sourcing to production, we guarantee that our iron meets the most rigorous industry standards. Whether utilized in construction, manufacturing, or infrastructure development, our iron consistently demonstrates durability and reliability.",
+      "Our Moroccan iron is distinguished by its superior quality and adaptability, essential for a wide array of industrial uses around the world.",
+    purity: "≥ 56%",
+    stock: "40,000 tons",
+    applications: [
+      "Construction and infrastructure",
+      "Manufacturing equipment",
+      "Automotive components",
+      "Industrial machinery",
+      "Tools and hardware",
+    ],
+    qualityAssurance:
+      "With rigorous quality control from sourcing to production in our Moroccan facilities, we guarantee that our iron meets the most rigorous industry standards.",
+    annualExtraction: "120,000 tons from Morocco's iron-rich mountains",
+    purityLevel: "98.5%",
     specs: [
       { name: "Purity", value: "≥ 56%" },
       { name: "Available Stock", value: "40,000 tons" },
+      { name: "Industry Grade", value: "98.5%" },
       { name: "Density", value: "7.87 g/cm³" },
       { name: "Melting Point", value: "1,538°C (2,800°F)" },
       { name: "Form", value: "Ore, concentrate" },
     ],
+  },
+  cobalt: {
+    title: "Moroccan Cobalt",
+    description:
+      "Our high-quality Moroccan cobalt is essential for modern technology and industrial applications, sustainably sourced from Morocco's mineral wealth.",
+    purity: "42%+",
+    stock: "Available upon request",
     applications: [
-      {
-        name: "Construction",
-        description:
-          "Structural components, reinforcing bars, and framework in buildings and infrastructure.",
-        icon: "building",
-      },
-      {
-        name: "Manufacturing",
-        description:
-          "Production of machinery, tools, equipment, and consumer goods.",
-        icon: "cog",
-      },
-      {
-        name: "Transportation",
-        description: "Railway tracks, bridges, and vehicle components.",
-        icon: "truck",
-      },
-      {
-        name: "Energy",
-        description:
-          "Power plants, transmission towers, and energy infrastructure.",
-        icon: "bolt",
-      },
-      {
-        name: "Steel Production",
-        description:
-          "Primary raw material for various steel grades and alloys.",
-        icon: "flame",
-      },
+      "Lithium-ion batteries",
+      "Superalloys for aerospace",
+      "Cutting tools and drill bits",
+      "Magnetic materials",
+      "Healthcare applications",
     ],
-    extractionProcess: [
-      {
-        step: 1,
-        name: "Mining",
-        description:
-          "Extraction of iron ore from open-pit or underground mines",
-      },
-      {
-        step: 2,
-        name: "Crushing & Grinding",
-        description: "Breaking down the ore into smaller pieces",
-      },
-      {
-        step: 3,
-        name: "Concentration",
-        description: "Removing impurities and increasing iron content",
-      },
-      {
-        step: 4,
-        name: "Pelletizing",
-        description:
-          "Converting concentrated ore into pellets for easier handling",
-      },
-      {
-        step: 5,
-        name: "Blast Furnace Processing",
-        description: "Smelting iron ore to produce pig iron",
-      },
+    qualityAssurance:
+      "We source cobalt responsibly from Morocco's mining regions and ensure consistent quality for all technological and industrial uses.",
+    annualExtraction: "New addition to Morocco's mineral exports",
+    purityLevel: "99.8%",
+    specs: [
+      { name: "Purity", value: "42%+" },
+      { name: "Available Stock", value: "Available upon request" },
+      { name: "Industry Grade", value: "99.8%" },
+      { name: "Form", value: "Ore, Concentrate" },
+    ],
+  },
+  antimony: {
+    title: "Moroccan Antimony",
+    description:
+      "Our premium Moroccan antimony provides exceptional quality for various industrial applications, sourced from Morocco's exclusive mining operations.",
+    purity: "30%+",
+    stock: "+700 tons",
+    applications: [
+      "Flame retardants",
+      "Battery manufacturing",
+      "Electronic components",
+      "Glass and ceramic production",
+      "Metal alloys",
+    ],
+    qualityAssurance:
+      "Our Moroccan antimony undergoes strict quality control to meet the highest industry standards in our state-of-the-art Moroccan facilities.",
+    annualExtraction: "25,000 tons from Morocco's antimony deposits",
+    purityLevel: "99.65%",
+    specs: [
+      { name: "Purity", value: "30%+" },
+      { name: "Available Stock", value: "+700 tons" },
+      { name: "Industry Grade", value: "99.65%" },
+      { name: "Form", value: "Ore, Concentrate" },
     ],
   },
 };
 
-// Icons mapping
-const icons: Record<IconName, JSX.Element> = {
-  battery: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M2 4.5A2.5 2.5 0 014.5 2h11a2.5 2.5 0 012.5 2.5v11a2.5 2.5 0 01-2.5 2.5h-11A2.5 2.5 0 012 15.5v-11z"></path>
-    </svg>
-  ),
-  shield: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  building: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  chip: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M13 7H7v6h6V7z"></path>
-      <path
-        fillRule="evenodd"
-        d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  sparkles: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  cog: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  bolt: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  sun: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  pill: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  drill: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  xray: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
-  paintbrush: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M13.6,2.3L12.8,3l-1.1-1L10.9,2.8l1.1,1L9.5,6.2L8.5,5.2l-0.8,0.8l1.1,1L4.3,11.7c-0.6,0.6-0.6,1.5,0,2.1
-      c0.6,0.6,1.5,0.6,2.1,0l4.6-4.6l1.1,1.1l0.8-0.8l-1.1-1.1l2.5-2.5l1.1,1.1l0.8-0.8l-1.1-1.1l0.8-0.8c0,0,0,0,0,0
-      C16.6,3.5,15.8,1.2,13.6,2.3z"
-      ></path>
-    </svg>
-  ),
-  truck: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
-      <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
-    </svg>
-  ),
-  flame: (
-    <svg
-      className="w-6 h-6 text-teal-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  ),
+// Helper function to format purity
+const formatPurity = (
+  purity: string | { concentrate?: string; powder?: string; ore: string }
+): string => {
+  if (typeof purity === "string") return purity;
+
+  const parts = [];
+  if (purity.concentrate) parts.push(`Concentrate: ${purity.concentrate}`);
+  if (purity.powder) parts.push(`Powder: ${purity.powder}`);
+  if (purity.ore) parts.push(`Ore: ${purity.ore}`);
+
+  return parts.join(", ");
 };
 
-// Icons function to render the correct icon
-const getIcon = (iconName: IconName | string): JSX.Element => {
-  // Check if the iconName is a valid key in our icons object
-  if (iconName in icons) {
-    return icons[iconName as IconName];
-  }
+// Helper function to format stock
+const formatStock = (
+  stock: string | { concentrate?: string; powder?: string; ore: string }
+): string => {
+  if (typeof stock === "string") return stock;
 
-  // Fallback to cog icon if not found
-  return icons.cog;
+  const parts = [];
+  if (stock.concentrate) parts.push(`Concentrate: ${stock.concentrate}`);
+  if (stock.powder) parts.push(`Powder: ${stock.powder}`);
+  if (stock.ore) parts.push(`Ore: ${stock.ore}`);
+
+  return parts.join(", ");
 };
 
-// Metadata generators
-export async function generateMetadata({ params }: MetadataParams) {
-  const product = productsData[params.id];
-  if (!product) {
+// Product-specific SEO keywords
+const productKeywords: Record<string, string[]> = {
+  lead: [
+    "Moroccan lead",
+    "lead Morocco",
+    "lead supplier Morocco",
+    "Morocco lead mining",
+    "lead concentrate Morocco",
+    "lead powder Morocco",
+    "lead ore Morocco",
+    "Morocco lead concentrate",
+    "Morocco lead powder",
+    "Morocco lead ore",
+    "lead concentrate supplier Morocco",
+    "lead powder supplier Morocco",
+    "lead ore supplier Morocco",
+    "high-purity lead Morocco",
+    "Moroccan lead exporter",
+    "Morocco lead deposits",
+    "Bni Taddjit lead",
+    "Errachidia lead mining",
+    "lead-acid battery materials",
+    "radiation shielding lead",
+    "industrial lead Morocco",
+    "99.97% pure lead",
+    "lead mining Morocco",
+    "Morocco raw materials lead",
+    "African lead supplier",
+    "North Africa lead",
+    "lead concentrate supplier",
+    "Morocco mineral exports lead",
+    "ethically sourced lead",
+    "sustainable lead mining",
+    "lead for batteries",
+    "construction lead materials",
+    "automotive lead supplier",
+    "electronics lead Morocco",
+  ],
+  copper: [
+    "Moroccan copper",
+    "copper Morocco",
+    "copper supplier Morocco",
+    "Morocco copper mining",
+    "copper ore Morocco",
+    "Morocco copper ore",
+    "copper ore supplier Morocco",
+    "copper concentrate Morocco",
+    "Morocco copper concentrate",
+    "high-quality copper Morocco",
+    "Moroccan copper exporter",
+    "Tinghir copper mining",
+    "Morocco copper deposits",
+    "industrial copper Morocco",
+    "99.9% pure copper",
+    "copper mining Morocco",
+    "Morocco raw materials copper",
+    "African copper supplier",
+    "North Africa copper",
+    "electrical copper Morocco",
+    "Morocco mineral exports copper",
+    "ethically sourced copper",
+    "sustainable copper mining",
+    "copper wiring materials",
+    "electronics copper supplier",
+    "telecommunications copper",
+    "construction copper Morocco",
+    "copper cathode Morocco",
+    "renewable energy copper",
+    "8-21% copper purity",
+  ],
+  zinc: [
+    "Moroccan zinc",
+    "zinc Morocco",
+    "zinc calamine Morocco",
+    "zinc supplier Morocco",
+    "Morocco zinc mining",
+    "zinc ore Morocco",
+    "zinc concentrate Morocco",
+    "Morocco zinc ore",
+    "Morocco zinc concentrate",
+    "zinc ore supplier Morocco",
+    "zinc concentrate supplier Morocco",
+    "calamine ore Morocco",
+    "Morocco calamine ore",
+    "high-purity zinc Morocco",
+    "Moroccan zinc exporter",
+    "Bni Taddjit zinc",
+    "Errachidia zinc mining",
+    "Morocco zinc deposits",
+    "industrial zinc Morocco",
+    "99.95% pure zinc",
+    "zinc mining Morocco",
+    "Morocco raw materials zinc",
+    "African zinc supplier",
+    "North Africa zinc",
+    "galvanizing zinc Morocco",
+    "Morocco mineral exports zinc",
+    "ethically sourced zinc",
+    "sustainable zinc mining",
+    "zinc for cosmetics",
+    "pharmaceutical zinc",
+    "die-casting zinc",
+    "zinc calamine skincare",
+    "zinc galvanizing steel",
+  ],
+  barite: [
+    "Moroccan barite",
+    "barite Morocco",
+    "baryte Morocco",
+    "barite supplier Morocco",
+    "Morocco barite mining",
+    "barite powder Morocco",
+    "barite ore Morocco",
+    "barite lumps Morocco",
+    "Morocco barite powder",
+    "Morocco barite ore",
+    "Morocco barite lumps",
+    "barite powder supplier Morocco",
+    "barite ore supplier Morocco",
+    "barite lumps supplier Morocco",
+    "high-density barite Morocco",
+    "Moroccan barite exporter",
+    "Morocco barite deposits",
+    "industrial barite Morocco",
+    "4.2 specific gravity barite",
+    "barite mining Morocco",
+    "Morocco raw materials barite",
+    "African barite supplier",
+    "North Africa barite",
+    "drilling barite Morocco",
+    "Morocco mineral exports barite",
+    "ethically sourced barite",
+    "sustainable barite mining",
+    "oil drilling barite",
+    "medical barite applications",
+    "paint grade barite",
+    "construction barite Morocco",
+    "BaSO4 Morocco",
+    "barium sulfate Morocco",
+  ],
+  iron: [
+    "Moroccan iron",
+    "iron Morocco",
+    "iron ore Morocco",
+    "Morocco iron ore",
+    "iron ore supplier Morocco",
+    "iron concentrate Morocco",
+    "Morocco iron concentrate",
+    "iron supplier Morocco",
+    "Morocco iron mining",
+    "high-purity iron Morocco",
+    "Moroccan iron exporter",
+    "Morocco iron deposits",
+    "industrial iron Morocco",
+    "98.5% pure iron",
+    "iron ore mining Morocco",
+    "Morocco raw materials iron",
+    "African iron supplier",
+    "North Africa iron",
+    "iron ore concentrate Morocco",
+    "Morocco mineral exports iron",
+    "ethically sourced iron",
+    "sustainable iron mining",
+    "construction iron Morocco",
+    "manufacturing iron ore",
+    "automotive iron materials",
+    "industrial machinery iron",
+    "steel production iron",
+    "iron ore 56% purity",
+    "Morocco iron-rich mountains",
+    "bulk iron ore supplier",
+  ],
+  cobalt: [
+    "Moroccan cobalt",
+    "cobalt Morocco",
+    "cobalt supplier Morocco",
+    "Morocco cobalt mining",
+    "cobalt ore Morocco",
+    "cobalt concentrate Morocco",
+    "Morocco cobalt ore",
+    "Morocco cobalt concentrate",
+    "cobalt ore supplier Morocco",
+    "cobalt concentrate supplier Morocco",
+    "high-purity cobalt Morocco",
+    "Moroccan cobalt exporter",
+    "Morocco cobalt deposits",
+    "industrial cobalt Morocco",
+    "99.8% pure cobalt",
+    "cobalt mining Morocco",
+    "Morocco raw materials cobalt",
+    "African cobalt supplier",
+    "North Africa cobalt",
+    "battery-grade cobalt Morocco",
+    "Morocco mineral exports cobalt",
+    "ethically sourced cobalt",
+    "sustainable cobalt mining",
+    "lithium-ion battery cobalt",
+    "cobalt for batteries",
+    "aerospace cobalt alloys",
+    "superalloy cobalt Morocco",
+    "cobalt 42% purity",
+    "electric vehicle cobalt",
+    "renewable energy cobalt",
+  ],
+  antimony: [
+    "Moroccan antimony",
+    "antimony Morocco",
+    "antimony supplier Morocco",
+    "Morocco antimony mining",
+    "antimony ore Morocco",
+    "antimony concentrate Morocco",
+    "Morocco antimony ore",
+    "Morocco antimony concentrate",
+    "antimony ore supplier Morocco",
+    "antimony concentrate supplier Morocco",
+    "high-purity antimony Morocco",
+    "Moroccan antimony exporter",
+    "Khenifra antimony mining",
+    "Morocco antimony deposits",
+    "industrial antimony Morocco",
+    "99.65% pure antimony",
+    "antimony mining Morocco",
+    "Morocco raw materials antimony",
+    "African antimony supplier",
+    "North Africa antimony",
+    "antimony trioxide Morocco",
+    "Morocco mineral exports antimony",
+    "ethically sourced antimony",
+    "sustainable antimony mining",
+    "flame retardant antimony",
+    "battery antimony materials",
+    "electronics antimony Morocco",
+    "antimony 30% purity",
+    "antimony alloys Morocco",
+  ],
+};
+
+// Metadata generator
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const product = products.find((p) => p.id === params.id);
+  const details = productDetails[params.id];
+
+  if (!product || !details) {
     return {
       title: "Product Not Found | The 3 Rocks",
       description: "The requested product could not be found.",
     };
   }
 
+  const productUrl = `https://www.the-3rocks.com/products/${params.id}`;
+  const productImage = `https://www.the-3rocks.com/images/${params.id}-product.png`;
+
+  // Generate Schema.org Product structured data
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: details.title,
+    description: details.description,
+    brand: {
+      "@type": "Brand",
+      name: "The 3 Rocks Company",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "The 3 Rocks Company",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "Morocco",
+      },
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "The 3 Rocks Company",
+      },
+      areaServed: {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+    },
+    additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "Origin",
+        value: "Morocco",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Purity Level",
+        value: details.purityLevel,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Annual Extraction",
+        value: details.annualExtraction,
+      },
+    ],
+    category: "Mining & Raw Materials",
+    countryOfOrigin: {
+      "@type": "Country",
+      name: "Morocco",
+    },
+  };
+
   return {
-    title: product.title,
-    description: product.description,
+    title: `${details.title} | Premium Moroccan Mining Materials | The 3 Rocks`,
+    description: details.description,
+    keywords: productKeywords[params.id] || [],
+    authors: [{ name: "The 3 Rocks Company" }],
+    creator: "The 3 Rocks Mining Company",
+    publisher: "The 3 Rocks Company, Morocco",
+    openGraph: {
+      title: `${details.title} - Premium Quality from Morocco`,
+      description: details.description,
+      url: productUrl,
+      siteName: "The 3 Rocks",
+      images: [
+        {
+          url: productImage,
+          width: 1200,
+          height: 630,
+          alt: `${details.title} - Premium Moroccan Mining Material`,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${details.title} - Premium Moroccan Mining Materials`,
+      description: details.description,
+      images: [productImage],
+      creator: "@the3rocks",
+      site: "@the3rocks",
+    },
+    alternates: {
+      canonical: productUrl,
+      languages: {
+        "en-US": productUrl,
+        "fr-FR": productUrl,
+        "ar-MA": productUrl,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    other: {
+      "geo.region": "MA",
+      "geo.placename": "Morocco",
+      "og:country-name": "Morocco",
+    },
   };
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = productsData[params.id];
+export default function ProductPage({ params }: { params: { id: string } }) {
+  const product = products.find((p) => p.id === params.id);
+  const details = productDetails[params.id];
 
   // Handle case where product ID doesn't exist
-  if (!product) {
+  if (!product || !details) {
     return (
       <>
         <div
@@ -652,7 +620,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 The product you're looking for doesn't exist or has been moved.
               </p>
               <Link
-                href="/articles"
+                href="/products"
                 className="btn text-white bg-teal-500 hover:bg-teal-400"
               >
                 View All Products
@@ -664,8 +632,68 @@ export default function ProductPage({ params }: ProductPageProps) {
     );
   }
 
+  // Generate Schema.org Product structured data
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: details.title,
+    description: details.description,
+    brand: {
+      "@type": "Brand",
+      name: "The 3 Rocks Company",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "The 3 Rocks Company",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "Morocco",
+      },
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "The 3 Rocks Company",
+      },
+      areaServed: {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+    },
+    additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "Origin",
+        value: "Morocco",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Purity Level",
+        value: details.purityLevel,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Annual Extraction",
+        value: details.annualExtraction,
+      },
+    ],
+    category: "Mining & Raw Materials",
+    countryOfOrigin: {
+      "@type": "Country",
+      name: "Morocco",
+    },
+  };
+
   return (
     <>
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"
@@ -674,57 +702,140 @@ export default function ProductPage({ params }: ProductPageProps) {
         <PageIllustration />
       </div>
 
-      <section className="relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="relative bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+            {/* Back to Products Button */}
+            <div className="max-w-7xl mx-auto mb-8">
+              <Link 
+                href="/products" 
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-teal-500 dark:hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-all duration-300 shadow-sm hover:shadow-md group"
+              >
+                <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span className="font-medium">Back to All Products</span>
+              </Link>
+            </div>
+
             {/* Product header */}
-            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h1 font-red-hat-display mb-4">{product.name}</h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400">
-                {product.intro}
+            <div className="max-w-4xl mx-auto text-center pb-12 md:pb-16" data-aos="fade-up">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/30 border border-teal-200/50 dark:border-teal-700/50 text-teal-700 dark:text-teal-300 text-sm font-semibold mb-6 shadow-sm">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Premium Moroccan Quality
+              </div>
+              <h1 className="h1 font-red-hat-display mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                {details.title}
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                {details.description}
               </p>
             </div>
 
-            {/* Product overview */}
-            <div className="md:flex md:space-x-8 mb-16">
-              {/* Product image */}
-              <div className="md:w-1/2 mb-8 md:mb-0">
-                <div className="relative h-80 md:h-96 overflow-hidden rounded-lg shadow-lg">
-                  <Image
-                    className="w-full h-full object-cover"
-                    src={product.mainImage || "/images/products/default.jpg"}
-                    width={600}
-                    height={400}
-                    alt={`${product.name} raw material`}
-                  />
-                </div>
-              </div>
-
-              {/* Product details */}
-              <div className="md:w-1/2">
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md h-full">
-                  <h2 className="h3 font-red-hat-display mb-4">
-                    Product Specifications
-                  </h2>
-
-                  <div className="space-y-4">
-                    {product.specs.map((spec: Specification, index: number) => (
-                      <div key={index}>
-                        <h3 className="font-bold text-gray-800 dark:text-gray-300">
-                          {spec.name}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {spec.value}
-                        </p>
+            {/* Product overview with image and specs */}
+            <div className="mb-20" data-aos="fade-up" data-aos-delay="100">
+              <div className="relative group">
+                {/* Glassmorphic card */}
+                <div className="relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50">
+                  <div className="md:flex">
+                    {/* Image section */}
+                    <div className="md:w-1/2 relative overflow-hidden">
+                      <div className="relative h-72 md:h-full min-h-[450px]">
+                        <Image
+                          src={product.image}
+                          alt={`Moroccan ${product.name} mineral`}
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority
+                        />
+                        <div className={`absolute inset-0 ${product.color} opacity-10`}></div>
+                        {/* Gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 via-transparent to-transparent"></div>
                       </div>
-                    ))}
+                    </div>
 
-                    <div className="pt-4">
+                    {/* Specifications section */}
+                    <div className="md:w-1/2 p-8 md:p-10">
+                      <h2 className="text-3xl font-bold font-red-hat-display mb-4 text-gray-900 dark:text-white">
+                        Specifications
+                      </h2>
+                      
+                      {/* SEO-rich introduction */}
+                      <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        Our Moroccan {product.name.toLowerCase()} is sourced from Morocco's most productive mining regions, 
+                        ensuring exceptional quality and purity. Each batch undergoes rigorous quality control testing 
+                        to meet international industry standards and customer specifications.
+                      </p>
+
+                      {/* Annual Extraction */}
+                      <div className="mb-6 p-4 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 rounded-xl border border-teal-200/50 dark:border-teal-700/50">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Annual Extraction</span>
+                          <span className="text-lg font-bold text-teal-900 dark:text-teal-100">{details.annualExtraction}</span>
+                        </div>
+                      </div>
+
+                      {/* Available Stock */}
+                      <div className="mb-8">
+                        <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">Available Stock</h3>
+                        <div className="grid grid-cols-3 gap-3">
+                          {"stockDetails" in details ? (
+                            <>
+                              {details.stockDetails.concentrate && (
+                                <div className="relative group/stock p-3 rounded-lg bg-gradient-to-br from-teal-50 to-teal-100/50 dark:from-teal-900/20 dark:to-teal-800/20 border border-teal-200/50 dark:border-teal-700/50 hover:shadow-md transition-all">
+                                  <div className="text-xs font-medium text-teal-700 dark:text-teal-400 mb-1">Concentrate</div>
+                                  <div className="text-base font-bold text-teal-900 dark:text-teal-100">{details.stockDetails.concentrate}</div>
+                                </div>
+                              )}
+                              {details.stockDetails.powder && (
+                                <div className="relative group/stock p-3 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200/50 dark:border-blue-700/50 hover:shadow-md transition-all">
+                                  <div className="text-xs font-medium text-blue-700 dark:text-blue-400 mb-1">Powder</div>
+                                  <div className="text-base font-bold text-blue-900 dark:text-blue-100">{details.stockDetails.powder}</div>
+                                </div>
+                              )}
+                              {details.stockDetails.ore && (
+                                <div className="relative group/stock p-3 rounded-lg bg-gradient-to-br from-amber-50 to-amber-100/50 dark:from-amber-900/20 dark:to-amber-800/20 border border-amber-200/50 dark:border-amber-700/50 hover:shadow-md transition-all">
+                                  <div className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1">Ore</div>
+                                  <div className="text-base font-bold text-amber-900 dark:text-amber-100">{details.stockDetails.ore}</div>
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <div className="col-span-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/30 text-center">
+                              <span className="font-semibold text-gray-900 dark:text-white">{details.stock || "Available upon request"}</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Additional specs */}
+                      <div className="space-y-3 mb-8 p-5 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl border border-gray-200/30 dark:border-gray-700/30">
+                        {details.specs.slice(0, 5).map((spec: any, index: number) => (
+                          <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200/50 dark:border-gray-700/50 last:border-0">
+                            <span className="text-sm text-gray-600 dark:text-gray-400">
+                              {spec.name}
+                            </span>
+                            <span className="font-semibold text-gray-900 dark:text-white">{spec.value}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* CTA Button */}
                       <Link
                         href="/contact"
-                        className="btn-sm text-white bg-teal-500 hover:bg-teal-400"
+                        className="group/btn relative inline-flex items-center justify-center w-full px-6 py-4 text-base font-semibold text-white bg-gradient-to-r from-teal-600 to-teal-500 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
                       >
-                        Request Quote
+                        <span className="relative z-10 flex items-center gap-2">
+                          Request Moroccan Minerals Quote
+                          <svg className="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </span>
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                       </Link>
                     </div>
                   </div>
@@ -732,192 +843,403 @@ export default function ProductPage({ params }: ProductPageProps) {
               </div>
             </div>
 
+            {/* FAQ Section - Product Specific */}
+            <div className="mb-20" data-aos="fade-up">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold font-red-hat-display text-center mb-6 text-gray-900 dark:text-white">
+                  Frequently Asked Questions About Moroccan {product.name}
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 leading-relaxed">
+                  Everything you need to know about our {product.name.toLowerCase()} extraction, sourcing, and applications.
+                </p>
+
+                <div className="space-y-4">
+                  {/* FAQ Items - Product Specific */}
+                  {product.id === "lead" && (
+                    <>
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            Where is the lead mined in Morocco?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our lead is extracted from the <strong className="text-gray-900 dark:text-white">Errachidia region</strong>, specifically in <strong className="text-gray-900 dark:text-white">Bni Taddjit</strong>, one of Morocco's most productive mining areas. This region is known for its high-purity lead deposits and has been a key mining location for decades.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            How much lead is extracted annually?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          We extract approximately <strong className="text-gray-900 dark:text-white">8400 tons of lead annually</strong> from our Moroccan mines, with a monthly production capacity of over 150 tons. Our current stock includes 400 tons of concentrate, 150 tons of powder, and 300 tons of ore.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            What applications is Moroccan lead used for?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our high-purity lead is primarily used for <strong className="text-gray-900 dark:text-white">lead-acid batteries</strong> in automotive and industrial applications. It's also essential for <strong className="text-gray-900 dark:text-white">radiation shielding</strong> in medical and nuclear facilities, construction materials, electronics manufacturing, and specialized cosmetic applications.
+                        </div>
+                      </details>
+                    </>
+                  )}
+
+                  {product.id === "zinc" && (
+                    <>
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            Where is the zinc (calamine) mined in Morocco?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our zinc calamine is sourced from the <strong className="text-gray-900 dark:text-white">Errachidia region</strong>, specifically in <strong className="text-gray-900 dark:text-white">Bni Taddjit</strong>, the same mineral-rich area known for quality zinc deposits in Morocco's mining belt.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            How much zinc is extracted annually?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          We extract over <strong className="text-gray-900 dark:text-white">50,000 tons of zinc annually</strong> from our Moroccan deposits. Current available stock includes 300 tons of ore and 80 tons of concentrate, with purity levels of +37% for ore and 70% for concentrate.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            What applications is Moroccan zinc used for?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our zinc calamine is widely used for <strong className="text-gray-900 dark:text-white">galvanizing steel</strong> to prevent corrosion, in <strong className="text-gray-900 dark:text-white">cosmetics and skincare products</strong> for its soothing properties, pharmaceutical applications, die-casting for precise metal components, and battery manufacturing.
+                        </div>
+                      </details>
+                    </>
+                  )}
+
+                  {product.id === "copper" && (
+                    <>
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            Where is the copper mined in Morocco?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our copper is extracted from the <strong className="text-gray-900 dark:text-white">Tinghir region</strong> in Morocco, a historically significant copper mining area known for its rich mineral deposits and quality copper ore.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            How much copper is extracted annually?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          We extract approximately <strong className="text-gray-900 dark:text-white">17,000 tons of copper annually</strong> from our Moroccan mineral deposits. We maintain over 500 tons in stock with purity ranging from 8% to 21%, with special high-purity copper available at 40% (with permit).
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            What applications is Moroccan copper used for?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Copper is essential for <strong className="text-gray-900 dark:text-white">electrical wiring and systems</strong> due to its excellent conductivity, electronics manufacturing, construction materials (plumbing, roofing), telecommunications infrastructure, and renewable energy systems like solar panels and wind turbines.
+                        </div>
+                      </details>
+                    </>
+                  )}
+
+                  {product.id === "antimony" && (
+                    <>
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            Where is the antimony mined in Morocco?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our antimony is extracted from the <strong className="text-gray-900 dark:text-white">Khenifra region</strong> in Morocco, an area with significant antimony deposits known for producing high-quality material.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            How much antimony is extracted annually?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          We extract approximately <strong className="text-gray-900 dark:text-white">25,000 tons of antimony annually</strong> from our Moroccan deposits. We maintain over 700 tons in stock with purity levels of 30%+ for both ore and concentrate forms.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            What applications is Moroccan antimony used for?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Antimony is primarily used for <strong className="text-gray-900 dark:text-white">flame retardants</strong> in textiles and plastics, battery manufacturing (lead-acid batteries), electronic components, glass and ceramic production, and metal alloys to improve hardness and strength.
+                        </div>
+                      </details>
+                    </>
+                  )}
+
+                  {/* General FAQ for other products (Barite, Iron, Cobalt) */}
+                  {!["lead", "zinc", "copper", "antimony"].includes(product.id) && (
+                    <>
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            Where is the {product.name.toLowerCase()} mined in Morocco?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          Our {product.name.toLowerCase()} is extracted from various productive mining regions across <strong className="text-gray-900 dark:text-white">Morocco</strong>, areas known for their rich mineral deposits and quality {product.name.toLowerCase()} resources.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            How much {product.name.toLowerCase()} is extracted annually?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                          {details.annualExtraction} We maintain consistent production to meet global demand while ensuring sustainable mining practices.
+                        </div>
+                      </details>
+
+                      <details className="group bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg overflow-hidden">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-3">
+                            <svg className="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
+                            </svg>
+                            What applications is Moroccan {product.name.toLowerCase()} used for?
+                          </h3>
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400">
+                          <ul className="space-y-2">
+                            {details.applications.map((app: string, index: number) => (
+                              <li key={index} className="flex items-start gap-2">
+                                <svg className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                                </svg>
+                                <span>{app}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </details>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+
             {/* Applications */}
-            <div className="mb-16">
-              <h2 className="h2 font-red-hat-display text-center mb-8">
+            <div className="mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold font-red-hat-display text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent" data-aos="fade-up">
                 Applications
               </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                {product.applications.map((app: Application, index: number) => (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {details.applications.map((app: string, index: number) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center"
+                    className="group relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                     data-aos="fade-up"
-                    data-aos-delay={index * 100}
+                    data-aos-delay={index * 50}
                   >
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-900 mb-4">
-                      {getIcon(app.icon)}
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                        <svg
+                          className="w-5 h-5 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-200 font-medium leading-relaxed">
+                        {app}
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold font-red-hat-display mb-2">
-                      {app.name}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {app.description}
-                    </p>
+                    {/* Accent border */}
+                    <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-teal-500 to-teal-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl"></div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Extraction process */}
-            <div className="mb-16">
-              <h2 className="h2 font-red-hat-display text-center mb-8">
-                {product.name} Extraction Process
-              </h2>
-
-              <div
-                className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md"
-                data-aos="fade-up"
-              >
-                <div className="grid md:grid-cols-5 gap-4">
-                  {product.extractionProcess.map(
-                    (step: ExtractionStep, index: number) => (
-                      <div key={index} className="text-center">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-500 text-white text-xl font-bold mb-4">
-                          {step.step}
-                        </div>
-                        <h3 className="font-bold mb-2">{step.name}</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          {step.description}
-                        </p>
-                      </div>
-                    )
-                  )}
-                </div>
-
-                <div className="mt-8">
-                  <h3 className="font-bold text-gray-800 dark:text-gray-300 mb-4">
-                    Our Sustainable Approach
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    At The 3 Rocks, we employ advanced extraction technologies
-                    that minimize environmental impact while maximizing resource
-                    utilization. Our {product.name.toLowerCase()} extraction
-                    process includes:
-                  </p>
-                  <ul className="list-disc pl-5 mt-4 text-gray-600 dark:text-gray-400 space-y-2">
-                    <li>Closed-loop water systems to prevent contamination</li>
-                    <li>Energy-efficient processing technologies</li>
-                    <li>Comprehensive waste management and recycling</li>
-                    <li>Continuous monitoring of environmental metrics</li>
-                    <li>Rehabilitation of mining sites after extraction</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Quality standards */}
-            <div className="mb-16">
-              <h2 className="h2 font-red-hat-display text-center mb-8">
-                Quality Standards & Certifications
-              </h2>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                <div
-                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                  data-aos="fade-up"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-500 mb-4">
-                    <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
+            {/* Quality Assurance */}
+            <div className="mb-20" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 dark:bg-teal-400/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-600/5 dark:bg-teal-500/5 rounded-full blur-3xl"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">
+                      Quality Assurance
+                    </h2>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">ISO 9001:2015</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Our {product.name.toLowerCase()} production facilities
-                    maintain ISO 9001:2015 certification, ensuring consistent
-                    quality management systems.
-                  </p>
-                </div>
-
-                <div
-                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-500 mb-4">
-                    <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">ISO 14001:2015</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Environmental management certification ensuring our{" "}
-                    {product.name.toLowerCase()} extraction and processing meets
-                    strict environmental standards.
-                  </p>
-                </div>
-
-                <div
-                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-500 mb-4">
-                    <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">
-                    Product Quality Testing
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Every batch of our {product.name.toLowerCase()} undergoes
-                    rigorous testing to ensure it meets or exceeds industry
-                    specifications and customer requirements.
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {details.qualityAssurance}
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Call to action */}
-            <div className="text-center">
-              <h2 className="h3 font-red-hat-display mb-4">
-                Ready to Order Premium {product.name}?
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-                Contact our experts today to discuss your specific requirements
-                and receive a personalized quote.
-              </p>
-              <Link
-                href="/contact"
-                className="btn text-white bg-teal-500 hover:bg-teal-400 mb-4 mr-4"
-              >
-                Request Quote
-              </Link>
-              <Link
-                href="/articles"
-                className="btn text-teal-500 bg-teal-100 hover:bg-teal-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-teal-400"
-              >
-                View All Products
-              </Link>
+            <div className="text-center" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-gradient-to-br from-teal-600 to-teal-700 dark:from-teal-700 dark:to-teal-800 p-12 rounded-2xl shadow-2xl">
+                {/* Decorative effects */}
+                <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl"></div>
+                
+                <div className="relative z-10">
+                  <h2 className="text-3xl md:text-4xl font-bold font-red-hat-display mb-4 text-white">
+                    Ready to Order Premium Moroccan {product.name}?
+                  </h2>
+                  <p className="text-xl text-teal-50 mb-8 max-w-2xl mx-auto">
+                    Contact our experts today to discuss your specific Moroccan raw
+                    material requirements and receive a personalized quote.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center">
+                    <Link
+                      href="/contact"
+                      className="group/btn relative inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-teal-700 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      Request Quote
+                      <svg className="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
+                    <Link
+                      href="/products"
+                      className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-white/10 backdrop-blur-sm rounded-xl border-2 border-white/30 hover:bg-white/20 transition-all duration-300"
+                    >
+                      View All Products
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

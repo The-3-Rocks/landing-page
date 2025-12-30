@@ -32,6 +32,24 @@ export async function generateMetadata({
   return {
     title,
     description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: post.metadata.image || "/images/og-default.png",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [post.metadata.image || "/images/og-default.png"],
+    },
   };
 }
 

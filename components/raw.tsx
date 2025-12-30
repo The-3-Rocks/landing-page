@@ -1,112 +1,9 @@
 "use client";
 import Head from "next/head";
-import { useState } from "react";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
-import ProductPopup from "@/components/product-popup";
-
-// Import product images
-import leadImage from "@/public/images/raw-material-lead.jpg";
-import copperImage from "@/public/images/copper1.png";
-import zincImage from "@/public/images/zinc-product.png";
-import bariteImage from "@/public/images/Barite-Clay.jpg";
-import ironImage from "@/public/images/iron-product.png";
-import cobaltImage from "@/public/images/cobaltt.png";
-import antimonyImage from "@/public/images/antimony11.jpg";
-
-// Define Product type
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  image: StaticImageData;
-  purity: string;
-  stock: string;
-  color: string;
-  forms: string[];
-}
-
-// Product data without prices
-const products: Product[] = [
-  {
-    id: "lead",
-    name: "Lead",
-    description:
-      "High-grade Moroccan lead with exceptional purity for various industrial applications, ethically sourced from Morocco's rich mineral deposits.",
-    image: leadImage,
-    purity: "86%",
-    stock: "400 tons concentrate, 150 tons powder, 300 tons ore",
-    color: "bg-gray-700",
-    forms: ["Concentrate", "Powder", "Ore"],
-  },
-  {
-    id: "copper",
-    name: "Copper",
-    description:
-      "Premium Moroccan copper with exceptional quality extracted from Morocco's historic mining regions, offering versatility for industrial applications.",
-    image: copperImage,
-    purity: "8% to 21%",
-    stock: "500 tons",
-    color: "bg-amber-600",
-    forms: ["Ore"],
-  },
-  {
-    id: "zinc",
-    name: "Zinc",
-    description:
-      "High-quality zinc calamine from Morocco's mineral-rich mountains for various applications, including cosmetics and industrial uses.",
-    image: zincImage,
-    purity: "+37%",
-    stock: "300 tons ore, 80 tons concentrate",
-    color: "bg-slate-300",
-    forms: ["Ore", "Concentrate"],
-  },
-  {
-    id: "barite",
-    name: "Barite",
-    description:
-      "High-quality Moroccan barite sourced from premier mining regions of Morocco for drilling, medical, paint and construction applications.",
-    image: bariteImage,
-    purity: "Density: 4.18 - 4.28",
-    stock: "400 tons",
-    color: "bg-white",
-    forms: ["Ore", "Powder", "Lumps"],
-  },
-  {
-    id: "iron",
-    name: "Iron",
-    description:
-      "Superior quality iron extracted from Morocco's ancient ore deposits for construction, manufacturing, and industrial uses worldwide.",
-    image: ironImage,
-    purity: "≥ 56%",
-    stock: "40,000 tons",
-    color: "bg-slate-500",
-    forms: ["Ore"],
-  },
-  {
-    id: "cobalt",
-    name: "Cobalt",
-    description:
-      "High-quality Moroccan cobalt essential for modern battery technology and superalloys, sustainably mined from Morocco's mineral wealth.",
-    image: cobaltImage,
-    purity: "42%+",
-    stock: "Available upon request",
-    color: "bg-blue-800",
-    forms: ["Ore", "Concentrate"],
-  },
-  {
-    id: "antimony",
-    name: "Antimony",
-    description:
-      "Premium antimony from Morocco's exclusive mining operations for flame retardants, batteries, and electronic components with guaranteed quality.",
-    image: antimonyImage,
-    purity: "30%+",
-    stock: "Available upon request",
-    color: "bg-gray-600",
-    forms: ["Ore", "Concentrate"],
-  },
-];
+import { products, Product } from "@/lib/products";
 
 // Generate Product Schema for SEO (without prices)
 const generateProductSchema = () => {
@@ -176,14 +73,6 @@ const organizationSchema = {
 };
 
 export default function ProductsPage() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-
-  const openProductPopup = (product: Product) => {
-    setSelectedProduct(product);
-    setIsPopupOpen(true);
-  };
-
   return (
     <>
       <Head>
@@ -272,7 +161,7 @@ export default function ProductsPage() {
                     <div className="relative h-64 md:h-full">
                       <Image
                         className="absolute inset-0 w-full h-full object-cover"
-                        src={leadImage}
+                        src={products[0].image}
                         width={600}
                         height={400}
                         alt="Moroccan Lead raw material"
@@ -331,12 +220,12 @@ export default function ProductsPage() {
                       </div>
                     </div>
 
-                    <button
-                      onClick={() => openProductPopup(products[0])}
+                    <Link
+                      href="/products/lead"
                       className="btn-sm text-white bg-teal-500 hover:bg-teal-400"
                     >
                       Learn More About Our Moroccan Lead
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -380,12 +269,12 @@ export default function ProductsPage() {
                         {product.stock}
                       </div>
                     </div>
-                    <button
-                      onClick={() => openProductPopup(product)}
+                    <Link
+                      href={`/products/${product.id}`}
                       className="btn-sm text-white bg-teal-500 hover:bg-teal-400 w-full mt-3"
                     >
                       Learn More
-                    </button>
+                    </Link>
                   </div>
                 ))}
             </div>
@@ -500,13 +389,6 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
-
-      {/* Product Popup */}
-      <ProductPopup
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-        product={selectedProduct}
-      />
     </>
   );
 }
