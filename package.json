@@ -54,9 +54,8 @@
     "tailwindcss": "^3.3.6"
   },
   "browserslist": [
-    "chrome >= 115",
-    "firefox >= 115",
-    "safari >= 17",
-    "edge >= 115"
+    "defaults",
+    "not ie 11",
+    "not op_mini all"
   ]
 }
