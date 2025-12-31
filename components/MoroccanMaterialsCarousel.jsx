@@ -15,7 +15,6 @@ import CarouselImage08 from "@/public/images/copper.jpeg";
 
 // Import Swiper
 import Swiper from "swiper";
-import "swiper/swiper.min.css";
 
 export default function MoroccoMaterialsCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);

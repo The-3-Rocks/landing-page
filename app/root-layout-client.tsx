@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import "aos/dist/aos.css";
 import Theme from "./theme-provider";
 
 export default function RootLayoutClient({

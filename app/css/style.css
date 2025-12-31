@@ -1,6 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
+/* Library styles */
+@import 'aos/dist/aos.css';
+@import 'swiper/swiper.min.css';
+
 /* Additional styles */
 @import 'additional-styles/utility-patterns.css';
 @import 'additional-styles/range-slider.css';
