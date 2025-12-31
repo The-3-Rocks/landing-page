@@ -568,11 +568,6 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     },
     alternates: {
       canonical: productUrl,
-      languages: {
-        "en-US": productUrl,
-        "fr-FR": productUrl,
-        "ar-MA": productUrl,
-      },
     },
     robots: {
       index: true,
