@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Theme from "./theme-provider";
+import "aos/dist/aos.css";
 
 export default function RootLayoutClient({
   children,

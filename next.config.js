@@ -7,6 +7,9 @@ const nextConfig = {
   swcMinify: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
 };
 
 module.exports = withMDX(nextConfig);
