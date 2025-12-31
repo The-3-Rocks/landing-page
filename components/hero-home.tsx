@@ -211,9 +211,7 @@ export default function HeroHome() {
               <Image
                 className="rounded-full shrink-0 mr-3"
                 src={rock}
-                fetchPriority="high"
-                // width={32}
-                // height={32}
+                priority
                 alt="rock"
               />
             </div>
