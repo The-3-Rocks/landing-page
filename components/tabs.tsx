@@ -36,7 +36,7 @@ export default function Tabs() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
               Morocco's Premium Services
             </div>
             <h2 className="h2 font-red-hat-display mb-4">
@@ -57,7 +57,7 @@ export default function Tabs() {
                 <button
                   className={`w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center m-1 lg:mx-0 ${
                     category === "1" &&
-                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700"
                   }`}
                   onClick={() => setCateg("1")}
                 >
@@ -82,7 +82,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "2" &&
-                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700"
                   }`}
                   onClick={() => setCateg("2")}
                 >
@@ -106,7 +106,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "3" &&
-                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700"
                   }`}
                   onClick={() => setCateg("3")}
                 >
@@ -130,7 +130,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "4" &&
-                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700"
                   }`}
                   onClick={() => setCateg("4")}
                 >
@@ -154,7 +154,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "5" &&
-                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700"
                   }`}
                   onClick={() => setCateg("5")}
                 >
@@ -316,10 +316,10 @@ export default function Tabs() {
                     className={["2"].includes(category) ? undefined : "hidden"}
                   >
                     <div className="relative">
-                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-600">
+                      <h3 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-700">
                         <FaGem className="w-16 h-16 mr-6" /> High-Quality Raw
                         Material Supply
-                      </h1>
+                      </h3>
 
                       <p className="text-gray-700 dark:text-gray-300">
                         At The 3 Rocks Company, we take pride in delivering the
@@ -371,10 +371,10 @@ export default function Tabs() {
                     className={["3"].includes(category) ? undefined : "hidden"}
                   >
                     <div className="relative">
-                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-600">
+                      <h3 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-700">
                         <FaHandshake className="w-20 h-20 mr-6" /> Supplier
                         Collaboration with Rigorous Standards
-                      </h1>
+                      </h3>
                       <p className="text-gray-700 dark:text-gray-300">
                         While we occasionally collaborate with trusted Moroccan
                         suppliers, our rigorous guidelines ensure that every
@@ -432,10 +432,10 @@ export default function Tabs() {
                     className={["4"].includes(category) ? undefined : "hidden"}
                   >
                     <div className="relative">
-                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-600">
+                      <h3 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-700">
                         <FaSearch className="w-16 h-16 mr-6" /> Transparent
                         Tracking and Compliance
-                      </h1>
+                      </h3>
 
                       <p className="text-gray-700 dark:text-gray-300">
                         Even though we do not currently utilize a software tool
@@ -491,10 +491,10 @@ export default function Tabs() {
                     className={["5"].includes(category) ? undefined : "hidden"}
                   >
                     <div className="relative">
-                      <h1 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-600">
+                      <h3 className="h3 font-red-hat-display mb-4 flex items-center dark:text-white text-teal-700">
                         <FaHeadset className="w-16 h-16 mr-6 mb-3" /> Dedicated
                         Customer Support and Transparency
-                      </h1>
+                      </h3>
 
                       <p className="text-gray-700 dark:text-gray-300">
                         Our Moroccan mining company values open communication

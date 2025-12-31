@@ -5,8 +5,10 @@ import { useTheme } from "next-themes";
 
 export default function ThemeToggle({
   className = "",
+  id = "light-switch",
 }: {
   className?: string;
+  id?: string;
 }) {
   const { theme, setTheme, resolvedTheme } = useTheme();
 
@@ -20,7 +22,7 @@ export default function ThemeToggle({
   return (
     <div className={`form-switch flex flex-col justify-center ${className}`}>
       <input
-        id="light-switch"
+        id={id}
         type="checkbox"
         name="light-switch"
         className="light-switch sr-only"
@@ -32,7 +34,7 @@ export default function ThemeToggle({
           return setTheme("light");
         }}
       />
-      <label className="relative" htmlFor="light-switch">
+      <label className="relative" htmlFor={id}>
         <span
           className="relative bg-gradient-to-t from-gray-100 to-white dark:from-gray-800 dark:to-gray-700 shadow-sm z-10"
           aria-hidden="true"

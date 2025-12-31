@@ -89,7 +89,7 @@ export default function Header() {
             </ul>
 
             {/* Desktop lights switch */}
-            <ThemeToggle className="ml-3" />
+            <ThemeToggle className="ml-3" id="theme-toggle-desktop" />
 
             {/* Desktop CTA on the right */}
             <ul className="flex justify-end flex-wrap items-center">

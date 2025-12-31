@@ -14,7 +14,7 @@ export default function MiningProcess() {
         <div className="py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
               Morocco's Mining Excellence
             </div>
             <h2 className="h2 font-red-hat-display mb-4">
@@ -237,7 +237,7 @@ export default function MiningProcess() {
               </p>
               <Link
                 href="/our-process"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-700 hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-800 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
               >
                 View Full Process Details
                 <svg

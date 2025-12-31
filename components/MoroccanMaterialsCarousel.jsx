@@ -160,7 +160,7 @@ export default function MoroccoMaterialsCarousel() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center pb-10">
-          <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+          <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
             Morocco's Premium Resources
           </div>
           <h2 className="h2 font-red-hat-display mb-4">
@@ -220,7 +220,7 @@ export default function MoroccoMaterialsCarousel() {
 
                       {/* Purity badge */}
                       <div className="absolute top-3 right-3 z-20">
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-teal-100 text-teal-800 text-xs font-medium dark:bg-teal-900 dark:text-teal-200">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-teal-100 text-teal-900 text-xs font-medium dark:bg-teal-900 dark:text-teal-200">
                           {material.purity}
                         </span>
                       </div>
@@ -259,7 +259,7 @@ export default function MoroccoMaterialsCarousel() {
                       {/* CTA button */}
                       <Link
                         href={material.link}
-                        className="inline-flex items-center justify-center w-full px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors duration-200 dark:bg-teal-700 dark:hover:bg-teal-600"
+                        className="inline-flex items-center justify-center w-full px-3 py-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium rounded-lg transition-colors duration-200 dark:bg-teal-700 dark:hover:bg-teal-800"
                       >
                         <span>Discover {material.name} Solutions</span>
                         <svg
