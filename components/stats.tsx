@@ -104,7 +104,7 @@ export default function StatsCarousel() {
                         <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                           {slide.periodicTable}
                         </div>
-                        <div className="text-gray-600 dark:text-gray-400">
+                        <div className="text-gray-700 dark:text-gray-400">
                           Raw material
                         </div>
                       </div>
@@ -117,7 +117,7 @@ export default function StatsCarousel() {
                         <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                           {slide.content}
                         </div>
-                        <div className="text-gray-600 dark:text-gray-400">
+                        <div className="text-gray-700 dark:text-gray-400">
                           The {slide.name.toLowerCase()} content
                         </div>
                       </div>
@@ -130,7 +130,7 @@ export default function StatsCarousel() {
                         <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                           {slide.stock}
                         </div>
-                        <div className="text-gray-600 dark:text-gray-400">
+                        <div className="text-gray-700 dark:text-gray-400">
                           Our stock (Tons)
                         </div>
                       </div>
@@ -143,7 +143,7 @@ export default function StatsCarousel() {
                         <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                           {slide.clients}
                         </div>
-                        <div className="text-gray-600 dark:text-gray-400">
+                        <div className="text-gray-700 dark:text-gray-400">
                           Satisfied clients
                         </div>
                       </div>

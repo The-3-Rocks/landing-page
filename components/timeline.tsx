@@ -61,7 +61,7 @@ export default function Timeline() {
                     <div className="text-gray-600 dark:text-gray-400 grow">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
-                    <a className="inline-flex items-center font-medium text-teal-500 hover:underline mt-2" href="#0">
+                    <a className="inline-flex items-center font-medium text-teal-700 dark:text-teal-400 hover:underline mt-2" href="#0">
                       <span>Learn more</span>
                       <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />

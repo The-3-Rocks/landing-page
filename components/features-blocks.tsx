@@ -17,7 +17,7 @@ export default function FeaturesBlocks() {
           >
             {/* 1st item */}
             <cite
-              className="flex flex-col not-italic p-5 group text-white bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 shadow-2xl"
+              className="flex flex-col not-italic p-5 group text-white bg-gradient-to-tr from-teal-800 to-teal-700 dark:to-teal-800 shadow-2xl"
               data-aos="fade-down"
               data-aos-anchor="[data-aos-id-featbl]"
             >

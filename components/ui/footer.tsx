@@ -50,7 +50,7 @@ export default function Footer() {
               <div className="mt-4 text-sm text-center text-gray-600 dark:text-gray-400">
                 <a
                   href="mailto:info@the-3rocks.com"
-                  className="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition duration-150 ease-in-out"
+                  className="text-teal-700 hover:text-teal-800 dark:text-teal-500 dark:hover:text-teal-400 transition duration-150 ease-in-out"
                 >
                   info@the-3rocks.com
                 </a>
@@ -128,7 +128,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-1">
                     <a
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-400 hover:text-teal-700 dark:hover:text-teal-400 hover:underline transition duration-150 ease-in-out"
                       href="mailto:info@the-3rocks.com"
                     >
                       Email: info@the-3rocks.com
@@ -227,7 +227,7 @@ export default function Footer() {
             <ul className="flex mb-4 md:order-2 md:ml-4 md:mb-0">
               <li className="ml-4">
                 <a
-                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
+                  className="flex justify-center items-center text-white bg-teal-700 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-800 rounded-full transition duration-150 ease-in-out"
                   href="https://www.linkedin.com/company/the-3-rocks/"
                   aria-label="Linkedin"
                   target="_blank"
@@ -244,7 +244,7 @@ export default function Footer() {
               </li>
               <li className="ml-4">
                 <a
-                  className="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out"
+                  className="flex justify-center items-center text-white bg-teal-700 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-800 rounded-full transition duration-150 ease-in-out"
                   href="mailto:info@the-3rocks.com"
                   aria-label="Email"
                 >
@@ -260,7 +260,7 @@ export default function Footer() {
             </ul>
             {/* Copyrights note */}
             <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">
-              &copy; The<span className="text-teal-400">3</span>Rocks. All
+              &copy; The<span className="text-teal-700 dark:text-teal-400">3</span>Rocks. All
               rights reserved.
             </div>
           </div>

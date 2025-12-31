@@ -30,11 +30,11 @@ export default function CtaContact() {
 
             {/* CTA header */}
             <h3 className="h3 font-red-hat-display text-gray-100 mb-2">Reach Out to Us for the Best Options and Solutions</h3>
-            <p className="text-gray-400 text-xl">At the<span className="text-teal-500">3</span>rocks, we are committed to providing exceptional services tailored to your needs. Our team of experts is ready to assist you in finding the best options and solutions. Whether you need consultation, support, or customized solutions, we are here to help.</p>
+            <p className="text-gray-400 text-xl">At the<span className="text-teal-400">3</span>rocks, we are committed to providing exceptional services tailored to your needs. Our team of experts is ready to assist you in finding the best options and solutions. Whether you need consultation, support, or customized solutions, we are here to help.</p>
 
             {/* CTA button */}
             <div className="flex justify-center mt-8">
-              <a className="btn text-white bg-teal-500 hover:bg-teal-400" href="/contact">Send us a message</a>
+              <a className="btn text-white bg-teal-700 hover:bg-teal-800" href="/contact">Send us a message</a>
             </div>
 
           </div>

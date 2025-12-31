@@ -42,7 +42,7 @@ export default function Tabs() {
             <h2 className="h2 font-red-hat-display mb-4">
               Exceptional Quality and Transparent Services
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-xl text-gray-700 dark:text-gray-400">
               Delivering top-quality Moroccan raw materials with unwavering
               transparency and compliance. Discover the reliability and
               integrity that sets us apart.
@@ -65,7 +65,7 @@ export default function Tabs() {
                     className={`w-4 h-4 shrink-0 mr-2 ${
                       category === "1"
                         ? "text-white dark:text-white"
-                        : "text-teal-500 dark:text-gray-400"
+                        : "text-teal-700 dark:text-gray-400"
                     }`}
                   />
                   <span
@@ -90,14 +90,14 @@ export default function Tabs() {
                     className={`w-4 h-4 shrink-0 mr-2 ${
                       category === "2"
                         ? "text-white dark:text-white"
-                        : "text-teal-500 dark:text-gray-400"
+                        : "text-teal-700 dark:text-gray-400"
                     }`}
                   />
                   <span
                     className={
                       category === "2"
                         ? "text-white dark:text-white"
-                        : "text-gray-600 dark:text-gray-300"
+                        : "text-gray-700 dark:text-gray-300"
                     }
                   >
                     High-Quality Raw Material Supply
@@ -114,7 +114,7 @@ export default function Tabs() {
                     className={`w-4 h-4 shrink-0 mr-2 ${
                       category === "3"
                         ? "text-white dark:text-white"
-                        : "text-teal-500 dark:text-gray-400"
+                        : "text-teal-700 dark:text-gray-400"
                     }`}
                   />
                   <span
@@ -138,7 +138,7 @@ export default function Tabs() {
                     className={`w-4 h-4 shrink-0 mr-2 ${
                       category === "4"
                         ? "text-white dark:text-white"
-                        : "text-teal-500 dark:text-gray-400"
+                        : "text-teal-700 dark:text-gray-400"
                     }`}
                   />
                   <span
@@ -162,7 +162,7 @@ export default function Tabs() {
                     className={`w-4 h-4 shrink-0 mr-2 ${
                       category === "5"
                         ? "text-white dark:text-white"
-                        : "text-teal-500 dark:text-gray-400"
+                        : "text-teal-700 dark:text-gray-400"
                     }`}
                   />
                   <span

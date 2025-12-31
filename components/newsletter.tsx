@@ -16,7 +16,7 @@ export default function Newsletter() {
             aria-label="Your email"
           /> */}
           <a
-            className="btn-sm text-white bg-teal-500 hover:bg-teal-400 shrink-0"
+            className="btn-sm text-white bg-teal-700 hover:bg-teal-800 shrink-0"
             href="/contact"
           >
             Get in Touch with Us!
@@ -30,7 +30,7 @@ export default function Newsletter() {
             aria-hidden="true"
           >
             <path
-              className="fill-current text-gray-600"
+              className="text-gray-700 dark:text-gray-400"
               d="M6.226 39.073l9.71 2.172-.436 1.951-13.436-3.004-1.735-.388 1.232-1.281 9.545-9.923 1.441 1.387-6.898 7.171 7.737-2.329C25.946 29.254 34.831 17.909 40.043.71l1.914.58c-5.378 17.746-14.651 29.572-27.818 35.393l-.117.043-7.796 2.347z"
             />
           </svg>

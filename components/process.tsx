@@ -18,10 +18,10 @@ export default function MiningProcess() {
               Morocco's Mining Excellence
             </div>
             <h2 className="h2 font-red-hat-display mb-4">
-              Our <span className="text-teal-500">Premium</span> Raw Materials
+              Our <span className="text-teal-700 dark:text-teal-400">Premium</span> Raw Materials
               Process
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-xl text-gray-700 dark:text-gray-400">
               From extraction to final export, we ensure the highest quality
               through our rigorous and sustainable process.
             </p>

@@ -22,7 +22,7 @@ export default function RelatedPosts01() {
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                 Copper
               </div>
-              <div className="text-gray-600 dark:text-gray-400">
+              <div className="text-gray-700 dark:text-gray-400">
                 Raw material
               </div>
             </div>
@@ -36,7 +36,7 @@ export default function RelatedPosts01() {
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                 +8%
               </div>
-              <div className="text-gray-600 dark:text-gray-400">
+              <div className="text-gray-700 dark:text-gray-400">
                 The Amber content
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function RelatedPosts01() {
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                 +150
               </div>
-              <div className="text-gray-600 dark:text-gray-400">
+              <div className="text-gray-700 dark:text-gray-400">
                 Our stock (T)
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function RelatedPosts01() {
               <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                 2
               </div>
-              <div className="text-gray-600 dark:text-gray-400">
+              <div className="text-gray-700 dark:text-gray-400">
                 Satisfied clients
               </div>
             </div>

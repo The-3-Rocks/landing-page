@@ -165,7 +165,7 @@ export default function MoroccoMaterialsCarousel() {
           <h2 className="h2 font-red-hat-display mb-4">
             Discover Morocco's Exceptional Minerals
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-lg text-gray-700 dark:text-gray-400">
             Explore our premium raw materials meticulously sourced from
             Morocco's mineral-rich regions.
           </p>

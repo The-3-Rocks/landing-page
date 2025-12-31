@@ -29,12 +29,12 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-teal-500"
+                    className="fill-current text-teal-700 dark:text-teal-400"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
               </div>
-              <blockquote className="text-xl text-gray-600 dark:text-gray-400">
+              <blockquote className="text-xl text-gray-700 dark:text-gray-400">
                 " Hi, I am Lead, or as my pals call me, "Plumbum." I'm the
                 heavy-duty, laid-back metal with a bluish-gray complexion. I'm
                 great at shielding radiation, making batteries, and even showing
@@ -66,7 +66,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-teal-500"
+                    className="fill-current text-teal-700 dark:text-teal-400"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
@@ -103,7 +103,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-teal-500"
+                    className="fill-current text-teal-700 dark:text-teal-400"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>
@@ -141,7 +141,7 @@ export default function TestimonialsBlocks() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="fill-current text-teal-500"
+                    className="fill-current text-teal-700 dark:text-teal-400"
                     d="M2.785 5.334C2.538 5.5-.2 2.944.011 2.646.826 1.483 2.183.836 3.62.5 5.064.158 6.582.117 7.92-.02c.017-.002.098.153.088.166-1.763 2.018-3.223 3.836-5.221 5.188zm3.676 6.519c-.862.184-1.937-3.403-1.07-3.711 3.422-1.22 7.078-1.671 10.728-1.766 3.655-.096 7.304.162 10.866.32.044.002.06.177.018.187-6.938 1.634-13.691 3.504-20.542 4.97z"
                   />
                 </svg>

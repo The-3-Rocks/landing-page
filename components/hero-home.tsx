@@ -62,7 +62,7 @@ export default function HeroHome() {
                 Raw Materials, Deals
               </h1>
               <p
-                className="text-xl text-gray-600 dark:text-gray-400 animate-fade-in-down [animation-delay:150ms]"
+                className="text-xl text-gray-700 dark:text-gray-400 animate-fade-in-down [animation-delay:150ms]"
               >
                 Sourcing and supplying quality mining raw materials. Ensuring
                 efficient and reliable transactions every time.
@@ -151,7 +151,7 @@ export default function HeroHome() {
               </form>
 
               <ul
-                className="max-w-sm sm:max-w-md mx-auto md:max-w-none text-gray-600 dark:text-gray-400 mt-8 -mb-2 animate-fade-in-down [animation-delay:300ms]"
+                className="max-w-sm sm:max-w-md mx-auto md:max-w-none text-gray-700 dark:text-gray-400 mt-8 -mb-2 animate-fade-in-down [animation-delay:300ms]"
               >
                 <li className="flex items-center mb-2">
                   <svg
@@ -165,7 +165,7 @@ export default function HeroHome() {
                 </li>
                 <li className="flex items-center mb-2">
                   <svg
-                    className="w-3 h-3 fill-current text-teal-600 mr-2 shrink-0"
+                    className="w-3 h-3 fill-current text-teal-700 dark:text-teal-400 mr-2 shrink-0"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -175,7 +175,7 @@ export default function HeroHome() {
                 </li>
                 <li className="flex items-center mb-2">
                   <svg
-                    className="w-3 h-3 fill-current text-teal-600 mr-2 shrink-0"
+                    className="w-3 h-3 fill-current text-teal-700 dark:text-teal-400 mr-2 shrink-0"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -204,6 +204,7 @@ export default function HeroHome() {
                 src={rock}
                 priority
                 alt="rock"
+                sizes="(max-width: 768px) 100vw, 500px"
               />
             </div>
           </div>
