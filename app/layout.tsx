@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./css/style.css";
-import "./css/additional-styles/utility-patterns.css";
 import { Inter, Red_Hat_Display } from "next/font/google";
 import RootLayoutClient from "./root-layout-client";
 import Header from "@/components/ui/header";
@@ -39,9 +38,9 @@ export default function RootLayout({
       >
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0QV4CTYT36"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

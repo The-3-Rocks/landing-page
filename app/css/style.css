@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Additional styles loaded via postcss-import */
+@import 'additional-styles/utility-patterns.css';
+
 /* Custom Animations for Performance (AOS replacement for Hero) */
 @keyframes fadeInDown {
     from {
