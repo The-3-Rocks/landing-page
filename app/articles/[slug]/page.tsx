@@ -50,6 +50,9 @@ export async function generateMetadata({
       description,
       images: [post.metadata.image || "/images/og-default.png"],
     },
+    alternates: {
+      canonical: `https://www.the-3rocks.com/articles/${params.slug}`,
+    },
   };
 }
 

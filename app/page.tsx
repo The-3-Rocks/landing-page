@@ -82,11 +82,6 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://www.the-3rocks.com",
-    languages: {
-      "en-US": "https://www.the-3rocks.com/",
-      "fr-FR": "https://www.the-3rocks.com/",
-      "ar-MA": "https://www.the-3rocks.com/",
-    },
   },
   category: "Moroccan Mining & Raw Materials",
   verification: {

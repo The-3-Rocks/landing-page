@@ -21,6 +21,9 @@ export const metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: "https://www.the-3rocks.com/articles",
+  },
 };
 
 export default function Blog() {

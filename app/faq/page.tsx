@@ -61,7 +61,7 @@ export default function FAQs() {
         <div className="absolute inset-0 h-128 pt-16 box-content">
           <Image
             className="absolute inset-0 w-full h-full object-cover opacity-25"
-            src="/path/to/faqs-background.jpg"
+            src="/images/about-hero.jpg"
             width={1440}
             height={577}
             priority
