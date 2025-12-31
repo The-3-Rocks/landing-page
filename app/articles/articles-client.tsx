@@ -123,7 +123,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
       )}
 
       {/* Filter and Search Section */}
-      <section className="bg-gray-50 dark:bg-gray-800/50">
+      <section className={`bg-gray-50 dark:bg-gray-800/50 ${!featuredPost ? 'pt-32 md:pt-40' : ''}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="py-8">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -163,9 +163,11 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
             </div>
 
             {/* Results count */}
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-              Showing {filteredBlogs.length > 1 ? startIndex : 0} - {endIndex - 1} of {filteredBlogs.length - 1} articles
-            </p>
+            {filteredBlogs.length > 1 && (
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                Showing {startIndex} - {endIndex - 1} of {filteredBlogs.length - 1} articles
+              </p>
+            )}
           </div>
         </div>
       </section>
