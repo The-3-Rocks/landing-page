@@ -14,7 +14,7 @@ export default function RootLayoutClient({
       const AOS = (await import("aos")).default;
       AOS.init({
         once: true,
-        disable: "phone",
+        disable: "mobile",
         duration: 600,
         easing: "ease-out-sine",
       });

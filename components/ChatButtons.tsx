@@ -7,17 +7,9 @@ import { IoClose } from "react-icons/io5";
 export default function ChatButtons() {
   const [open, setOpen] = useState(false);
   const [showWhatsApp, setShowWhatsApp] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
 
   const whatsappNumber = "212654352802";
   const wechatId = "wxid_3j2et54a5s2l12";
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 640);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,11 +18,9 @@ export default function ChatButtons() {
     return () => clearInterval(interval);
   }, [open]);
 
-  // Sizes
-  const mobileSize = "w-16 h-16";
-  const mobileIconSize = "w-8 h-8";
-  const desktopSize = "lg:w-16 lg:h-16"; // all desktop buttons same size
-  const desktopIconSize = "lg:w-10 lg:h-10";
+  // Combined sizes using Tailwind responsive classes
+  const buttonSize = "w-16 h-16 lg:w-16 lg:h-16";
+  const iconSize = "w-8 h-8 lg:w-10 lg:h-10";
 
   return (
     <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
@@ -41,26 +31,18 @@ export default function ChatButtons() {
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center ${
-              isMobile ? mobileSize : desktopSize
-            } bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg transition`}
+            className={`flex items-center justify-center ${buttonSize} bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg transition`}
           >
-            <FaWhatsapp
-              className={`${isMobile ? mobileIconSize : desktopIconSize}`}
-            />
+            <FaWhatsapp className={iconSize} />
           </a>
 
           <a
             href={`weixin://dl/chat?${wechatId}`}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center ${
-              isMobile ? mobileSize : desktopSize
-            } bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg transition`}
+            className={`flex items-center justify-center ${buttonSize} bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg transition`}
           >
-            <FaWeixin
-              className={`${isMobile ? mobileIconSize : desktopIconSize}`}
-            />
+            <FaWeixin className={iconSize} />
           </a>
         </div>
       )}
@@ -68,13 +50,13 @@ export default function ChatButtons() {
       {/* Single dynamic icon */}
       {!open && (
         <div
-          className={`flex items-center justify-center ${mobileSize} ${desktopSize} bg-teal-600 text-white rounded-full shadow-lg transition cursor-pointer`}
+          className={`flex items-center justify-center ${buttonSize} bg-teal-600 text-white rounded-full shadow-lg transition cursor-pointer`}
           onClick={() => setOpen(true)}
         >
           {showWhatsApp ? (
-            <FaWhatsapp className={`${mobileIconSize} ${desktopIconSize}`} />
+            <FaWhatsapp className={iconSize} />
           ) : (
-            <FaWeixin className={`${mobileIconSize} ${desktopIconSize}`} />
+            <FaWeixin className={iconSize} />
           )}
         </div>
       )}
@@ -83,9 +65,9 @@ export default function ChatButtons() {
       {open && (
         <button
           onClick={() => setOpen(false)}
-          className={`flex items-center justify-center ${mobileSize} ${desktopSize} bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg transition`}
+          className={`flex items-center justify-center ${buttonSize} bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg transition`}
         >
-          <IoClose className={`${mobileIconSize} ${desktopIconSize}`} />
+          <IoClose className={iconSize} />
         </button>
       )}
     </div>

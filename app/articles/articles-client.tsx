@@ -40,11 +40,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
     }
 
     if (articlesListRef.current) {
-      const yOffset = -100; // Offset for header overlap
-      const element = articlesListRef.current;
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      articlesListRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentPage]);
 
@@ -191,7 +187,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
       </section>
 
       {/* Articles list */}
-      <section ref={articlesListRef}>
+      <section ref={articlesListRef} className="scroll-mt-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="py-12 md:py-20">
             {paginatedPosts.length > 0 ? (
