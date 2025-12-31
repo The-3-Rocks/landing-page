@@ -15,7 +15,6 @@ import CarouselImage09 from "@/public/images/raw-material-amber.png";
 
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from "swiper";
-import "swiper/swiper.min.css";
 Swiper.use([Autoplay, Navigation]);
 
 export default function Carousel() {
