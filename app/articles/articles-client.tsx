@@ -6,7 +6,7 @@ import PostDate from "@/components/post-date";
 import PostItem from "@/components/post-item";
 import { useState, useMemo, useRef, useEffect } from "react";
 
-const ARTICLES_PER_PAGE = 6;
+const ARTICLES_PER_PAGE = 50;
 
 interface BlogPost {
   slug: string;
