@@ -142,7 +142,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
               </div>
 
               {/* Category Filter */}
-              <div className="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto md:flex-wrap md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
+              <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 w-full md:w-auto md:flex-wrap md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
                 {categories.map((category) => (
                   <button
                     key={category}
