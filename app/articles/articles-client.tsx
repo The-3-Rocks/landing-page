@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PostDate from "@/components/post-date";
 import PostItem from "@/components/post-item";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 
 const ARTICLES_PER_PAGE = 6;
 
@@ -29,6 +29,24 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const articlesListRef = useRef<HTMLElement>(null);
+  const isFirstRender = useRef(true);
+
+  // Scroll to top of articles when page changes
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    if (articlesListRef.current) {
+      const yOffset = -100; // Offset for header overlap
+      const element = articlesListRef.current;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [currentPage]);
 
   // Extract unique categories
   const categories = useMemo(() => {
@@ -173,7 +191,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
       </section>
 
       {/* Articles list */}
-      <section>
+      <section ref={articlesListRef}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="py-12 md:py-20">
             {paginatedPosts.length > 0 ? (
