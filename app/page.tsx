@@ -101,10 +101,10 @@ export const metadata = {
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
 import Stats from "@/components/stats";
-import ChatButtons from "@/components/ChatButtons";
 import dynamic from "next/dynamic";
 
 const MoroccanMaterialsCarousel = dynamic(() => import("@/components/MoroccanMaterialsCarousel"));
+const ChatButtons = dynamic(() => import("@/components/ChatButtons"), { ssr: false });
 const MiningProcess = dynamic(() => import("@/components/process"));
 const Tabs = dynamic(() => import("@/components/tabs"));
 const TestimonialsBlocks = dynamic(() => import("@/components/testimonials-blocks"));

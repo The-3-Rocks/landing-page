@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import Theme from "./theme-provider";
 
@@ -11,12 +10,16 @@ export default function RootLayoutClient({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      disable: "phone",
-      duration: 600,
-      easing: "ease-out-sine",
-    });
+    const initAOS = async () => {
+      const AOS = (await import("aos")).default;
+      AOS.init({
+        once: true,
+        disable: "phone",
+        duration: 600,
+        easing: "ease-out-sine",
+      });
+    };
+    initAOS();
   }, []);
 
   return <Theme>{children}</Theme>;
