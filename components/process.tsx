@@ -105,6 +105,7 @@ export default function MiningProcess() {
                     width={300}
                     height={225}
                     alt="Moroccan raw material extraction"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">
@@ -140,6 +141,7 @@ export default function MiningProcess() {
                     width={300}
                     height={225}
                     alt="Moroccan material analysis"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">
@@ -175,6 +177,7 @@ export default function MiningProcess() {
                     width={300}
                     height={225}
                     alt="Moroccan material processing"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">
@@ -209,6 +212,7 @@ export default function MiningProcess() {
                     width={300}
                     height={225}
                     alt="Material export from Morocco"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 to-transparent flex items-end">
                     <h3 className="text-xl font-bold text-white p-4">Export</h3>
