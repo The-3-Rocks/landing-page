@@ -53,8 +53,14 @@ export default function TestimonialsCarousel() {
 
   const heightFix = () => {
     if (testimonials.current) {
-      const childrenDiv = testimonials.current.children[active] as HTMLElement
-      childrenDiv && (testimonials.current.style.height = `${childrenDiv.offsetHeight}px`)
+      requestAnimationFrame(() => {
+        if (testimonials.current) {
+          const childrenDiv = testimonials.current.children[active] as HTMLElement
+          if (childrenDiv) {
+            testimonials.current.style.height = `${childrenDiv.offsetHeight}px`
+          }
+        }
+      })
     }
   }
 

@@ -69,19 +69,6 @@ export default function StatsCarousel() {
     return () => clearInterval(interval);
   }, [currentSlide, autorotate, slides.length, autorotateTiming]);
 
-  const heightFix = () => {
-    if (carouselRef.current) {
-      const activeSlide = carouselRef.current.children[
-        currentSlide
-      ] as HTMLElement;
-      activeSlide &&
-        (carouselRef.current.style.height = `${activeSlide.offsetHeight}px`);
-    }
-  };
-
-  useEffect(() => {
-    heightFix();
-  }, [currentSlide]);
 
   return (
     <section className="relative">
@@ -95,8 +82,7 @@ export default function StatsCarousel() {
         <div className="pb-12 md:pb-20">
           <div className="relative">
             <div
-              className="relative flex flex-col items-start z-10 transition-all duration-300 ease-in-out"
-              ref={carouselRef}
+              className="relative flex flex-col items-start z-10 transition-all duration-300 ease-in-out h-full"
             >
               {slides.map((slide, index) => (
                 <Transition
@@ -108,7 +94,6 @@ export default function StatsCarousel() {
                   leave="transition ease-in-out duration-300 transform absolute"
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-8"
-                  beforeEnter={() => heightFix()}
                   unmount={false}
                 >
                   <div className="w-full text-center px-12 py-8 mx-4 md:mx-0">
