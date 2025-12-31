@@ -5,7 +5,7 @@ import leadImage from "@/public/images/raw-material-lead.jpg";
 import copperImage from "@/public/images/copper1.png";
 import zincImage from "@/public/images/zinc-product.png";
 import bariteImage from "@/public/images/Barite-Clay.jpg";
-import ironImage from "@/public/images/iron-product.png";
+import ironImage from "@/public/images/moroccan-iron-ore.png";
 import cobaltImage from "@/public/images/cobaltt.png";
 import antimonyImage from "@/public/images/antimony11.jpg";
 

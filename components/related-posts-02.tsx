@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import RelatedImage01 from "@/public/images/lead-product.jpg";
-import RelatedImage02 from "@/public/images/iron-product.png";
+import RelatedImage02 from "@/public/images/moroccan-iron-ore.png";
 import RelatedImage03 from "@/public/images/zinc-product.png";
 import RelatedImage04 from "@/public/images/barite-product.png";
 import { usePathname } from "next/navigation";
