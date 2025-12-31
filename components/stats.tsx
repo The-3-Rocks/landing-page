@@ -100,8 +100,6 @@ export default function StatsCarousel() {
                     <div className="grid grid-cols-2 gap-4 lg:gap-6 md:grid-cols-4 text-center">
                       <div
                         className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl"
-                        data-aos="fade-down"
-                        data-aos-anchor="[data-aos-id-stats]"
                       >
                         <div className="font-red-hat-display text-3xl font-black tracking-tighter mb-1">
                           {slide.periodicTable}

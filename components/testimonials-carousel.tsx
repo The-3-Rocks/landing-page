@@ -51,22 +51,9 @@ export default function TestimonialsCarousel() {
     return () => clearInterval(interval)
   }, [active, autorotate])  
 
-  const heightFix = () => {
-    if (testimonials.current) {
-      requestAnimationFrame(() => {
-        if (testimonials.current) {
-          const childrenDiv = testimonials.current.children[active] as HTMLElement
-          if (childrenDiv) {
-            testimonials.current.style.height = `${childrenDiv.offsetHeight}px`
-          }
-        }
-      })
-    }
-  }
-
   useEffect(() => {
-    heightFix()
-  }, [])       
+    // Height fix removed as it caused forced layout reflows
+  }, [])
 
   return (
     <section>
@@ -94,7 +81,7 @@ export default function TestimonialsCarousel() {
                     leave="transition ease-in-out duration-300 transform absolute"
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-8"
-                    beforeEnter={() => heightFix()}
+                    beforeEnter={() => {}}
                     unmount={false}
                   >
 

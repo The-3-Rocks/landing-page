@@ -57,15 +57,12 @@ export default function HeroHome() {
             {/* Content */}
             <div className="md:col-span-7 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
               <h1
-                className="h1 lg:text-6xl mb-4 font-red-hat-display font-black"
-                data-aos="fade-down"
+                className="h1 lg:text-6xl mb-4 font-red-hat-display font-black animate-fade-in-down"
               >
                 Raw Materials, Deals
               </h1>
               <p
-                className="text-xl text-gray-600 dark:text-gray-400"
-                data-aos="fade-down"
-                data-aos-delay="150"
+                className="text-xl text-gray-600 dark:text-gray-400 animate-fade-in-down [animation-delay:150ms]"
               >
                 Sourcing and supplying quality mining raw materials. Ensuring
                 efficient and reliable transactions every time.
@@ -154,9 +151,7 @@ export default function HeroHome() {
               </form>
 
               <ul
-                className="max-w-sm sm:max-w-md mx-auto md:max-w-none text-gray-600 dark:text-gray-400 mt-8 -mb-2"
-                data-aos="fade-down"
-                data-aos-delay="450"
+                className="max-w-sm sm:max-w-md mx-auto md:max-w-none text-gray-600 dark:text-gray-400 mt-8 -mb-2 animate-fade-in-down [animation-delay:300ms]"
               >
                 <li className="flex items-center mb-2">
                   <svg
@@ -194,8 +189,6 @@ export default function HeroHome() {
             {/* Mobile mockup */}
             <div
               className="md:col-span-5 lg:col-span-5 text-center md:text-right"
-              data-aos="fade-up"
-              data-aos-delay="450"
             >
               {/* <ModalVideoIphone
                 thumb={VideoThumb}
