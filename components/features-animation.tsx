@@ -1,3 +1,5 @@
+import "./features-animation.css";
+
 export default function FeaturesAnimation() {
   return (
     <section>

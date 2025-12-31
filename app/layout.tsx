@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./css/style.css";
 import "./css/additional-styles/utility-patterns.css";
-import "./css/additional-styles/range-slider.css";
-import "./css/additional-styles/toggle-switch.css";
-import "./css/additional-styles/theme.css";
 import { Inter, Red_Hat_Display } from "next/font/google";
 import RootLayoutClient from "./root-layout-client";
 import Header from "@/components/ui/header";

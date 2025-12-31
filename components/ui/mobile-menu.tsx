@@ -5,6 +5,7 @@ import { Transition } from "@headlessui/react";
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import LogoBig from "./logo-big";
+import "./mobile-menu.css";
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);

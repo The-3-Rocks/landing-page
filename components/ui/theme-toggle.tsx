@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
+import "./theme-toggle.css";
 
 export default function ThemeToggle({
   className = "",
