@@ -43,7 +43,7 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">Lead Guardian</cite>,{" "}
-                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
+                <cite className="text-teal-600 transition duration-150 ease-in-out not-italic">
                   Ancient Rome
                 </cite>
               </div>
@@ -80,7 +80,7 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">Zinc Shiny</cite>,{" "}
-                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
+                <cite className="text-teal-600 transition duration-150 ease-in-out not-italic">
                   Earth's Crust
                 </cite>
               </div>
@@ -118,7 +118,7 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">—Bary Rock</cite>,{" "}
-                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
+                <cite className="text-teal-600 transition duration-150 ease-in-out not-italic">
                   Veins
                 </cite>
               </div>
@@ -155,7 +155,7 @@ export default function TestimonialsBlocks() {
               </blockquote>
               <div className="font-red-hat-display font-bold mt-2">
                 <cite className="not-italic">—Iron Strong</cite>,{" "}
-                <cite className="text-teal-500 transition duration-150 ease-in-out not-italic">
+                <cite className="text-teal-600 transition duration-150 ease-in-out not-italic">
                   Earth's Core
                 </cite>
               </div>

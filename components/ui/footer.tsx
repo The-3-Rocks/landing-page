@@ -61,7 +61,7 @@ export default function Footer() {
             <div className="md:col-span-10 lg:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8">
               {/* 2nd block */}
               <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2">Products</h6>
+                <h3 className="font-medium uppercase mb-2 text-gray-900 dark:text-gray-100">Products</h3>
                 <ul>
                   <li className="mb-1">
                     <a
@@ -124,7 +124,7 @@ export default function Footer() {
 
               {/* 3rd block */}
               <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2">Contact Us</h6>
+                <h3 className="font-medium uppercase mb-2 text-gray-900 dark:text-gray-100">Contact Us</h3>
                 <ul>
                   <li className="mb-1">
                     <a
@@ -157,7 +157,7 @@ export default function Footer() {
 
               {/* 4th block */}
               <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2">Company</h6>
+                <h3 className="font-medium uppercase mb-2 text-gray-900 dark:text-gray-100">Company</h3>
                 <ul>
                   <li className="mb-1">
                     <a
@@ -180,7 +180,7 @@ export default function Footer() {
 
               {/* 5th block */}
               <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2">Support</h6>
+                <h3 className="font-medium uppercase mb-2 text-gray-900 dark:text-gray-100">Support</h3>
                 <ul>
                   <li className="mb-1">
                     <a
@@ -206,8 +206,8 @@ export default function Footer() {
           {/* Bottom area */}
           <div className="md:flex md:items-center md:justify-between">
             {/* Social links */}
-            <ul className="flex mb-4 md:order-2 md:ml-4 md:mb-0">
-              <div className="text-sm md:order-1 text-gray-700 mb-2 md:mb-0">
+            <div className="flex mb-4 md:order-2 md:ml-4 md:mb-0">
+              <div className="text-sm md:order-1 text-gray-700 dark:text-gray-400 mb-2 md:mb-0">
                 <a
                   className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
                   href="/our-terms"
@@ -222,7 +222,7 @@ export default function Footer() {
                   Privacy Policy
                 </a>
               </div>
-            </ul>
+            </div>
 
             <ul className="flex mb-4 md:order-2 md:ml-4 md:mb-0">
               <li className="ml-4">

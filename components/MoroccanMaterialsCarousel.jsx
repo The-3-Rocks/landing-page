@@ -160,7 +160,7 @@ export default function MoroccoMaterialsCarousel() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center pb-10">
-          <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-600 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+          <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
             Morocco's Premium Resources
           </div>
           <h2 className="h2 font-red-hat-display mb-4">

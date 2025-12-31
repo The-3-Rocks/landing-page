@@ -104,7 +104,7 @@ export default function HeroHome() {
                   />
                   <button
                     type="submit"
-                    className={`btn text-white bg-teal-600 hover:bg-teal-700 shrink-0 ${
+                    className={`btn text-white bg-teal-700 hover:bg-teal-800 shrink-0 ${
                       submitting ? "opacity-50 pointer-events-none" : ""
                     }`}
                   >

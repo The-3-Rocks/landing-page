@@ -36,7 +36,7 @@ export default function Tabs() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-600 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
               Morocco's Premium Services
             </div>
             <h2 className="h2 font-red-hat-display mb-4">
@@ -57,7 +57,7 @@ export default function Tabs() {
                 <button
                   className={`w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center m-1 lg:mx-0 ${
                     category === "1" &&
-                    "!bg-teal-600 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
                   }`}
                   onClick={() => setCateg("1")}
                 >
@@ -82,7 +82,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "2" &&
-                    "!bg-teal-600 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
                   }`}
                   onClick={() => setCateg("2")}
                 >
@@ -106,7 +106,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "3" &&
-                    "!bg-teal-600 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
                   }`}
                   onClick={() => setCateg("3")}
                 >
@@ -130,7 +130,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "4" &&
-                    "!bg-teal-600 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
                   }`}
                   onClick={() => setCateg("4")}
                 >
@@ -154,7 +154,7 @@ export default function Tabs() {
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${
                     category === "5" &&
-                    "!bg-teal-600 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
+                    "!bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 dark:bg-opacity-25 dark:hover:bg-opacity-25"
                   }`}
                   onClick={() => setCateg("5")}
                 >
@@ -347,7 +347,7 @@ export default function Tabs() {
                       <br></br>
                       <a
                         href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded transition-colors duration-200"
+                        className="inline-flex items-center px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium rounded transition-colors duration-200"
                       >
                         Contact Us
                         <svg
@@ -408,7 +408,7 @@ export default function Tabs() {
                       <br></br>
                       <a
                         href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded transition-colors duration-200"
+                        className="inline-flex items-center px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium rounded transition-colors duration-200"
                       >
                         Contact Us
                         <svg
@@ -467,7 +467,7 @@ export default function Tabs() {
                       <br></br>
                       <a
                         href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded transition-colors duration-200"
+                        className="inline-flex items-center px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium rounded transition-colors duration-200"
                       >
                         Contact Us
                         <svg
@@ -521,7 +521,7 @@ export default function Tabs() {
                       <br></br>
                       <a
                         href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded transition-colors duration-200"
+                        className="inline-flex items-center px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium rounded transition-colors duration-200"
                       >
                         Contact Us
                         <svg
