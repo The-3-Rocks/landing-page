@@ -486,6 +486,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: details.title,
+    image: productImage,
     description: details.description,
     brand: {
       "@type": "Brand",
@@ -652,6 +653,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: details.title,
+    image: `https://www.the-3rocks.com/images/${params.id}-product.png`,
     description: details.description,
     brand: {
       "@type": "Brand",
