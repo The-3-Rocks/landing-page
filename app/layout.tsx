@@ -49,6 +49,11 @@ export default function RootLayout({
             gtag('config', 'G-0QV4CTYT36');
           `}
         </Script>
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6470650628887259"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <RootLayoutClient>
           <div className="flex flex-col min-h-screen overflow-hidden">
             <Header />
