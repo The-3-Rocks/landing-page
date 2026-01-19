@@ -20,6 +20,9 @@ const redhat = Red_Hat_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.the-3rocks.com"),
+  other: {
+    "google-adsense-account": "ca-pub-6470650628887259",
+  },
 };
 
 export default function RootLayout({
