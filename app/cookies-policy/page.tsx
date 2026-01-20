@@ -1,14 +1,14 @@
+
 import Image from "next/image";
 import Newsletter from "@/components/newsletter";
-import RelatedPosts from "@/components/related-posts-02";
 
 export const metadata = {
-  title: "Terms and Conditions",
+  title: "Cookies Policy",
   description:
-    "Welcome to The 3 Rocks! By accessing or using our website, you agree to be bound by the following terms and conditions.",
+    "Learn about how The 3 Rocks uses cookies to enhance your browsing experience and serve personalized content and ads.",
 };
 
-export default function Terms() {
+export default function CookiesPolicy() {
   return (
     <>
       <section className="relative">
@@ -20,7 +20,7 @@ export default function Terms() {
             width={1440}
             height={577}
             priority
-            alt="Terms and Conditions"
+            alt="Cookies Policy"
           />
           <div
             className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900"
@@ -40,16 +40,16 @@ export default function Terms() {
                       className="h1 font-red-hat-display mb-4"
                       data-aos="fade-down"
                     >
-                      Terms and Conditions
+                      Cookies Policy
                     </h1>
                     <p
                       className="text-xl text-gray-600 dark:text-gray-400"
                       data-aos="fade-down"
                       data-aos-delay="150"
                     >
-                      Welcome to The 3 Rocks! By accessing or using our
-                      website (https://www.the-3rocks.com), you agree to be
-                      bound by the following terms and conditions.
+                      The 3 Rocks uses cookies to enhance your browsing
+                      experience and to serve personalized content and ads
+                      through Google AdSense.
                     </p>
                   </div>
                 </header>
@@ -62,53 +62,60 @@ export default function Terms() {
                 {/* Article content */}
                 <div className="mb-8" data-aos="fade-up" data-aos-delay="450">
                   <article className="prose text-lg text-gray-600 dark:text-gray-400 max-w-none prose-lg prose-p:leading-normal prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-strong:font-medium prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:italic prose-blockquote:pl-4 prose-blockquote:border-l-2 prose-blockquote:border-teal-500 dark:prose-blockquote:border-gray-400 prose-blockquote:font-normal prose-blockquote:text-inherit">
-                                        <h2>Use of Website</h2>
+                    <h2>What Are Cookies?</h2>
                     <p>
-                      The content provided on The 3 Rocks is for informational
-                      purposes only.
+                      Cookies are small data files stored on your device that
+                      help us understand how you use our website and improve
+                      your experience.
                     </p>
+
+                    <h2>Types of Cookies We Use</h2>
                     <ul>
                       <li>
-                        You agree not to misuse, reproduce, or redistribute any
-                        content without permission.
+                        <strong>Necessary cookies:</strong> Essential for the
+                        website to function properly.
                       </li>
                       <li>
-                        We may modify, update, or remove content at any time
-                        without notice.
+                        <strong>Performance cookies:</strong> Help us analyze
+                        website performance.
+                      </li>
+                      <li>
+                        <strong>Advertising cookies:</strong> Used by Google
+                        AdSense to deliver personalized ads.
                       </li>
                     </ul>
 
-                    <h2>Intellectual Property</h2>
+                    <h2>Managing Cookies</h2>
                     <p>
-                      All content, images, and branding are the property of The
-                      3 Rocks unless otherwise stated. Unauthorized use is
-                      strictly prohibited.
+                      You can choose to accept or decline cookies. Most browsers
+                      allow you to modify your settings to decline cookies if
+                      you prefer. However, this may affect your user experience.
                     </p>
 
-                    <h2>Third-Party Links & Advertising</h2>
+                    <h2>Opt-Out</h2>
                     <p>
-                      The 3 Rocks may contain links to third-party websites and
-                      display ads through Google AdSense. We are not responsible
-                      for the content or privacy practices of external sites.
-                    </p>
-
-                    <h2>Limitation of Liability</h2>
-                    <p>
-                      We are not liable for any loss or damage resulting from
-                      your use of this website. All information is provided “as
-                      is” without warranty.
-                    </p>
-
-                    <h2>Governing Law</h2>
-                    <p>
-                      These terms shall be governed in accordance with the laws
-                      of Morocco, including applicable GDPR and CCPA
-                      regulations.
+                      You may opt out of personalized ads by visiting{" "}
+                      <a
+                        href="https://adssettings.google.com"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        Ads Settings
+                      </a>{" "}
+                      or{" "}
+                      <a
+                        href="https://www.aboutads.info"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        www.aboutads.info
+                      </a>
+                      .
                     </p>
 
                     <h2>Contact</h2>
                     <p>
-                      For any questions, contact us at{" "}
+                      Questions about our cookie use? Email us at{" "}
                       <a href="mailto:info@the-3rocks.com">
                         info@the-3rocks.com
                       </a>

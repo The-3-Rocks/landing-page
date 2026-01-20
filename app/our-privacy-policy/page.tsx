@@ -5,7 +5,7 @@ import RelatedPosts from "@/components/related-posts-02";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "Learn about our privacy practices at The 3 Rocks, including how we collect, use, and protect your information.",
+    "At The 3 Rocks, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPolicy() {
@@ -47,9 +47,10 @@ export default function PrivacyPolicy() {
                       data-aos="fade-down"
                       data-aos-delay="150"
                     >
-                      Your privacy is important to us. This privacy policy
-                      explains the types of information we collect, how we use
-                      it, and your rights regarding your information.
+                      At The 3 Rocks (https://www.the-3rocks.com), your
+                      privacy is important to us. This Privacy Policy explains
+                      how we collect, use, and protect your personal
+                      information.
                     </p>
                   </div>
                   {/* Article meta */}
@@ -63,63 +64,89 @@ export default function PrivacyPolicy() {
                 {/* Article content */}
                 <div className="mb-8" data-aos="fade-up" data-aos-delay="450">
                   <article className="prose text-lg text-gray-600 dark:text-gray-400 max-w-none prose-lg prose-p:leading-normal prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-strong:font-medium prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:italic prose-blockquote:pl-4 prose-blockquote:border-l-2 prose-blockquote:border-teal-500 dark:prose-blockquote:border-gray-400 prose-blockquote:font-normal prose-blockquote:text-inherit">
-                    <h2>Information Collection</h2>
+                    <h2>Information We Collect</h2>
+                    <p>We may collect the following types of data:</p>
+                    <ul>
+                      <li>
+                        Information you voluntarily provide (e.g., email address
+                        when contacting us)
+                      </li>
+                      <li>
+                        Usage data such as IP address, browser type, and device
+                        information
+                      </li>
+                      <li>Cookies and similar tracking technologies</li>
+                    </ul>
+
+                    <h2>How We Use Your Information</h2>
+                    <p>We use your information to:</p>
+                    <ul>
+                      <li>Operate and improve our website and services</li>
+                      <li>Personalize your experience</li>
+                      <li>
+                        Display relevant advertisements through services like
+                        Google AdSense
+                      </li>
+                      <li>Analyze website traffic and trends</li>
+                    </ul>
+
+                    <h2>Use of Cookies</h2>
                     <p>
-                      We collect various types of information in connection with
-                      the services we provide. This includes:
+                      We use cookies to provide a better user experience and to
+                      serve personalized ads via Google AdSense. Cookies help us
+                      analyze traffic and understand how visitors interact with
+                      our website. You can manage or disable cookies through
+                      your browser settings.
+                    </p>
+
+                    <h2>Google AdSense</h2>
+                    <p>
+                      We use Google AdSense to display ads. Google and its
+                      partners may use cookies to personalize ads based on your
+                      previous interactions with websites. You can learn more
+                      about how Google uses data{" "}
+                      <a
+                        href="https://policies.google.com/technologies/partner-sites"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        here
+                      </a>
+                      .
+                    </p>
+
+                    <h2>Your GDPR & CCPA Rights</h2>
+                    <p>
+                      If you are located in the EU or California, you have the
+                      right to:
                     </p>
                     <ul>
                       <li>
-                        Information you provide directly to us through our
-                        contact form, such as your first name, last name,
-                        company name, phone number, country, and the products
-                        you are interested in.
+                        Access, update, or delete your personal data
                       </li>
+                      <li>Object to or restrict processing</li>
+                      <li>Request data portability</li>
                       <li>
-                        Information we collect when you download our product
-                        catalog, including your email address.
+                        Opt out of the sale or sharing of your personal
+                        information (California residents)
                       </li>
                     </ul>
-
-                    <h2>Use of Information</h2>
-                    <p>We use the information we collect to:</p>
-                    <ul>
-                      <li>Provide, maintain, and improve our services.</li>
-                      <li>Understand and analyze how you use our services.</li>
-                      <li>
-                        Communicate with you about our products, services, and
-                        offers.
-                      </li>
-                      <li>
-                        Respond to your inquiries and provide customer support.
-                      </li>
-                    </ul>
-
-                    <h2>Data Storage</h2>
                     <p>
-                      All collected information is securely stored in our
-                      Firebase database. We take appropriate security measures
-                      to protect against unauthorized access, alteration,
-                      disclosure, or destruction of your personal information.
+                      To exercise these rights, please contact us at{" "}
+                      <a href="mailto:info@the-3rocks.com">
+                        info@the-3rocks.com
+                      </a>
+                      .
                     </p>
-
-                    <h2>Your Rights</h2>
-                    <p>You have the right to:</p>
-                    <ul>
-                      <li>
-                        Access, correct, or delete your personal information.
-                      </li>
-                      <li>
-                        Object to or restrict the processing of your
-                        information.
-                      </li>
-                      <li>Withdraw your consent at any time.</li>
-                    </ul>
 
                     <h2>Contact Us</h2>
                     <p>
-                      If you have any questions about this privacy policy or our
-                      data practices, please contact us at info@the3rocks.com
+                      If you have any questions about this Privacy Policy,
+                      please email us at{" "}
+                      <a href="mailto:info@the-3rocks.com">
+                        info@the-3rocks.com
+                      </a>
+                      .
                     </p>
                   </article>
                 </div>

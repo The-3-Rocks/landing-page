@@ -220,6 +220,13 @@ export default function Footer() {
                   href="/our-privacy-policy"
                 >
                   Privacy Policy
+                </a>{" "}
+                ·{" "}
+                <a
+                  className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                  href="/cookies-policy"
+                >
+                  Cookies Policy
                 </a>
               </div>
             </div>
