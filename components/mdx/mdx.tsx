@@ -38,6 +38,7 @@ const mdxComponents = {
   h3: generateHeading(3),
   h4: generateHeading(4),
   Link: PostLink,
+  a: PostLink,
   Image: PostImage,
   // Add Table Components
   table: (props: any) => (
