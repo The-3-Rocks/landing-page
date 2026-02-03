@@ -345,6 +345,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: "https://www.the-3rocks.com/articles/zinc-ore-output-increase-asia-metal",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://www.the-3rocks.com/our-privacy-policy",
       lastModified: new Date(),
       changeFrequency: "monthly",
