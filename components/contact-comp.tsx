@@ -431,8 +431,11 @@ const Contact: React.FC = () => {
       ]);
 
       if (supabaseResult.error) {
-        console.error("Supabase error:", supabaseResult.error);
+        console.error("Supabase insert error details:", supabaseResult.error);
+        alert(`Supabase Error: ${supabaseResult.error.message}`);
         // We'll still continue since Firebase succeeded, or you can throw an error
+      } else {
+        console.log("Supabase insert success:", supabaseResult.data);
       }
 
       console.log("Form submitted successfully!");

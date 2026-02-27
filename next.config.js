@@ -41,7 +41,7 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.googlesyndication.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: *.googletagmanager.com *.google-analytics.com *.googlesyndication.com; font-src 'self' data:; connect-src 'self' *.google-analytics.com *.googlesyndication.com https://ep1.adtrafficquality.google https://*.firebasedatabase.app https://*.firebaseio.com wss://*.firebaseio.com https://*.googleapis.com; frame-src 'self' *.googlesyndication.com *.doubleclick.net https://www.google.com/recaptcha/ https://recaptcha.google.com/;"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.googlesyndication.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: *.googletagmanager.com *.google-analytics.com *.googlesyndication.com; font-src 'self' data:; connect-src 'self' *.google-analytics.com *.googlesyndication.com https://ep1.adtrafficquality.google https://*.firebasedatabase.app https://*.firebaseio.com wss://*.firebaseio.com https://*.googleapis.com https://*.supabase.co; frame-src 'self' *.googlesyndication.com *.doubleclick.net https://www.google.com/recaptcha/ https://recaptcha.google.com/;"
           }
         ],
       },
