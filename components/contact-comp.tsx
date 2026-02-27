@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ref, push, set } from "firebase/database";
 import { db } from "../app/firebaseConfig";
+import { supabase } from "../app/supabaseConfig";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
   FaCheck,
@@ -417,7 +418,22 @@ const Contact: React.FC = () => {
         captchaVerified: true,
       };
 
-      await set(newRef, dataToSubmit);
+      // Submit to Firebase
+      const firebasePromise = set(newRef, dataToSubmit);
+
+      // Submit to Supabase - using the same data
+      const supabasePromise = supabase.from("clients").insert([dataToSubmit]);
+
+      // Wait for both to complete
+      const [firebaseResult, supabaseResult] = await Promise.all([
+        firebasePromise,
+        supabasePromise,
+      ]);
+
+      if (supabaseResult.error) {
+        console.error("Supabase error:", supabaseResult.error);
+        // We'll still continue since Firebase succeeded, or you can throw an error
+      }
 
       console.log("Form submitted successfully!");
 
