@@ -124,7 +124,7 @@ export default function MoroccanMaterialsCarousel() {
         {/* Modern Minimal Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="max-w-2xl">
-                <span className="block text-teal-600 dark:text-teal-400 font-bold tracking-wider text-sm uppercase mb-3">
+                <span className="block text-teal-700 dark:text-teal-300 font-bold tracking-wider text-sm uppercase mb-3">
                     Verified Moroccan Source
                 </span>
                 <h2 className="text-4xl md:text-5xl font-red-hat-display font-bold text-gray-900 dark:text-white leading-tight">
