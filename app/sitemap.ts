@@ -1,366 +1,99 @@
 import { MetadataRoute } from "next";
+import { getProductsPosts } from "@/components/mdx/utils";
 
+const BASE_URL = "https://www.the-3rocks.com";
+
+// ─── Static pages with real priority values ──────────────────────────────────
+const staticPages: MetadataRoute.Sitemap = [
+  {
+    url: BASE_URL,
+    lastModified: new Date("2024-01-15"),
+    changeFrequency: "weekly",
+    priority: 1.0,
+  },
+  {
+    url: `${BASE_URL}/about`,
+    lastModified: new Date("2024-01-10"),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: `${BASE_URL}/our-process`,
+    lastModified: new Date("2024-01-10"),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    url: `${BASE_URL}/contact`,
+    lastModified: new Date("2024-01-10"),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: `${BASE_URL}/faq`,
+    lastModified: new Date("2024-01-10"),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: `${BASE_URL}/our-privacy-policy`,
+    lastModified: new Date("2024-01-01"),
+    changeFrequency: "yearly",
+    priority: 0.4,
+  },
+  {
+    url: `${BASE_URL}/our-terms`,
+    lastModified: new Date("2024-01-01"),
+    changeFrequency: "yearly",
+    priority: 0.4,
+  },
+];
+
+// ─── Product pages ────────────────────────────────────────────────────────────
+// Products list page + each individual product
+const products = [
+  "lead", "copper", "zinc", "barite", "iron", "cobalt", "antimony",
+];
+
+const productPages: MetadataRoute.Sitemap = [
+  {
+    url: `${BASE_URL}/products`,
+    lastModified: new Date("2024-01-15"),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  ...products.map((slug) => ({
+    url: `${BASE_URL}/products/${slug}`,
+    lastModified: new Date("2024-01-15"),
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  })),
+];
+
+// ─── Article pages — dynamic from local MDX scanner ───────────────────────────
+// This auto-includes every new .mdx file you create under content/articles
+const allArticles = getProductsPosts();
+
+const articlePages: MetadataRoute.Sitemap = [
+  {
+    url: `${BASE_URL}/articles`,
+    lastModified: new Date("2024-01-15"),
+    changeFrequency: "weekly",
+    priority: 0.9,
+  },
+  ...allArticles.map((article) => ({
+    url: `${BASE_URL}/articles/${article.slug}`,
+    lastModified: new Date(article.metadata.updatedAt ?? article.metadata.publishedAt ?? "2024-01-01"),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  })),
+];
+
+// ─── Export ───────────────────────────────────────────────────────────────────
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: "https://www.the-3rocks.com",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1,
-    },
-    {
-      url: "https://www.the-3rocks.com/about",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/lead",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/copper",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/zinc",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/barite",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/iron",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/cobalt",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/products/antimony",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/contact",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://www.the-3rocks.com/our-process",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://www.the-3rocks.com/faq",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/lead",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/acopper",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/zinc",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/barite",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/iron",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/cobalt",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/antimony",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/morocco-lead-mining",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/moroccan-copper-mining",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/zinc-mining-morocco",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/moroccan-barite",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/moroccan-iron-ore",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/moroccan-cobalt",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/antimony-mining-morocco",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/mineral-analysis-quality-control",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/battery-production-materials",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/understanding-mineral-purity",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/morocco-mining-regions",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/renewable-energy-materials",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/automotive-industry-metals",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/construction-infrastructure-materials",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/electronics-semiconductors-minerals",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/aerospace-defense-alloys",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/medical-pharmaceutical-minerals",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/ceramics-glass-production",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/paints-coatings-industry",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/agriculture-fertilizers-minerals",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/water-treatment-solutions",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/radiation-shielding-materials",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/textile-flame-retardants",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/marine-shipbuilding-applications",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/geological-formation-atlas",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/sustainable-mining-technologies",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/flotation-beneficiation-processes",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/xrf-fluorescence-explained",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/icp-testing-explained",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/supply-chain-transparency",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/mineral-export-procedures",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/environmental-impact-assessments",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/mine-remediation-practices",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/heavy-metal-safety-protocols",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/global-metal-market-trends",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/future-of-moroccan-mining",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/articles/zinc-ore-output-increase-asia-metal",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://www.the-3rocks.com/our-privacy-policy",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: "https://www.the-3rocks.com/our-terms",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+    ...staticPages,
+    ...productPages,
+    ...articlePages,
   ];
 }

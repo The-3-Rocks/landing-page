@@ -245,6 +245,7 @@ const productKeywords: Record<string, string[]> = {
     "lead concentrate supplier Morocco",
     "lead powder supplier Morocco",
     "lead ore supplier Morocco",
+    "lead ingot exporter morocco",
     "high-purity lead Morocco",
     "Moroccan lead exporter",
     "Morocco lead deposits",
@@ -271,6 +272,9 @@ const productKeywords: Record<string, string[]> = {
     "Moroccan copper",
     "copper Morocco",
     "copper supplier Morocco",
+    "copper ore supplier morocco",
+    "Moroccan copper concentrate",
+    "copper raw material Morocco",
     "Morocco copper mining",
     "copper ore Morocco",
     "Morocco copper ore",
@@ -793,6 +797,87 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     },
   };
 
+  // Generate Schema.org FAQPage structured data for lead, zinc, and copper
+  let faqSchema = null;
+  if (params.id === "lead") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is the leading lead ore supplier in Morocco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 3 Rocks Company is Morocco's leading lead ore supplier, offering high-purity Moroccan lead concentrate, lead powder, and raw lead ore ethically sourced from mineral-rich Moroccan mining regions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the purity of Moroccan lead concentrate and powder you supply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our lead concentrate features an exceptional purity of 86%, while our lead powder is 76% pure. Raw lead ore is also available at more than 50% purity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you export lead ingots and concentrates globally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as a trusted lead ingot exporter and raw materials supplier, we export lead concentrates and ores globally, complying with international shipping and environmental safety regulations."
+          }
+        }
+      ]
+    };
+  } else if (params.id === "zinc") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I source high-quality zinc concentrate in Morocco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 3 Rocks is a leading supplier of premium zinc concentrate in Morocco. We offer high-quality zinc calamine ore (+37% purity) and zinc concentrate (70% purity) sourced from legendary Moroccan mining regions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the key specifications of Moroccan zinc calamine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our zinc calamine ore offers exceptional purity of +37%, a density of 7.14 g/cm³, and a melting point of 419.5°C, making it ideal for galvanization and die-casting."
+          }
+        }
+      ]
+    };
+  } else if (params.id === "copper") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the purity range of Moroccan copper supplied by The 3 Rocks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Moroccan copper ore typically ranges from 8% to 21% purity. We also offer high-purity copper of up to 40% under special export permit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the industrial applications of your Moroccan copper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is widely used in electrical wiring, telecommunications infrastructure, heat exchangers, cooling systems, and electronics manufacturing."
+          }
+        }
+      ]
+    };
+  }
+
   return (
     <>
       {/* Schema.org Structured Data */}
@@ -800,6 +885,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       
       {/* Page illustration */}
       <div

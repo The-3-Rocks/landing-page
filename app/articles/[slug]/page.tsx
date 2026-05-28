@@ -8,6 +8,37 @@ import Newsletter from "@/components/newsletter";
 import RelatedPosts from "@/components/related-posts-02";
 import ChatButtons from "@/components/ChatButtons";
 
+const authorBios: Record<
+  string,
+  { name: string; title: string; bio: string; initials: string }
+> = {
+  "Dr. Rachid Alami": {
+    name: "Dr. Rachid Alami",
+    title: "Chief Geologist & Mining Engineer",
+    bio: "Dr. Rachid Alami holds a Ph.D. in Economic Geology and has over 15 years of field experience mapping mineral deposits across Morocco's Atlas Mountains. He leads quality control, XRF/ICP composition verification, and purity standards at The 3 Rocks.",
+    initials: "RA",
+  },
+  "Sarah Jenkins": {
+    name: "Sarah Jenkins",
+    title: "Sustainable Mining Specialist",
+    bio: "Sarah Jenkins is an environmental engineer specializing in sustainable resource extraction and ESG compliance in North Africa. She directs environmental impact assessments, mine site remediation, and worker safety protocols at The 3 Rocks.",
+    initials: "SJ",
+  },
+  "Youssef Benjelloun": {
+    name: "Youssef Benjelloun",
+    title: "Director of Logistics & Export Compliance",
+    bio: "Youssef Benjelloun oversees global supply chain logistics, customs compliance, and mineral export procedures. With a decade of international trade experience, he ensures seamless transit of Moroccan raw materials to partners worldwide.",
+    initials: "YB",
+  },
+  "The 3 Rocks Company": {
+    name: "The 3 Rocks Editorial Team",
+    title: "Mining & Geological Experts",
+    bio: "The 3 Rocks Editorial Team consists of geologists, mining logistics experts, and sustainability officers dedicated to providing transparent, verified, and E-E-A-T compliant insights on Moroccan raw materials.",
+    initials: "3R",
+  },
+};
+
+
 export async function generateStaticParams() {
   const allBlogs = getProductsPosts();
 
@@ -160,6 +191,34 @@ export default async function SinglePost({
                     <CustomMDX source={post.content} />
                   </article>
                 </div>
+
+                {/* Author Bio Card */}
+                {post.metadata.author && (
+                  (() => {
+                    const authorInfo = authorBios[post.metadata.author] || authorBios["The 3 Rocks Company"];
+                    return (
+                      <div className="my-12 p-6 sm:p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700/50 flex flex-col sm:flex-row items-center sm:items-start gap-6 transition-all duration-300 hover:shadow-md">
+                        <div className="w-16 h-16 rounded-full overflow-hidden bg-teal-100 dark:bg-teal-900/50 border border-teal-200/50 dark:border-teal-700/50 shrink-0 shadow-inner flex items-center justify-center select-none">
+                          <span className="text-xl font-bold text-teal-700 dark:text-teal-400">
+                            {authorInfo.initials}
+                          </span>
+                        </div>
+                        <div className="text-center sm:text-left flex-grow">
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                            About {authorInfo.name}
+                          </h4>
+                          <p className="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3 uppercase tracking-wider">
+                            {authorInfo.title}
+                          </p>
+                          <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                            {authorInfo.bio}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })()
+                )}
+
                 <ChatButtons />
                 {/* Article footer */}
                 <footer>

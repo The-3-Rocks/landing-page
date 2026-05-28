@@ -1,0 +1,105 @@
+# The 3 Rocks - Premium Moroccan Mining Materials
+
+> Sourced ethically from Morocco's legendary mining regions. Delivering exceptional quality, transparency, and reliability to global markets.
+
+This document serves as a structured index for Large Language Models (LLMs) and search crawlers, providing a comprehensive directory of the products, processes, articles, and expertise of **The 3 Rocks Company**.
+
+---
+
+## 🏛️ Company Information
+- **Official Name:** The 3 Rocks Company (also known as The 3 Rocks Mining)
+- **Website Domain:** `https://www.the-3rocks.com`
+- **Headquarters Location:** Morocco (Geo-region: MA)
+- **Primary Business:** Ethical Sourcing, Mining, Analysis, Processing, and Global Export of Moroccan Minerals and Raw Materials.
+- **Key Navigation Pages:**
+  - [Home Page](https://www.the-3rocks.com/): Core hero section, stats, mining process summary, dynamic product carousel, and partner contact entry point.
+  - [About Us](https://www.the-3rocks.com/about): Information on geological expertise, ethical mining guidelines, local impact, and corporate responsibility.
+  - [Our Process](https://www.the-3rocks.com/our-process): Step-by-step documentation on geological mapping, resource extraction, flotation/beneficiation processing, and logistics.
+  - [Contact Sales](https://www.the-3rocks.com/contact): Inquiries, pricing quotes, composition reports, and global supply logistics request form.
+  - [FAQ Page](https://www.the-3rocks.com/faq): Answers regarding minimum order quantities (MOQ), export compliance, customs clearance, and lead times.
+
+---
+
+## 💎 Premium Moroccan Raw Materials
+
+### 1. [Lead (Pb)](https://www.the-3rocks.com/products/lead)
+- **Description:** Soft, highly malleable, corrosion-resistant, and high-density lead ore and concentrates.
+- **Grades & Purities:**
+  - Lead Concentrate: **86% pure**
+  - Lead Powder: **76% pure**
+  - Raw Lead Ore: **>50% pure**
+- **Sourcing Regions:** Errachidia and Bni Taddjit, Morocco.
+- **Common Applications:** Batteries, radiation shielding, construction, soundproofing, and electronics.
+
+### 2. [Zinc (Zn)](https://www.the-3rocks.com/products/zinc)
+- **Description:** Premium quality zinc calamine ore and zinc concentrates.
+- **Grades & Purities:**
+  - Zinc Concentrate: **70% purity**
+  - Zinc Calamine Ore: **+37% purity**
+- **Common Applications:** Steel galvanization, die-casting, pharmaceutical compounds, and cosmetics.
+
+### 3. [Copper (Cu)](https://www.the-3rocks.com/products/copper)
+- **Description:** Superior-grade copper ores and concentrates powering modern infrastructure.
+- **Grades & Purities:**
+  - Standard Ore Purity: **8% to 21%**
+  - High-Purity Ore: **Up to 40%** (available via special export permit)
+- **Common Applications:** Electrical wiring, power transmission, telecommunications, and heat exchangers.
+
+### 4. [Barite (BaSO4)](https://www.the-3rocks.com/products/barite)
+- **Description:** High-density barium sulfate (barytine) meeting API drilling standards.
+- **Specific Gravity / Density:** **4.18 - 4.28**
+- **Common Applications:** Oil and gas drilling fluids, medical shielding, paint fillers, and industrial coatings.
+
+### 5. [Iron (Fe)](https://www.the-3rocks.com/products/iron)
+- **Description:** Premium-grade hematite and magnetite iron ores.
+- **Grades & Purities:**
+  - Iron Ore: **≥ 56% purity**
+- **Common Applications:** Construction, steel manufacturing, automotive, and heavy industrial machinery.
+
+### 6. [Cobalt (Co)](https://www.the-3rocks.com/products/cobalt)
+- **Description:** Battery-grade cobalt ores and concentrates essential for advanced electronics.
+- **Grades & Purities:**
+  - Cobalt Concentrate: **42%+ purity**
+- **Common Applications:** EV batteries, superalloys for aerospace, magnets, and medical technologies.
+
+### 7. [Antimony (Sb)](https://www.the-3rocks.com/products/antimony)
+- **Description:** Critical metalloid raw material for advanced technologies.
+- **Grades & Purities:**
+  - Antimony Ore/Concentrate: **30%+ purity**
+- **Common Applications:** Halogen-free flame retardants, lead alloys, glass/ceramics, and semiconductors.
+
+---
+
+## 📚 Mining Articles & Geological Publications
+Detailed educational and industry resources written by The 3 Rocks geological and supply-chain experts:
+
+- **Mineral Sourcing & Regional Guides:**
+  - [The Future of Moroccan Mining](https://www.the-3rocks.com/articles/future-of-moroccan-mining): Long-term industrial projection and infrastructure advancements.
+  - [Morocco Mining Regions](https://www.the-3rocks.com/articles/morocco-mining-regions): Geological map detailing the Atlas and Anti-Atlas mineral belts.
+  - [Morocco Lead Mining](https://www.the-3rocks.com/articles/morocco-lead-mining): Structural guide to lead veins in Bni Taddjit.
+  - [Moroccan Copper Mining](https://www.the-3rocks.com/articles/moroccan-copper-mining): Exploring Tinghir and related copper deposits.
+  - [Zinc Mining in Morocco](https://www.the-3rocks.com/articles/zinc-mining-morocco): Calamine extraction and processing details.
+  - [Moroccan Barite](https://www.the-3rocks.com/articles/moroccan-barite): Production analysis of high-density barytine.
+  - [Moroccan Iron Ore](https://www.the-3rocks.com/articles/moroccan-iron-ore): Exploring iron mountains and logistics.
+  - [Moroccan Cobalt](https://www.the-3rocks.com/articles/moroccan-cobalt): North Africa's contribution to clean energy materials.
+  - [Antimony Mining in Morocco](https://www.the-3rocks.com/articles/antimony-mining-morocco): Exploring critical raw material deposits.
+
+- **Quality Control & Laboratory Verification:**
+  - [Mineral Analysis & Quality Control](https://www.the-3rocks.com/articles/mineral-analysis-quality-control): Sourcing validation workflows.
+  - [XRF (X-Ray Fluorescence) Testing Explained](https://www.the-3rocks.com/articles/xrf-fluorescence-explained): Fast, non-destructive elemental analysis.
+  - [ICP Testing and Analysis](https://www.the-3rocks.com/articles/icp-testing-explained): Inductively Coupled Plasma testing for trace elements and purity.
+  - [Understanding Mineral Purity](https://www.the-3rocks.com/articles/understanding-mineral-purity): Purity ranges and pricing impacts.
+
+- **Sustainability & Supply Chain Ethics:**
+  - [Supply Chain Transparency](https://www.the-3rocks.com/articles/supply-chain-transparency): Tracing materials from mine face to ship hull.
+  - [Mine Remediation Practices](https://www.the-3rocks.com/articles/mine-remediation-practices): Soil restoration and environmental rehabilitation.
+  - [Environmental Impact Assessments](https://www.the-3rocks.com/articles/environmental-impact-assessments): Mining permissions and ecology preservation.
+  - [Heavy Metal Safety Protocols](https://www.the-3rocks.com/articles/heavy-metal-safety-protocols): Protecting workers and surrounding local environments.
+
+- **Industrial Mineral Applications:**
+  - [Renewable Energy Materials](https://www.the-3rocks.com/articles/renewable-energy-materials): The role of copper and cobalt in green transitions.
+  - [Battery Production Materials](https://www.the-3rocks.com/articles/battery-production-materials): Lead-acid, lithium-ion, and solid-state mineral requirements.
+  - [Aerospace & Defense Alloys](https://www.the-3rocks.com/articles/aerospace-defense-alloys): Superalloys requiring high-purity cobalt and antimony.
+  - [Electronics & Semiconductors Minerals](https://www.the-3rocks.com/articles/electronics-semiconductors-minerals): Modern semiconductor components and conductives.
+  - [Paints & Coatings Industry](https://www.the-3rocks.com/articles/paints-coatings-industry): Barite's role as a weight filler and pigment stabilizer.
+  - [Radiation Shielding Materials](https://www.the-3rocks.com/articles/radiation-shielding-materials): High-density lead walls and barite cements.
