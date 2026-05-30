@@ -19,7 +19,11 @@ export default function RootLayoutClient({
         duration: 600,
         easing: "ease-out-sine",
       });
-      AOS.refresh();
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          AOS.refresh();
+        });
+      });
     };
     initAOS();
   }, []);
