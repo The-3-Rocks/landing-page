@@ -8,7 +8,8 @@ export function middleware(request: NextRequest) {
 
   const csp = [
     `default-src 'self' https://fundingchoicesmessages.google.com`,
-    `script-src 'nonce-${nonce}' 'strict-dynamic' 'sha256-eMuh8xiwcX72rRYNAGENurQBAcH7kLlAUQcoOri3BIo=' 'unsafe-eval' 'self' *.googletagmanager.com *.googlesyndication.com *.adtrafficquality.google fundingchoicesmessages.google.com *.fundingchoicesmessages.google.com consent.google.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://accounts.google.com`,
+    `base-uri 'self'`,
+    `script-src 'nonce-${nonce}' 'strict-dynamic' 'unsafe-inline' 'sha256-eMuh8xiwcX72rRYNAGENurQBAcH7kLlAUQcoOri3BIo=' 'unsafe-eval' 'self' *.googletagmanager.com *.googlesyndication.com *.adtrafficquality.google fundingchoicesmessages.google.com *.fundingchoicesmessages.google.com consent.google.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://accounts.google.com`,
     `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
     `style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com`,
     `img-src 'self' blob: data: https://fundingchoicesmessages.google.com *.googletagmanager.com *.google-analytics.com *.googlesyndication.com *.adtrafficquality.google`,

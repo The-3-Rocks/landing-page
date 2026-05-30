@@ -10,6 +10,9 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  experimental: {
+    optimizePackageImports: ["react-icons", "date-fns"],
+  },
   async headers() {
     return [
       {
