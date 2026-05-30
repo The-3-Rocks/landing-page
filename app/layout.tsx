@@ -5,6 +5,7 @@ import RootLayoutClient from "./root-layout-client";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import Script from "next/script";
+import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const nonce = headers().get("x-nonce") ?? "";
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -47,6 +49,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         <script
           type="application/ld+json"
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -81,8 +84,9 @@ export default function RootLayout({
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0QV4CTYT36"
           strategy="lazyOnload"
+          nonce={nonce}
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="lazyOnload" nonce={nonce}>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -95,6 +99,7 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6470650628887259"
           crossOrigin="anonymous"
           strategy="afterInteractive"
+          nonce={nonce}
         />
         <RootLayoutClient>
           <div className="flex flex-col min-h-screen overflow-hidden">
