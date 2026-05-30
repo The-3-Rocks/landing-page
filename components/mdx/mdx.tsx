@@ -21,14 +21,7 @@ const generateHeading = (headingLevel: number) => {
   return ({ children }: { children: React.ReactNode }) => {
     const textContent = React.Children.toArray(children).join("");
     const slug = transformToSlug(textContent);
-    return React.createElement(`h${headingLevel}`, { id: slug }, [
-      React.createElement("a", {
-        href: `#${slug}`,
-        key: `link-${slug}`,
-        className: "anchor-link",
-      }),
-      textContent,
-    ]);
+    return React.createElement(`h${headingLevel}`, { id: slug }, textContent);
   };
 };
 

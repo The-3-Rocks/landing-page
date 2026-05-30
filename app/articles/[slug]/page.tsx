@@ -5,7 +5,7 @@ import Image from "next/image";
 import PostDate from "@/components/post-date";
 import { CustomMDX } from "@/components/mdx/mdx";
 import Newsletter from "@/components/newsletter";
-import RelatedPosts from "@/components/related-posts-02";
+import Link from "next/link";
 import ChatButtons from "@/components/ChatButtons";
 
 const authorBios: Record<
@@ -92,9 +92,20 @@ export default async function SinglePost({
 }: {
   params: { slug: string };
 }) {
-  const post = getProductsPosts().find((post) => post.slug === params.slug);
+  const allPosts = getProductsPosts();
+  const post = allPosts.find((post) => post.slug === params.slug);
 
   if (!post) notFound();
+
+  // Find up to 3 related posts circularly
+  const currentIndex = allPosts.findIndex((p) => p.slug === params.slug);
+  const relatedPosts = [];
+  if (currentIndex !== -1 && allPosts.length > 1) {
+    for (let i = 1; i <= Math.min(3, allPosts.length - 1); i++) {
+      const nextIndex = (currentIndex + i) % allPosts.length;
+      relatedPosts.push(allPosts[nextIndex]);
+    }
+  }
 
   return (
     <>
@@ -229,7 +240,63 @@ export default async function SinglePost({
           </div>
         </div>
       </section>
-      <RelatedPosts />
+      {/* Related Resources Dynamic Section */}
+      {relatedPosts.length > 0 && (
+        <aside className="border-t border-gray-100 dark:border-gray-800/80 bg-gray-50/50 dark:bg-gray-900/20 py-16">
+          <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl mx-auto">
+              <h4 className="h4 font-red-hat-display mb-8 text-gray-900 dark:text-white">
+                Related Resources
+              </h4>
+
+              {/* Articles container */}
+              <div
+                className="grid gap-6 sm:grid-cols-3"
+                data-aos-id-relposts
+              >
+                {relatedPosts.map((relatedPost) => (
+                  <article
+                    key={relatedPost.slug}
+                    className="relative group p-6 text-white overflow-hidden rounded-2xl shadow-lg border border-gray-100/10 min-h-48 flex flex-col justify-end"
+                    data-aos="fade-down"
+                    data-aos-anchor="[data-aos-id-relposts]"
+                  >
+                    <figure className="absolute inset-0 w-full h-full">
+                      {relatedPost.metadata.image ? (
+                        <Image
+                          className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-700 ease-out"
+                          src={relatedPost.metadata.image}
+                          alt={relatedPost.metadata.title}
+                          width={400}
+                          height={300}
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gray-800" />
+                      )}
+                      <div
+                        className="absolute inset-0 bg-teal-900/85 group-hover:opacity-75 transition duration-700 ease-out"
+                        aria-hidden="true"
+                      ></div>
+                    </figure>
+                    <div className="relative flex flex-col h-full z-10 justify-between">
+                      <header className="grow">
+                        <Link className="hover:underline text-white block" href={`/articles/${relatedPost.slug}`}>
+                          <h3 className="text-base font-red-hat-display font-bold tracking-tight mb-2 leading-snug">
+                            {relatedPost.metadata.title}
+                          </h3>
+                        </Link>
+                      </header>
+                      <div className="text-xs opacity-70 mt-4 font-medium">
+                        <PostDate dateString={relatedPost.metadata.publishedAt} />
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </aside>
+      )}
     </>
   );
 }
