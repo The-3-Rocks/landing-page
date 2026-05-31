@@ -11,27 +11,53 @@ export const metadata = {
 const faqs = [
   {
     question: "What types of raw materials do you sell?",
-    answer: "We sell zinc, lead, barite, and iron.",
+    answer:
+      "We supply a diverse range of premium Moroccan minerals including lead (concentrate, powder, and ore), zinc (calamine ore and concentrate), copper (ore), barite (ore, powder, and lumps), iron (ore), cobalt (ore and concentrate), and antimony (ore and concentrate). Each material is ethically sourced from Morocco's richest mining regions and undergoes rigorous quality testing before export.",
   },
   {
     question: "What are the applications of these materials?",
     answer:
-      "Each material has various industrial applications, such as in construction, manufacturing, and more.",
+      "Our materials serve a wide range of global industries. Lead is essential for batteries, radiation shielding, and construction. Copper powers electrical systems, renewable energy infrastructure, and telecommunications. Barite is critical for oil and gas drilling, medical imaging, and paints. Iron forms the backbone of construction and manufacturing. Cobalt is indispensable for lithium-ion batteries, superalloys, and aerospace components. Zinc is used for galvanization, cosmetics, and die-casting, while antimony is vital for flame retardants, batteries, and electronics.",
+  },
+  {
+    question: "What are your minimum order quantities (MOQ)?",
+    answer:
+      "Minimum order quantities vary by material and product form. For bulk ore and concentrate shipments, our MOQ typically starts from 20 metric tons. For processed materials and powders, MOQ may be lower depending on the product. We also accommodate smaller trial orders for new partnerships. Please contact us with your specific requirements for a detailed quotation.",
   },
   {
     question: "How can I place an order?",
     answer:
-      "You can place an order by contacting us through our website or email.",
+      "You can place an order by filling out the contact form on our website or by emailing us directly at info@the-3rocks.com. Our team will respond within 24 hours to discuss your requirements, provide current pricing, share product specifications, and arrange shipping logistics. We guide you through every step from initial inquiry to final delivery.",
   },
   {
     question: "What is the delivery timeframe?",
     answer:
-      "Delivery times vary depending on location and product availability. Please contact us for specific details.",
+      "Delivery timelines depend on the material, quantity, destination port, and shipping method. Standard shipments from Morocco to major international ports typically take 2 to 4 weeks from order confirmation. We work with experienced freight forwarders to ensure timely and secure delivery. Express shipping options may be available upon request for urgent orders.",
+  },
+  {
+    question: "Do you provide quality certifications?",
+    answer:
+      "Yes, all our materials are accompanied by comprehensive quality documentation. We provide certificates of analysis (COA) from accredited laboratories, mill test certificates, and material safety data sheets (MSDS) where applicable. Our quality assurance process includes chemical composition testing, physical property analysis, and third-party verification to ensure every shipment meets international standards.",
+  },
+  {
+    question: "What payment terms do you offer?",
+    answer:
+      "We offer flexible payment terms to accommodate different business relationships. Standard options include irrevocable letters of credit (L/C), telegraphic transfers (T/T), and bank guarantees. Payment terms are negotiated on a case-by-case basis depending on the order size, material type, and trading history. Contact our sales team to discuss the best option for your procurement needs.",
+  },
+  {
+    question: "What shipping and export documentation do you provide?",
+    answer:
+      "We handle all export documentation required for international shipments. This includes the commercial invoice, packing list, certificate of origin (issued by Moroccan authorities), bill of lading or airway bill, phytosanitary certificate if applicable, and any additional customs documentation required by the destination country. Our logistics team ensures full compliance with Moroccan export regulations and international trade laws.",
+  },
+  {
+    question: "Can I request a sample before ordering?",
+    answer:
+      "Yes, we provide material samples for prospective buyers. Sample requests can be made through our contact form or by email. Depending on the material and quantity requested, samples may be provided free of charge with the buyer covering shipping costs. Our team will coordinate with you to ensure you receive representative samples for your evaluation and testing.",
   },
   {
     question: "How can I reach customer support?",
     answer:
-      "You can reach our customer support team through the contact form on our website or by emailing info@the3rocks.com.",
+      "Our customer support team is available Monday through Friday from 9:00 AM to 6:00 PM (Morocco time, UTC+1). You can reach us through the contact form on our website, by emailing info@the-3rocks.com, or by phone. We strive to respond to all inquiries within 24 hours. For urgent matters, please indicate the priority in your subject line and we will prioritize your request.",
   },
 ];
 

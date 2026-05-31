@@ -6,7 +6,7 @@ interface PostLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export default function PostLink({ href, ...props }: PostLinkProps) {
-  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#') || href.includes('the-3rocks.com'));
 
   if (isInternalLink) {
     return (

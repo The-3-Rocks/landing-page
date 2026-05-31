@@ -3,7 +3,7 @@ import Newsletter from "@/components/newsletter";
 import RelatedPosts from "@/components/related-posts-02";
 
 export const metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | The 3 Rocks",
   description:
     "At The 3 Rocks, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.",
 };

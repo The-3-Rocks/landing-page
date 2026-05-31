@@ -1,8 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import PostDate from "@/components/post-date";
 import PostItem from "@/components/post-item";
 import { useState, useMemo, useRef, useEffect } from "react";
 
@@ -63,124 +60,123 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
     });
   }, [allBlogs, selectedCategory, searchQuery]);
 
-  const featuredPost = filteredBlogs[0];
-  
   // Pagination
-  const totalPages = Math.ceil((filteredBlogs.length - 1) / ARTICLES_PER_PAGE);
-  const startIndex = 1 + (currentPage - 1) * ARTICLES_PER_PAGE;
+  const totalPages = Math.ceil(filteredBlogs.length / ARTICLES_PER_PAGE);
+  const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
   const endIndex = Math.min(startIndex + ARTICLES_PER_PAGE, filteredBlogs.length);
   const paginatedPosts = filteredBlogs.slice(startIndex, endIndex);
 
   return (
     <>
-      {/* Featured post */}
-      {featuredPost && (
-        <section className="relative">
-          {/* Background image */}
-          {featuredPost.metadata.image && (
-            <div className="absolute inset-0 h-128 pt-16 box-content -z-1">
-              <Image
-                className="absolute inset-0 w-full h-full object-cover opacity-25"
-                src={featuredPost.metadata.image}
-                width={1440}
-                height={577}
-                priority
-                alt={featuredPost.metadata.title}
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900"
-                aria-hidden="true"
-              ></div>
-            </div>
-          )}
-          <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="pt-32 pb-12 md:pt-40 md:pb-16">
-              {/* Featured article */}
-              <div className="max-w-3xl" data-aos="fade-down">
-                <article>
-                  <header>
-                    {/* Title and excerpt */}
-                    <div className="text-center md:text-left">
-                      <Link href={`/articles/${featuredPost.slug}`}>
-                        <h1 className="h1 font-red-hat-display mb-4">
-                          {featuredPost.metadata.title}
-                        </h1>
-                      </Link>
-                      <p className="text-xl text-gray-600 dark:text-gray-400">
-                        {featuredPost.metadata.summary}
-                      </p>
-                    </div>
-                    {/* Article meta */}
-                    <div className="md:flex md:items-center md:justify-between mt-5">
-                      {/* Author meta */}
-                      {featuredPost.metadata.author && (
-                        <div className="flex items-center justify-center">
-                          <div>
-                            <span className="text-gray-600 dark:text-gray-400">By </span>
-                            <span className="font-medium text-gray-800 dark:text-gray-300">
-                              {featuredPost.metadata.author}
-                            </span>
-                            <span className="text-gray-600 dark:text-gray-400">
-                              {" · "}
-                              <PostDate dateString={featuredPost.metadata.publishedAt} />
-                            </span>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </header>
-                </article>
+      {/* Intro Section */}
+      <section className="relative">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="pt-32 pb-12 md:pt-40 md:pb-16">
+            <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-900/20 border border-teal-200/50 dark:border-teal-700/30 text-teal-700 dark:text-teal-300 text-sm font-semibold mb-6">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+                </svg>
+                Knowledge Hub
               </div>
+              <h2 className="h2 font-red-hat-display mb-6 text-gray-900 dark:text-white">
+                Insights from Morocco's Mining Experts
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto mb-4">
+                Explore our comprehensive library of articles covering Morocco's rich mining industry — from mineral properties and extraction methods to market trends, quality standards, and sustainable practices. Each guide is written by our team of geologists, mining engineers, and industry specialists.
+              </p>
+              <p className="text-base text-gray-500 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto">
+                Whether you're sourcing raw materials, researching Moroccan mineral deposits, or staying informed on global metal markets, our resources provide the technical depth and practical insights you need.
+              </p>
+              {filteredBlogs.length > 0 && (
+                <div className="mt-10 flex items-center justify-center gap-8">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold font-red-hat-display text-teal-600 dark:text-teal-400">{filteredBlogs.length}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Articles</div>
+                  </div>
+                  <div className="w-px h-12 bg-gray-200 dark:bg-gray-700"></div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold font-red-hat-display text-teal-600 dark:text-teal-400">{categories.length - 1}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Categories</div>
+                  </div>
+                  <div className="w-px h-12 bg-gray-200 dark:bg-gray-700"></div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold font-red-hat-display text-teal-600 dark:text-teal-400">{allBlogs.filter(p => p.metadata.author && p.metadata.author !== "The 3 Rocks Company").length + 1}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Experts</div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Filter and Search Section */}
-      <section className={`bg-gray-50 dark:bg-gray-800/50 ${!featuredPost ? 'pt-32 md:pt-40' : ''}`}>
+      <section className="bg-gray-50 dark:bg-gray-800/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="py-8">
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-              {/* Search */}
-              <div className="w-full md:w-96">
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                />
-              </div>
+          <div className="py-8 md:py-10">
+            {/* Search */}
+            <div className="relative max-w-xl mx-auto md:mx-0">
+              <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-shadow hover:shadow-md"
+              />
+            </div>
 
-              {/* Category Filter */}
-              <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 w-full md:w-auto md:flex-wrap md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => {
-                      setSelectedCategory(category);
-                      setCurrentPage(1);
-                    }}
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
-                      selectedCategory === category
-                        ? "bg-teal-600 text-white"
-                        : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-gray-600"
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
+            {/* Category Filter */}
+            <div className="mt-6">
+              <div className="relative">
+                {/* Mobile fade edges */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-gray-50 dark:from-gray-800/50 to-transparent z-10 md:hidden"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-gray-50 dark:from-gray-800/50 to-transparent z-10 md:hidden"></div>
+                {/* Categories scroll container */}
+                <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1 -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap md:overflow-visible">
+                  {categories.map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => {
+                        setSelectedCategory(category);
+                        setCurrentPage(1);
+                      }}
+                      className={`relative px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 whitespace-nowrap flex-shrink-0 border ${
+                        selectedCategory === category
+                          ? "bg-gradient-to-r from-teal-600 to-teal-500 text-white border-teal-500 shadow-lg shadow-teal-500/20 scale-105"
+                          : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-teal-300 dark:hover:border-teal-600 hover:text-teal-600 dark:hover:text-teal-400 hover:-translate-y-0.5"
+                      }`}
+                    >
+                      {category === "All" ? (
+                        <span className="flex items-center gap-1.5">
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                          </svg>
+                          All
+                        </span>
+                      ) : (
+                        category
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
             {/* Results count */}
-            {filteredBlogs.length > 1 && (
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                Showing {startIndex} - {endIndex - 1} of {filteredBlogs.length - 1} articles
-              </p>
+            {filteredBlogs.length > 0 && (
+              <div className="mt-5 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>{startIndex + 1}–{endIndex} of {filteredBlogs.length} articles</span>
+              </div>
             )}
           </div>
         </div>

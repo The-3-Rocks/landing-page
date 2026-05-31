@@ -8,7 +8,7 @@ import ChatButtons from "@/components/ChatButtons";
 
 export const metadata = {
   title:
-    "Our Mining Process | Premium Moroccan Minerals & Raw Materials | The 3 Rocks",
+    "Mining Process | Premium Moroccan Minerals | The 3 Rocks",
   description:
     "Learn about The 3 Rocks' efficient and sustainable process for extracting, processing, and exporting premium Moroccan minerals and raw materials worldwide. Specializing in Morocco's diverse mining sector.",
   keywords: [
@@ -57,7 +57,7 @@ export const metadata = {
     "mining sustainability practices",
   ],
   openGraph: {
-    title: "Premium Moroccan Mining & Mineral Export Process | The 3 Rocks",
+    title: "Mining Process | Premium Moroccan Minerals | The 3 Rocks",
     description:
       "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
     url: "https://www.the-3rocks.com/our-process",
@@ -74,7 +74,7 @@ export const metadata = {
     locale: "en_US",
   },
   linkedin: {
-    title: "Premium Moroccan Mining & Mineral Export Process | The 3 Rocks",
+    title: "Mining Process | Premium Moroccan Minerals | The 3 Rocks",
     description:
       "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
     images: ["https://www.the-3rocks.com/images/process-linkedin.png"],

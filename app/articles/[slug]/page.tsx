@@ -61,7 +61,7 @@ export async function generateMetadata({
   const { title, summary: description } = post.metadata;
 
   return {
-    title,
+    title: `${title} | The 3 Rocks`,
     description,
     openGraph: {
       title,
