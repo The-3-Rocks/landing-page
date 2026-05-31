@@ -552,6 +552,9 @@ const Contact: React.FC = () => {
                 We'll reach out soon with exclusive details about our premium
                 raw materials and exceptional services.
               </p>
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
+                After submitting your inquiry, a member of our team will review your requirements and respond within 24 hours with product specifications, current pricing, and shipping options. For urgent requests, we recommend including your preferred delivery timeline and target specifications so we can prioritize your inquiry and provide the most relevant material options from our current inventory.
+              </p>
             </div>
 
             {/* Company info panel */}

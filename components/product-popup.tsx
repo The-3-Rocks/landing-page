@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ProductGridItem } from "app/types/product";
+import { ProductGridItem } from "@/app/types/product";
 
 // Define interfaces for our product details
 interface BaseProductDetail {

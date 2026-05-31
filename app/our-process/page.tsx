@@ -128,6 +128,9 @@ export default function ProcessPage() {
                 From extraction to delivery, discover how we ensure the highest
                 quality Moroccan raw materials through our meticulous process
               </p>
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
+                What sets The 3 Rocks apart is our integrated approach — we oversee every stage from mine to port, maintaining full control over quality, traceability, and timelines. Our process combines decades of on-the-ground experience in Morocco's mining regions with modern analytical techniques and responsible sourcing practices that meet the expectations of discerning international buyers.
+              </p>
             </div>
 
             {/* Mission & Vision */}

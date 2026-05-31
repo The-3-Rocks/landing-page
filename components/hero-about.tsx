@@ -33,7 +33,10 @@ export default function HeroAbout() {
                 Company brings generations of expertise to mineral extraction in
                 Morocco's rich geological landscapes. Our commitment to
                 sustainable Moroccan mining practices has established us as
-                leaders in Morocco's mineral industry.
+                leaders in                 Morocco's mineral industry.
+              </p>
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
+                We serve clients across Europe, Asia, and the Americas with a diverse portfolio spanning base metals, industrial minerals, and precious materials. Our operations are guided by ethical mining principles, ensuring that every ton extracted supports local communities and preserves Morocco's mineral heritage for future generations.
               </p>
               <div
                 className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"

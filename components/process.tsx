@@ -118,7 +118,7 @@ export default function MiningProcess() {
                   <p className="text-gray-600 dark:text-gray-400">
                     We extract raw materials from Morocco using sustainable
                     methods that minimize environmental impact while maximizing
-                    resource quality.
+                    resource quality. Our mining partners employ selective extraction techniques tailored to each deposit's geology, reducing waste and preserving high-grade material. All operations follow Moroccan mining regulations and international safety standards, with ongoing rehabilitation of extraction sites.
                   </p>
                 </div>
               </div>
@@ -154,7 +154,7 @@ export default function MiningProcess() {
                   <p className="text-gray-600 dark:text-gray-400">
                     Each batch undergoes rigorous testing and analysis to verify
                     purity levels and ensure compliance with international
-                    quality standards.
+                    quality standards. Our laboratory team conducts chemical composition analysis, particle size distribution, moisture content testing, and contaminant screening. Detailed certificates of analysis accompany every shipment, providing full transparency on product specifications.
                   </p>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function MiningProcess() {
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-400">
                     Materials are carefully processed and prepared according to
-                    client specifications and international standards.
+                    client specifications and international standards. This stage includes crushing, grinding, screening, grading, and homogenization to achieve consistent particle size and chemical composition. Each lot is individually sampled, labeled, and stored in segregated inventory for complete traceability from mine to delivery.
                   </p>
                 </div>
               </div>
@@ -223,7 +223,7 @@ export default function MiningProcess() {
                   <p className="text-gray-600 dark:text-gray-400">
                     We handle all documentation, logistics, and shipping
                     requirements to ensure timely delivery from Morocco to your
-                    destination.
+                    destination. Our export team manages customs clearance, certificates of origin, weight and quality verification at port, and container loading supervision. We coordinate with major Moroccan ports — Casablanca, Jorf Lasfar, and Tangier Med — to optimize shipping routes and transit times for clients worldwide.
                   </p>
                 </div>
               </div>

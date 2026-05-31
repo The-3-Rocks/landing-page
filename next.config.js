@@ -10,6 +10,35 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/about-us",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/articles/antimony-mining-in-morocco-khenifra-region-applications",
+        destination: "/articles/antimony-mining-morocco",
+        permanent: true,
+      },
+      {
+        source: "/articles/moroccan-barite-drilling-grade-industrial-applications",
+        destination: "/articles/moroccan-barite",
+        permanent: true,
+      },
+      {
+        source: "/articles/moroccan-cobalt-battery-grade-superalloy-applications",
+        destination: "/articles/moroccan-cobalt",
+        permanent: true,
+      },
+      {
+        source: "/process",
+        destination: "/our-process",
+        permanent: true,
+      },
+    ];
+  },
   experimental: {
     optimizePackageImports: ["react-icons", "date-fns"],
   },

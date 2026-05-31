@@ -79,6 +79,9 @@ export default function Team() {
               modern expertise to deliver exceptional quality minerals from
               Morocco's rich geological deposits.
             </p>
+            <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
+              With decades of collective experience in geology, mineral processing, logistics, and international trade, our specialists bring deep knowledge across every stage of the mining value chain. From identifying promising deposits in the Atlas Mountains to managing complex export documentation, each team member contributes specialized expertise that sets The 3 Rocks apart in Morocco's mining industry.
+            </p>
           </div>
 
           {/* Team members */}
@@ -126,7 +129,7 @@ export default function Team() {
           </div>
 
           {/* Team values */}
-          {/* <div className="max-w-3xl mx-auto text-center pt-12 md:pt-20">
+          <div className="max-w-3xl mx-auto text-center pt-12 md:pt-20">
             <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-teal-600 bg-teal-200 rounded-full mb-4">
               Moroccan Mining Values
             </div>
@@ -141,7 +144,7 @@ export default function Team() {
               to deliver superior quality minerals from Morocco's legendary
               mining regions.
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>

@@ -88,6 +88,9 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
               <p className="text-base text-gray-500 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto">
                 Whether you're sourcing raw materials, researching Moroccan mineral deposits, or staying informed on global metal markets, our resources provide the technical depth and practical insights you need.
               </p>
+              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-xl mx-auto mt-4">
+                Each article is researched and reviewed by our in-house team of geologists and mining engineers, drawing on firsthand experience across Morocco's mining regions. New content is published regularly as market conditions, extraction techniques, and industry standards evolve.
+              </p>
               {filteredBlogs.length > 0 && (
                 <div className="mt-10 flex items-center justify-center gap-8">
                   <div className="text-center">

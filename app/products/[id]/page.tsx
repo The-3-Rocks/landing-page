@@ -930,6 +930,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                 {details.description}
               </p>
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-4">
+                Morocco is one of the world's most significant mineral producers, with deposits that have been worked for centuries. Our {product.name} is sourced from carefully selected Moroccan mining regions known for their exceptional geological characteristics. Each shipment reflects the unique mineral composition of these deposits, processed under strict quality controls to meet international specifications for global buyers.
+              </p>
             </div>
 
             {/* Product overview with image and specs */}
