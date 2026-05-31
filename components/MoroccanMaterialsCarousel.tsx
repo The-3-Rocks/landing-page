@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -81,9 +81,21 @@ const materials: (CardStackItem & { image: any })[] = [
 export default function MoroccanMaterialsCarousel() {
   const cardStackRef = useRef<CardStackHandle>(null);
 
+  const [cardSize, setCardSize] = useState({ width: 400, height: 440 });
+
+  useEffect(() => {
+    const update = () => {
+      const mobile = window.innerWidth < 768;
+      setCardSize(mobile ? { width: 240, height: 300 } : { width: 400, height: 440 });
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
     <section
-      className="relative py-20 bg-white dark:bg-gray-900 overflow-hidden"
+      className="relative py-12 md:py-20 bg-white dark:bg-gray-900 overflow-hidden"
       style={{ marginTop: -68 }}
       data-aos="fade-up"
     >
@@ -109,7 +121,7 @@ export default function MoroccanMaterialsCarousel() {
           <button
             onClick={() => cardStackRef.current?.prev()}
             aria-label="Previous"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 group -ml-16"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 group -ml-16"
           >
             <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -124,9 +136,9 @@ export default function MoroccanMaterialsCarousel() {
             intervalMs={4000}
             pauseOnHover
             showDots
-            maxVisible={5}
-            cardWidth={400}
-            cardHeight={440}
+            maxVisible={6}
+            cardWidth={cardSize.width}
+            cardHeight={cardSize.height}
             overlap={0.35}
             spreadDeg={28}
             activeScale={1.08}
@@ -142,7 +154,7 @@ export default function MoroccanMaterialsCarousel() {
           <button
             onClick={() => cardStackRef.current?.next()}
             aria-label="Next"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 group -mr-16"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 group -mr-16"
           >
             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
