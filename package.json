@@ -24,6 +24,8 @@
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
+    "baseline-browser-mapping": "^2.10.33",
+    "caniuse-lite": "^1.0.30001793",
     "contentlayer": "^0.3.2",
     "critters": "^0.0.25",
     "critters-webpack-plugin": "^3.0.2",
