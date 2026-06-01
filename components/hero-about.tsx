@@ -38,8 +38,11 @@ export default function HeroAbout() {
               <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
                 We serve clients across Europe, Asia, and the Americas with a diverse portfolio spanning base metals, industrial minerals, and precious materials. Our operations are guided by ethical mining principles, ensuring that every ton extracted supports local communities and preserves Morocco's mineral heritage for future generations.
               </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8 -mt-4">
+              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-4 -mt-4">
                 From the Anti-Atlas ranges to the Middle Atlas, our team maintains direct relationships with mine operators and cooperative extraction sites. This network allows us to offer consistent volume, transparent pricing, and traceable supply chains — from the mine face to the port of loading.
+              </p>
+              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
+                Morocco's mining sector produces over 30 different mineral commodities, from phosphates and base metals to industrial minerals and strategic metals essential for the energy transition. The country's strategic location at the crossroads of Africa and Europe, combined with modern port infrastructure and free trade agreements with both the EU and the United States, makes it a natural hub for mineral processing and export. Our company was founded to bridge the gap between Morocco's mineral wealth and the global buyers who need reliable, high-quality raw materials — whether for construction, manufacturing, energy storage, or specialized industrial applications.
               </p>
               <div
                 className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
