@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the purity range of Moroccan copper supplied by The 3 Rocks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our Moroccan copper ore typically ranges from 8% to 21% purity. We also offer high-purity copper of up to 40% under special export permit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the industrial applications of your Moroccan copper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is widely used in electrical wiring, telecommunications infrastructure, heat exchangers, cooling systems, and electronics manufacturing."
+      }
+    }
+  ]
+}

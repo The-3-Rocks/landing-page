@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is the leading lead ore supplier in Morocco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 3 Rocks Company is Morocco's leading lead ore supplier, offering high-purity Moroccan lead concentrate, lead powder, and raw lead ore ethically sourced from mineral-rich Moroccan mining regions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the purity of Moroccan lead concentrate and powder you supply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our lead concentrate features an exceptional purity of 86%, while our lead powder is 76% pure. Raw lead ore is also available at more than 50% purity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you export lead ingots and concentrates globally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as a trusted lead ingot exporter and raw materials supplier, we export lead concentrates and ores globally, complying with international shipping and environmental safety regulations."
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the fastest way to contact The 3 Rocks Company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reach us through the contact form on our website, email info@the-3rocks.com, or by phone during business hours. We aim to respond within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the shipping and export options for Moroccan minerals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We ship Moroccan minerals worldwide with full export documentation, port handling, and logistics support for bulk mineral orders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are customer inquiries handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our customer support team is available Monday through Friday from 9:00 AM to 6:00 PM Morocco time, and urgent inquiries are prioritized."
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Lead",
+        "description": "High-grade Moroccan lead with exceptional purity for various industrial applications, ethically sourced from Morocco's rich mineral deposits.",
+        "image": "https://www.the-3rocks.com/images/raw-material-lead.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#lead",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Lead",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Concentrate" },
+          { "@type": "PropertyValue", "name": "form", "value": "Powder" },
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Copper",
+        "description": "Premium Moroccan copper with exceptional quality extracted from Morocco's historic mining regions, offering versatility for industrial applications.",
+        "image": "https://www.the-3rocks.com/images/copper1.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#copper",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Copper",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Zinc",
+        "description": "High-quality zinc calamine from Morocco's mineral-rich mountains for various applications, including cosmetics and industrial uses.",
+        "image": "https://www.the-3rocks.com/images/zinc-product.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#zinc",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Zinc",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" },
+          { "@type": "PropertyValue", "name": "form", "value": "Concentrate" }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Barite",
+        "description": "High-quality Moroccan barite sourced from premier mining regions of Morocco for drilling, medical, paint and construction applications.",
+        "image": "https://www.the-3rocks.com/images/Barite-Clay.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#barite",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Barite",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" },
+          { "@type": "PropertyValue", "name": "form", "value": "Powder" },
+          { "@type": "PropertyValue", "name": "form", "value": "Lumps" }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Iron",
+        "description": "Superior quality iron extracted from Morocco's ancient ore deposits for construction, manufacturing, and industrial uses worldwide.",
+        "image": "https://www.the-3rocks.com/images/moroccan-iron-ore.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#iron",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Iron",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Cobalt",
+        "description": "High-quality Moroccan cobalt essential for modern battery technology and superalloys, sustainably mined from Morocco's mineral wealth.",
+        "image": "https://www.the-3rocks.com/images/cobaltt.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#cobalt",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Cobalt",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" },
+          { "@type": "PropertyValue", "name": "form", "value": "Concentrate" }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Product",
+        "name": "Moroccan Antimony",
+        "description": "Premium antimony from Morocco's exclusive mining operations for flame retardants, batteries, and electronic components with guaranteed quality.",
+        "image": "https://www.the-3rocks.com/images/antimony11.webp",
+        "brand": {
+          "@type": "Brand",
+          "name": "The 3 Rocks Company"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.the-3rocks.com/products#antimony",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "material": "Antimony",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Morocco"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "form", "value": "Ore" },
+          { "@type": "PropertyValue", "name": "form", "value": "Concentrate" }
+        ]
+      }
+    }
+  ]
+}
