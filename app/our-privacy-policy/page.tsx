@@ -104,13 +104,13 @@ export default function PrivacyPolicy() {
                       We use Google AdSense to display ads. Google and its
                       partners may use cookies to personalize ads based on your
                       previous interactions with websites. You can learn more
-                      about how Google uses data{" "}
+                      about{" "}
                       <a
                         href="https://policies.google.com/technologies/partner-sites"
                         target="_blank"
                         rel="nofollow noreferrer"
                       >
-                        here
+                        how Google uses data on partner sites
                       </a>
                       .
                     </p>

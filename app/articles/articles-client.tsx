@@ -79,9 +79,9 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
                 </svg>
                 Knowledge Hub
               </div>
-              <h2 className="h2 font-red-hat-display mb-6 text-gray-900 dark:text-white">
+              <h1 className="h2 font-red-hat-display mb-6 text-gray-900 dark:text-white">
                 Insights from Morocco's Mining Experts
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto mb-4">
                 Explore our comprehensive library of articles covering Morocco's rich mining industry — from mineral properties and extraction methods to market trends, quality standards, and sustainable practices. Each guide is written by our team of geologists, mining engineers, and industry specialists.
               </p>

@@ -671,15 +671,41 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <h1 className="h1 font-red-hat-display mb-4">
                 Product Not Found
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
                 The product you're looking for doesn't exist or has been moved.
               </p>
-              <Link
-                href="/products"
-                className="btn text-white bg-teal-500 hover:bg-teal-400"
-              >
-                View All Products
-              </Link>
+              <p className="text-base text-gray-500 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+                The URL may be incorrect, the product may have been removed from our catalog, or you may have followed an outdated link. We are continuously updating our product range to reflect the latest availability from Morocco's mining regions.
+              </p>
+              <div className="mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200/50 dark:border-amber-700/30 max-w-lg mx-auto">
+                <h2 className="font-semibold text-gray-900 dark:text-white mb-3">Looking for something specific?</h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  We specialize in Moroccan lead, zinc, copper, barite, iron, cobalt, and antimony — available as ore, concentrate, and processed materials. Our team can provide detailed specifications, current stock levels, and competitive pricing within 24 hours.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-500 text-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Contact our team for assistance
+                </Link>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <Link
+                  href="/products"
+                  className="btn text-white bg-teal-500 hover:bg-teal-400"
+                >
+                  View All Products
+                </Link>
+                <Link
+                  href="/articles"
+                  className="btn text-teal-600 bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 hover:bg-teal-100 dark:hover:bg-teal-900/30"
+                >
+                  Browse Mining Resources
+                </Link>
+              </div>
             </div>
           </div>
         </section>

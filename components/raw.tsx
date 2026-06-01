@@ -276,7 +276,7 @@ export default function ProductsPage() {
                       href={`/products/${product.id}`}
                       className="btn-sm text-white bg-teal-500 hover:bg-teal-400 w-full mt-3"
                     >
-                      Learn More
+                      View Moroccan {product.name} Details
                     </Link>
                   </div>
                 ))}
