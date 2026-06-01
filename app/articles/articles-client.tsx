@@ -94,6 +94,9 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
               <p className="text-xs text-gray-400 dark:text-gray-600 leading-relaxed max-w-lg mx-auto mt-3 italic">
                 Use the category filters below to browse specific topics — from material guides and mining operations to sustainability and market analysis. You can also search by keyword to find articles relevant to your sourcing or research needs.
               </p>
+              <p className="text-sm text-gray-500 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto mt-4">
+                Our editorial team includes geologists with field experience across Morocco's Atlas Mountains, mining engineers who have worked in extraction and beneficiation facilities, and supply chain experts who manage mineral exports to markets in Europe, Asia, and the Americas. Every article cites authoritative sources including USGS mineral commodity summaries, academic research from the Journal of African Earth Sciences, and data from Morocco's Ministry of Energy Transition and Sustainable Development. We update our content quarterly to reflect changes in mining regulations, market prices, and extraction technologies.
+              </p>
               {filteredBlogs.length > 0 && (
                 <div className="mt-10 flex items-center justify-center gap-8">
                   <div className="text-center">

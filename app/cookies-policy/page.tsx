@@ -126,7 +126,7 @@ export default function CookiesPolicy() {
                       <a
                         href="https://adssettings.google.com"
                         target="_blank"
-                        rel="nofollow noreferrer"
+                        rel="noopener noreferrer"
                       >
                         Google Ads Settings
                       </a>
@@ -134,7 +134,7 @@ export default function CookiesPolicy() {
                       <a
                         href="https://www.aboutads.info"
                         target="_blank"
-                        rel="nofollow noreferrer"
+                        rel="noopener noreferrer"
                       >
                         Digital Advertising Alliance
                       </a>{" "}

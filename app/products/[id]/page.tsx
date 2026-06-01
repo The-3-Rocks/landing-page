@@ -672,15 +672,15 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 Product Not Found
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-                The product you're looking for doesn't exist or has been moved.
+                The product you requested is not currently available in our catalog.
               </p>
               <p className="text-base text-gray-500 dark:text-gray-400 mb-8 max-w-xl mx-auto">
-                The URL may be incorrect, the product may have been removed from our catalog, or you may have followed an outdated link. We are continuously updating our product range to reflect the latest availability from Morocco's mining regions.
+                This could mean the URL contains an error, the product listing has been updated to reflect changes in our Moroccan mining supply, or you may have followed an outdated or mistyped link. We review and refresh our product catalog every month to match current extraction capacity, stock levels, and export availability from Morocco's mining regions. Our portfolio focuses on the minerals that Morocco produces most abundantly — lead, zinc, copper, barite, iron, cobalt, and antimony — each available in multiple grades and forms to suit different industrial applications worldwide. If you arrived here from a search engine, try browsing our full product list or exploring our educational articles about Moroccan mining, mineral processing, and global supply chain standards.
               </p>
               <div className="mb-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200/50 dark:border-amber-700/30 max-w-lg mx-auto">
                 <h2 className="font-semibold text-gray-900 dark:text-white mb-3">Looking for something specific?</h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  We specialize in Moroccan lead, zinc, copper, barite, iron, cobalt, and antimony — available as ore, concentrate, and processed materials. Our team can provide detailed specifications, current stock levels, and competitive pricing within 24 hours.
+                  We specialize in Moroccan lead, zinc, copper, barite, iron, cobalt, and antimony — available as raw ore, high-grade concentrate, and finely processed materials. Our team can provide detailed specifications, current stock levels, and competitive pricing within 24 hours. If you need a mineral grade or form not listed on our site, we may still be able to source it from our network of trusted Moroccan mining partners. Every order includes full documentation, chemical analysis certificates, and logistics coordination from Moroccan ports to your destination. Contact us with your requirements and we will respond with a tailored quote and availability details.
                 </p>
                 <Link
                   href="/contact"

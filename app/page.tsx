@@ -116,11 +116,32 @@ export default function Home() {
         <PageIllustration />
       </div>
       <Hero />
+      <section className="py-12 md:py-16 bg-white dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold font-red-hat-display text-center mb-8 text-gray-900 dark:text-white">Why The 3 Rocks for Moroccan Minerals</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-6 rounded-xl bg-teal-50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-800/30">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">The 3 Rocks Company was founded to connect global industrial buyers with Morocco's exceptional mineral resources. Our team brings together geologists who have mapped deposits across the Anti-Atlas and High Atlas ranges, mining engineers with hands-on experience in beneficiation plants near Errachidia and Khenifra, and logistics professionals who manage port operations at Casablanca, Tangier Med, and Jorf Lasfar. We work with a network of artisanal and small-scale mines alongside larger industrial operations, applying consistent quality standards across every source. Each shipment is tested at our partner laboratories using XRF and ICP analysis, with certificates of analysis issued before loading.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-teal-50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-800/30">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">Our portfolio covers six core minerals: lead concentrate and powder from Bni Taddjit, zinc calamine ore and concentrate from the Errachidia mineral belt, copper ore with purity ranges from 8 to 40 percent from the Tinghir region, barite with specific gravity above 4.2 from mines near Midelt and Ouarzazate, iron ore exceeding 56 percent iron content from the Nador and Oujda areas, and cobalt ore sourced from the Bou Azzer district. We also supply antimony from the Khenifra region. Every mineral is available in raw ore, processed concentrate, or milled powder forms to match buyer specifications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Stats />
       <ChatButtons />
       {/* <Carousel /> */}
       <MoroccanMaterialsCarousel />
-      {/* <MoroccanMaterialsCarousel /> */}
+      <section className="py-12 md:py-16 bg-gray-50 dark:bg-gray-800/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">We manage the full supply chain from mine to port. Our team coordinates with local mine operators, arranges on-site quality inspections, handles transport via truck to processing facilities and ports, manages all customs and export documentation through Morocco's Office des Changes and customs authorities, and books container or bulk vessel shipping to destinations worldwide. Buyers receive complete documentation packages including certificates of origin, bills of lading, packing lists, commercial invoices, and independent laboratory analysis reports. Minimum order quantities start at 20 metric tons for concentrates and 50 metric tons for ore, with larger volumes available for long-term contracts.</p>
+          </div>
+        </div>
+      </section>
       <MiningProcess />
       <Tabs />
 

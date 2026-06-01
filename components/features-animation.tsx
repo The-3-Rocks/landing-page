@@ -7,9 +7,9 @@ export default function FeaturesAnimation() {
         <div className="py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 font-red-hat-display mb-4">
+            <h2 className="h2 font-red-hat-display mb-4">
               Our Raw Materials products
-            </h1>
+            </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               At The<span className="text-teal-500">3</span>rocks, we offer a
               diverse range of high-quality raw materials, including metals and

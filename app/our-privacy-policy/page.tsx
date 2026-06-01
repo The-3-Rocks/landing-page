@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
                       <a
                         href="https://policies.google.com/technologies/partner-sites"
                         target="_blank"
-                        rel="nofollow noreferrer"
+                        rel="noopener noreferrer"
                       >
                         how Google uses data on partner sites
                       </a>
