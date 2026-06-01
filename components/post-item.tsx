@@ -20,9 +20,9 @@ export default function PostItem({ ...props }) {
           </Link>
         )}
         <Link className="hover:underline" href={`/articles/${props.slug}`}>
-          <h3 className="h4 font-red-hat-display mb-2">
+          <h2 className="h4 font-red-hat-display mb-2">
             {props.metadata.title}
-          </h3>
+          </h2>
         </Link>
       </header>
       <p className="text-gray-600 dark:text-gray-400 grow">
