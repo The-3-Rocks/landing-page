@@ -91,6 +91,9 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
               <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-xl mx-auto mt-4">
                 Each article is researched and reviewed by our in-house team of geologists and mining engineers, drawing on firsthand experience across Morocco's mining regions. New content is published regularly as market conditions, extraction techniques, and industry standards evolve.
               </p>
+              <p className="text-xs text-gray-400 dark:text-gray-600 leading-relaxed max-w-lg mx-auto mt-3 italic">
+                Use the category filters below to browse specific topics — from material guides and mining operations to sustainability and market analysis. You can also search by keyword to find articles relevant to your sourcing or research needs.
+              </p>
               {filteredBlogs.length > 0 && (
                 <div className="mt-10 flex items-center justify-center gap-8">
                   <div className="text-center">

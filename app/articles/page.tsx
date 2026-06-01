@@ -3,7 +3,7 @@ import ArticlesClient from "./articles-client";
 import ChatButtons from "@/components/ChatButtons";
 
 export const metadata = {
-  title: "Moroccan Mining Insights & Industry Articles | The 3 Rocks Company",
+  title: "Moroccan Mining Insights & Industry Articles",
   description:
     "Explore expert articles on Morocco's mining industry, mineral extraction, sustainability practices, and market trends from The 3 Rocks Company.",
   keywords:

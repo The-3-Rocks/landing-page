@@ -555,6 +555,9 @@ const Contact: React.FC = () => {
               <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
                 After submitting your inquiry, a member of our team will review your requirements and respond within 24 hours with product specifications, current pricing, and shipping options. For urgent requests, we recommend including your preferred delivery timeline and target specifications so we can prioritize your inquiry and provide the most relevant material options from our current inventory.
               </p>
+              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed mt-4 max-w-2xl mx-auto">
+                Whether you are a industrial buyer, trader, or manufacturer, we work with you to define product specifications, arrange independent quality verification, and coordinate logistics from Moroccan ports to your destination. Our team speaks English, French, and Arabic to serve clients across Europe, the Middle East, Africa, and Asia.
+              </p>
             </div>
 
             {/* Company info panel */}

@@ -25,6 +25,9 @@ export default function MiningProcess() {
               From extraction to final export, we ensure the highest quality
               through our rigorous and sustainable process.
             </p>
+            <p className="text-base text-gray-500 dark:text-gray-500 leading-relaxed mt-6">
+              Every order follows a documented sequence of controlled stages — from deposit evaluation and selective extraction to laboratory analysis, processing, and certified packaging for international shipment. Our process is designed to give buyers full visibility into the quality and provenance of every ton we deliver.
+            </p>
           </div>
 
           {/* Glow illustration */}

@@ -1,6 +1,6 @@
 export const metadata = {
   title:
-    "Premium Moroccan Minerals & Mining Materials Supplier | The 3 Rocks Co.",
+    "Premium Moroccan Minerals & Mining Materials Supplier",
   description:
     "Leading supplier of high-quality Moroccan minerals including lead, zinc, copper, barite, iron, cobalt, and antimony. Ethically sourced from Morocco's richest mining regions for global industrial applications.",
   keywords: [
@@ -58,7 +58,7 @@ export const metadata = {
     "Morocco export minerals",
   ],
   openGraph: {
-    title: "Premium Moroccan Mining Materials Supplier | The 3 Rocks Company",
+    title: "Premium Moroccan Mining Materials Supplier",
     description:
       "Ethically sourced Moroccan minerals for global industries. High-quality lead, zinc, copper, barite, iron, cobalt, and antimony from Morocco's legendary mines.",
     url: "https://www.the-3rocks.com/products",

@@ -3,7 +3,7 @@ import Newsletter from "@/components/newsletter";
 import RelatedPosts from "@/components/related-posts-02";
 
 export const metadata = {
-  title: "Terms and Conditions | The 3 Rocks",
+  title: "Terms and Conditions",
   description:
     "Welcome to The 3 Rocks! By accessing or using our website, you agree to be bound by the following terms and conditions.",
 };

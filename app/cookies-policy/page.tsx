@@ -3,7 +3,7 @@ import Image from "next/image";
 import Newsletter from "@/components/newsletter";
 
 export const metadata = {
-  title: "Cookies Policy | The 3 Rocks",
+  title: "Cookies Policy",
   description:
     "Learn about how The 3 Rocks uses cookies to enhance your browsing experience and serve personalized content and ads.",
 };

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Leading Moroccan Mining Experts | About The 3 Rocks Mining Company",
+  title: "Leading Moroccan Mining Experts",
   description:
     "Discover Morocco's premier mining company with decades of expertise in extracting high-quality minerals from Morocco's rich geological deposits. Learn about our sustainable Moroccan mining practices and heritage.",
   keywords:

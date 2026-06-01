@@ -67,6 +67,9 @@ export default function HeroHome() {
                 Sourcing and supplying quality mining raw materials. Ensuring
                 efficient and reliable transactions every time.
               </p>
+              <p className="text-base text-gray-500 dark:text-gray-500 leading-relaxed max-w-xl mx-auto md:mx-0 mt-4">
+                Based in Morocco, we specialize in connecting global buyers with premium minerals — from lead and zinc to cobalt and barite — extracted from some of the world's richest geological deposits. Our team manages every stage: sourcing, quality verification, processing, documentation, and door-to-door delivery.
+              </p>
               {/* CTA form */}
               {/* <form className="mt-8" data-aos="fade-down" data-aos-delay="300">
                 <div className="flex flex-col sm:flex-row justify-center max-w-sm mx-auto sm:max-w-md md:mx-0">

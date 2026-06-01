@@ -22,7 +22,7 @@ const redhat = Red_Hat_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.the-3rocks.com"),
   title: {
-    template: "%s | The 3 Rocks - Premium Moroccan Mining Materials",
+    template: "%s | The 3 Rocks",
     default: "The 3 Rocks - Morocco's Leading Mining & Raw Materials Supplier",
   },
   description:

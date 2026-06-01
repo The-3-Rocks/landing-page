@@ -477,7 +477,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
   if (!product || !details) {
     return {
-      title: "Product Not Found | The 3 Rocks",
+      title: "Product Not Found",
       description: "The requested product could not be found.",
     };
   }
@@ -596,7 +596,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 
   return {
-    title: `${details.title} | Premium Moroccan Mining Materials | The 3 Rocks`,
+    title: `${details.title} | Premium Moroccan Mining Materials`,
     description: details.description,
     keywords: productKeywords[params.id] || [],
     authors: [{ name: "The 3 Rocks Company" }],
@@ -932,6 +932,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               </p>
               <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-4">
                 Morocco is one of the world's most significant mineral producers, with deposits that have been worked for centuries. Our {product.name} is sourced from carefully selected Moroccan mining regions known for their exceptional geological characteristics. Each shipment reflects the unique mineral composition of these deposits, processed under strict quality controls to meet international specifications for global buyers.
+              </p>
+              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed mt-3">
+                We offer {product.name} in multiple grades and forms — including ore, concentrate, and processed material — to match your exact production requirements. Every lot is tested for chemical composition, particle size, moisture content, and contaminants before shipment. Our logistics team manages all documentation, port handling, and shipping from major Moroccan ports to destinations worldwide.
               </p>
             </div>
 
@@ -1402,6 +1405,30 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   </div>
                   <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                     {details.qualityAssurance}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sourcing & Logistics */}
+            <div className="mb-16" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">
+                      Sourcing & Global Logistics
+                    </h2>
+                  </div>
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Every shipment of Moroccan {product.name.toLowerCase()} begins at carefully evaluated deposits in Morocco's mineral-rich regions. Our sourcing team works directly with mine operators to select material that meets your target specifications, from ore grade and concentrate purity to particle size and moisture content. We then coordinate all downstream logistics — including quality verification at independent laboratories, export documentation, port handling, and container loading — to deliver your material efficiently from Moroccan ports to your destination.
+                  </p>
+                  <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-4">
+                    Our team manages customs clearance, certificates of origin, bills of lading, and weight and quality certifications issued at the port of loading. We ship from Casablanca, Jorf Lasfar, and Tangier Med, with regular container and break-bulk services to Europe, Asia, the Middle East, and the Americas.
                   </p>
                 </div>
               </div>

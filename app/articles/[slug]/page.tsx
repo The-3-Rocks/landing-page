@@ -61,7 +61,7 @@ export async function generateMetadata({
   const { title, summary: description } = post.metadata;
 
   return {
-    title: `${title} | The 3 Rocks`,
+    title,
     description,
     openGraph: {
       title,
@@ -201,6 +201,16 @@ export default async function SinglePost({
                   <article className="prose text-lg text-gray-600 dark:text-gray-400 max-w-none prose-lg prose-p:leading-normal prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-strong:font-medium prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:italic prose-blockquote:pl-4 prose-blockquote:border-l-2 prose-blockquote:border-teal-500 dark:prose-blockquote:border-gray-400 prose-blockquote:font-normal prose-blockquote:text-inherit">
                     <CustomMDX source={post.content} />
                   </article>
+                </div>
+
+                {/* Quality & Sourcing Note */}
+                <div className="mb-12 p-6 sm:p-8 rounded-2xl bg-teal-50/50 dark:bg-teal-900/10 border border-teal-200/50 dark:border-teal-700/30">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    About the Minerals Discussed in This Article
+                  </h3>
+                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                    The minerals and materials covered in our articles reflect the actual products we source, test, and export from Morocco. The 3 Rocks maintains direct supply relationships with mining operations across Morocco's key mineral-producing regions — including the Anti-Atlas, Middle Atlas, and High Atlas ranges. Every product we offer is verified for chemical composition through independent laboratory analysis and accompanied by a certificate of analysis. For current pricing, specifications, and availability, contact our team.
+                  </p>
                 </div>
 
                 {/* Author Bio Card */}

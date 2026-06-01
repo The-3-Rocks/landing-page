@@ -151,6 +151,9 @@ export default function ProductsPage() {
                 and raw materials sourced and processed from Morocco's legendary
                 mining regions to meet the highest industry standards worldwide.
               </p>
+              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
+                Each product listed below represents a carefully vetted supply chain — from geological survey and extraction to beneficiation, quality certification, and export logistics. Whether you need ore, concentrate, or processed material, we provide detailed specifications, independent lab analysis, and flexible volume options tailored to industrial buyers, traders, and manufacturers.
+              </p>
             </div>
 
             {/* Featured product - Lead */}
