@@ -956,6 +956,146 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         />
       )}
 
+      {/* COMPREHENSIVE PRODUCT INTRO SECTION - FOR SEO */}
+      <section className="bg-white dark:bg-gray-900 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              Premium {details.title} from Morocco
+            </h1>
+            <p className="text-2xl text-gray-700 dark:text-gray-300 font-semibold mb-6">
+              High-Purity {product.name} Sourced from Morocco's Richest Mining
+              Regions
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              {details.description} We supply {product.name.toLowerCase()} in
+              multiple grades and forms to meet the diverse needs of industrial
+              customers worldwide, from construction and automotive
+              manufacturers to electronics producers, energy companies, and
+              chemical processors. Every batch undergoes rigorous laboratory
+              testing and quality verification to ensure consistent
+              specifications and reliability.
+            </p>
+
+            <div className="bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 rounded-lg p-8 mb-8 border border-teal-200 dark:border-teal-800">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Why Choose Our Moroccan {product.name}?
+              </h2>
+              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                <li className="flex gap-3">
+                  <span className="text-teal-600 dark:text-teal-400 font-bold">
+                    ✓
+                  </span>
+                  <div>
+                    <strong>Sourced from Proven Mining Regions:</strong> Our{" "}
+                    {product.name.toLowerCase()} comes from Morocco's most
+                    productive and geologically established mining districts,
+                    where mineral deposits have been documented for decades.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-teal-600 dark:text-teal-400 font-bold">
+                    ✓
+                  </span>
+                  <div>
+                    <strong>Consistent High Purity:</strong> With purity levels
+                    of{" "}
+                    {typeof details.purityDetails !== "string"
+                      ? `${details.purityDetails?.concentrate || details.purityDetails?.ore}`
+                      : details.purityLevel}
+                    , our {product.name.toLowerCase()} meets or exceeds
+                    international specifications for industrial applications.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-teal-600 dark:text-teal-400 font-bold">
+                    ✓
+                  </span>
+                  <div>
+                    <strong>Comprehensive Testing:</strong> Every shipment
+                    includes XRF analysis, ICP-MS trace element testing, and wet
+                    chemical verification to document mineral composition and
+                    detect any impurities.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-teal-600 dark:text-teal-400 font-bold">
+                    ✓
+                  </span>
+                  <div>
+                    <strong>Flexible Supply Options:</strong> Available as raw
+                    ore, beneficiated concentrate, finely milled powder, and
+                    other custom forms depending on your processing
+                    requirements.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-teal-600 dark:text-teal-400 font-bold">
+                    ✓
+                  </span>
+                  <div>
+                    <strong>Reliable Availability:</strong> With annual
+                    extraction capacity of {details.annualExtraction}, we
+                    maintain consistent stock and can scale supply to match your
+                    production needs.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-teal-600 dark:text-teal-400 font-bold">
+                    ✓
+                  </span>
+                  <div>
+                    <strong>Global Export Experience:</strong> We handle all
+                    documentation, customs compliance, and logistics from
+                    Moroccan ports to your facility, supporting shipments to
+                    customers worldwide.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Morocco has been a major producer of {product.name.toLowerCase()}{" "}
+              for over a century, with extensive deposits located throughout the
+              Atlas Mountains region and surrounding areas. The country's
+              geological formations create ideal conditions for{" "}
+              {product.name.toLowerCase()} mineralization, resulting in
+              economically viable mining operations that produce minerals
+              suitable for export to demanding industrial customers. Our team
+              works directly with mine operators and beneficiation plant
+              managers to source premium {product.name.toLowerCase()} and ensure
+              quality from extraction through delivery.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Industrial Applications of {product.name}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              Our {product.name.toLowerCase()} serves a wide range of industries
+              and manufacturing processes:
+            </p>
+            <ul className="grid md:grid-cols-2 gap-3 mb-8 text-gray-600 dark:text-gray-400">
+              {details.applications?.map((app: string, idx: number) => (
+                <li key={idx} className="flex gap-3">
+                  <span className="text-teal-500 font-bold">→</span>
+                  {app}
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              These industries depend on reliable access to high-quality{" "}
+              {product.name.toLowerCase()} that meets exacting purity and
+              consistency standards. By sourcing from The 3 Rocks, industrial
+              buyers gain access to rigorously tested Moroccan{" "}
+              {product.name.toLowerCase()} with complete documentation,
+              technical support, and the flexibility to customize supply
+              arrangements for production planning and logistics coordination.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"

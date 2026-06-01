@@ -7,8 +7,7 @@ import Cta from "@/components/cta";
 import ChatButtons from "@/components/ChatButtons";
 
 export const metadata = {
-  title:
-    "Mining Process | Premium Moroccan Minerals",
+  title: "Mining Process | Premium Moroccan Minerals",
   description:
     "Learn about The 3 Rocks' efficient and sustainable process for extracting, processing, and exporting premium Moroccan minerals and raw materials worldwide. Specializing in Morocco's diverse mining sector.",
   keywords: [
@@ -104,6 +103,258 @@ export default function ProcessPage() {
   return (
     <>
       <ChatButtons />
+
+      {/* COMPREHENSIVE PROCESS OVERVIEW - ADDED FOR SEO */}
+      <section className="bg-white dark:bg-gray-900 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto mb-12">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              The 3 Rocks Mining Process: From Mine to Global Markets
+            </h1>
+            <p className="text-2xl text-gray-700 dark:text-gray-300 font-semibold mb-6">
+              Our Integrated Approach to Premium Moroccan Mineral Sourcing
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              The 3 Rocks has developed a comprehensive, end-to-end mining and
+              export process that ensures every mineral shipment meets the
+              highest international standards for quality, purity, traceability,
+              and sustainability. Our process spans mineral identification and
+              extraction through laboratory testing, beneficiation, packaging,
+              documentation, and global logistics — all orchestrated by our team
+              of experienced geologists, engineers, and supply chain
+              professionals.
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Stage 1: Geological Prospecting & Source Identification
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Our geologists actively monitor and evaluate mining operations
+              across Morocco's most productive regions including the Anti-Atlas
+              and High Atlas mountain ranges, the Errachidia zinc belt, Tinghir
+              copper district, Khenifra antimony region, Midelt barite deposits,
+              and coastal mining zones. We maintain detailed knowledge of each
+              deposit's geological characteristics, mineral composition,
+              seasonal availability, and extraction schedules. This deep
+              understanding allows us to:
+            </p>
+            <ul className="space-y-2 mb-6 text-gray-600 dark:text-gray-400">
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Identify high-quality sources with consistent specifications and
+                minimal contamination
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Negotiate directly with mining operations for preferential
+                access to premium ore
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Establish long-term supply relationships ensuring reliable
+                availability
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Conduct preliminary quality assessments to predict final product
+                specifications
+              </li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Stage 2: Extraction & Initial Processing
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Moroccan minerals are extracted using both artisanal small-scale
+              operations and modern industrial mining techniques. We work with
+              certified mining partners who follow sustainable practices,
+              maintain safety standards, and minimize environmental impact. Once
+              extracted, raw ore undergoes initial processing including:
+            </p>
+            <ul className="space-y-2 mb-6 text-gray-600 dark:text-gray-400">
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Sorting and grading:</strong> Removing waste rock and
+                low-grade material
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Crushing and screening:</strong> Reducing ore to
+                appropriate particle sizes
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Preliminary washing:</strong> Removing surface
+                impurities and weathered material
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Initial quality sampling:</strong> Testing
+                representative samples for mineral content
+              </li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Stage 3: Beneficiation & Concentration
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              For most minerals, raw ore is sent to beneficiation plants where
+              advanced processing technologies concentrate the valuable minerals
+              and remove waste. Our partners operate state-of-the-art facilities
+              using techniques such as:
+            </p>
+            <ul className="space-y-2 mb-6 text-gray-600 dark:text-gray-400">
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Flotation:</strong> Using chemical reagents and air
+                bubbles to separate mineral particles by density and surface
+                properties
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Gravity separation:</strong> Exploiting differences in
+                specific gravity to concentrate minerals
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Magnetic separation:</strong> Removing ferromagnetic
+                impurities using specialized equipment
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Milling:</strong> Fine grinding to achieve specified
+                particle size distributions
+              </li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Stage 4: Quality Testing & Certification
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Before shipment, every mineral lot undergoes comprehensive
+              laboratory analysis at accredited testing facilities. Our quality
+              assurance process includes:
+            </p>
+            <ul className="space-y-2 mb-6 text-gray-600 dark:text-gray-400">
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>XRF Analysis:</strong> X-Ray Fluorescence spectroscopy
+                for rapid elemental composition determination
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>ICP-MS Testing:</strong> Inductively Coupled Plasma Mass
+                Spectrometry for trace element analysis
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Wet Chemical Analysis:</strong> Traditional laboratory
+                methods for verification and specificity
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Physical Property Testing:</strong> Density, particle
+                size distribution, moisture content, bulk density
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <strong>Certificate of Analysis (COA):</strong> Detailed
+                documentation of all test results
+              </li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Stage 5: Packaging, Warehousing & Documentation
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Once approved, minerals are carefully packaged in appropriate
+              containers (bulk bags, super sacks, 25kg bags, drums, or bulk
+              shipment containers depending on product type and buyer
+              requirements). We maintain secure warehousing facilities with:
+            </p>
+            <ul className="space-y-2 mb-6 text-gray-600 dark:text-gray-400">
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Climate-controlled storage to prevent degradation and moisture
+                absorption
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Organized inventory systems with lot tracking and traceability
+                records
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Complete documentation including purchase orders, invoices, test
+                reports, and shipping manifests
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                Compliance documentation for international trade including
+                certificates of origin and safety data sheets
+              </li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Stage 6: Export Logistics & International Shipping
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              We work with established freight forwarders and logistics partners
+              to arrange secure, efficient shipping to buyers worldwide. Morocco
+              has several major port facilities we utilize including:
+            </p>
+            <ul className="space-y-3 mb-6 text-gray-600 dark:text-gray-400">
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <div>
+                  <strong>Port of Casablanca:</strong> Morocco's busiest port,
+                  capable of handling containerized and bulk shipments to
+                  Europe, Americas, and Asia
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <div>
+                  <strong>Tangier Med:</strong> Modern Mediterranean port with
+                  state-of-the-art facilities and global connectivity
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-500 font-bold">→</span>
+                <div>
+                  <strong>Jorf Lasfar:</strong> Specialized port for bulk and
+                  industrial cargo including minerals
+                </div>
+              </li>
+            </ul>
+
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Our logistics expertise ensures minerals are loaded safely,
+              documentation is complete and accurate, and shipments arrive on
+              schedule and in perfect condition. We handle FOB (Free on Board),
+              CIF (Cost, Insurance, and Freight), and other standard
+              international trade terms, and can arrange specialized services
+              like full container loads (FCL), less-than-container loads (LCL),
+              and project-specific shipping requirements.
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Quality Assurance Throughout
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Our commitment to quality extends through every stage — from
+              source selection and extraction oversight to beneficiation plant
+              visits, rigorous testing, secure warehousing, and careful export
+              handling. This integrated approach, combined with our deep
+              knowledge of Morocco's mining industry and our relationships with
+              trusted partners, ensures that The 3 Rocks consistently delivers
+              premium minerals that meet or exceed international standards and
+              customer specifications.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"
@@ -129,7 +380,13 @@ export default function ProcessPage() {
                 quality Moroccan raw materials through our meticulous process
               </p>
               <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
-                What sets The 3 Rocks apart is our integrated approach — we oversee every stage from mine to port, maintaining full control over quality, traceability, and timelines. Our process combines decades of on-the-ground experience in Morocco's mining regions with modern analytical techniques and responsible sourcing practices that meet the expectations of discerning international buyers.
+                What sets The 3 Rocks apart is our integrated approach — we
+                oversee every stage from mine to port, maintaining full control
+                over quality, traceability, and timelines. Our process combines
+                decades of on-the-ground experience in Morocco's mining regions
+                with modern analytical techniques and responsible sourcing
+                practices that meet the expectations of discerning international
+                buyers.
               </p>
             </div>
 
