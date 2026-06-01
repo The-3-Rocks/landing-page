@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import RelatedImage01 from "@/public/images/lead-product.jpg";
-import RelatedImage02 from "@/public/images/moroccan-iron-ore.png";
-import RelatedImage03 from "@/public/images/zinc-product.png";
-import RelatedImage04 from "@/public/images/barite-product.png";
+import RelatedImage01 from "@/public/images/lead-product.webp";
+import RelatedImage02 from "@/public/images/moroccan-iron-ore.webp";
+import RelatedImage03 from "@/public/images/zinc-product.webp";
+import RelatedImage04 from "@/public/images/barite-product.webp";
 import { usePathname } from "next/navigation";
 
 export default function RelatedPosts02() {

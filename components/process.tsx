@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Import process images - replace these with your actual mining process images
-import ExtractionImage from "@/public/images/extraction1.png";
-import ProcessingImage from "@/public/images/process.png";
-import ExportImage from "@/public/images/export1.png";
-import AnalysisImage from "@/public/images/analyses11.png";
+import ExtractionImage from "@/public/images/extraction1.webp";
+import ProcessingImage from "@/public/images/process.webp";
+import ExportImage from "@/public/images/export1.webp";
+import AnalysisImage from "@/public/images/analyses11.webp";
 
 export default function MiningProcess() {
   return (

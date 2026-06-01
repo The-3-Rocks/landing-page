@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 // Import team images
-import TeamMember3 from "@/public/images/badr.png";
-import TeamMember2 from "@/public/images/zack.png";
-import TeamMember1 from "@/public/images/pere.png";
-import TeamMember5 from "@/public/images/khalii.png";
+import TeamMember3 from "@/public/images/badr.webp";
+import TeamMember2 from "@/public/images/zack.webp";
+import TeamMember1 from "@/public/images/pere.webp";
+import TeamMember5 from "@/public/images/khalii.webp";
 
 export default function Team() {
   const [focusedMember, setFocusedMember] = useState<number | null>(null);

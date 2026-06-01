@@ -3,15 +3,15 @@
 import { useEffect } from "react";
 
 import Image from "next/image";
-import CarouselImage01 from "@/public/images/raw-material-zinc.png";
-import CarouselImage02 from "@/public/images/raw-material-lead.png";
-import CarouselImage03 from "@/public/images/raw-material-barite.png";
-import CarouselImage04 from "@/public/images/raw-material-iron.png";
-import CarouselImage05 from "@/public/images/raw-material-antimony.png";
-import CarouselImage06 from "@/public/images/raw-material-amber.png";
-import CarouselImage07 from "@/public/images/raw-cobalt.png";
-import CarouselImage08 from "@/public/images/raw-copper.png";
-import CarouselImage09 from "@/public/images/raw-material-amber.png";
+import CarouselImage01 from "@/public/images/raw-material-zinc.webp";
+import CarouselImage02 from "@/public/images/raw-material-lead.webp";
+import CarouselImage03 from "@/public/images/raw-material-barite.webp";
+import CarouselImage04 from "@/public/images/raw-material-iron.webp";
+import CarouselImage05 from "@/public/images/raw-material-antimony.webp";
+import CarouselImage06 from "@/public/images/raw-material-amber.webp";
+import CarouselImage07 from "@/public/images/raw-cobalt.webp";
+import CarouselImage08 from "@/public/images/raw-copper.webp";
+import CarouselImage09 from "@/public/images/raw-material-amber.webp";
 
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from "swiper";

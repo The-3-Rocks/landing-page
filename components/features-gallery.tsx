@@ -4,12 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 
 // Import gallery images
-import MiningOperations from "@/public/images/11.jpg";
-import MineralProcessing from "@/public/images/22.jpg";
-import SustainablePractices from "@/public/images/66.jpg";
-import SustainablePractices1 from "@/public/images/33.jpg";
-import QualityControl from "@/public/images/44.jpg";
-import GlobalDistribution from "@/public/images/55.jpg";
+import MiningOperations from "@/public/images/11.webp";
+import MineralProcessing from "@/public/images/22.webp";
+import SustainablePractices from "@/public/images/66.webp";
+import SustainablePractices1 from "@/public/images/33.webp";
+import QualityControl from "@/public/images/44.webp";
+import GlobalDistribution from "@/public/images/55.webp";
 
 export default function FeaturesGallery() {
   const [category, setCategory] = useState("all");

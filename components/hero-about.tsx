@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 // Import images
-import MiningHeroImage from "@/public/images/company.jpeg";
+import MiningHeroImage from "@/public/images/company.webp";
 
 export default function HeroAbout() {
   return (

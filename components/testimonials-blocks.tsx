@@ -1,8 +1,8 @@
 import Image from "next/image";
-import TestimonialImage01 from "@/public/images/testimonial-01.png";
-import TestimonialImage02 from "@/public/images/testimonial-02.png";
-import TestimonialImage03 from "@/public/images/testimonial-03.png";
-import TestimonialImage04 from "@/public/images/testimonial-04.png";
+import TestimonialImage01 from "@/public/images/testimonial-01.webp";
+import TestimonialImage02 from "@/public/images/testimonial-02.webp";
+import TestimonialImage03 from "@/public/images/testimonial-03.webp";
+import TestimonialImage04 from "@/public/images/testimonial-04.webp";
 
 export default function TestimonialsBlocks() {
   const size = 180;

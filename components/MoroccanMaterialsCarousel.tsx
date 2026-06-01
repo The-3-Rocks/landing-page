@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/card-stack";
 
 // Import images
-import LeadImage from "@/public/images/lead-product.jpg";
-import ZincImage from "@/public/images/zinc11.jpeg";
-import BariteImage from "@/public/images/barite11.jpeg";
-import CobaltImage from "@/public/images/cobalt11.jpg";
-import AntimonyImage from "@/public/images/antimony11.jpg";
-import CopperImage from "@/public/images/copper1.png";
+import LeadImage from "@/public/images/lead-product.webp";
+import ZincImage from "@/public/images/zinc11.webp";
+import BariteImage from "@/public/images/barite11.webp";
+import CobaltImage from "@/public/images/cobalt11.webp";
+import AntimonyImage from "@/public/images/antimony11.webp";
+import CopperImage from "@/public/images/copper1.webp";
 
 const materials: (CardStackItem & { image: any })[] = [
   {

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import RelatedImage03 from "@/public/images/related-post-03.jpg";
-import RelatedImage04 from "@/public/images/related-post-04.jpg";
-import RelatedImage05 from "@/public/images/related-post-05.jpg";
-import RelatedImage06 from "@/public/images/related-post-06.jpg";
+import RelatedImage03 from "@/public/images/related-post-03.webp";
+import RelatedImage04 from "@/public/images/related-post-04.webp";
+import RelatedImage05 from "@/public/images/related-post-05.webp";
+import RelatedImage06 from "@/public/images/related-post-06.webp";
 
 export default function RelatedPosts01() {
   return (

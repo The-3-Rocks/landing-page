@@ -17,7 +17,7 @@ export default function PostLink({ href, ...props }: PostLinkProps) {
   }
 
   return (
-    <a target="_blank" rel="nofollow noopener noreferrer" href={href} {...props}>
+    <a target="_blank" rel="noopener noreferrer" href={href} {...props}>
       {props.children}
     </a>
   );

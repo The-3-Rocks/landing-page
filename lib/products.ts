@@ -1,13 +1,13 @@
 import { StaticImageData } from "next/image";
 
 // Import product images
-import leadImage from "@/public/images/raw-material-lead.jpg";
-import copperImage from "@/public/images/copper1.png";
-import zincImage from "@/public/images/zinc-product.png";
-import bariteImage from "@/public/images/Barite-Clay.jpg";
-import ironImage from "@/public/images/moroccan-iron-ore.png";
-import cobaltImage from "@/public/images/cobaltt.png";
-import antimonyImage from "@/public/images/antimony11.jpg";
+import leadImage from "@/public/images/raw-material-lead.webp";
+import copperImage from "@/public/images/copper1.webp";
+import zincImage from "@/public/images/zinc-product.webp";
+import bariteImage from "@/public/images/Barite-Clay.webp";
+import ironImage from "@/public/images/moroccan-iron-ore.webp";
+import cobaltImage from "@/public/images/cobaltt.webp";
+import antimonyImage from "@/public/images/antimony11.webp";
 
 // Define Product type for the grid/listing
 export interface Product {
