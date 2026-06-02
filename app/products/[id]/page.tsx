@@ -1,6 +1,7 @@
 // app/products/[id]/page.tsx
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import PageIllustration from "@/components/page-illustration";
 import React from "react";
 import { products } from "@/lib/products";
@@ -11,6 +12,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Lead",
     description:
       "At The 3 Rocks Company, we pride ourselves on offering high-quality Moroccan lead that stands out for its exceptional purity and unmatched durability, sourced from Morocco's historic mining regions.",
+    narrative:
+      "Moroccan lead ore is sourced primarily from the Bni Taddjit and Errachidia mineral belt in the eastern High Atlas, where vein and replacement-style deposits have been worked for centuries and remain among the most consistently high-grade lead sources in North Africa. The ore is concentrated at our partner facilities to a typical 86 percent lead grade for the concentrate stream, with a 76 percent grade for the powder form and a 50 percent-plus grade for run-of-mine ore, each matched to the requirements of downstream processors. Moroccan lead concentrate is widely used by lead-acid battery manufacturers in Europe, Africa, and Asia; the powder form is preferred by radiation shielding producers, cosmetics formulators, and specialty alloy makers; and the run-of-mine ore is exported to smelters that operate their own milling circuits. Every shipment is accompanied by an independent laboratory certificate covering lead, silver, zinc, copper, and antimony content, and our depot in Errachidia maintains standing stock of concentrate, powder, and ore throughout the year.",
     purityDetails: {
       concentrate: "86% pure lead",
       powder: "76% pure lead",
@@ -47,6 +50,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Copper",
     description:
       "Our Moroccan copper stands out for its exceptional quality and versatility, making it indispensable for a variety of industrial applications worldwide.",
+    narrative:
+      "Moroccan copper ore originates from the Tinghir region of the eastern Anti-Atlas and from the historic mining districts of the central High Atlas, where stratiform and vein-style deposits produce a clean oxide and sulphide ore well suited to both hydrometallurgical and pyrometallurgical processing. Our standard export grade runs from 8 to 21 percent copper, with 40 percent-plus high-purity lots available under special export permit for buyers who need higher-grade feed for their concentrators. The ore is sized, blended, and packaged at our depot in Ouarzazate before container loading at Casablanca or bulk loading at Jorf Lasfar. Major end-use markets include wire and cable manufacturers serving renewable energy and electrification projects, telecommunications infrastructure suppliers, brass and bronze alloy producers, and chemical processors that recover copper from the oxide fraction. Every shipment is screened by X-ray fluorescence and verified by ICP analysis for grade, with full assay results returned within forty-eight hours of dispatch.",
     purity: "8% to 21% (with special permit for 40% high-purity copper)",
     stock: "500 tons",
     applications: [
@@ -70,6 +75,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Zinc (Calamine)",
     description:
       "Our high-quality Moroccan zinc calamine offers exceptional purity and reliability for various applications, including cosmetics and industrial uses.",
+    narrative:
+      "Moroccan zinc calamine is extracted from the carbonate and silicate ore bodies of the Errachidia mineral belt in the eastern High Atlas, where the calamine form of zinc — natural zinc carbonate and hemimorphite — has been mined for cosmetic, pharmaceutical, and industrial use for generations. We export two principal forms: a +37 percent zinc ore suitable for direct feed to Waelz kilns and electrolytic zinc producers, and a 70 percent concentrate produced at our partner flotation facility for the galvanizing and die-casting industries. Calamine is also a key raw material in pharmaceutical-grade zinc oxide and in premium cosmetics, where its natural purity and low lead content are valued by formulators. The ore is hand-sorted, crushed, sized, and packed in 25-kilogram bags or 1-tonne big bags at our depot, with monthly capacity that comfortably supports trial orders of 20 metric tons and recurring contracts of several hundred tons per quarter.",
     purityDetails: {
       ore: "+37%",
       concentrate: "70%",
@@ -103,6 +110,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Barite",
     description:
       "Our Moroccan Barite is renowned for its high quality and purity, making it indispensable for a wide range of industrial applications globally.",
+    narrative:
+      "Moroccan barite, also known as baryte or barytine, is sourced from vein and bedded deposits near Midelt in the central High Atlas and from the Ouarzazate province to the south, both of which produce a clean, off-white to light grey barite with specific gravity consistently in the 4.18 to 4.28 range — well above the API 13A specification required by the oil and gas drilling industry. We export barite in three principal forms: run-of-mine ore for drilling-fluid blenders who operate their own grinding circuits, finely milled powder with controlled particle size distribution for paints, plastics, and radiation shielding, and graded lumps for medical imaging and concrete shielding applications. Moroccan barite enjoys a strong reputation in the Mediterranean and West African markets because of its low impurity content — particularly strontium and mercury — and because of the country’s well-established shipping links from Casablanca to all major oilfield service hubs.",
     density: "4.18 - 4.28",
     stock: "400 tons",
     applications: [
@@ -129,6 +138,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Iron",
     description:
       "Our Moroccan iron is distinguished by its superior quality and adaptability, essential for a wide array of industrial uses around the world.",
+    narrative:
+      "Moroccan iron ore comes from the ancient mining districts of the Nador and Oujda areas in the country’s northeast, where hematite-rich formations have been worked since Phoenician times. The ore we export typically grades at 56 percent iron or higher, with low phosphorus and alumina content that makes it an attractive feed for both integrated steel mills and direct-reduction plants. We supply 40,000 metric tons of standing stock at any given time, sourced from our partner mines in the Rif and the eastern Meseta, and we can scale monthly volumes up or down to match buyer requirements. The ore is sized at our depot in Nador and dispatched either as lump for blast furnace feed or as fines for sinter plants, with options for washed and screened product on request. Moroccan iron has become a strategic secondary source for Mediterranean steel producers seeking to diversify away from a small number of dominant suppliers, and the country’s geographic proximity to European ports keeps delivered costs competitive.",
     purity: "≥ 56%",
     stock: "40,000 tons",
     applications: [
@@ -155,6 +166,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Cobalt",
     description:
       "Our high-quality Moroccan cobalt is essential for modern technology and industrial applications, sustainably sourced from Morocco's mineral wealth.",
+    narrative:
+      "Moroccan cobalt is sourced from the Bou Azzer mining district in the central Anti-Atlas, one of the world’s oldest and most productive cobalt mining regions and the only primary cobalt source on the African continent outside the Copperbelt. The ore is typically a cobalt arsenide assemblage with co-product nickel and silver, processed into a 42 percent-plus cobalt concentrate suitable for downstream hydrometallurgical refining. The concentrate is the preferred feed stock for lithium-ion battery precursor manufacturers, superalloy producers serving the aerospace and gas turbine industries, and high-performance magnet producers. As global demand for battery-grade cobalt continues to grow, the Bou Azzer district has attracted renewed investment in exploration, mine modernisation, and tailings retreatment. The 3 Rocks works with mining partners in Bou Azzer to secure long-term offtake volumes, with current concentrate availability confirmed on a contract-by-contract basis and standing stock reserved for established buyers.",
     purity: "42%+",
     stock: "Available upon request",
     applications: [
@@ -179,6 +192,8 @@ const productDetails: Record<string, any> = {
     title: "Moroccan Antimony",
     description:
       "Our premium Moroccan antimony provides exceptional quality for various industrial applications, sourced from Morocco's exclusive mining operations.",
+    narrative:
+      "Moroccan antimony comes predominantly from the stibnite veins of the Khenifra region in the central Middle Atlas, where quartz-stibnite lodes cut through Palaeozoic shales and produce a clean, high-grade antimony ore well suited to both concentrate production and direct shipping ore. Our standard export grade runs from 30 percent antimony upward, with premium lots exceeding 50 percent antimony available from selected veins. Antimony is classified as a critical mineral by the European Union, the United States, and several Asian jurisdictions because of its irreplaceable role in flame retardants, lead-acid batteries, military applications, and specialised alloys. Demand has surged as construction, electronics, and electric-vehicle battery supply chains have expanded. The 3 Rocks holds standing relationships with the principal Khenifra mining operations and can reserve 700 tons of concentrate or run-of-mine ore for established buyers, with additional volumes mobilised within four to six weeks of a confirmed letter of credit.",
     purity: "30%+",
     stock: "+700 tons",
     applications: [
@@ -651,6 +666,11 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 export default function ProductPage({ params }: { params: { id: string } }) {
+  // Redirect known external links to relevant article
+  if (params.id === "fertilizers") {
+    redirect("/articles/agriculture-fertilizers-minerals");
+  }
+
   const product = products.find((p) => p.id === params.id);
   const details = productDetails[params.id];
 
@@ -962,6 +982,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed mt-3">
                 We offer {product.name} in multiple grades and forms — including ore, concentrate, and processed material — to match your exact production requirements. Every lot is tested for chemical composition, particle size, moisture content, and contaminants before shipment. Our logistics team manages all documentation, port handling, and shipping from major Moroccan ports to destinations worldwide.
               </p>
+              {details.narrative && (
+                <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mt-6 max-w-3xl mx-auto text-left">
+                  {details.narrative}
+                </p>
+              )}
             </div>
 
             {/* Product overview with image and specs */}

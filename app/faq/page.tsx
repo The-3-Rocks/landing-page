@@ -59,6 +59,46 @@ const faqs = [
     answer:
       "Our customer support team is available Monday through Friday from 9:00 AM to 6:00 PM (Morocco time, UTC+1). You can reach us through the contact form on our website, by emailing info@the-3rocks.com, or by phone. We strive to respond to all inquiries within 24 hours. For urgent matters, please indicate the priority in your subject line and we will prioritize your request.",
   },
+  {
+    question: "Which Moroccan ports do you ship from?",
+    answer:
+      "The 3 Rocks ships from three major Moroccan ports depending on cargo type, destination, and buyer preference. Casablanca handles most containerised and break-bulk mineral shipments and offers weekly liner services to Europe, West Africa, and the Americas. Tangier Med is the country’s largest container terminal and connects to over 180 ports worldwide, with frequent sailings to Asia, North America, and the Mediterranean. Jorf Lasfar offers dedicated bulk-loading facilities for industrial minerals and is the natural choice for large-volume bulk carriers. We can also arrange road transport to alternative Mediterranean ports such as Algeciras and Marseille on request.",
+  },
+  {
+    question: "What incoterms do you support?",
+    answer:
+      "We support the full range of international commercial terms. The most common arrangements for our buyers are FOB (Free on Board) from one of the three Moroccan ports listed above, CIF (Cost, Insurance, and Freight) to a major global port of the buyer’s choice, and CFR (Cost and Freight) for buyers who prefer to arrange their own insurance through a known underwriter. We also work with ex-works arrangements for buyers who take full control of inland transport. Our logistics team prepares a detailed cost breakdown for every incoterm so the buyer can compare options before signing the contract.",
+  },
+  {
+    question: "What laboratory analysis do you provide with each shipment?",
+    answer:
+      "Every shipment is accompanied by a certificate of analysis issued by an independent Moroccan laboratory accredited to ISO 17025. The certificate includes the results of X-ray fluorescence screening for major and minor elements, inductively coupled plasma testing for trace elements, particle size distribution where relevant, moisture content, and specific gravity for dense minerals such as barite. We retain reference samples from every shipment for twelve months so the buyer can request a re-test at any point. On request, we can also arrange third-party inspection by SGS, Bureau Veritas, or Intertek at the port of loading, with the cost split between buyer and seller as agreed in the contract.",
+  },
+  {
+    question: "Do you offer samples for laboratory testing?",
+    answer:
+      "Yes. We provide free samples of Moroccan lead, zinc, copper, barite, iron, cobalt, and antimony for qualified buyers. Sample size is typically one to five kilograms depending on the mineral, enough for the buyer to run a full laboratory characterisation in their own facility. Sample shipments are dispatched by international courier (DHL, FedEx, or UPS) with the buyer covering the courier cost. For larger representative bulk samples of 50 kilograms or more — useful for pilot-scale processing trials — we can arrange those from our depot within two weeks of the request.",
+  },
+  {
+    question: "What is the typical lead time from order to vessel departure?",
+    answer:
+      "Standard lead time for a single mineral shipment, once the contract is signed and the financial instrument is in place, is fourteen to twenty-one days for materials already in our depot. For materials requiring fresh extraction, crushing, or milling, allow an additional two to four weeks. Long-term offtake contracts are scheduled in advance and can be dispatched on a recurring monthly or quarterly cadence with shorter reaction time. Our team provides a confirmed vessel schedule — including ETA at the port of loading and estimated transit time to the destination — as part of the contract package.",
+  },
+  {
+    question: "How do you handle environmental, social, and governance (ESG) requirements?",
+    answer:
+      "ESG compliance is built into our operating model. All mining partners in our network must hold valid Moroccan exploitation permits issued by the Ministry of Energy Transition and Sustainable Development, comply with the country’s environmental impact assessment regulations, and provide evidence of site rehabilitation plans. We maintain a chain-of-custody log for every lot that records the mine, the date of extraction, the transport route, and the laboratory certificate. For buyers who require additional ESG documentation — such as conflict-mineral declarations, modern slavery statements, or carbon footprint estimates per ton — we can prepare those on request at the quotation stage.",
+  },
+  {
+    question: "Can you consolidate multiple minerals in a single shipment?",
+    answer:
+      "Yes. Many of our buyers source two or three minerals from us in a single vessel call, which reduces per-ton shipping cost and simplifies the documentary package. For example, a buyer might take 200 tons of lead concentrate and 100 tons of barite in the same 20-foot container shipment, or 1,000 tons of zinc ore and 500 tons of copper ore in a single bulk vessel. Our logistics team plans the loading sequence at the port, prepares a consolidated commercial invoice and packing list, and arranges the certificates of analysis in a single bound document set. There is no additional fee for consolidation as long as the cargo can be safely stowed together.",
+  },
+  {
+    question: "How is the price of Moroccan raw materials typically structured?",
+    answer:
+      "Pricing is negotiated on a per-shipment basis and depends on the mineral, the grade, the form (ore, concentrate, powder), the packing, the incoterm, and the destination port. For long-term contracts, we offer formula-based pricing tied to the relevant LME reference price or to a published benchmark such as Metal Bulletin, with adjustments for grade and delivery terms. Indicative pricing for any of our minerals is available on request within twenty-four hours. We do not publish price lists on the website because raw material prices move with global commodity markets and we want our quotations to reflect the current market, not a stale figure.",
+  },
 ];
 
 // Schema.org structured data

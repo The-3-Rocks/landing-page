@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
@@ -75,60 +74,15 @@ const organizationSchema = {
 export default function ProductsPage() {
   return (
     <>
-      <Head>
-        <title>Premium Moroccan Mining Materials | The 3 Rocks Company</title>
-        <meta
-          name="description"
-          content="Discover high-quality Moroccan minerals including lead, zinc, copper, barite, iron, cobalt, and antimony, ethically sourced from Morocco's legendary mining regions."
-        />
-        <meta
-          name="keywords"
-          content="Morocco mining, Moroccan minerals, lead, zinc, copper, barite, iron, cobalt, antimony, raw materials Morocco, mining company Morocco, mineral supplier"
-        />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.the-3rocks.com/products" />
-        <meta
-          property="og:title"
-          content="Premium Moroccan Mining Materials | The 3 Rocks Company"
-        />
-        <meta
-          property="og:description"
-          content="Discover our extensive range of high-quality Moroccan minerals and raw materials sourced from Morocco's legendary mining regions."
-        />
-        <meta
-          property="og:image"
-          content="https://www.the-3rocks.com/images/the3rocks.png"
-        />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://www.the-3rocks.com/products"
-        />
-        <meta
-          property="twitter:title"
-          content="Premium Moroccan Mining Materials | The 3 Rocks Company"
-        />
-        <meta
-          property="twitter:description"
-          content="Discover our extensive range of high-quality Moroccan minerals and raw materials sourced from Morocco's legendary mining regions."
-        />
-        <meta
-          property="twitter:image"
-          content="https://www.the-3rocks.com/images/the3rocks.png"
-        />
-
-        {/* Schema.org markup */}
-        <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(generateProductSchema())}
-        </script>
-      </Head>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateProductSchema()) }}
+      />
 
       {/* Page illustration */}
       <div
@@ -142,18 +96,27 @@ export default function ProductsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             {/* Page header */}
-            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <div className="max-w-4xl mx-auto text-center pb-12 md:pb-16">
               <h1 className="h1 font-red-hat-display mb-4">
                 Premium Moroccan Mining & Raw Materials
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                Discover our extensive range of high-quality Moroccan minerals
-                and raw materials sourced and processed from Morocco's legendary
-                mining regions to meet the highest industry standards worldwide.
+                Discover our extensive range of high-quality Moroccan minerals and raw materials sourced and processed from Morocco's legendary mining regions to meet the highest industry standards worldwide.
               </p>
               <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
                 Each product listed below represents a carefully vetted supply chain — from geological survey and extraction to beneficiation, quality certification, and export logistics. Whether you need ore, concentrate, or processed material, we provide detailed specifications, independent lab analysis, and flexible volume options tailored to industrial buyers, traders, and manufacturers.
               </p>
+              <div className="prose prose-base text-gray-600 dark:text-gray-400 max-w-none prose-p:leading-relaxed mt-6 mx-auto text-left">
+                <p>
+                  The 3 Rocks is Morocco’s premier exporter of seven industrial raw materials that together cover the bulk of the country’s strategic non-phosphate mining output. Our <strong>lead</strong> comes from the Bni Taddjit and Errachidia mineral belt and is shipped as concentrate, powder, or run-of-mine ore. Our <strong>zinc calamine</strong> is sourced from the eastern High Atlas and supplied as +37 percent ore or 70 percent concentrate for galvanising, die-casting, and pharmaceutical use. Our <strong>copper</strong> originates from the Tinghir and central High Atlas districts and is exported as 8 to 21 percent ore, with 40 percent-plus high-purity lots available under special permit.
+                </p>
+                <p>
+                  <strong>Barite</strong> from Midelt and Ouarzazate, with specific gravity consistently between 4.18 and 4.28, is preferred by oil and gas drilling-fluid blenders, radiation shielding manufacturers, and the paints and coatings industry. <strong>Iron ore</strong> from the Nador and Oujda districts grades at 56 percent iron or higher and is exported in bulk to Mediterranean steel mills and direct-reduction plants. <strong>Cobalt</strong> from the Bou Azzer district — the only primary cobalt source in Africa outside the Copperbelt — is supplied as 42 percent-plus concentrate to battery precursor manufacturers, superalloy producers, and high-performance magnet makers. <strong>Antimony</strong> from the Khenifra region is shipped as 30 percent-plus ore or concentrate for flame retardants, lead-acid batteries, and defence applications.
+                </p>
+                <p>
+                  Every product on this page is supported by a downloadable specification sheet, a current stock indicator, and a request-quote form that connects the buyer directly to our commercial team in Rabat. We respond to all enquiries within twenty-four hours and provide indicative pricing, lead times, and shipping options before the buyer commits to a contract.
+                </p>
+              </div>
             </div>
 
             {/* Featured product - Lead */}

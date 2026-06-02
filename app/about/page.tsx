@@ -33,25 +33,48 @@ export default function About() {
   return (
     <>
       <ChatButtons />
-      {/* Hero section showcasing Moroccan mining heritage */}
       <Hero />
 
-      {/* Gallery featuring our Moroccan mining operations */}
+      <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="py-12 md:py-16">
+            <div className="text-center pb-8" data-aos="fade-down">
+              <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+                Our Story
+              </div>
+              <h2 className="h2 font-red-hat-display mb-4">A Moroccan Mining House Built on Trust</h2>
+            </div>
+            <div className="prose prose-lg text-gray-600 dark:text-gray-400 max-w-none prose-p:leading-relaxed prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 dark:prose-strong:text-white" data-aos="fade-up">
+              <p>
+                The 3 Rocks Company was founded to solve a problem that international buyers of Moroccan raw materials had been facing for decades: how to source lead, zinc, copper, barite, iron, cobalt, and antimony from a single trusted partner who could guarantee grade, documentation, and delivery, without having to coordinate with half a dozen intermediaries scattered across three continents. Our founders came from the Moroccan mining sector itself — geologists, beneficiation engineers, and export logistics professionals who had worked inside the country’s largest mining groups before deciding to build a more agile, buyer-focused alternative.
+              </p>
+              <p>
+                From our headquarters in Rabat and a network of depots in Errachidia, Khenifra, Midelt, Ouarzazate, Nador, and Casablanca, we now serve industrial buyers in more than twenty countries. Our portfolio covers the seven minerals that together represent the bulk of Morocco’s strategic non-phosphate mining output. Each shipment is tested at an ISO 17025-accredited laboratory before loading, packaged in compliance with international shipping regulations, and documented end-to-end with certificates of origin, certificates of analysis, bills of lading, packing lists, and commercial invoices.
+              </p>
+              <p>
+                We are proud of the reputation we have built with our clients. More than seventy percent of our new business comes from referrals by existing customers — a metric that we consider the clearest possible endorsement of our work. Many of our first clients from a decade ago are still our clients today, and several have grown with us from single-trial orders into long-term offtake contracts measured in tens of thousands of tons per year. We have also invested heavily in our editorial library, our sustainability disclosures, and our laboratory protocols, so that buyers who are just discovering Moroccan raw materials have a transparent, well-documented entry point.
+              </p>
+              <p>
+                The 3 Rocks is, at its heart, a service company. We do not extract the ore ourselves; we partner with the best mining operations in each region, applying consistent quality standards across the entire supply chain. We do not own the vessels; we coordinate with established freight forwarders and shipping lines that serve the major Moroccan ports of Casablanca, Tangier Med, and Jorf Lasfar. What we own is the relationship with the buyer, the integrity of the chain of custody, and the commitment to be reachable, accountable, and fair at every stage of the engagement.
+              </p>
+              <p>
+                We are equally comfortable handling a 20-ton trial shipment of Moroccan zinc calamine for a brand-new customer as we are coordinating a 40,000-ton iron ore cargo from the Nador district to a Mediterranean steel mill. Whichever the size of the engagement, our quality system, our people, and our commitment to transparent communication remain the same. If you would like to learn more about our work, discuss a specific sourcing requirement, or arrange a visit to one of our depots, please <a href="/contact">get in touch</a> — we respond to every enquiry within one business day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FeaturesGallery />
 
-      {/* Uncomment when ready to display Moroccan mining history timeline */}
       {/* <Timeline /> */}
 
-      {/* Uncomment when ready to display careers in Moroccan mining */}
       {/* <Career /> */}
 
-      {/* Features highlighting our Moroccan mining innovations */}
       <FeaturesAnimation />
 
-      {/* Our expert Moroccan mining team */}
       <Team />
       <ContactInfoSection />
-      {/* Contact section for Moroccan mineral inquiries */}
       {/* <CtaContact /> */}
     </>
   );

@@ -133,6 +133,19 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Our portfolio covers six core minerals: lead concentrate and powder from Bni Taddjit, zinc calamine ore and concentrate from the Errachidia mineral belt, copper ore with purity ranges from 8 to 40 percent from the Tinghir region, barite with specific gravity above 4.2 from mines near Midelt and Ouarzazate, iron ore exceeding 56 percent iron content from the Nador and Oujda areas, and cobalt ore sourced from the Bou Azzer district. We also supply antimony from the Khenifra region. Every mineral is available in raw ore, processed concentrate, or milled powder forms to match buyer specifications.</p>
               </div>
             </div>
+
+            <div className="prose prose-lg text-gray-600 dark:text-gray-400 max-w-none prose-p:leading-relaxed prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline mt-12" data-aos="fade-up">
+              <h3 className="h3 font-red-hat-display mb-3 text-gray-900 dark:text-white">About The 3 Rocks — Morocco’s Premier Mineral Exporter</h3>
+              <p>
+                The 3 Rocks Company is a Morocco-based supplier of ethically sourced industrial raw materials. We specialise in the export of <a href="/products/lead">lead</a>, <a href="/products/zinc">zinc calamine</a>, <a href="/products/copper">copper</a>, <a href="/products/barite">barite</a>, <a href="/products/iron">iron ore</a>, <a href="/products/cobalt">cobalt</a>, and <a href="/products/antimony">antimony</a> to industrial buyers, commodity traders, and procurement teams across Europe, Asia, the Americas, and the Middle East. Our headquarters and main depot are in Rabat, with satellite operations in Errachidia, Khenifra, Midelt, Ouarzazate, and Casablanca, giving us on-the-ground presence in every key Moroccan mining region.
+              </p>
+              <p>
+                Our founders spent more than a decade working in Moroccan geology and mineral logistics before launching The 3 Rocks. They saw that international buyers consistently faced the same three challenges when sourcing Moroccan raw materials: inconsistent grade between lots, opaque documentation, and unreliable delivery timelines. The 3 Rocks was built to solve these problems. We publish a standard certificate of analysis for every shipment, run all minerals through X-ray fluorescence screening and inductively coupled plasma verification, and assign a single account manager to every buyer so that questions about grade, packing, port, or payment are answered by a person who knows the cargo personally.
+              </p>
+              <p>
+                Today we work with buyers in more than twenty countries. Our client base ranges from publicly listed mining groups and industrial processors to mid-sized traders, family-run supply houses, and procurement teams at lithium-ion battery manufacturers, paint and coatings producers, drilling-fluid blenders, ceramics and glass plants, pharmaceutical and cosmetics companies, and steel mills. Whether a buyer needs a 20-ton trial shipment of Moroccan zinc calamine or a 40,000-ton long-term contract for Nador iron ore, our process — from contract signing to certificate of analysis to bill of lading — is the same, and is designed to give the buyer total visibility into the chain of custody of every ton we deliver.
+              </p>
+            </div>
           </div>
         </div>
       </section>
