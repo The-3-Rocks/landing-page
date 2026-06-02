@@ -4,46 +4,6 @@ import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import { products, Product } from "@/lib/products";
 
-// Generate Product Schema for SEO (without prices)
-const generateProductSchema = () => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: products.map((product: Product, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        name: `Moroccan ${product.name}`,
-        description: product.description,
-        image: `https://www.the-3rocks.com${product.image.src}`,
-        brand: {
-          "@type": "Brand",
-          name: "The 3 Rocks Company",
-        },
-        offers: {
-          "@type": "Offer",
-          url: `https://www.the-3rocks.com/products#${product.id}`,
-          availability: product.stock.includes("Available upon request")
-            ? "https://schema.org/PreOrder"
-            : "https://schema.org/InStock",
-          itemCondition: "https://schema.org/NewCondition",
-        },
-        material: product.name,
-        countryOfOrigin: {
-          "@type": "Country",
-          name: "Morocco",
-        },
-        additionalProperty: product.forms.map((form: string) => ({
-          "@type": "PropertyValue",
-          name: "form",
-          value: form,
-        })),
-      },
-    })),
-  };
-};
-
 // Generate Organization Schema
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -79,11 +39,6 @@ export default function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateProductSchema()) }}
-      />
-
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"

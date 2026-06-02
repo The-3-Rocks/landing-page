@@ -507,6 +507,9 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     name: details.title,
     image: productImage,
     description: details.description,
+    url: productUrl,
+    sku: `MRC-${params.id.toUpperCase()}`,
+    mpn: `MRC-${params.id.toUpperCase()}`,
     brand: {
       "@type": "Brand",
       name: "The 3 Rocks Company",
@@ -521,6 +524,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     },
     offers: {
       "@type": "Offer",
+      url: productUrl,
       priceCurrency: "USD",
       price: "1000",
       priceValidUntil: "2026-12-31",
@@ -740,6 +744,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     name: details.title,
     image: `https://www.the-3rocks.com/images/${params.id}-product.png`,
     description: details.description,
+    url: `https://www.the-3rocks.com/products/${params.id}`,
+    sku: `MRC-${params.id.toUpperCase()}`,
+    mpn: `MRC-${params.id.toUpperCase()}`,
     brand: {
       "@type": "Brand",
       name: "The 3 Rocks Company",
