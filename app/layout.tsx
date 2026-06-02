@@ -47,7 +47,31 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           nonce={nonce}
-          src="/structured-data/organization.json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "The 3 Rocks Company",
+              "alternateName": "The 3 Rocks Mining",
+              "url": "https://www.the-3rocks.com",
+              "logo": "https://www.the-3rocks.com/images/logo.png",
+              "sameAs": [
+                "https://twitter.com/the3rocks",
+                "https://www.linkedin.com/company/the-3-rocks"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                "areaServed": "Worldwide",
+                "availableLanguage": ["en", "fr", "ar"]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "MA",
+                "addressRegion": "Morocco"
+              }
+            })
+          }}
         />
       </head>
       {/* suppressHydrationWarning: https://github.com/vercel/next.js/issues/44343 */}
@@ -59,11 +83,15 @@ export default function RootLayout({
           strategy="lazyOnload"
           nonce={nonce}
         />
-        <Script
-          src="/js/google-analytics.js"
-          strategy="lazyOnload"
-          nonce={nonce}
-        />
+        <Script id="google-analytics" strategy="lazyOnload" nonce={nonce}>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0QV4CTYT36');
+          `}
+        </Script>
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6470650628887259"
           crossOrigin="anonymous"

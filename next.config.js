@@ -7,7 +7,6 @@ const nextConfig = {
   swcMinify: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  compress: true,
   images: {
     formats: ["image/avif", "image/webp"],
   },
@@ -19,20 +18,17 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/articles/antimony-mining-in-morocco-khenifra-region-applications",
+        source: "/articles/antimony-mining-in-morocco-khenifra-region-applications",
         destination: "/articles/antimony-mining-morocco",
         permanent: true,
       },
       {
-        source:
-          "/articles/moroccan-barite-drilling-grade-industrial-applications",
+        source: "/articles/moroccan-barite-drilling-grade-industrial-applications",
         destination: "/articles/moroccan-barite",
         permanent: true,
       },
       {
-        source:
-          "/articles/moroccan-cobalt-battery-grade-superalloy-applications",
+        source: "/articles/moroccan-cobalt-battery-grade-superalloy-applications",
         destination: "/articles/moroccan-cobalt",
         permanent: true,
       },
@@ -72,14 +68,13 @@ const nextConfig = {
             value: "origin-when-cross-origin",
           },
           {
-            key: "Permissions-Policy",
-            value:
-              "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+             key: "Permissions-Policy",
+             value: "camera=(), microphone=(), geolocation=(), interest-cohort=()"
           },
           {
             key: "Cross-Origin-Opener-Policy",
-            value: "same-origin-allow-popups",
-          },
+            value: "same-origin-allow-popups"
+          }
         ],
       },
     ];

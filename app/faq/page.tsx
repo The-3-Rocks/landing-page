@@ -78,7 +78,10 @@ const jsonLd: WithContext<FAQPage> = {
 export default function FAQs() {
   return (
     <>
-      <script type="application/ld+json" src="/structured-data/faq-page.json" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="relative">
         {/* Background image */}
         <div className="absolute inset-0 h-128 pt-16 box-content">
