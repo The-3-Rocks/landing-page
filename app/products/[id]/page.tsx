@@ -1492,6 +1492,74 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               </div>
             </div>
 
+            {/* Industrial Applications Detail */}
+            <div className="mb-16" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                        <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">Industrial Applications & Market Sectors</h2>
+                  </div>
+                  <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4">
+                    <p>Moroccan {product.name.toLowerCase()} serves a diverse range of industrial sectors, each with specific quality requirements, certification standards, and logistics preferences. The principal markets for this material include {details.applications.slice(0, 3).join(", ")}, and {details.applications.slice(-1)}. Buyers in each sector typically require different grades, packaging formats, and documentation, and our team works closely with each buyer to match the product specification to the intended end use.</p>
+                    <p>For customers in the {details.applications[0] || "industrial manufacturing"} sector, we supply {product.name.toLowerCase()} in grades that meet the relevant international standards, supported by a full certificate of analysis and, where required, a statement of conformity with REACH, RoHS, or other applicable regulations. Our sales team can provide technical data sheets, safety data sheets, and application-specific recommendations based on the buyer's production process and quality thresholds.</p>
+                    <p>In the {details.applications[1] || "specialty applications"} field, {product.name.toLowerCase()} from Moroccan deposits is valued for its consistent purity profile, low impurity content, and availability in multiple physical forms. Buyers in this segment typically require smaller volumes but higher documentation standards, including full traceability from mine to loading point. We accommodate these requirements by maintaining separate production batches with dedicated stock management and segregated container loading.</p>
+                    <p>The {details.applications[2] || "global export"} market for Moroccan {product.name.toLowerCase()} has grown steadily as international buyers seek to diversify their supply sources. Morocco's geographic position at the crossroads of Europe, Africa, and the Middle East, combined with its modern port infrastructure at Casablanca and Tangier Med, makes it a competitive origin for mineral shipments to most major industrial regions. Our logistics team manages the complete export chain, from inland trucking and port handling to ocean freight and customs clearance at destination, under FOB, CFR, CIF, or DDP incoterms as agreed with the buyer.</p>
+                    <p>New buyers are encouraged to begin with a trial shipment of 20 to 50 metric tons to evaluate the material quality, documentation accuracy, and logistics reliability before entering a long-term supply agreement. During the trial phase, we provide weekly updates on stock availability, production scheduling, and vessel booking, and we assign a dedicated account manager who serves as the single point of contact for all commercial and operational matters.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mining & Processing Details */}
+            <div className="mb-16" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">Mining & Processing Overview</h2>
+                  </div>
+                  <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4">
+                    <p>The extraction of Moroccan {product.name.toLowerCase()} takes place in geological formations that are characteristic of the Atlas Mountain belt, where tectonic activity has created mineral-rich zones with deposits that range from near-surface oxide zones suitable for open-pit extraction to deeper sulphide ore bodies accessed through underground mining. The specific mining method applied to each deposit depends on the depth, geometry, and grade distribution of the mineralised zone, as well as on the surrounding rock competence and the hydrological conditions of the area.</p>
+                    <p>After extraction, the ore is transported to a beneficiation facility where it undergoes a sequence of physical and chemical processes designed to separate the valuable mineral from the waste rock and to upgrade the mineral content to the target export grade. For {product.name.toLowerCase()}, the beneficiation flowsheet typically includes crushing and grinding to liberate the mineral particles, followed by gravity separation, flotation, magnetic separation, or a combination of these methods, depending on the mineralogy of the deposit and the required product specification. The final concentrate or direct-shipping ore is then dried, sampled, and stored under cover awaiting dispatch.</p>
+                    <p>Quality control is integrated into every stage of the mining and processing sequence. Field geologists map and sample each mining face before blasting to confirm grade continuity. The beneficiation plant operator monitors feed grade hourly and adjusts process parameters to maintain output within specification. Each production batch is assigned a unique lot number, and samples are collected at the plant and again at the port for independent laboratory analysis. The certified results are recorded against the lot number and made available to the buyer as part of the shipment documentation package.</p>
+                    <p>Our monthly production capacity for Moroccan {product.name.toLowerCase()} is maintained through a network of partner mines and contract processing facilities, allowing us to scale volumes up or down in response to buyer demand. We hold standing stock at our regional depots and at the port terminals, with typical availability of {details.stock || details.stockDetails?.concentrate || details.monthlyCapacity || "several hundred metric tons"} at any given time. For long-term contracts exceeding 12 months, we work with our mining partners to reserve dedicated production capacity and to establish a quality baseline that remains consistent throughout the contract period.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quality Standards & Certification */}
+            <div className="mb-16" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">Quality Standards & Export Compliance</h2>
+                  </div>
+                  <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4">
+                    <p>Every export shipment of Moroccan {product.name.toLowerCase()} from The 3 Rocks is processed in accordance with Moroccan export regulations, international trade standards, and the specific quality requirements of the destination country. Our quality management system covers mineral grade verification, contaminant screening, moisture determination, particle size analysis, and physical property testing as applicable to each mineral type. Test methods are selected from international standards including ASTM, ISO, and EN where they exist for the specific mineral and parameter being measured.</p>
+                    <p>For buyers in regulated industries — including aerospace, defence, pharmaceuticals, cosmetics, and food-contact applications — we can arrange for additional testing and certification beyond the standard certificate of analysis. This includes heavy metal screening by ICP-MS, mineral phase identification by X-ray diffraction, specific surface area measurement by BET analysis, thermal stability testing by thermogravimetric analysis, and microbiological testing for cosmetic-grade minerals. These additional tests are performed by accredited partner laboratories and the results are incorporated into the shipment documentation package.</p>
+                    <p>Export documentation from The 3 Rocks includes the certificate of origin issued by the Moroccan Chamber of Commerce, the commercial invoice, the packing list, the bill of lading or air waybill, the certificate of analysis from a Moroccan ISO 17025-accredited laboratory, and any destination-specific certifications such as the European Union REACH compliance statement or the United States TSCA certification. For shipments to countries that require a phytosanitary certificate or a radioactive clearance certificate, we coordinate the inspection and certification through the relevant Moroccan authorities before loading.</p>
+                    <p>We maintain records of all quality control data, shipment documentation, and correspondence for each transaction for a minimum of five years, and we make these records available to the buyer or to the buyer's nominated representative upon request. For contracts that specify a penalty for off-grade material, the reference analysis method and the arbitration procedure are defined in the contract terms before shipment, and both parties agree on a mutually acceptable referee laboratory before loading commences.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Call to action */}
             <div className="text-center" data-aos="fade-up">
               <div className="relative overflow-hidden bg-gradient-to-br from-teal-600 to-teal-700 dark:from-teal-700 dark:to-teal-800 p-12 rounded-2xl shadow-2xl">
