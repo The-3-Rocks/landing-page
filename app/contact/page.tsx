@@ -20,7 +20,12 @@ export const metadata = {
   alternates: { canonical: "https://www.the-3rocks.com/contact" },
 };
 
-import Contact from "@/components/contact-comp";
+import dynamic from "next/dynamic";
+
+const ContactForm = dynamic(
+  () => import("@/components/contact-comp"),
+  { ssr: false }
+);
 
 export default function Contacts() {
   return (
@@ -41,7 +46,7 @@ export default function Contacts() {
           </div>
         </div>
       </section>
-      <Contact />
+      <ContactForm />
     </>
   );
 }
