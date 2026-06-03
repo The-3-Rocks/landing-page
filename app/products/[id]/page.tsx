@@ -1560,6 +1560,27 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               </div>
             </div>
 
+            {/* Export Markets & Shipping */}
+            <div className="mb-16" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">Export Markets & Shipping Guide</h2>
+                  </div>
+                  <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4">
+                    <p>Moroccan {product.name.toLowerCase()} from The 3 Rocks is exported to buyers across Europe, Asia, the Middle East, Africa, and the Americas. Our primary export markets for this mineral include industrial processors and manufacturers in Spain, Italy, Germany, France, Belgium, the Netherlands, the United Kingdom, Turkey, Egypt, Saudi Arabia, the United Arab Emirates, India, China, Japan, South Korea, Nigeria, Ghana, the United States, and Brazil. For each destination, we tailor the shipping method, documentation, and packaging to the buyer&#39;s specific requirements and to the regulations of the destination country.</p>
+                    <p>Standard shipping is arranged in 20-foot or 40-foot containers from Casablanca or Tangier Med, with vessel nomination and container booking managed by our logistics team. For large-volume orders exceeding 500 metric tons, we can arrange break-bulk or full-vessel charter shipments from Jorf Lasfar or Casablanca, with the vessel type and size matched to the buyer&#39;s discharge port capabilities. Our team manages all port-side logistics including container stuffing, weight verification at certified scales, customs clearance through Morocco&#39;s ADIL system, and vessel-side documentation including the bill of lading, cargo manifest, and stowage plan.</p>
+                    <p>Shipping insurance is arranged through a Moroccan insurer with A-minus or better financial strength rating, covering Institute Cargo Clauses A for containerised shipments and Institute Cargo Clauses B for bulk shipments. The insurance certificate is issued in the buyer&#39;s name and covers the cargo from the moment it passes the ship&#39;s rail at the port of loading until it is discharged at the port of destination. Buyers who prefer to arrange their own insurance can do so under FOB or CFR incoterms.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Call to action */}
             <div className="text-center" data-aos="fade-up">
               <div className="relative overflow-hidden bg-gradient-to-br from-teal-600 to-teal-700 dark:from-teal-700 dark:to-teal-800 p-12 rounded-2xl shadow-2xl">

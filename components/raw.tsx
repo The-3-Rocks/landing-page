@@ -152,6 +152,16 @@ export default function ProductsPage() {
               </div>
             </div>
 
+            {/* Quality & Logistics Overview */}
+            <div className="mb-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+              <h2 className="text-2xl font-bold font-red-hat-display mb-6">Quality Control & Export Logistics</h2>
+              <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p>Every mineral listed on this page is supported by a documented quality control process that begins at the mine site and continues through beneficiation, packing, and port loading. Our quality assurance team collects samples at each stage of the supply chain and submits them to ISO 17025-accredited laboratories in Casablanca and Rabat for analysis by X-ray fluorescence, inductively coupled plasma optical emission spectrometry, and gravimetric methods as appropriate for the mineral type and the parameter being measured. The certificate of analysis issued for each shipment includes the target element grade, a full impurity profile covering all elements that could affect the material&rsquo;s performance in the buyer&rsquo;s process, moisture content, and relevant physical properties such as specific gravity for barite, particle size distribution for powder products, and bulk density for ore and lump materials.</p>
+                <p>Export logistics are managed through our network of regional depots located near each mining district and through our port operations teams in Casablanca, Tangier Med, and Jorf Lasfar. Our logistics coordinators arrange trucking from the mine or beneficiation plant to the port, manage container booking and stuffing, clear shipments through Moroccan customs using the ADIL electronic system, and prepare the full export documentation package including the certificate of origin from the Moroccan Chamber of Commerce, the commercial invoice, the packing list, the bill of lading, and the insurance certificate. Buyers receive real-time tracking information once the container is gated into the port terminal and can monitor vessel position throughout the voyage using the AIS tracking link provided by our logistics team.</p>
+                <p>We offer flexible shipping terms to match buyers&rsquo; procurement preferences. FOB Casablanca or Tangier Med is the most commonly used incoterm for first-time buyers, as it gives the buyer control over ocean freight selection and insurance placement. CIF and CFR terms are available for buyers who prefer a delivered price that includes all logistics costs to their nominated port. For long-term contract buyers who require stable delivered pricing, we can structure quarterly or biannual pricing based on the LME or Metal Bulletin reference price for the relevant mineral, with a fixed logistics margin that covers freight, insurance, and port handling charges for the duration of the contract term.</p>
+              </div>
+            </div>
+
             {/* Products grid */}
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-start">
               {products

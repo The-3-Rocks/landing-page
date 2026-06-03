@@ -106,6 +106,96 @@ export default function CookiesPolicy() {
                       Cookies remain on your device for different durations. Session cookies are temporary and are deleted when you close your browser. Persistent cookies remain on your device for a set period or until you manually delete them, allowing the website to remember your preferences on future visits. Our persistent cookies typically expire after 30 days to 24 months, depending on their purpose.
                     </p>
 
+                    <h2>Cookies Used on This Website</h2>
+                    <p>The following table lists the cookies that may be set on your device when you visit The 3 Rocks website. Please note that the specific cookies set may vary depending on your browser, device, and consent preferences.</p>
+                    <table className="w-full border-collapse text-sm">
+                      <thead>
+                        <tr className="bg-gray-100 dark:bg-gray-800">
+                          <th className="p-2 border border-gray-300 dark:border-gray-600 text-left">Cookie Name</th>
+                          <th className="p-2 border border-gray-300 dark:border-gray-600 text-left">Provider</th>
+                          <th className="p-2 border border-gray-300 dark:border-gray-600 text-left">Purpose</th>
+                          <th className="p-2 border border-gray-300 dark:border-gray-600 text-left">Type</th>
+                          <th className="p-2 border border-gray-300 dark:border-gray-600 text-left">Duration</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>_ga</code>, <code>_ga_*</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Google Analytics</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Distinguishes unique users and tracks website usage statistics including page visits, time spent, and navigation patterns</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Performance / Analytics</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">2 years / 2 years</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>_gid</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Google Analytics</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Distinguishes unique users and throttles request rate for analytics tracking</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Performance / Analytics</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">24 hours</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>_gat</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Google Analytics</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Throttles request rate to limit data collection on high-traffic sites</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Performance / Analytics</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">1 minute</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>_gcl_au</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Google AdSense</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Tracks conversion events and measures advertising effectiveness for Google AdSense campaigns</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Advertising</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">3 months</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>IDE</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Google DoubleClick</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Used for remarketing and personalisation of Google ads based on browsing behaviour across websites</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Advertising</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">13 months</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>NID</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Google</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Remembers user preferences such as language selection, region, and ad personalisation settings</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Functional / Preferences</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">6 months</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600"><code>__cf_bm</code></td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Cloudflare</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Manages incoming traffic and identifies legitimate traffic to prevent malicious requests</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Necessary / Security</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">30 minutes</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Next.js session</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">The 3 Rocks</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Maintains session state and enables server-side rendering functionality for the Next.js framework</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Necessary / Functional</td>
+                          <td className="p-2 border border-gray-300 dark:border-gray-600">Session</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>This table is updated periodically to reflect changes in the cookies set by third-party services. If you have questions about a specific cookie not listed here, please contact us at the email address provided in the Contact section below.</p>
+
+                    <h2>Consent Management</h2>
+                    <p>When you first visit The 3 Rocks website, a cookie consent banner is displayed that allows you to accept or decline the use of non-necessary cookies. Your consent preferences are stored in a first-party cookie so that the banner is not shown on subsequent visits. If you wish to change your preferences after your initial choice, you can clear your browser cookies and revisit the website to trigger the consent banner again, or you can manage cookies directly through your browser settings as described in the section above.</p>
+                    <p>Under applicable data protection laws, including the General Data Protection Regulation (GDPR) and the ePrivacy Directive, we rely on your consent for the use of performance and advertising cookies. Necessary cookies are set without your consent because they are essential for the website to function. You have the right to withdraw your consent at any time without affecting the lawfulness of processing carried out before the withdrawal. Withdrawal of consent may affect certain features of the website, including personalized content and advertisements.</p>
+                    <p>We use a cookie consent management platform that records your consent choice and provides a mechanism for you to review and change your preferences at any time. If you experience any issues with the consent banner or wish to exercise your data protection rights, please contact our Data Protection Officer at info@the-3rocks.com.</p>
+
+                    <h2>Browser-Specific Instructions for Managing Cookies</h2>
+                    <p>If you prefer to manage cookies directly through your browser settings rather than through our consent banner, the following instructions apply for commonly used browsers:</p>
+                    <ul>
+                      <li><strong>Google Chrome:</strong> Click the three-dot menu in the top-right corner of the browser window, select Settings, then Privacy and Security, then Cookies and Other Site Data. From this screen you can block all cookies, block third-party cookies only, or clear cookies for specific websites. For more detailed guidance, visit the Chrome Help Center at support.google.com.</li>
+                      <li><strong>Mozilla Firefox:</strong> Click the menu button (three horizontal lines) in the top-right corner, select Settings, then Privacy and Security. Under the Cookies and Site Data section, you can choose to block all cookies, block cross-site tracking cookies, or clear cookies when Firefox closes. For more detailed guidance, visit the Firefox Support page at support.mozilla.org.</li>
+                      <li><strong>Safari:</strong> On macOS, open Safari, click Safari in the menu bar, select Preferences, then the Privacy tab. From here you can block all cookies or prevent cross-site tracking. On iOS, open Settings, scroll to Safari, then tap Privacy and Security to adjust cookie and tracking settings. For more detailed guidance, visit the Safari Support page at support.apple.com.</li>
+                      <li><strong>Microsoft Edge:</strong> Click the three-dot menu in the top-right corner, select Settings, then Cookies and Site Permissions, then Cookies and Data Stored. From this screen you can block cookies, allow only essential cookies, or clear existing cookies. For more detailed guidance, visit the Microsoft Edge Support page at support.microsoft.com.</li>
+                      <li><strong>Opera:</strong> Click the Opera menu button in the top-left corner, select Settings, then Advanced, then Privacy and Security, then Cookies and Other Site Data. For more detailed guidance, visit the Opera Help page at help.opera.com.</li>
+                      <li><strong>Brave:</strong> Click the three-line menu in the top-right corner, select Settings, then Shields, then Cookies and Site Data. Brave blocks third-party cookies by default and provides granular controls for per-site cookie management. For more detailed guidance, visit the Brave Support page at support.brave.com.</li>
+                    </ul>
+                    <p>If your browser is not listed above, please consult its help documentation or support website for instructions on managing cookies. You can also use the Global Privacy Control (GPC) signal if your browser supports it, which communicates your preference to opt out of data sharing or sale of personal information to all websites you visit that respect the GPC signal.</p>
+
                     <h2>Managing Cookies</h2>
                     <p>
                       You can choose to accept or decline cookies at any time. Most web browsers allow you to control cookies through their settings. You can block all cookies, delete existing cookies, or set preferences for specific websites. Below are links to instructions for common browsers:

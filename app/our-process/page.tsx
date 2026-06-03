@@ -245,6 +245,29 @@ export default function ProcessPage() {
         </div>
       </section>
 
+      {/* Geological Context & Mining Operations */}
+      <section className="bg-gray-50 dark:bg-gray-800">
+        <div className="section-wrapper">
+          <div className="section-pad section-divider">
+            <div className="max-w-4xl mx-auto prose prose-lg text-gray-600 dark:text-gray-400 max-w-none prose-p:leading-relaxed prose-headings:text-gray-900 dark:prose-headings:text-gray-100">
+              <h2 className="h2 font-red-hat-display mb-6 text-gray-900 dark:text-white">Our Geological & Operational Footprint</h2>
+              <p>
+                Morocco&rsquo;s mineral wealth is the product of a complex geological history that spans more than 500 million years. The country lies at the junction of the African and Eurasian tectonic plates, where repeated episodes of rifting, subduction, and continental collision have created a remarkable diversity of mineral deposit types in a relatively compact geographic area. The 3 Rocks sources its products from four principal geological domains, each of which contributes distinct mineral assemblages and grade profiles to our portfolio.
+              </p>
+              <p>
+                The High Atlas belt, running diagonally across central Morocco from Agadir in the southwest to the Algerian border near Figuig in the northeast, hosts the majority of our lead and zinc deposits. Mineralisation here occurs primarily as Mississippi Valley-type carbonate-hosted deposits within Jurassic and Cretaceous limestone and dolomite sequences. Our lead concentrate and zinc calamine ore from this region typically grade between 55 and 70 percent lead and 32 and 40 percent zinc respectively, with low levels of deleterious elements such as arsenic, cadmium, and mercury. The Anti-Atlas range in the south, where Proterozoic basement rocks are exposed through a cover of Paleozoic sediments, is our principal source of cobalt, antimony, and copper. The famous Bou Azzer district near Ouarzazate has been mined for cobalt since the 1930s and remains one of the world&rsquo;s few primary cobalt producers outside the Central African Copperbelt.
+              </p>
+              <p>
+                The eastern Meseta around Nador and Oujda supplies our iron ore, which occurs as siderite-hematite bodies within Jurassic carbonate sequences. These deposits yield lump and fine iron ore grading 50 to 58 percent iron with moderate levels of silica and alumina that are well suited to sinter feed and direct-reduction feed for the Mediterranean steel industry. The barite deposits of the Middle Atlas and the Tafilalet region near Errachidia, hosted in veins and stratiform bodies within Paleozoic and Mesozoic rocks, produce barite ore ranging from 85 to 97 percent BaSO₄, which after simple gravity and magnetic separation reaches 4.20 specific gravity or higher for oil and gas drilling applications. Our supply network also includes smaller satellite deposits in the Rehamna massif, the Jebilet region, and the Maider basin, each of which contributes specialised grades that extend our product range.
+              </p>
+              <p>
+                On the operational side, our team manages a production workflow that combines artisanal and small-scale mining with mechanised open-pit operations, depending on the deposit geometry. For narrow-vein deposits such as those in the Bou Azzer cobalt district, extraction follows the vein orientation using hand-sorting and pneumatic drilling to maximise ore grade and minimise dilution. For bulk-tonnage deposits such as the iron ore bodies near Nador, full bench-and-blast open-pit methods are used, with run-of-mine ore crushed in a primary jaw crusher installed at the pit perimeter before being transported to the beneficiation plant. Our on-site geologists log every blast hole and every truck load, maintaining a block model that is updated daily and reconciled against the monthly survey. This level of operational control means that when we quote a grade range for a product, that range is anchored in real production data, not in a laboratory test on a single hand-picked sample.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Export Process */}
       <section className="bg-white dark:bg-gray-900">
         <div className="section-wrapper">
@@ -297,6 +320,32 @@ export default function ProcessPage() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Beneficiation, Processing & Laboratory Quality Control */}
+      <section className="bg-white dark:bg-gray-900">
+        <div className="section-wrapper">
+          <div className="section-pad section-divider">
+            <div className="max-w-4xl mx-auto prose prose-lg text-gray-600 dark:text-gray-400 max-w-none prose-p:leading-relaxed prose-headings:text-gray-900 dark:prose-headings:text-gray-100">
+              <h2 className="h2 font-red-hat-display mb-6 text-gray-900 dark:text-white">Beneficiation, Processing & Laboratory Quality Control</h2>
+              <p>
+                The chain of custody at The 3 Rocks extends well beyond the mine gate. Once run-of-mine ore arrives at our depot, it enters a beneficiation workflow that is designed to match the physical and chemical characteristics of each mineral type. For barite, the primary beneficiation methods are jigging for coarse fractions and wet shaking-table separation for fines, followed by magnetic separation to remove iron-stained gangue minerals such as hematite and goethite. Our barite processing line can produce material suitable for oil and gas drilling applications at specific gravity 4.10, 4.20, and 4.25+ as required by API 13A and OCMA specifications, as well as chemical-grade barite for the paint, plastics, and radiation-shielding industries at 97 to 99 percent BaSO₄ purity.
+              </p>
+              <p>
+                For base-metal ores such as lead, zinc, and copper, the processing route depends on the mineralogy and the target product form. Lead oxide ores from the High Atlas region are crushed and screened to produce direct-shipping fines, while lead carbonate and lead sulphide ores can be upgraded by froth flotation to produce concentrates grading 55 to 70 percent lead. Zinc calamine ore (smithsonite and hydrozincite) is processed by dry screening and pneumatic sorting to remove silica-rich gangue, yielding a calamine product grading 32 to 40 percent zinc that is directly usable by zinc smelters producing metal or zinc oxide. Copper oxide ores from our Anti-Atlas sources are typically upgraded by acid-leach testing to confirm solubility before being crushed, blended, and stockpiled for sale as copper ore grading 12 to 22 percent copper for direct smelting or for the ferroalloy industry.
+              </p>
+              <p>
+                Quality control is woven into every stage of processing. Our on-site laboratory at the Errachidia depot is equipped with a handheld X-ray fluorescence analyser for rapid grade screening of incoming lots, a thermogravimetric analyser for moisture determination, a sieve shaker for particle size distribution, and a pycnometer for specific gravity measurement. Every production lot is assigned a unique internal reference number that tracks it from the mine weighbridge through each processing step, and the results of all QC tests are recorded in a digital database that is accessible to our export documentation team in real time.
+              </p>
+              <p>
+                Independent third-party verification is required before any shipment leaves the depot. We work with three ISO 17025-accredited laboratories in Morocco — in Casablanca, Rabat, and Marrakech — and the buyer may nominate a fourth laboratory for umpire analysis in the event of a grade dispute. The laboratory certificate that accompanies each shipment includes the assay method used, the detection limits for each element, the laboratory&rsquo;s accreditation reference, and the signature of the responsible analyst. For buyers who require additional testing beyond the standard suite — such as loss on ignition, mercury content by cold-vapour atomic fluorescence, or fluorine determination by ion-selective electrode — our laboratory partners can add those parameters to the test schedule at a modest incremental cost.
+              </p>
+              <p>
+                Packing is tailored to the product form and the shipping mode. Bulk ore for open-hatch vessels is loaded directly into the hold using conveyor belts and telescopic chutes to minimise segregation and dust generation. Containerised products are loaded into 20-foot or 40-foot open-top containers for lump materials and into standard containers lined with polypropylene sheets for powders and concentrates. Bagged products are available in 50 kg, 1-tonne jumbo bags, or 1.5-tonne sling bags, depending on the buyer&rsquo;s handling equipment at the destination port. Every container is photographed at the stuffing stage, weighed on a calibrated weighbridge, and sealed with a high-security bolt seal bearing a unique serial number that is recorded on the bill of lading.
+              </p>
             </div>
           </div>
         </div>

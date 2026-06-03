@@ -101,7 +101,8 @@ export default function Blog() {
           </div>
         </div>
       </section>
-      <ArticlesClient allBlogs={allBlogs} />
+      {/* Strip content field before passing to client to avoid __NEXT_DATA__ bloat */}
+      <ArticlesClient allBlogs={allBlogs.map(({ slug, metadata }) => ({ slug, metadata })) as any} />
 
       <section className="relative bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
