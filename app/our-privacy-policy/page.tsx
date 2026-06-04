@@ -6,6 +6,10 @@ export const metadata = {
   title: "Privacy Policy",
   description:
     "At The 3 Rocks, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function PrivacyPolicy() {

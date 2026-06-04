@@ -161,8 +161,11 @@ export default function ProductsPage() {
                           {product.purity}
                         </div>
                       </div>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      <p className="text-gray-600 dark:text-gray-400 mb-2">
                         {product.description}
+                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-500 mb-4 leading-relaxed">
+                        {product.richDescription}
                       </p>
                       <div className="text-sm text-gray-500 mb-4">
                         <span className="font-semibold">Available Stock:</span>{" "}

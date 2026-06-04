@@ -21,7 +21,6 @@ import Hero from "@/components/hero-about";
 import FeaturesGallery from "@/components/features-gallery";
 import Timeline from "@/components/timeline";
 import Career from "@/components/career";
-import FeaturesAnimation from "@/components/features-animation";
 import Team from "@/components/team";
 import CtaContact from "@/components/cta-contact";
 import ContactInfoSection from "@/components/data-company";
@@ -77,8 +76,6 @@ export default function About() {
       {/* <Timeline /> */}
 
       {/* <Career /> */}
-
-      <FeaturesAnimation />
 
       <Team />
       <ContactInfoSection />

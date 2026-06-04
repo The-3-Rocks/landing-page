@@ -19,6 +19,7 @@ export interface Product {
   stock: string;
   color: string;
   forms: string[];
+  richDescription: string;
 }
 
 // Product data for listing page
@@ -33,6 +34,7 @@ export const products: Product[] = [
     stock: "400 tons concentrate, 150 tons powder, 300 tons ore",
     color: "bg-gray-700",
     forms: ["Concentrate", "Powder", "Ore"],
+    richDescription: "Used by lead-acid battery manufacturers across Europe, Africa, and Asia — the battery sector alone accounts for more than 80% of global lead consumption. Also specified by radiation shielding producers and specialty alloy makers."
   },
   {
     id: "copper",
@@ -44,6 +46,7 @@ export const products: Product[] = [
     stock: "500 tons",
     color: "bg-amber-600",
     forms: ["Ore"],
+    richDescription: "Essential for wire and cable manufacturers supplying the renewable energy and electrification sectors across Europe and the Mediterranean. Also used in brass and bronze alloys, telecommunications infrastructure, and chemical processing."
   },
   {
     id: "zinc",
@@ -55,6 +58,7 @@ export const products: Product[] = [
     stock: "300 tons ore, 80 tons concentrate",
     color: "bg-slate-300",
     forms: ["Ore", "Concentrate"],
+    richDescription: "Supplied to galvanisers, die-casters, and cosmetics manufacturers across Europe and Asia. The calamine form is also a key raw material for pharmaceutical-grade zinc oxide and premium skincare products."
   },
   {
     id: "barite",
@@ -66,6 +70,7 @@ export const products: Product[] = [
     stock: "400 tons",
     color: "bg-white",
     forms: ["Ore", "Powder", "Lumps"],
+    richDescription: "Preferred by oil and gas drilling operators across West Africa, the Mediterranean, and the Middle East for drilling-fluid formulation. Also used in paints, plastics, medical imaging, and concrete radiation shielding."
   },
   {
     id: "iron",
@@ -77,6 +82,7 @@ export const products: Product[] = [
     stock: "40,000 tons",
     color: "bg-slate-500",
     forms: ["Ore"],
+    richDescription: "A strategic secondary supply source for Mediterranean blast furnaces and direct-reduction plants, complementing dominant supply from Brazil and Australia. Low phosphorus and alumina content makes it ideal feed for steel production."
   },
   {
     id: "cobalt",
@@ -88,6 +94,7 @@ export const products: Product[] = [
     stock: "Available upon request",
     color: "bg-blue-800",
     forms: ["Ore", "Concentrate"],
+    richDescription: "Specified by lithium-ion battery precursor manufacturers, aerospace superalloy producers, and high-performance magnet makers. The Bou Azzer district is the only primary cobalt source in Africa outside the DRC."
   },
   {
     id: "antimony",
@@ -99,5 +106,6 @@ export const products: Product[] = [
     stock: "Available upon request",
     color: "bg-gray-600",
     forms: ["Ore", "Concentrate"],
+    richDescription: "Used by European flame retardant manufacturers for electronics and construction materials, lead-acid battery hardening, military applications including night-vision equipment, and specialty alloys. Classified as a critical mineral by the EU and US."
   },
 ];

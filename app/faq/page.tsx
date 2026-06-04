@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FAQPage, WithContext, Question } from "schema-dts";
 
 export const metadata = {
-  title: "FAQ — Moroccan Minerals & Raw Materials Export | The 3 Rocks",
+  title: "FAQ — Moroccan Minerals & Raw Materials Export",
   description:
     "Discover frequently asked questions about raw materials supplying and more by The 3 Rocks.",
 };
