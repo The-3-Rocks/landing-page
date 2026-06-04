@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FAQPage, WithContext, Question } from "schema-dts";
 
 export const metadata = {
@@ -132,24 +131,8 @@ export default function FAQs() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="relative">
-        {/* Background image */}
-        <div className="absolute inset-0 h-128 pt-16 box-content">
-          <Image
-            className="absolute inset-0 w-full h-full object-cover opacity-25"
-            src="/images/about-hero.jpg"
-            width={1440}
-            height={577}
-            priority
-            alt="FAQs"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900"
-            aria-hidden="true"
-          ></div>
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             <div className="max-w-3xl mx-auto">
               <article>
