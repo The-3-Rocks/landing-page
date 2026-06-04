@@ -280,12 +280,18 @@ export default function ProductsPage() {
                 receive a personalized quote for premium Moroccan mining
                 products.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/contact"
                   className="btn text-white bg-teal-500 hover:bg-teal-400"
                 >
                   Connect with Morocco's Mining Experts
+                </Link>
+                <Link
+                  href="/"
+                  className="btn text-teal-600 bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 hover:bg-teal-100 dark:hover:bg-teal-900/30"
+                >
+                  Explore The 3 Rocks Homepage
                 </Link>
               </div>
             </div>

@@ -7,8 +7,8 @@ export const metadata = {
   description:
     "At The 3 Rocks, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

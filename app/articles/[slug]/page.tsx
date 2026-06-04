@@ -274,6 +274,11 @@ export default async function SinglePost({
                 {/* Article footer */}
                 <footer>
                   <Newsletter />
+                  <div className="mt-6 text-center">
+                    <Link href="/" className="text-sm text-teal-600 dark:text-teal-400 hover:underline font-medium">
+                      ← Back to The 3 Rocks — Moroccan Mineral Exporter
+                    </Link>
+                  </div>
                 </footer>
               </article>
             </div>

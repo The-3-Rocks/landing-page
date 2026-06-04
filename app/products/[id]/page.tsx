@@ -742,6 +742,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </svg>
                 <span className="font-medium">Back to All Products</span>
               </Link>
+              <Link 
+                href="/" 
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-teal-500 dark:hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-all duration-300 shadow-sm hover:shadow-md ml-3"
+              >
+                <span className="font-medium">Home</span>
+              </Link>
             </div>
 
             {/* Product header */}
