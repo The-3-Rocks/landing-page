@@ -1,6 +1,6 @@
 export const metadata = {
   title:
-    "Moroccan Mineral Products — Lead, Zinc, Copper, Barite, Iron, Cobalt & Antimony",
+    "Moroccan Mineral Products — Lead, Zinc, Barite & More",
   description:
     "Leading supplier of high-quality Moroccan minerals including lead, zinc, copper, barite, iron, cobalt, and antimony. Ethically sourced from Morocco's richest mining regions for global industrial applications.",
   openGraph: {

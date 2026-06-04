@@ -135,45 +135,21 @@ export default function FAQs() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             <div className="max-w-3xl mx-auto">
-              <article>
-                {/* Article header */}
-                <header className="mb-8">
-                  {/* Title and excerpt */}
-                  <div className="text-center md:text-left">
-                    <h1
-                      className="h1 font-red-hat-display mb-4"
-                      data-aos="fade-down"
-                    >
-                      Frequently Asked Questions (FAQs)
-                    </h1>
-                    <p
-                      className="text-xl text-gray-600 dark:text-gray-400"
-                      data-aos="fade-down"
-                      data-aos-delay="150"
-                    >
-                      Here are answers to some common questions about our
-                      products and services.
-                    </p>
-                  </div>
-                </header>
-                <hr
-                  className="w-5 h-px pt-px bg-gray-400 dark:bg-gray-500 border-0 mb-8"
-                  data-aos="fade-down"
-                  data-aos-delay="450"
-                />
+              <header className="mb-8 text-center md:text-left">
+                <h1 className="h1 font-red-hat-display mb-4">Frequently Asked Questions (FAQs)</h1>
+                <p className="text-xl text-gray-600 dark:text-gray-400">
+                  Here are answers to some common questions about our products and services.
+                </p>
+              </header>
 
-                {/* Article content */}
-                <div className="mb-8" data-aos="fade-up" data-aos-delay="450">
-                  <article className="prose text-lg text-gray-600 dark:text-gray-400 max-w-none prose-lg prose-p:leading-normal prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-strong:font-medium prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:italic prose-blockquote:pl-4 prose-blockquote:border-l-2 prose-blockquote:border-teal-500 dark:prose-blockquote:border-gray-400 prose-blockquote:font-normal prose-blockquote:text-inherit">
-                    {faqs.map((faq, index) => (
-                      <div key={index}>
-                        <h3>{faq.question}</h3>
-                        <p>{faq.answer}</p>
-                      </div>
-                    ))}
-                  </article>
-                </div>
-              </article>
+              <div className="prose-article">
+                {faqs.map((faq, index) => (
+                  <div key={index}>
+                    <h3>{faq.question}</h3>
+                    <p>{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

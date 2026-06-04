@@ -5,11 +5,11 @@ import Cta from "@/components/cta";
 import ChatButtons from "@/components/ChatButtons";
 
 export const metadata = {
-  title: "Mining & Export Process — Moroccan Minerals from Mine to Port | The 3 Rocks",
+  title: "Mining & Export Process — Moroccan Minerals from Mine to Port",
   description:
     "Learn about The 3 Rocks' efficient and sustainable process for extracting, processing, and exporting premium Moroccan minerals and raw materials worldwide. Specializing in Morocco's diverse mining sector.",
   openGraph: {
-    title: "Mining & Export Process — Moroccan Minerals from Mine to Port | The 3 Rocks",
+    title: "Mining & Export Process — Moroccan Minerals from Mine to Port",
     description:
       "Discover our streamlined process for extracting and exporting high-quality minerals and raw materials from Morocco's rich mineral deposits to global markets.",
     url: "https://www.the-3rocks.com/our-process",
