@@ -89,6 +89,45 @@
     .prose-article {
         @apply prose text-lg text-gray-600 dark:text-gray-400 max-w-none prose-lg prose-p:leading-normal prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-strong:font-medium prose-strong:text-gray-900 dark:prose-strong:text-gray-100 prose-blockquote:italic prose-blockquote:pl-4 prose-blockquote:border-l-2 prose-blockquote:border-teal-500 dark:prose-blockquote:border-gray-400 prose-blockquote:font-normal prose-blockquote:text-inherit;
     }
+    .section-pill {
+        @apply inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold mb-6;
+        background-color: #e1f5ee;
+        color: #0f6e56;
+    }
+    .dark .section-pill {
+        background-color: #20493c;
+        color: #81E6D9;
+    }
+    .section-title {
+        @apply h2 font-red-hat-display mb-4 text-gray-900 dark:text-white;
+    }
+    .section-card {
+        @apply bg-white dark:bg-gray-800 rounded-xl p-7;
+        border: 0.5px solid #e5e5e5;
+    }
+    .dark .section-card {
+        border-color: #333;
+    }
+    .accent-border-card {
+        @apply p-5;
+        border-left: 3px solid #1d9e75;
+        border-radius: 0 8px 8px 0;
+        background-color: #fafafa;
+    }
+    .dark .accent-border-card {
+        background-color: #1a1a1e;
+    }
+    .stat-block {
+        @apply rounded-lg text-center p-6;
+        background-color: #f5f5f5;
+    }
+    .dark .stat-block {
+        background-color: #1e1e22;
+    }
+    .stat-number {
+        @apply text-[28px] font-bold mb-1;
+        color: #1d9e75;
+    }
 }
 
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
