@@ -4,41 +4,9 @@ import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import { products, Product } from "@/lib/products";
 
-// Generate Organization Schema
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "The 3 Rocks Company",
-  url: "https://www.the-3rocks.com",
-  logo: "https://www.the-3rocks.com/images/the3rocks.png",
-  description:
-    "Premium Moroccan mining materials supplier specializing in lead, zinc, copper, barite, iron, cobalt, and antimony",
-  sameAs: ["https://www.linkedin.com/company/the-3-rocks"],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "",
-    addressLocality: "Rabat",
-    addressRegion: "Rabat-Salé-Kénitra",
-    postalCode: "10000",
-    addressCountry: "Morocco",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+212-654-352802",
-    contactType: "customer service",
-    email: "info@the-3rocks.com",
-    availableLanguage: ["English", "French", "Arabic"],
-  },
-};
-
 export default function ProductsPage() {
   return (
     <>
-      {/* Schema.org markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
       {/* Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"
@@ -53,7 +21,7 @@ export default function ProductsPage() {
             {/* Page header */}
             <div className="max-w-4xl mx-auto text-center pb-12 md:pb-16">
               <h1 className="h1 font-red-hat-display mb-4">
-                Premium Moroccan Mining & Raw Materials
+                Moroccan Mineral Exporter — Lead, Zinc, Copper, Barite, Iron, Cobalt & Antimony
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400">
                 Discover our extensive range of high-quality Moroccan minerals and raw materials sourced and processed from Morocco's legendary mining regions to meet the highest industry standards worldwide.
@@ -159,6 +127,7 @@ export default function ProductsPage() {
                 <p>Every mineral listed on this page is supported by a documented quality control process that begins at the mine site and continues through beneficiation, packing, and port loading. Our quality assurance team collects samples at each stage of the supply chain and submits them to ISO 17025-accredited laboratories in Casablanca and Rabat for analysis by X-ray fluorescence, inductively coupled plasma optical emission spectrometry, and gravimetric methods as appropriate for the mineral type and the parameter being measured. The certificate of analysis issued for each shipment includes the target element grade, a full impurity profile covering all elements that could affect the material&rsquo;s performance in the buyer&rsquo;s process, moisture content, and relevant physical properties such as specific gravity for barite, particle size distribution for powder products, and bulk density for ore and lump materials.</p>
                 <p>Export logistics are managed through our network of regional depots located near each mining district and through our port operations teams in Casablanca, Tangier Med, and Jorf Lasfar. Our logistics coordinators arrange trucking from the mine or beneficiation plant to the port, manage container booking and stuffing, clear shipments through Moroccan customs using the ADIL electronic system, and prepare the full export documentation package including the certificate of origin from the Moroccan Chamber of Commerce, the commercial invoice, the packing list, the bill of lading, and the insurance certificate. Buyers receive real-time tracking information once the container is gated into the port terminal and can monitor vessel position throughout the voyage using the AIS tracking link provided by our logistics team.</p>
                 <p>We offer flexible shipping terms to match buyers&rsquo; procurement preferences. FOB Casablanca or Tangier Med is the most commonly used incoterm for first-time buyers, as it gives the buyer control over ocean freight selection and insurance placement. CIF and CFR terms are available for buyers who prefer a delivered price that includes all logistics costs to their nominated port. For long-term contract buyers who require stable delivered pricing, we can structure quarterly or biannual pricing based on the LME or Metal Bulletin reference price for the relevant mineral, with a fixed logistics margin that covers freight, insurance, and port handling charges for the duration of the contract term.</p>
+                <p>Every buyer at The 3 Rocks is assigned a dedicated account manager who serves as the single point of contact from initial inquiry through contract negotiation, production scheduling, laboratory testing, shipping coordination, and post-delivery follow-up. This means that when you email or call about a Moroccan mineral shipment, you speak to someone who knows your specification, your quality requirements, your preferred incoterm, and your logistics chain. We also provide monthly market updates to active buyers covering price movements in the relevant commodities, regulatory changes affecting Moroccan mineral exports, and new stock availability from our network of partner mines across the Anti-Atlas, High Atlas, Middle Atlas, and eastern Meseta regions.</p>
               </div>
             </div>
 

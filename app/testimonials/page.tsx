@@ -2,16 +2,6 @@ export const metadata = {
   title: 'Client Testimonials | The 3 Rocks - Moroccan Mining Materials',
   description:
     'Read what industrial buyers, traders and procurement managers say about The 3 Rocks — Morocco’s trusted supplier of lead, zinc, copper, barite, iron, cobalt and antimony.',
-  keywords: [
-    'The 3 Rocks testimonials',
-    'Moroccan mining supplier reviews',
-    'lead supplier Morocco reviews',
-    'zinc calamine supplier testimonials',
-    'copper ore Morocco client feedback',
-    'barite supplier reviews',
-    'iron ore Morocco testimonials',
-    'cobalt antimony supplier reviews',
-  ],
   openGraph: {
     title: 'Client Testimonials | The 3 Rocks - Moroccan Mining Materials',
     description:

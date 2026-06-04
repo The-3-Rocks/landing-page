@@ -2,8 +2,6 @@ export const metadata = {
   title: "Contact The 3 Rocks | Request a Quote for Moroccan Minerals",
   description:
     "Contact The 3 Rocks, Morocco's premier supplier of lead, zinc, copper, barite, iron, cobalt and antimony. Request a quote, sample, certificate of analysis, or shipping terms within 24 hours.",
-  keywords:
-    "contact The 3 Rocks, Morocco mining supplier, request quote Moroccan minerals, sample Moroccan lead, sample Moroccan zinc, sample Moroccan barite, shipping terms Morocco",
   openGraph: {
     title: "Contact The 3 Rocks - Moroccan Mining Materials",
     description:

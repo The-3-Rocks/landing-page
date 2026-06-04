@@ -9,9 +9,10 @@ import { products } from "@/lib/products";
 // Detailed product information including data from ProductPopup
 const productDetails: Record<string, any> = {
   lead: {
-    title: "Moroccan Lead",
+    title: "Moroccan Lead Concentrate & Ore — FOB Export from Casablanca",
+    metaTitle: "Lead Concentrate & Ore Supplier Morocco",
     description:
-      "At The 3 Rocks Company, we pride ourselves on offering high-quality Moroccan lead that stands out for its exceptional purity and unmatched durability, sourced from Morocco's historic mining regions.",
+      "Buy Moroccan lead concentrate (86% Pb), powder, and run-of-mine ore. ISO-certified labs. Ships FOB Casablanca or Tangier Med. 20-ton minimum. Quote in 24 hrs.",
     narrative:
       "Moroccan lead ore is sourced primarily from the Bni Taddjit and Errachidia mineral belt in the eastern High Atlas, where vein and replacement-style deposits have been worked for centuries and remain among the most consistently high-grade lead sources in North Africa. The ore is concentrated at our partner facilities to a typical 86 percent lead grade for the concentrate stream, with a 76 percent grade for the powder form and a 50 percent-plus grade for run-of-mine ore, each matched to the requirements of downstream processors. Our lead concentrate is packed and shipped in 1.5-tonne big bags or 50-kilogram bags, loaded in twenty-foot containers at the Casablanca container terminal or as break-bulk cargo at Jorf Lasfar port. The powder form is supplied in sealed 25-kilogram multi-ply paper sacks with a PE liner and palletised for container stuffing. Moroccan lead concentrate is widely used by lead-acid battery manufacturers in Europe, Africa, and Asia — the battery sector alone accounts for more than eighty percent of global lead consumption. The powder form is preferred by radiation shielding producers, cosmetics formulators, and specialty alloy makers; the run-of-mine ore is exported to smelters that operate their own milling circuits. Every shipment is accompanied by an independent laboratory certificate covering lead, silver, zinc, copper, and antimony content, with X-ray fluorescence screening and ICP confirmation of the full assay suite. Our depot in Errachidia maintains standing stock of concentrate, powder, and ore throughout the year, and we coordinate monthly trucking to Casablanca and Jorf Lasfar on a published schedule that allows buyers to plan their logistics with confidence. For new buyers, we recommend beginning with a trial lot of twenty to fifty metric tons to evaluate the grade consistency and the responsiveness of our documentation and logistics team before committing to a long-term supply contract.",
     purityDetails: {
@@ -47,9 +48,10 @@ const productDetails: Record<string, any> = {
     ],
   },
   copper: {
-    title: "Moroccan Copper",
+    title: "Moroccan Copper Ore — 8–40% Purity, Tinghir Region",
+    metaTitle: "Copper Ore Exporter Morocco — 8–40% Grade",
     description:
-      "Our Moroccan copper stands out for its exceptional quality and versatility, making it indispensable for a variety of industrial applications worldwide.",
+      "Export-grade Moroccan copper ore from the Tinghir and High Atlas districts. 8–21% standard grades, 40%+ high-purity lots available. ISO lab certified. FOB or CIF.",
     narrative:
       "Moroccan copper ore originates from the Tinghir region of the eastern Anti-Atlas and from the historic mining districts of the central High Atlas, where stratiform and vein-style deposits produce a clean oxide and sulphide ore well suited to both hydrometallurgical and pyrometallurgical processing. Our standard export grade runs from 8 to 21 percent copper, with 40 percent-plus high-purity lots available under special export permit for buyers who need higher-grade feed for their concentrators. The ore is sized, blended, and packaged at our depot in Ouarzazate before container loading at Casablanca or bulk loading at Jorf Lasfar. Sulphide ore is shipped as loose bulk in standard open-top containers or as bagged concentrate in sealed 1.5-tonne bulk bags, while oxide ore is typically containerised on pallets to minimise fines generation during transit. We maintain five hundred metric tons of standing stock graded by copper content and ready for dispatch within seven to ten working days of a confirmed order. Major end-use markets include wire and cable manufacturers serving renewable energy and electrification projects across Europe and the Mediterranean basin, telecommunications infrastructure suppliers, brass and bronze alloy producers, and chemical processors that recover copper from the oxide fraction. The copper content and impurity profile of each lot are verified using a triple-check protocol: field-portable X-ray fluorescence at the depot, laboratory ICP analysis before loading, and an optional referee analysis at an accredited laboratory in the buyer's country at the buyer's cost. For European buyers, the Casablanca-to-Rotterdam transit time is typically twelve to fourteen days, and we offer CIF, CFR, and FOB incoterms with full support for letter-of-credit documentation, SGS inspection, and phytosanitary certificates where required.",
     purity: "8% to 21% (with special permit for 40% high-purity copper)",
@@ -72,9 +74,10 @@ const productDetails: Record<string, any> = {
     ],
   },
   zinc: {
-    title: "Moroccan Zinc (Calamine)",
+    title: "Zinc Calamine Supplier Morocco — Errachidia Belt, +37% Grade",
+    metaTitle: "Zinc Calamine Supplier Morocco — Ore & Concentrate",
     description:
-      "Our high-quality Moroccan zinc calamine offers exceptional purity and reliability for various applications, including cosmetics and industrial uses.",
+      "Moroccan zinc calamine ore and concentrate from the Errachidia belt. Grades from +37% ore to 70% concentrate. Available for galvanising, pharma, and die-casting. Request a quote.",
     narrative:
       "Moroccan zinc calamine is extracted from the carbonate and silicate ore bodies of the Errachidia mineral belt in the eastern High Atlas, where the calamine form of zinc — natural zinc carbonate and hemimorphite — has been mined for cosmetic, pharmaceutical, and industrial use for generations. We export two principal forms: a +37 percent zinc ore suitable for direct feed to Waelz kilns and electrolytic zinc producers, and a 70 percent concentrate produced at our partner flotation facility for the galvanizing and die-casting industries. Calamine is also a key raw material in pharmaceutical-grade zinc oxide and in premium cosmetics, where its natural purity and low lead content are valued by formulators. The ore is hand-sorted, crushed, sized, and packed in 25-kilogram multi-ply paper sacks with a moisture barrier, or in 1-tonne big bags for larger buyers. The concentrate is shipped in sealed 1.5-tonne bulk bags that are fork-lift ready for container stuffing at the Casablanca depot. Our monthly capacity of seven hundred metric tons comfortably supports trial orders of twenty metric tons and recurring contracts of several hundred tons per quarter. Every shipment is certified with a full assay covering zinc, lead, cadmium, iron, and moisture content, and the calamine product can be accompanied by a pharmaceutical-grade suitability statement for buyers in the cosmetics and pharmaceutical sectors. We support FCA Errachidia, FOB Casablanca, and CIF destination incoterms, and our documentation package includes the certificate of origin, packing list, commercial invoice, and a fumigation certificate for wooden pallets used in bagged shipments. For galvanizing and die-casting buyers who require a consistent +37 percent zinc content, we recommend quarterly supply agreements with provision for a rolling assay verification at an agreed international laboratory.",
     purityDetails: {
@@ -107,9 +110,10 @@ const productDetails: Record<string, any> = {
     ],
   },
   barite: {
-    title: "Moroccan Barite",
+    title: "Moroccan Barite — API 13A Grade, SG 4.2+",
+    metaTitle: "Moroccan Barite — API 13A Grade, SG 4.2+",
     description:
-      "Our Moroccan Barite is renowned for its high quality and purity, making it indispensable for a wide range of industrial applications globally.",
+      "High-density Moroccan barite with specific gravity 4.18–4.28 from Midelt and Ouarzazate. API 13A compliant for drilling fluids. Also used in paints, radiation shielding, and coatings.",
     narrative:
       "Moroccan barite, also known as baryte or barytine, is sourced from vein and bedded deposits near Midelt in the central High Atlas and from the Ouarzazate province to the south, both of which produce a clean, off-white to light grey barite with specific gravity consistently in the 4.18 to 4.28 range — well above the API 13A specification required by the oil and gas drilling industry. We export barite in three principal forms: run-of-mine ore for drilling-fluid blenders who operate their own grinding circuits, finely milled powder with controlled particle size distribution for paints, plastics, and radiation shielding, and graded lumps for medical imaging and concrete shielding applications. The run-of-mine ore is shipped in loose bulk or in 1.5-tonne bulk bags, the powder is supplied in 25-kilogram or 50-kilogram valve-mouth paper sacks palletised and shrink-wrapped for container loading, and the lump material is packed in 1-tonne bulk bags for easy handling at the destination. Our standing stock is four hundred metric tons, with an additional two hundred tons produced monthly, and we schedule dispatches to avoid demurrage at the port. Every lot is tested for specific gravity by helium pycnometry, for barium sulphate content by gravimetric analysis, and for leachable heavy metals by ICP-MS, with results issued on The 3 Rocks letterhead and accepted by most oilfield operators without additional third-party testing. Moroccan barite enjoys a strong reputation in the Mediterranean and West African markets because of its low impurity content — particularly strontium and mercury — and because of the country’s well-established shipping links from Casablanca to all major oilfield service hubs. We recommend first-time buyers request a five-kilogram sample of each form before placing a commercial order, and we provide this free of charge with a prepaid courier label for destinations in Europe, the Middle East, and West Africa.",
     density: "4.18 - 4.28",
@@ -135,9 +139,10 @@ const productDetails: Record<string, any> = {
     ],
   },
   iron: {
-    title: "Moroccan Iron",
+    title: "Moroccan Iron Ore — 56%+ Fe, Nador & Oujda",
+    metaTitle: "Moroccan Iron Ore — 56%+ Fe, Nador & Oujda",
     description:
-      "Our Moroccan iron is distinguished by its superior quality and adaptability, essential for a wide array of industrial uses around the world.",
+      "Iron ore from Morocco's Nador and Oujda districts, grading at 56% Fe or higher. Bulk vessel shipments from 5,000 tons. Preferred supply source for Mediterranean steel mills.",
     narrative:
       "Moroccan iron ore comes from the ancient mining districts of the Nador and Oujda areas in the country's northeast, where hematite-rich formations have been worked since Phoenician times. The ore we export typically grades at 56 percent iron or higher, with low phosphorus and alumina content that makes it an attractive feed for both integrated steel mills and direct-reduction plants. We supply forty thousand metric tons of standing stock at any given time, sourced from our partner mines in the Rif and the eastern Meseta, and we can scale monthly volumes up or down to match buyer requirements. The ore is sized at our depot in Nador and dispatched as lump for blast furnace feed or as fines for sinter and pelletising plants, with options for washed and screened product to reduce the silica and alumina load. Lump ore is shipped by self-discharging bulk carrier from Nador's deep-water port, while fines are containerised in twenty-foot open-top containers with a PE liner and weighed at a certified truck scale before port delivery. European buyers benefit from the short sea route across the Mediterranean \u2014 the transit time from Nador to southern European ports such as Taranto, Piombino, or Sagunto is typically four to six days, making Moroccan iron ore a logistically compelling alternative to Brazilian or Australian supply. Port handling at Nador is managed by a dedicated stevedore team that The 3 Rocks has contracted on a multi-year basis, ensuring priority berthing for our vessels and consistent loading rates. For buyers in the Middle East, Asia, or the Americas, we offer FOB Nador terms and can arrange for an independent pre-shipment inspection by SGS, Bureau Veritas, or Intertek at the buyer's request and cost.",
     purity: "≥ 56%",
@@ -163,9 +168,10 @@ const productDetails: Record<string, any> = {
     ],
   },
   cobalt: {
-    title: "Moroccan Cobalt",
+    title: "Moroccan Cobalt — Bou Azzer, 42%+ Concentrate",
+    metaTitle: "Cobalt Concentrate — Bou Azzer, 42%+ Grade",
     description:
-      "Our high-quality Moroccan cobalt is essential for modern technology and industrial applications, sustainably sourced from Morocco's mineral wealth.",
+      "Moroccan cobalt concentrate (42%+) from the Bou Azzer district — Africa's only primary cobalt source outside the DRC. Battery-grade and superalloy spec. Contact us for availability.",
     narrative:
       "Moroccan cobalt is sourced from the Bou Azzer mining district in the central Anti-Atlas, one of the world\u2019s oldest and most productive cobalt mining regions and the only primary cobalt source on the African continent outside the Copperbelt. The ore is typically a cobalt arsenide assemblage with co-product nickel and silver, processed into a 42 percent-plus cobalt concentrate suitable for downstream hydrometallurgical refining. The concentrate is the preferred feed stock for lithium-ion battery precursor manufacturers, superalloy producers serving the aerospace and gas turbine industries, and high-performance magnet producers. As global demand for battery-grade cobalt continues to grow, the Bou Azzer district has attracted renewed investment in exploration, mine modernisation, and tailings retreatment. The 3 Rocks works with mining partners in Bou Azzer to secure long-term offtake volumes, with current concentrate availability confirmed on a contract-by-contract basis and standing stock reserved for established buyers. Our cobalt concentrate is shipped in sealed 1.5-tonne bulk bags, containerised at Agadir port and routed to the buyer\u2019s designated refinery or precursor plant. Every lot is assayed for cobalt, nickel, arsenic, and silver content by ICP-OES, and the concentrate can be dried to a specified moisture content of less than eight percent on request. For battery supply chain buyers who require a due diligence statement under the OECD Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas, we maintain the necessary documentation chain from mine to FOB loading, supported by an annual third-party audit. New buyers in the battery sector typically begin with a five-metric-ton trial lot for precursor qualification testing before committing to a twelve-month offtake agreement. For aerospace superalloy producers, we offer a separate high-purity concentrate stream with arsenic below five hundred parts per million and a certified nickel-to-cobalt ratio.",
     purity: "42%+",
@@ -189,9 +195,10 @@ const productDetails: Record<string, any> = {
     ],
   },
   antimony: {
-    title: "Moroccan Antimony",
+    title: "Moroccan Antimony — 30–50%+ Grade, Khenifra",
+    metaTitle: "Antimony Ore & Concentrate — 30–50%+, Morocco",
     description:
-      "Our premium Moroccan antimony provides exceptional quality for various industrial applications, sourced from Morocco's exclusive mining operations.",
+      "Strategic-grade Moroccan antimony from the Khenifra region. 30–50%+ Sb grades for flame retardants, battery hardening, and defence applications. Export documentation included.",
     narrative:
       "Moroccan antimony comes predominantly from the stibnite veins of the Khenifra region in the central Middle Atlas, where quartz-stibnite lodes cut through Palaeozoic shales and produce a clean, high-grade antimony ore well suited to both concentrate production and direct shipping ore. Our standard export grade runs from 30 percent antimony upward, with premium lots exceeding 50 percent antimony available from selected veins. Antimony is classified as a critical mineral by the European Union, the United States, and several Asian jurisdictions because of its irreplaceable role in flame retardants, lead-acid batteries, military applications, and specialised alloys. Demand has surged as construction, electronics, and electric-vehicle battery supply chains have expanded. The 3 Rocks holds standing relationships with the principal Khenifra mining operations and can reserve seven hundred tons of concentrate or run-of-mine ore for established buyers, with additional volumes mobilised within four to six weeks of a confirmed letter of credit. The concentrate is shipped in sealed 1.5-tonne bulk bags palletised for container loading at Casablanca, while run-of-mine ore is shipped in twenty-foot open-top containers lined with a single-use PE sheet to prevent cross-contamination. Each lot is assayed for antimony, arsenic, lead, and sulphur content by XRF and ICP-MS, with a full certificate of analysis issued before loading. European flame retardant manufacturers that use our antimony trioxide feed stock typically require an antimony content above 55 percent and arsenic below 2,000 parts per million — our premium Khenifra lots consistently deliver within these parameters. For military and aerospace buyers, we can arrange for an independent purity verification by an approved NATO laboratory, with the cost shared equally between buyer and seller for contracts exceeding one hundred metric tons.",
     purity: "30%+",
@@ -244,247 +251,6 @@ const formatStock = (
   return parts.join(", ");
 };
 
-// Product-specific SEO keywords
-const productKeywords: Record<string, string[]> = {
-  lead: [
-    "Moroccan lead",
-    "lead Morocco",
-    "lead supplier Morocco",
-    "Morocco lead mining",
-    "lead concentrate Morocco",
-    "lead powder Morocco",
-    "lead ore Morocco",
-    "Morocco lead concentrate",
-    "Morocco lead powder",
-    "Morocco lead ore",
-    "lead concentrate supplier Morocco",
-    "lead powder supplier Morocco",
-    "lead ore supplier Morocco",
-    "lead ingot exporter morocco",
-    "high-purity lead Morocco",
-    "Moroccan lead exporter",
-    "Morocco lead deposits",
-    "Bni Taddjit lead",
-    "Errachidia lead mining",
-    "lead-acid battery materials",
-    "radiation shielding lead",
-    "industrial lead Morocco",
-    "99.97% pure lead",
-    "lead mining Morocco",
-    "Morocco raw materials lead",
-    "African lead supplier",
-    "North Africa lead",
-    "lead concentrate supplier",
-    "Morocco mineral exports lead",
-    "ethically sourced lead",
-    "sustainable lead mining",
-    "lead for batteries",
-    "construction lead materials",
-    "automotive lead supplier",
-    "electronics lead Morocco",
-  ],
-  copper: [
-    "Moroccan copper",
-    "copper Morocco",
-    "copper supplier Morocco",
-    "copper ore supplier morocco",
-    "Moroccan copper concentrate",
-    "copper raw material Morocco",
-    "Morocco copper mining",
-    "copper ore Morocco",
-    "Morocco copper ore",
-    "copper ore supplier Morocco",
-    "copper concentrate Morocco",
-    "Morocco copper concentrate",
-    "high-quality copper Morocco",
-    "Moroccan copper exporter",
-    "Tinghir copper mining",
-    "Morocco copper deposits",
-    "industrial copper Morocco",
-    "99.9% pure copper",
-    "copper mining Morocco",
-    "Morocco raw materials copper",
-    "African copper supplier",
-    "North Africa copper",
-    "electrical copper Morocco",
-    "Morocco mineral exports copper",
-    "ethically sourced copper",
-    "sustainable copper mining",
-    "copper wiring materials",
-    "electronics copper supplier",
-    "telecommunications copper",
-    "construction copper Morocco",
-    "copper cathode Morocco",
-    "renewable energy copper",
-    "8-21% copper purity",
-  ],
-  zinc: [
-    "Moroccan zinc",
-    "zinc Morocco",
-    "zinc calamine Morocco",
-    "zinc supplier Morocco",
-    "Morocco zinc mining",
-    "zinc ore Morocco",
-    "zinc concentrate Morocco",
-    "Morocco zinc ore",
-    "Morocco zinc concentrate",
-    "zinc ore supplier Morocco",
-    "zinc concentrate supplier Morocco",
-    "calamine ore Morocco",
-    "Morocco calamine ore",
-    "high-purity zinc Morocco",
-    "Moroccan zinc exporter",
-    "Bni Taddjit zinc",
-    "Errachidia zinc mining",
-    "Morocco zinc deposits",
-    "industrial zinc Morocco",
-    "99.95% pure zinc",
-    "zinc mining Morocco",
-    "Morocco raw materials zinc",
-    "African zinc supplier",
-    "North Africa zinc",
-    "galvanizing zinc Morocco",
-    "Morocco mineral exports zinc",
-    "ethically sourced zinc",
-    "sustainable zinc mining",
-    "zinc for cosmetics",
-    "pharmaceutical zinc",
-    "die-casting zinc",
-    "zinc calamine skincare",
-    "zinc galvanizing steel",
-  ],
-  barite: [
-    "Moroccan barite",
-    "barite Morocco",
-    "baryte Morocco",
-    "barite supplier Morocco",
-    "Morocco barite mining",
-    "barite powder Morocco",
-    "barite ore Morocco",
-    "barite lumps Morocco",
-    "Morocco barite powder",
-    "Morocco barite ore",
-    "Morocco barite lumps",
-    "barite powder supplier Morocco",
-    "barite ore supplier Morocco",
-    "barite lumps supplier Morocco",
-    "high-density barite Morocco",
-    "Moroccan barite exporter",
-    "Morocco barite deposits",
-    "industrial barite Morocco",
-    "4.2 specific gravity barite",
-    "barite mining Morocco",
-    "Morocco raw materials barite",
-    "African barite supplier",
-    "North Africa barite",
-    "drilling barite Morocco",
-    "Morocco mineral exports barite",
-    "ethically sourced barite",
-    "sustainable barite mining",
-    "oil drilling barite",
-    "medical barite applications",
-    "paint grade barite",
-    "construction barite Morocco",
-    "BaSO4 Morocco",
-    "barium sulfate Morocco",
-  ],
-  iron: [
-    "Moroccan iron",
-    "iron Morocco",
-    "iron ore Morocco",
-    "Morocco iron ore",
-    "iron ore supplier Morocco",
-    "iron concentrate Morocco",
-    "Morocco iron concentrate",
-    "iron supplier Morocco",
-    "Morocco iron mining",
-    "high-purity iron Morocco",
-    "Moroccan iron exporter",
-    "Morocco iron deposits",
-    "industrial iron Morocco",
-    "98.5% pure iron",
-    "iron ore mining Morocco",
-    "Morocco raw materials iron",
-    "African iron supplier",
-    "North Africa iron",
-    "iron ore concentrate Morocco",
-    "Morocco mineral exports iron",
-    "ethically sourced iron",
-    "sustainable iron mining",
-    "construction iron Morocco",
-    "manufacturing iron ore",
-    "automotive iron materials",
-    "industrial machinery iron",
-    "steel production iron",
-    "iron ore 56% purity",
-    "Morocco iron-rich mountains",
-    "bulk iron ore supplier",
-  ],
-  cobalt: [
-    "Moroccan cobalt",
-    "cobalt Morocco",
-    "cobalt supplier Morocco",
-    "Morocco cobalt mining",
-    "cobalt ore Morocco",
-    "cobalt concentrate Morocco",
-    "Morocco cobalt ore",
-    "Morocco cobalt concentrate",
-    "cobalt ore supplier Morocco",
-    "cobalt concentrate supplier Morocco",
-    "high-purity cobalt Morocco",
-    "Moroccan cobalt exporter",
-    "Morocco cobalt deposits",
-    "industrial cobalt Morocco",
-    "99.8% pure cobalt",
-    "cobalt mining Morocco",
-    "Morocco raw materials cobalt",
-    "African cobalt supplier",
-    "North Africa cobalt",
-    "battery-grade cobalt Morocco",
-    "Morocco mineral exports cobalt",
-    "ethically sourced cobalt",
-    "sustainable cobalt mining",
-    "lithium-ion battery cobalt",
-    "cobalt for batteries",
-    "aerospace cobalt alloys",
-    "superalloy cobalt Morocco",
-    "cobalt 42% purity",
-    "electric vehicle cobalt",
-    "renewable energy cobalt",
-  ],
-  antimony: [
-    "Moroccan antimony",
-    "antimony Morocco",
-    "antimony supplier Morocco",
-    "Morocco antimony mining",
-    "antimony ore Morocco",
-    "antimony concentrate Morocco",
-    "Morocco antimony ore",
-    "Morocco antimony concentrate",
-    "antimony ore supplier Morocco",
-    "antimony concentrate supplier Morocco",
-    "high-purity antimony Morocco",
-    "Moroccan antimony exporter",
-    "Khenifra antimony mining",
-    "Morocco antimony deposits",
-    "industrial antimony Morocco",
-    "99.65% pure antimony",
-    "antimony mining Morocco",
-    "Morocco raw materials antimony",
-    "African antimony supplier",
-    "North Africa antimony",
-    "antimony trioxide Morocco",
-    "Morocco mineral exports antimony",
-    "ethically sourced antimony",
-    "sustainable antimony mining",
-    "flame retardant antimony",
-    "battery antimony materials",
-    "electronics antimony Morocco",
-    "antimony 30% purity",
-    "antimony alloys Morocco",
-  ],
-};
-
 // Metadata generator
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);
@@ -500,129 +266,14 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   const productUrl = `https://www.the-3rocks.com/products/${params.id}`;
   const productImage = `https://www.the-3rocks.com/images/${params.id}-product.png`;
 
-  // Generate Schema.org Product structured data
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: details.title,
-    image: productImage,
-    description: details.description,
-    url: productUrl,
-    sku: `MRC-${params.id.toUpperCase()}`,
-    mpn: `MRC-${params.id.toUpperCase()}`,
-    brand: {
-      "@type": "Brand",
-      name: "The 3 Rocks Company",
-    },
-    manufacturer: {
-      "@type": "Organization",
-      name: "The 3 Rocks Company",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "Morocco",
-      },
-    },
-    offers: {
-      "@type": "Offer",
-      url: productUrl,
-      priceCurrency: "USD",
-      price: "1000",
-      priceValidUntil: "2026-12-31",
-      itemCondition: "https://schema.org/NewCondition",
-      availability: "https://schema.org/InStock",
-      seller: {
-        "@type": "Organization",
-        name: "The 3 Rocks Company",
-      },
-      areaServed: {
-        "@type": "Place",
-        name: "Worldwide",
-      },
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: "MA",
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: "30",
-        returnMethod: "https://schema.org/ReturnByMail",
-        returnFees: "https://schema.org/FreeReturn",
-      },
-      shippingDetails: {
-        "@type": "OfferShippingDetails",
-        shippingRate: {
-          "@type": "MonetaryAmount",
-          value: "0",
-          currency: "USD",
-        },
-        shippingDestination: {
-          "@type": "DefinedRegion",
-          addressCountry: "MA",
-        },
-        deliveryTime: {
-          "@type": "ShippingDeliveryTime",
-          handlingTime: {
-            "@type": "QuantitativeValue",
-            minValue: "0",
-            maxValue: "1",
-            unitCode: "DAY",
-          },
-          transitTime: {
-            "@type": "QuantitativeValue",
-            minValue: "1",
-            maxValue: "5",
-            unitCode: "DAY",
-          },
-        },
-      },
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "85",
-    },
-    review: {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-      },
-      author: {
-        "@type": "Person",
-        name: "Industrial Partner",
-      },
-    },
-    additionalProperty: [
-      {
-        "@type": "PropertyValue",
-        name: "Origin",
-        value: "Morocco",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Purity Level",
-        value: details.purityLevel,
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Annual Extraction",
-        value: details.annualExtraction,
-      },
-    ],
-    category: "Mining & Raw Materials",
-    countryOfOrigin: {
-      "@type": "Country",
-      name: "Morocco",
-    },
-  };
-
   return {
-    title: `${details.title} | Premium Moroccan Mining Materials`,
+    title: details.metaTitle || details.title,
     description: details.description,
-    keywords: productKeywords[params.id] || [],
     authors: [{ name: "The 3 Rocks Company" }],
     creator: "The 3 Rocks Mining Company",
     publisher: "The 3 Rocks Company, Morocco",
     openGraph: {
-      title: `${details.title} - Premium Quality from Morocco`,
+      title: details.metaTitle || details.title,
       description: details.description,
       url: productUrl,
       siteName: "The 3 Rocks",
@@ -639,7 +290,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${details.title} - Premium Moroccan Mining Materials`,
+      title: details.metaTitle || details.title,
       description: details.description,
       images: [productImage],
       creator: "@the3rocks",
@@ -850,7 +501,35 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     },
   };
 
-  // Generate Schema.org FAQPage structured data for lead, zinc, and copper
+  const productName = product?.name?.toLowerCase() || "";
+
+  // BreadcrumbList schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.the-3rocks.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.the-3rocks.com/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": details.title,
+        "item": `https://www.the-3rocks.com/products/${params.id}`
+      }
+    ]
+  };
+
+  // Generate Schema.org FAQPage structured data
   let faqSchema = null;
   if (params.id === "lead") {
     faqSchema = {
@@ -862,23 +541,23 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           "name": "Who is the leading lead ore supplier in Morocco?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The 3 Rocks Company is Morocco's leading lead ore supplier, offering high-purity Moroccan lead concentrate, lead powder, and raw lead ore ethically sourced from mineral-rich Moroccan mining regions."
+            "text": "The 3 Rocks Company is Morocco's leading lead ore supplier, offering high-purity Moroccan lead concentrate (86% Pb), lead powder, and raw lead ore ethically sourced from the Bni Taddjit and Errachidia mineral belt."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the purity of Moroccan lead concentrate and powder you supply?",
+          "name": "What is the purity of Moroccan lead concentrate and powder?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our lead concentrate features an exceptional purity of 86%, while our lead powder is 76% pure. Raw lead ore is also available at more than 50% purity."
+            "text": "Our lead concentrate is 86% pure, lead powder is 76% pure, and run-of-mine ore exceeds 50% purity. Monthly capacity is 700 tons. Ships FOB Casablanca or Tangier Med."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you export lead ingots and concentrates globally?",
+          "name": "What are the main applications of Moroccan lead?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, as a trusted lead ingot exporter and raw materials supplier, we export lead concentrates and ores globally, complying with international shipping and environmental safety regulations."
+            "text": "Moroccan lead is primarily used in lead-acid battery manufacturing (>80% of global consumption), radiation shielding for medical and nuclear facilities, cosmetics, and specialty alloys."
           }
         }
       ]
@@ -890,10 +569,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Where can I source high-quality zinc concentrate in Morocco?",
+          "name": "Where can I source high-quality zinc calamine in Morocco?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The 3 Rocks is a leading supplier of premium zinc concentrate in Morocco. We offer high-quality zinc calamine ore (+37% purity) and zinc concentrate (70% purity) sourced from legendary Moroccan mining regions."
+            "text": "The 3 Rocks supplies zinc calamine ore (+37% Zn) and concentrate (70% Zn) from the Errachidia mineral belt in the eastern High Atlas. Available for galvanising, die-casting, pharmaceuticals, and cosmetics."
           }
         },
         {
@@ -901,7 +580,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           "name": "What are the key specifications of Moroccan zinc calamine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our zinc calamine ore offers exceptional purity of +37%, a density of 7.14 g/cm³, and a melting point of 419.5°C, making it ideal for galvanization and die-casting."
+            "text": "Our zinc calamine ore offers +37% purity with a density of 7.14 g/cm³. Concentrate grades reach 70% purity. Monthly capacity is 700 metric tons with FOB Casablanca shipping."
           }
         }
       ]
@@ -916,15 +595,107 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           "name": "What is the purity range of Moroccan copper supplied by The 3 Rocks?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our Moroccan copper ore typically ranges from 8% to 21% purity. We also offer high-purity copper of up to 40% under special export permit."
+            "text": "Our Moroccan copper ore ranges from 8% to 21% purity. High-purity copper up to 40% is available under special export permit. Sourced from the Tinghir region and central High Atlas."
           }
         },
         {
           "@type": "Question",
-          "name": "What are the industrial applications of your Moroccan copper?",
+          "name": "What are the industrial applications of Moroccan copper?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is widely used in electrical wiring, telecommunications infrastructure, heat exchangers, cooling systems, and electronics manufacturing."
+            "text": "Moroccan copper is used in electrical wiring, telecommunications infrastructure, renewable energy systems, brass and bronze alloys, and chemical processing. Available FOB Casablanca or CIF to global ports."
+          }
+        }
+      ]
+    };
+  } else if (params.id === "barite") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the specific gravity of Moroccan barite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Moroccan barite has a specific gravity of 4.18–4.28, exceeding the API 13A minimum of 4.2. Sourced from Midelt and Ouarzazate, it is ideal for oil and gas drilling fluids."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What forms of barite does The 3 Rocks supply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We supply run-of-mine ore, finely milled powder (25 kg or 50 kg sacks), and graded lumps (1-tonne bulk bags). All forms are tested for SG, BaSO4 content, and leachable heavy metals."
+          }
+        }
+      ]
+    };
+  } else if (params.id === "iron") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What grade of iron ore does The 3 Rocks export from Morocco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Moroccan iron ore grades at 56% Fe or higher from the Nador and Oujda districts. Low phosphorus and alumina content makes it ideal feed for blast furnaces and direct-reduction plants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum order quantity for Moroccan iron ore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bulk vessel shipments start from 5,000 metric tons. We maintain 40,000 tons of standing stock. Transit time to southern European ports is 4–6 days from Nador."
+          }
+        }
+      ]
+    };
+  } else if (params.id === "cobalt") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Moroccan cobalt sourced from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our cobalt comes from the Bou Azzer district in the Anti-Atlas — the only primary cobalt source in Africa outside the DRC. The concentrate grades at 42%+ cobalt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries use Moroccan cobalt concentrate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Moroccan cobalt is used by lithium-ion battery precursor manufacturers, aerospace superalloy producers, and high-performance magnet makers. OECD due diligence documentation available."
+          }
+        }
+      ]
+    };
+  } else if (params.id === "antimony") {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What grade of antimony does The 3 Rocks supply from Morocco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Moroccan antimony from the Khenifra region grades from 30% to over 50% Sb. Premium lots exceed 50% with arsenic below 2,000 ppm for European flame retardant manufacturers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the main uses of Moroccan antimony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Antimony is used in brominated flame retardants for electronics and construction, lead-acid battery hardening, military applications (night-vision, infrared sensors), and specialty alloys."
           }
         }
       ]
@@ -937,6 +708,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {faqSchema && (
         <script
@@ -1576,6 +1351,27 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     <p>Moroccan {product.name.toLowerCase()} from The 3 Rocks is exported to buyers across Europe, Asia, the Middle East, Africa, and the Americas. Our primary export markets for this mineral include industrial processors and manufacturers in Spain, Italy, Germany, France, Belgium, the Netherlands, the United Kingdom, Turkey, Egypt, Saudi Arabia, the United Arab Emirates, India, China, Japan, South Korea, Nigeria, Ghana, the United States, and Brazil. For each destination, we tailor the shipping method, documentation, and packaging to the buyer&#39;s specific requirements and to the regulations of the destination country.</p>
                     <p>Standard shipping is arranged in 20-foot or 40-foot containers from Casablanca or Tangier Med, with vessel nomination and container booking managed by our logistics team. For large-volume orders exceeding 500 metric tons, we can arrange break-bulk or full-vessel charter shipments from Jorf Lasfar or Casablanca, with the vessel type and size matched to the buyer&#39;s discharge port capabilities. Our team manages all port-side logistics including container stuffing, weight verification at certified scales, customs clearance through Morocco&#39;s ADIL system, and vessel-side documentation including the bill of lading, cargo manifest, and stowage plan.</p>
                     <p>Shipping insurance is arranged through a Moroccan insurer with A-minus or better financial strength rating, covering Institute Cargo Clauses A for containerised shipments and Institute Cargo Clauses B for bulk shipments. The insurance certificate is issued in the buyer&#39;s name and covers the cargo from the moment it passes the ship&#39;s rail at the port of loading until it is discharged at the port of destination. Buyers who prefer to arrange their own insurance can do so under FOB or CFR incoterms.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Responsible Sourcing & ESG */}
+            <div className="mb-16" data-aos="fade-up">
+              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold font-red-hat-display text-gray-900 dark:text-white">Responsible Sourcing & ESG Compliance</h2>
+                  </div>
+                  <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4">
+                    <p>Environmental, social, and governance (ESG) considerations are increasingly central to mineral procurement decisions, and The 3 Rocks has structured its supply chain to meet the documentation and verification requirements that buyers in regulated industries expect. Every mining partner in our network holds a valid exploitation permit issued under Morocco&#39;s Mining Law 33-13, which requires an approved environmental impact assessment, a site rehabilitation plan, and a social responsibility agreement with the local community. We maintain a chain-of-custody record for every lot of Moroccan {product.name.toLowerCase()} that passes through our network, from the mine weighbridge to the vessel loading at the port, and we make these records available to buyers on request.</p>
+                    <p>For buyers who require additional ESG documentation, we can provide conflict-mineral declarations confirming that our materials do not originate from conflict-affected or high-risk areas as defined by the OECD Due Diligence Guidance for Responsible Supply Chains. We can also provide a modern slavery statement confirming compliance with the UK Modern Slavery Act 2015 and the Australian Modern Slavery Act 2018. For buyers who require a carbon footprint estimate per metric ton of delivered mineral, our logistics team can calculate the cradle-to-gate emissions based on the extraction method, the beneficiation route, the inland transport distance to the port, and the ocean freight distance to the destination port, using emission factors published by the International Maritime Organization and the Moroccan National Electricity Office. These ESG documents are provided as part of our standard export documentation package for buyers who request them at the quotation stage.</p>
+                    <p>Our commitment to responsible sourcing extends to the communities where we operate. A portion of the value of every shipment is directed toward local development initiatives in the mining districts of the High Atlas, Anti-Atlas, and Middle Atlas regions, including school construction, clean water projects, and healthcare infrastructure. We believe that a mining supply chain that is transparent, documented, and accountable to both the buyer and the community is the only basis for a long-term commercial relationship, and we have structured our operations accordingly.</p>
                   </div>
                 </div>
               </div>

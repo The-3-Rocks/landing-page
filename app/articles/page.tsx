@@ -7,8 +7,6 @@ export const metadata = {
   title: "Moroccan Mining Insights & Industry Articles",
   description:
     "Explore expert articles on Morocco's mining industry, mineral extraction, sustainability practices, and market trends from The 3 Rocks Company.",
-  keywords:
-    "Moroccan mining articles, mining insights Morocco, mineral industry news, Moroccan raw materials, cobalt mining, lead industry Morocco, sustainable mining Morocco",
   openGraph: {
     title: "Moroccan Mining Insights & Industry Articles",
     description:

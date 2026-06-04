@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.the-3rocks.com"),
   title: {
     template: "%s | The 3 Rocks",
-    default: "The 3 Rocks - Morocco's Leading Mining & Raw Materials Supplier",
+    default: "Moroccan Mineral Exporter — Lead, Zinc, Cobalt, Barite | The 3 Rocks",
   },
   description:
     "Discover The 3 Rocks, Morocco's premier supplier of premium raw materials including lead, zinc, copper, barite, iron, cobalt and antimony. Our materials are ethically sourced from Morocco's legendary mining regions with sustainable practices. We deliver exceptional quality, transparency, and reliability to industries worldwide. Explore our extensive range of Moroccan minerals and see why we are the preferred choice for businesses seeking top-tier Moroccan raw materials.",

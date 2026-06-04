@@ -1,9 +1,7 @@
 export const metadata = {
-  title: "Leading Moroccan Mining Experts",
+  title: "About The 3 Rocks — Lead, Zinc & Mineral Exporter Morocco",
   description:
     "Discover Morocco's premier mining company with decades of expertise in extracting high-quality minerals from Morocco's rich geological deposits. Learn about our sustainable Moroccan mining practices and heritage.",
-  keywords:
-    "Moroccan mining, Morocco minerals, mining company Morocco, sustainable mining Morocco, Moroccan mineral extraction, Morocco mining experts",
   openGraph: {
     title: "About The 3 Rocks - Morocco's Premier Mining Experts",
     description:
@@ -56,6 +54,15 @@ export default function About() {
               </p>
               <p>
                 The 3 Rocks is, at its heart, a service company. We do not extract the ore ourselves; we partner with the best mining operations in each region, applying consistent quality standards across the entire supply chain. We do not own the vessels; we coordinate with established freight forwarders and shipping lines that serve the major Moroccan ports of Casablanca, Tangier Med, and Jorf Lasfar. What we own is the relationship with the buyer, the integrity of the chain of custody, and the commitment to be reachable, accountable, and fair at every stage of the engagement.
+              </p>
+              <p>
+                Our technical team brings together geologists who have mapped mineral deposits across the High Atlas, Anti-Atlas, and Middle Atlas ranges, mineral processing engineers with hands-on experience operating beneficiation plants for lead, zinc, barite, cobalt, and antimony, and logistics professionals who have managed export shipments from Morocco to over twenty destination countries. Each member of our technical staff holds relevant professional qualifications — including engineering degrees from Moroccan and European universities, certifications in XRF and ICP analysis, and professional memberships in organisations such as the Institute of Materials, Minerals and Mining and the Society for Mining, Metallurgy and Exploration. This depth of in-house expertise is what allows us to answer technical questions about mineral grade, impurity profiles, beneficiation routes, and application suitability without having to consult external consultants.
+              </p>
+              <p>
+                In the field, our team maintains direct relationships with mining operations that collectively span more than thirty individual deposits across Morocco&rsquo;s mineral-producing regions. Each deposit has been evaluated by our geological team for grade consistency, mineralogy, access infrastructure, and environmental compliance before being added to our supply network. We do not work with artisanal or unlicensed operations, and every mining partner in our network must demonstrate a valid exploitation licence, an approved environmental management plan, and a visible commitment to worker health and safety before the first shipment can be scheduled. This due diligence process is documented in writing and reviewed annually, and the records are available for inspection by buyers who request them during the contract negotiation phase.
+              </p>
+              <p>
+                Our laboratory quality control system integrates on-site screening at our Errachidia depot with third-party analysis at ISO 17025-accredited laboratories in Casablanca, Rabat, and Marrakech. The on-site facility is equipped with a handheld XRF analyser for rapid elemental grade screening of incoming lots, a thermogravimetric analyser for moisture determination, a sieve shaker for particle size analysis, and a pycnometer for specific gravity measurement. All production lots are assigned unique reference numbers that track the material from the mine weighbridge through beneficiation, sampling, testing, and packing, and the results of all quality control tests are recorded in a digital database that is accessible to our export documentation team in real time. The third-party certificate of analysis that accompanies each shipment confirms the grade, impurity profile, moisture, and physical properties determined by the methods specified in the sales contract, and the buyer retains the right to nominate a fourth laboratory for umpire analysis in the event of a grade dispute.
               </p>
               <p>
                 We are equally comfortable handling a 20-ton trial shipment of Moroccan zinc calamine for a brand-new customer as we are coordinating a 40,000-ton iron ore cargo from the Nador district to a Mediterranean steel mill. Whichever the size of the engagement, our quality system, our people, and our commitment to transparent communication remain the same. If you would like to learn more about our work, discuss a specific sourcing requirement, or arrange a visit to one of our depots, please <a href="/contact">get in touch</a> — we respond to every enquiry within one business day.

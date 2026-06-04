@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FAQPage, WithContext, Question } from "schema-dts";
 
 export const metadata = {
-  title: "Frequently Asked Questions",
+  title: "FAQ — Moroccan Minerals & Raw Materials Export | The 3 Rocks",
   description:
     "Discover frequently asked questions about raw materials supplying and more by The 3 Rocks.",
 };
@@ -98,6 +98,16 @@ const faqs = [
     question: "How is the price of Moroccan raw materials typically structured?",
     answer:
       "Pricing is negotiated on a per-shipment basis and depends on the mineral, the grade, the form (ore, concentrate, powder), the packing, the incoterm, and the destination port. For long-term contracts, we offer formula-based pricing tied to the relevant LME reference price or to a published benchmark such as Metal Bulletin, with adjustments for grade and delivery terms. Indicative pricing for any of our minerals is available on request within twenty-four hours. We do not publish price lists on the website because raw material prices move with global commodity markets and we want our quotations to reflect the current market, not a stale figure.",
+  },
+  {
+    question: "What packaging options do you offer for mineral shipments?",
+    answer:
+      "We offer a range of packaging options depending on the product form, the quantity, and the buyer's handling equipment at the destination. For concentrate and powder products, standard packaging is 50-kilogram polypropylene-lined bags palletised and shrink-wrapped, or one-metric-tonne jumbo bags with four lifting loops for crane handling. For lump ore and coarse materials, we use 20-foot or 40-foot open-top containers lined with polypropylene sheets, or bulk loading directly into the vessel hold for large-volume shipments exceeding 500 metric tons. Each packaging format is selected to minimise moisture absorption, prevent contamination, and withstand the handling and transport conditions of the specific shipping route. We provide photographs of every container at the stuffing stage, and the packaging specification is recorded in the packing list included with the export documentation.",
+  },
+  {
+    question: "What laboratory testing methods does The 3 Rocks use for quality control?",
+    answer:
+      "Our quality control laboratory at the Errachidia depot is equipped with a handheld X-ray fluorescence analyser for rapid elemental screening of incoming lots, a thermogravimetric analyser for moisture content determination, a mechanical sieve shaker for particle size distribution analysis, and a gas pycnometer for specific gravity measurement of dense minerals such as barite. For comprehensive elemental analysis, we partner with ISO 17025-accredited laboratories in Casablanca, Rabat, and Marrakech that use inductively coupled plasma optical emission spectrometry for major and minor elements, inductively coupled plasma mass spectrometry for trace elements at parts-per-million and parts-per-billion detection limits, and cold-vapour atomic fluorescence spectrometry for mercury determination where required by the buyer's specification. All test methods are selected from internationally recognised standards published by ASTM, ISO, or EN, and the specific method used for each parameter is stated on the certificate of analysis.",
   },
 ];
 
