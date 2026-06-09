@@ -93,6 +93,12 @@ export default function RootLayout({
           `}
         </Script>
         <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="Gkc7KYwRYfJIEKJtsxbc2Q"
+          strategy="lazyOnload"
+          nonce={nonce}
+        />
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6470650628887259"
           crossOrigin="anonymous"
           strategy="afterInteractive"
