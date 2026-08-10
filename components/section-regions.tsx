@@ -37,10 +37,10 @@ export default function SectionRegions() {
           ))}
         </div>
 
-        <div className="p-6 rounded-lg" style={{ backgroundColor: "#f5f5f5" }}>
+        <div className="p-6 rounded-lg bg-gray-50 dark:bg-gray-800">
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#e1f5ee" }}>
-              <GitBranch size={18} color="#1d9e75" />
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-teal-50 dark:bg-teal-900">
+              <GitBranch size={18} className="text-teal-700 dark:text-teal-300" />
             </div>
             <div>
               <h3 className="text-base font-medium text-gray-900 dark:text-white mb-1">Multi-source flexibility</h3>

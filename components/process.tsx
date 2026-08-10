@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +11,31 @@ import ExportImage from "@/public/images/export1.webp";
 import AnalysisImage from "@/public/images/analyses11.webp";
 
 export default function MiningProcess() {
+  const [activeStep, setActiveStep] = useState<number>(1);
+
+  const stepDetails: Record<number, { title: string; description: string }> = {
+    1: {
+      title: 'Extraction',
+      description:
+        'We extract raw materials from Morocco using sustainable methods that minimize environmental impact while maximizing resource quality. Our mining partners employ selective extraction techniques tailored to each deposit\'s geology, reducing waste and preserving high-grade material. All operations follow Moroccan mining regulations and international safety standards, with ongoing rehabilitation of extraction sites.',
+    },
+    2: {
+      title: 'Analysis',
+      description:
+        'Each batch undergoes rigorous testing and analysis to verify purity levels and ensure compliance with international quality standards. Our laboratory team conducts chemical composition analysis, particle size distribution, moisture content testing, and contaminant screening. Detailed certificates of analysis accompany every shipment, providing full transparency on product specifications.',
+    },
+    3: {
+      title: 'Processing',
+      description:
+        'Materials are carefully processed and prepared according to client specifications and international standards. This stage includes crushing, grinding, screening, grading, and homogenization to achieve consistent particle size and chemical composition. Each lot is individually sampled, labeled, and stored in segregated inventory for complete traceability from mine to delivery.',
+    },
+    4: {
+      title: 'Export',
+      description:
+        'We handle all documentation, logistics, and shipping requirements to ensure timely delivery from Morocco to your destination. Our export team manages customs clearance, certificates of origin, weight and quality verification at port, and container loading supervision. We coordinate with major Moroccan ports — Casablanca, Jorf Lasfar, and Tangier Med — to optimize shipping routes and transit times for clients worldwide.',
+    },
+  };
+
   return (
     <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -93,15 +121,17 @@ export default function MiningProcess() {
             <div className="grid md:grid-cols-4 gap-8 md:gap-12">
               {/* Step 1: Extraction */}
               <div
-                className="relative flex flex-col items-center"
+                className="relative flex flex-col items-center cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
                 data-aos="fade-up"
+                onMouseEnter={() => setActiveStep(1)}
+                style={{ filter: activeStep !== 1 ? 'grayscale(100%)' : 'none' }}
               >
                 {/* Number */}
                 <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
                   1
                 </div>
                 {/* Image */}
-                <div className="relative w-full h-56 mb-6 shadow-lg rounded-lg overflow-hidden">
+                <div className="relative w-full h-56 mb-6 shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out">
                   <Image
                     className="object-cover w-full h-full"
                     src={ExtractionImage}
@@ -116,21 +146,15 @@ export default function MiningProcess() {
                     </h3>
                   </div>
                 </div>
-                {/* Description */}
-                <div className="text-center">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    We extract raw materials from Morocco using sustainable
-                    methods that minimize environmental impact while maximizing
-                    resource quality. Our mining partners employ selective extraction techniques tailored to each deposit's geology, reducing waste and preserving high-grade material. All operations follow Moroccan mining regulations and international safety standards, with ongoing rehabilitation of extraction sites.
-                  </p>
-                </div>
               </div>
 
               {/* Step 2: Processing & Analysis */}
               <div
-                className="relative flex flex-col items-center"
+                className="relative flex flex-col items-center cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
                 data-aos="fade-up"
                 data-aos-delay="100"
+                onMouseEnter={() => setActiveStep(2)}
+                style={{ filter: activeStep !== 2 ? 'grayscale(100%)' : 'none' }}
               >
                 {/* Number */}
                 <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
@@ -152,21 +176,15 @@ export default function MiningProcess() {
                     </h3>
                   </div>
                 </div>
-                {/* Description */}
-                <div className="text-center">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Each batch undergoes rigorous testing and analysis to verify
-                    purity levels and ensure compliance with international
-                    quality standards. Our laboratory team conducts chemical composition analysis, particle size distribution, moisture content testing, and contaminant screening. Detailed certificates of analysis accompany every shipment, providing full transparency on product specifications.
-                  </p>
-                </div>
               </div>
 
               {/* Step 3: Processing */}
               <div
-                className="relative flex flex-col items-center"
+                className="relative flex flex-col items-center cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
                 data-aos="fade-up"
                 data-aos-delay="200"
+                onMouseEnter={() => setActiveStep(3)}
+                style={{ filter: activeStep !== 3 ? 'grayscale(100%)' : 'none' }}
               >
                 {/* Number */}
                 <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
@@ -188,20 +206,15 @@ export default function MiningProcess() {
                     </h3>
                   </div>
                 </div>
-                {/* Description */}
-                <div className="text-center">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Materials are carefully processed and prepared according to
-                    client specifications and international standards. This stage includes crushing, grinding, screening, grading, and homogenization to achieve consistent particle size and chemical composition. Each lot is individually sampled, labeled, and stored in segregated inventory for complete traceability from mine to delivery.
-                  </p>
-                </div>
               </div>
 
               {/* Step 4: Export */}
               <div
-                className="relative flex flex-col items-center"
+                className="relative flex flex-col items-center cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
                 data-aos="fade-up"
                 data-aos-delay="300"
+                onMouseEnter={() => setActiveStep(4)}
+                style={{ filter: activeStep !== 4 ? 'grayscale(100%)' : 'none' }}
               >
                 {/* Number */}
                 <div className="w-16 h-16 rounded-full bg-teal-500 flex justify-center items-center text-white font-bold text-xl mb-6 z-10">
@@ -221,14 +234,17 @@ export default function MiningProcess() {
                     <h3 className="text-xl font-bold text-white p-4">Export</h3>
                   </div>
                 </div>
-                {/* Description */}
-                <div className="text-center">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    We handle all documentation, logistics, and shipping
-                    requirements to ensure timely delivery from Morocco to your
-                    destination. Our export team manages customs clearance, certificates of origin, weight and quality verification at port, and container loading supervision. We coordinate with major Moroccan ports — Casablanca, Jorf Lasfar, and Tangier Med — to optimize shipping routes and transit times for clients worldwide.
-                  </p>
-                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 shadow-sm">
+              <div className="max-w-4xl mx-auto">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700 dark:text-teal-300 mb-3">
+                  {stepDetails[activeStep].title}
+                </p>
+                <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {stepDetails[activeStep].description}
+                </p>
               </div>
             </div>
 
