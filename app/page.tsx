@@ -96,7 +96,7 @@ export default function Home() {
       <Hero />
 
       <Stats />
-      <ChatButtons />
+      {/* <ChatButtons /> */}
       {/* <Carousel /> */}
       <MoroccanMaterialsCarousel />
       <SectionAbout />
