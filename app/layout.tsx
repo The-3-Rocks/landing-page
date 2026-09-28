@@ -44,6 +44,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="stylesheet" href="/flag-icons.min.css" />
         <script
           type="application/ld+json"
           nonce={nonce}
