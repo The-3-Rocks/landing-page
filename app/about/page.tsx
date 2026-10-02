@@ -30,7 +30,7 @@ import ChatButtons from "@/components/ChatButtons";
 export default function About() {
   return (
     <>
-      <ChatButtons />
+      {/* <ChatButtons /> */}
       <Hero />
       <StoryAccordion />
 

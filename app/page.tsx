@@ -94,7 +94,7 @@ export default function Home() {
       </div>
       <Hero />
       <Stats />
-      <ChatButtons />
+      {/* <ChatButtons /> */}
       <MoroccanMaterialsCarousel />
       <SectionAbout />
 
