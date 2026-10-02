@@ -59,19 +59,6 @@ export default function SectionRegions() {
           ))}
         </div>
 
-<<<<<<< HEAD
-        <div className="p-6 rounded-lg bg-[#f5f5f5] dark:bg-gray-800">
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#e1f5ee] dark:bg-teal-900/40">
-              <GitBranch size={18} className="text-[#1d9e75] dark:text-teal-300" />
-            </div>
-            <div>
-              <h3 className="text-base font-medium text-gray-900 dark:text-white mb-1">Multi-source flexibility</h3>
-              <p className="text-[15px] leading-relaxed text-gray-500 dark:text-gray-400">
-                We maintain direct relationships with mines in every region — so we can match grade profiles and impurity signatures to your specific process requirements.
-              </p>
-            </div>
-=======
         <div
           className="group relative flex items-start gap-4 p-6 rounded-lg bg-gray-50 dark:bg-gray-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-sm"
           data-aos="fade-up"
@@ -89,7 +76,6 @@ export default function SectionRegions() {
             <p className="text-[15px] leading-relaxed text-gray-500 dark:text-gray-400">
               We maintain direct relationships with mines in every region — so we can match grade profiles and impurity signatures to your specific process requirements.
             </p>
->>>>>>> 34839abfd00e8f64ad26d0a94d59ecea26ae612a
           </div>
         </div>
       </div>
