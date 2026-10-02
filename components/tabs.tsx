@@ -36,7 +36,7 @@ export default function Tabs() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+            <div className="section-pill">
               Morocco's Premium Services
             </div>
             <h2 className="h2 font-red-hat-display mb-4">

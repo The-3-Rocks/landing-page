@@ -1,0 +1,61 @@
+
+> appy-next@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.4
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+   automatically enabled Fast Refresh for 1 custom loader
+ ✓ Ready in 4s
+ ✓ Compiled /middleware in 384ms (118 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 12.3s (1645 modules)
+ GET / 200 in 13169ms
+ ✓ Compiled in 2.2s (769 modules)
+ ○ Compiling /about ...
+ ✓ Compiled /about in 5.7s (1672 modules)
+ GET /about 200 in 6222ms
+ ○ Compiling /products ...
+ ✓ Compiled /products in 1085ms (1726 modules)
+ GET /products 200 in 1333ms
+ ○ Compiling /products/[id] ...
+ ✓ Compiled /products/[id] in 703ms (1743 modules)
+ GET /products/lead 200 in 1545ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 2.3s (1932 modules)
+ GET /contact 200 in 2680ms
+ ○ Compiling /faq ...
+ ✓ Compiled /faq in 1327ms (1936 modules)
+ GET /faq 200 in 1473ms
+ ○ Compiling /our-process ...
+ ✓ Compiled /our-process in 1308ms (1953 modules)
+ GET /our-process 200 in 1581ms
+ ○ Compiling /articles ...
+ ✓ Compiled /articles in 1402ms (2041 modules)
+ GET /articles 200 in 1658ms
+ ○ Compiling /help ...
+ ✓ Compiled /help in 1972ms (2060 modules)
+ GET /help 200 in 2149ms
+ ○ Compiling /testimonials ...
+ ✓ Compiled /testimonials in 1755ms (2198 modules)
+ GET /testimonials 200 in 1947ms
+ ○ Compiling /cookies-policy ...
+ ✓ Compiled /cookies-policy in 2.5s (2202 modules)
+ GET /cookies-policy 200 in 2658ms
+ ○ Compiling /our-privacy-policy ...
+ ✓ Compiled /our-privacy-policy in 927ms (2204 modules)
+ GET /our-privacy-policy 200 in 1047ms
+ ○ Compiling /our-terms ...
+ ✓ Compiled /our-terms in 993ms (2206 modules)
+ GET /our-terms 200 in 1120ms
+ GET /help 200 in 92ms
+ GET /testimonials 200 in 131ms
+ GET /articles 200 in 293ms
+ ✓ Compiled in 2s (1006 modules)
+ ✓ Compiled in 1250ms (1006 modules)
+ ✓ Compiled in 1036ms (1006 modules)
+ ✓ Compiled in 1181ms (1006 modules)
+ ✓ Compiled in 997ms (1006 modules)
+ ✓ Compiled in 974ms (1006 modules)
+ ✓ Compiled in 1117ms (1006 modules)

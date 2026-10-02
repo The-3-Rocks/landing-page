@@ -1,0 +1,33 @@
+/* ===== Shipment journey — The 3 Rocks ===== */
+
+.sj-panel-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(16px);
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out,
+    visibility 0s linear 500ms;
+}
+
+.sj-panel-layer.sj-panel-active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out,
+    visibility 0s linear 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sj-panel-layer {
+    transition: none !important;
+  }
+}

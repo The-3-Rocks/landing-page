@@ -25,8 +25,8 @@ export default function Cta() {
                   r="39.386%"
                   id="box-gr-a"
                 >
-                  <stop stopColor="#667EEA" offset="0%" />
-                  <stop stopColor="#667EEA" stopOpacity="0" offset="100%" />
+                  <stop stopColor="#C98B4B" offset="0%" />
+                  <stop stopColor="#C98B4B" stopOpacity="0" offset="100%" />
                 </radialGradient>
                 <radialGradient
                   cx="50%"

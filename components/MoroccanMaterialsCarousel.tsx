@@ -102,7 +102,7 @@ export default function MoroccanMaterialsCarousel() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8" style={{ marginTop: -36 }}>
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-          <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
+          <div className="section-pill">
             Morocco's Mining Excellence
           </div>
           <h2 className="h2 font-red-hat-display mb-4">

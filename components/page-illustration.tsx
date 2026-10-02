@@ -9,8 +9,8 @@ export default function PageIllustration() {
           <stop offset="1" stopColor="#3ABAB4" stopOpacity=".01" />
         </radialGradient>
         <radialGradient id="heroglow_paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(90 -40 249) scale(133.913)">
-          <stop stopColor="#667EEA" />
-          <stop offset="1" stopColor="#667EEA" stopOpacity=".01" />
+          <stop stopColor="#285E61" />
+          <stop offset="1" stopColor="#285E61" stopOpacity=".01" />
         </radialGradient>
       </defs>
     </svg>

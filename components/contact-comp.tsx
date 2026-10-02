@@ -534,34 +534,12 @@ const Contact: React.FC = () => {
         <PageIllustration />
       </div>
 
-      <section className="relative">
+      <section id="contact" className="relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-          <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-            {/* Page header */}
-            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h3 font-red-hat-display mb-4">
-                Get started with{" "}
-                <span className="h1 font-red-hat-display mb-4">
-                  {" "}
-                  the<span className="text-teal-500">3</span>Rocks{" "}
-                </span>{" "}
-                in Seconds
-              </h1>
-
-              <p className="text-xl text-gray-600 dark:text-gray-400">
-                We'll reach out soon with exclusive details about our premium
-                raw materials and exceptional services.
-              </p>
-              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mt-6">
-                After submitting your inquiry, a member of our team will review your requirements and respond within 24 hours with product specifications, current pricing, and shipping options. For urgent requests, we recommend including your preferred delivery timeline and target specifications so we can prioritize your inquiry and provide the most relevant material options from our current inventory.
-              </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed mt-4 max-w-2xl mx-auto">
-                Whether you are a industrial buyer, trader, or manufacturer, we work with you to define product specifications, arrange independent quality verification, and coordinate logistics from Moroccan ports to your destination. Our team speaks English, French, and Arabic to serve clients across Europe, the Middle East, Africa, and Asia.
-              </p>
-            </div>
-
-            {/* Company info panel */}
-            <div className="max-w-3xl mx-auto mb-12 grid md:grid-cols-2 gap-6">
+          <div className="py-10 md:py-14">
+            {/* Contact information + form */}
+            <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+              <div className="lg:col-span-4 space-y-6">
                 <div className="bg-white dark:bg-gray-800/70 backdrop-blur-xl rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 p-6">
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-teal-600 to-teal-500 text-white text-xs font-semibold mb-4 shadow-sm">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -570,25 +548,25 @@ const Contact: React.FC = () => {
                     </svg>
                     Our Office
                   </div>
-                  <div className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                    <svg className="w-4 h-4 text-teal-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>The 3 Rocks Company, Casablanca, Morocco</span>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      <svg className="w-4 h-4 text-teal-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>The 3 Rocks Company, Rabat, Morocco</span>
+                    </div>
+                    <a href="mailto:info@the-3rocks.com" className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400">
                       <svg className="w-4 h-4 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                       info@the-3rocks.com
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                    </a>
+                    <a href="tel:+212654352802" className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400">
                       <svg className="w-4 h-4 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       +212 654352802 / +212 783046051
-                    </div>
+                    </a>
                     <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                       <svg className="w-4 h-4 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -605,7 +583,7 @@ const Contact: React.FC = () => {
                     </svg>
                     Why Choose The 3 Rocks?
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2">
                     {[
                       "Ethically sourced premium Moroccan minerals",
                       "Certified quality with rigorous testing",
@@ -623,14 +601,24 @@ const Contact: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-            </div>
+              </div>
 
-            {/* Contact form */}
-            <form
-              className="max-w-xl mx-auto"
-              onSubmit={handleSubmit}
-              ref={formRef}
-            >
+              {/* Contact form */}
+              <div className="lg:col-span-8">
+                <h2 className="text-2xl font-black tracking-tight text-gray-900 dark:text-gray-100 font-red-hat-display mb-2">
+                  Send us a message
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-2">
+                  We&apos;ll reach out soon with exclusive details about our premium raw materials and exceptional services.
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                  Whether you are an industrial buyer, trader, or manufacturer, we work with you to define product specifications, arrange independent quality verification, and coordinate logistics from Moroccan ports to your destination. Our team speaks English, French, and Arabic to serve clients across Europe, the Middle East, Africa, and Asia.
+                </p>
+                <form
+                  id="contact-form"
+                  onSubmit={handleSubmit}
+                  ref={formRef}
+                >
               <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                   <label
@@ -642,7 +630,7 @@ const Contact: React.FC = () => {
                   <input
                     id="first-name"
                     type="text"
-                    className="form-input w-full"
+                    className="form-input w-full focus:border-teal-500! transition-colors"
                     placeholder="Enter your first name"
                     required
                     name="firstName"
@@ -660,7 +648,7 @@ const Contact: React.FC = () => {
                   <input
                     id="last-name"
                     type="text"
-                    className="form-input w-full"
+                    className="form-input w-full focus:border-teal-500! transition-colors"
                     placeholder="Enter your last name"
                     required
                     name="lastName"
@@ -682,7 +670,7 @@ const Contact: React.FC = () => {
                   <input
                     id="email"
                     type="email"
-                    className="form-input w-full"
+                    className="form-input w-full focus:border-teal-500! transition-colors"
                     placeholder="Enter your email address"
                     required
                     name="email"
@@ -703,7 +691,7 @@ const Contact: React.FC = () => {
                   <input
                     id="company"
                     type="text"
-                    className="form-input w-full"
+                    className="form-input w-full focus:border-teal-500! transition-colors"
                     placeholder="Enter your company name"
                     required
                     name="company"
@@ -757,7 +745,7 @@ const Contact: React.FC = () => {
                             <div className="relative">
                               <input
                                 type="text"
-                                className="form-input w-full pl-8"
+                                className="form-input w-full pl-8 focus:border-teal-500! transition-colors"
                                 placeholder="Search countries..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -836,7 +824,7 @@ const Contact: React.FC = () => {
                     <input
                       id="phone"
                       type="tel"
-                      className="form-input w-full rounded-l-none"
+                      className="form-input w-full rounded-l-none focus:border-teal-500! transition-colors"
                       placeholder="Enter your phone number"
                       required
                       name="phone"
@@ -857,7 +845,7 @@ const Contact: React.FC = () => {
                   </label>
                   <select
                     id="country"
-                    className="form-select w-full"
+                    className="form-select w-full focus:border-teal-500! transition-colors"
                     required
                     name="country"
                     value={formData.country}
@@ -880,7 +868,7 @@ const Contact: React.FC = () => {
                     <span className="text-red-600">*</span>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {/* Lead */}
                     <label className="flex items-center">
                       <input
@@ -1004,7 +992,7 @@ const Contact: React.FC = () => {
                     </label>
 
                     {/* Others (Autre) */}
-                    <div className="col-span-2 relative flex flex-col">
+                    <div className="relative flex flex-col">
                       <label className="flex items-center">
                         <input
                           type="checkbox"
@@ -1020,25 +1008,24 @@ const Contact: React.FC = () => {
                           Others raw materials
                         </span>
                       </label>
-
-                      {/* Full width input field under checkbox */}
-                      {formData.interestedProducts.includes("Autre") && (
-                        <input
-                          type="text"
-                          className="form-input w-full text-sm mt-2"
-                          placeholder="Please specify other raw materials"
-                          name="otherProduct"
-                          value={formData.otherProduct || ""}
-                          onChange={(e) =>
-                            setFormData({
-                              ...formData,
-                              otherProduct: e.target.value,
-                            })
-                          }
-                        />
-                      )}
                     </div>
                   </div>
+
+                  {formData.interestedProducts.includes("Autre") && (
+                    <input
+                      type="text"
+                      className="form-input w-full text-sm mt-3 focus:border-teal-500! transition-colors"
+                      placeholder="Please specify other raw materials"
+                      name="otherProduct"
+                      value={formData.otherProduct || ""}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          otherProduct: e.target.value,
+                        })
+                      }
+                    />
+                  )}
                 </div>
               </div>
 
@@ -1056,7 +1043,7 @@ const Contact: React.FC = () => {
                   <textarea
                     id="details"
                     rows={4}
-                    className="form-textarea w-full"
+                    className="form-textarea w-full focus:border-teal-500! transition-colors"
                     placeholder="What do you want to achieve with our premium raw materials and exceptional services?"
                     name="details"
                     value={formData.details}
@@ -1102,12 +1089,17 @@ const Contact: React.FC = () => {
                         <FaCheck className="w-4 h-4 shrink-0 ml-2 text-white dark:text-white-400" />
                       </span>
                     ) : (
-                      <span>Unlock Mining Potential</span>
+                      <span>Send Enquiry</span>
                     )}
                   </button>
                 </div>
               </div>
-            </form>
+                </form>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mt-4">
+                  After submitting your inquiry, a member of our team will review your requirements and respond within 24 hours with product specifications, current pricing, and shipping options. For urgent requests, we recommend including your preferred delivery timeline and target specifications so we can prioritize your inquiry and provide the most relevant material options from our current inventory.
+                </p>
+              </div>
+            </div>
 
             {/* reCAPTCHA Modal */}
             {showCaptcha && (

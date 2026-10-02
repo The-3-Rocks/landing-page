@@ -1,0 +1,30 @@
+
+> appy-next@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.4
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+   automatically enabled Fast Refresh for 1 custom loader
+ ✓ Ready in 4.1s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1092ms (118 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 16.4s (1715 modules)
+ GET / 200 in 17353ms
+ ✓ Compiled in 2.4s (769 modules)
+ ○ Compiling /products ...
+ ✓ Compiled /products in 10.8s (1712 modules)
+ GET /products 200 in 11278ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 3.8s (2431 modules)
+ GET /contact 200 in 4104ms
+ GET / 200 in 274ms
+ GET / 200 in 293ms
+ GET / 200 in 167ms
+ GET / 200 in 139ms
+ GET / 200 in 145ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1481ms (1772 modules)
+ ✓ Compiled /products in 258ms (928 modules)
