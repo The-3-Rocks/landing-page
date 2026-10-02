@@ -68,6 +68,7 @@ import SectionQuality from "@/components/section-quality";
 import SectionMineToPort from "@/components/section-mine-to-port";
 import SectionIndustries from "@/components/section-industries";
 import SectionFAQ from "@/components/section-faq";
+import SectionProcess from "@/components/section-process";
 import dynamic from "next/dynamic";
 
 const MoroccanMaterialsCarousel = dynamic(
@@ -76,7 +77,6 @@ const MoroccanMaterialsCarousel = dynamic(
 const ChatButtons = dynamic(() => import("@/components/ChatButtons"), {
   ssr: false,
 });
-const MiningProcess = dynamic(() => import("@/components/process"));
 const Tabs = dynamic(() => import("@/components/tabs"));
 const TestimonialsBlocks = dynamic(
   () => import("@/components/testimonials-blocks"),
@@ -86,7 +86,6 @@ const Cta = dynamic(() => import("@/components/cta"));
 export default function Home() {
   return (
     <>
-      {/*  Page illustration */}
       <div
         className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1"
         aria-hidden="true"
@@ -94,26 +93,24 @@ export default function Home() {
         <PageIllustration />
       </div>
       <Hero />
-
       <Stats />
       <ChatButtons />
-      {/* <Carousel /> */}
       <MoroccanMaterialsCarousel />
       <SectionAbout />
-      <SectionWhyChoose />
-      <Tabs />
 
-      {/* <PricingTables /> */}
-      <SectionWhyChoose />
-      <MiningProcess />
+      {/* <SectionWhyChoose /> */}
+      <SectionProcess />
+
       <SectionRegions />
-      <SectionQuality />
+      {/* <SectionQuality /> */}
       <SectionMineToPort />
-      <SectionIndustries />
+      {/* <SectionIndustries /> */}
+      <Tabs />
+      <TestimonialsBlocks />
+
+      <FeaturesBlocks />
       <SectionFAQ />
 
-      <TestimonialsBlocks />
-      <FeaturesBlocks />
       <Cta />
     </>
   );
