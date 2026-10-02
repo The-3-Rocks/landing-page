@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   const nonce = headers().get("x-nonce") ?? "";
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
