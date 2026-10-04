@@ -45,9 +45,9 @@ export default function Carousel() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 font-red-hat-display mb-4">
+            <h2 className="h2 font-red-hat-display mb-4">
               Explore Our Diverse Range of Premium Raw Materials
-            </h1>
+            </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               Discover a spectrum of high-quality raw materials meticulously
               sourced to meet our exacting standards.

@@ -1,9 +1,12 @@
 "use client";
 
-import PostItem from "@/components/post-item";
+import Link from "next/link";
+import Image from "next/image";
+import PostDate from "@/components/post-date";
 import { useState, useMemo, useRef, useEffect } from "react";
 
 const ARTICLES_PER_PAGE = 50;
+const STRATEGIC_SLUG = "zinc-ore-output-increase-asia-metal";
 
 interface BlogPost {
   slug: string;
@@ -22,11 +25,106 @@ interface ArticlesClientProps {
   allBlogs: BlogPost[];
 }
 
+function ArticleCard({ post }: { post: BlogPost }) {
+  return (
+    <Link
+      href={`/articles/${post.slug}`}
+      aria-label={`Read ${post.metadata.title}`}
+      className="group block"
+      data-aos="fade-up"
+    >
+      <article className="flex flex-col h-full overflow-hidden rounded-lg border border-stone-200 dark:border-gray-800 bg-white dark:bg-gray-800 hover:shadow-md transition-shadow duration-300">
+        <div className="relative aspect-[16/9] overflow-hidden">
+          {post.metadata.image && (
+            <Image
+              src={post.metadata.image}
+              alt=""
+              fill
+              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+          )}
+        </div>
+        <div className="p-4 md:p-5 flex flex-col grow">
+          <span className="text-xs font-semibold uppercase tracking-widest text-teal-700 dark:text-teal-400">
+            {post.metadata.category}
+          </span>
+          <h3 className="mt-1.5 font-red-hat-display font-black text-lg text-gray-900 dark:text-white line-clamp-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">
+            {post.metadata.title}
+          </h3>
+          {post.metadata.summary && (
+            <p className="mt-1.5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 grow">
+              {post.metadata.summary}
+            </p>
+          )}
+          <div className="mt-3 pt-2.5 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between gap-2 text-xs text-gray-500 dark:text-gray-400">
+            {post.metadata.author && <span className="truncate">{post.metadata.author}</span>}
+            <span className="flex-shrink-0">
+              <PostDate dateString={post.metadata.publishedAt} />
+            </span>
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
+}
+
+function StrategicCard({ post }: { post: BlogPost }) {
+  return (
+    <Link
+      href={`/articles/${post.slug}`}
+      aria-label={`Read ${post.metadata.title}`}
+      className="group block"
+      data-aos="fade-up"
+    >
+      <article className="md:grid md:grid-cols-5 overflow-hidden rounded-xl border border-stone-200 dark:border-gray-800 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <div className="relative aspect-[16/9] md:aspect-auto md:col-span-3 md:min-h-[320px] overflow-hidden border border-stone-200 dark:border-transparent">
+          {post.metadata.image && (
+            <Image
+              src={post.metadata.image}
+              alt={post.metadata.title}
+              fill
+              sizes="(min-width: 768px) 60vw, 100vw"
+              priority
+              className="object-cover"
+            />
+          )}
+        </div>
+        <div className="md:col-span-2 p-6 md:p-8 flex flex-col justify-center">
+          <span className="text-xs font-semibold uppercase tracking-widest text-teal-700 dark:text-teal-400">
+            {post.metadata.category}
+          </span>
+          <h2 className="mt-2 font-red-hat-display font-black text-2xl md:text-3xl text-gray-900 dark:text-white line-clamp-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">
+            {post.metadata.title}
+          </h2>
+          {post.metadata.summary && (
+            <p className="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">
+              {post.metadata.summary}
+            </p>
+          )}
+          <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between gap-4">
+            <span className="flex flex-wrap items-center gap-x-2 text-sm text-gray-500 dark:text-gray-400">
+              {post.metadata.author && <span>{post.metadata.author}</span>}
+              {post.metadata.author && <span className="text-stone-300 dark:text-gray-600" aria-hidden="true">·</span>}
+              <span>
+                <PostDate dateString={post.metadata.publishedAt} />
+              </span>
+            </span>
+            <svg className="w-4 h-4 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
+}
+
 export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const articlesListRef = useRef<HTMLElement>(null);
+  const articlesListRef = useRef<HTMLDivElement>(null);
   const isFirstRender = useRef(true);
 
   // Scroll to top of articles when page changes
@@ -66,151 +164,98 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
   const endIndex = Math.min(startIndex + ARTICLES_PER_PAGE, filteredBlogs.length);
   const paginatedPosts = filteredBlogs.slice(startIndex, endIndex);
 
+  // The Strategic article is pinned first and rendered alone with a wide
+  // horizontal presentation; everything else flows through the 3-column grid.
+  const strategicPost = paginatedPosts[0]?.slug === STRATEGIC_SLUG ? paginatedPosts[0] : null;
+  const gridPosts = strategicPost ? paginatedPosts.slice(1) : paginatedPosts;
+
   return (
     <>
-      {/* Intro Section */}
-      <section className="relative">
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="pt-32 pb-12 md:pt-40 md:pb-16">
-            <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-900/20 border border-teal-200/50 dark:border-teal-700/30 text-teal-700 dark:text-teal-300 text-sm font-semibold mb-6">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
-                </svg>
-                Knowledge Hub
-              </div>
-              <h1 className="h2 font-red-hat-display mb-6 text-gray-900 dark:text-white">
-                Insights from Morocco's Mining Experts
-              </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto mb-4">
-                Explore our comprehensive library of articles covering Morocco's rich mining industry — from mineral properties and extraction methods to market trends, quality standards, and sustainable practices. Each guide is written by our team of geologists, mining engineers, and industry specialists.
-              </p>
-              <p className="text-base text-gray-500 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto">
-                Whether you're sourcing raw materials, researching Moroccan mineral deposits, or staying informed on global metal markets, our resources provide the technical depth and practical insights you need.
-              </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-xl mx-auto mt-4">
-                Each article is researched and reviewed by our in-house team of geologists and mining engineers, drawing on firsthand experience across Morocco's mining regions. New content is published regularly as market conditions, extraction techniques, and industry standards evolve.
-              </p>
-              <p className="text-xs text-gray-400 dark:text-gray-600 leading-relaxed max-w-lg mx-auto mt-3 italic">
-                Use the category filters below to browse specific topics — from material guides and mining operations to sustainability and market analysis. You can also search by keyword to find articles relevant to your sourcing or research needs.
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto mt-4">
-                Our editorial team includes geologists with field experience across Morocco's Atlas Mountains, mining engineers who have worked in extraction and beneficiation facilities, and supply chain experts who manage mineral exports to markets in Europe, Asia, and the Americas. Every article cites authoritative sources including USGS mineral commodity summaries, academic research from the Journal of African Earth Sciences, and data from Morocco's Ministry of Energy Transition and Sustainable Development. We update our content quarterly to reflect changes in mining regulations, market prices, and extraction technologies.
-              </p>
-              {filteredBlogs.length > 0 && (
-                <div className="mt-10 flex items-center justify-center gap-8">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold font-red-hat-display text-teal-600 dark:text-teal-400">{filteredBlogs.length}</div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Articles</div>
-                  </div>
-                  <div className="w-px h-12 bg-gray-200 dark:bg-gray-700"></div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold font-red-hat-display text-teal-600 dark:text-teal-400">{categories.length - 1}</div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Categories</div>
-                  </div>
-                  <div className="w-px h-12 bg-gray-200 dark:bg-gray-700"></div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold font-red-hat-display text-teal-600 dark:text-teal-400">{allBlogs.filter(p => p.metadata.author && p.metadata.author !== "The 3 Rocks Company").length + 1}</div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Experts</div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Filter and Search Section */}
-      <section className="bg-gray-50 dark:bg-gray-800/50">
+      <section className="bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="py-8 md:py-10">
-            {/* Search */}
-            <div className="relative max-w-xl mx-auto md:mx-0">
-              <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  setCurrentPage(1);
-                }}
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-shadow hover:shadow-md"
-              />
-            </div>
+          {/* Editorial filter nav */}
+          <div className="py-5">
+            <div className="flex flex-col md:flex-row md:items-center gap-4" data-aos="fade-up">
+              {/* Category filters */}
+              <nav className="flex gap-5 overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap min-w-0 grow" aria-label="Article categories">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => {
+                      setSelectedCategory(category);
+                      setCurrentPage(1);
+                    }}
+                    className={`whitespace-nowrap pb-1 text-sm font-medium border-b-2 transition-colors duration-200 ${
+                      selectedCategory === category
+                        ? "text-teal-600 dark:text-teal-400 border-teal-600 dark:border-teal-400"
+                        : "text-gray-500 dark:text-gray-400 border-transparent hover:text-gray-900 dark:hover:text-white hover:border-stone-300 dark:hover:border-gray-600"
+                    }`}
+                  >
+                    {category === "All" ? (
+                      <span className="flex items-center gap-1.5">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                        </svg>
+                        All
+                      </span>
+                    ) : (
+                      category
+                    )}
+                  </button>
+                ))}
+              </nav>
 
-            {/* Category Filter */}
-            <div className="mt-6">
-              <div className="relative">
-                {/* Mobile fade edges */}
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-gray-50 dark:from-gray-800/50 to-transparent z-10 md:hidden"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-gray-50 dark:from-gray-800/50 to-transparent z-10 md:hidden"></div>
-                {/* Categories scroll container */}
-                <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1 -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap md:overflow-visible">
-                  {categories.map((category) => (
-                    <button
-                      key={category}
-                      onClick={() => {
-                        setSelectedCategory(category);
-                        setCurrentPage(1);
-                      }}
-                      className={`relative px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 whitespace-nowrap flex-shrink-0 border ${
-                        selectedCategory === category
-                          ? "bg-gradient-to-r from-teal-600 to-teal-500 text-white border-teal-500 shadow-lg shadow-teal-500/20 scale-105"
-                          : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-teal-300 dark:hover:border-teal-600 hover:text-teal-600 dark:hover:text-teal-400 hover:-translate-y-0.5"
-                      }`}
-                    >
-                      {category === "All" ? (
-                        <span className="flex items-center gap-1.5">
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-                          </svg>
-                          All
-                        </span>
-                      ) : (
-                        category
-                      )}
-                    </button>
-                  ))}
-                </div>
+              {/* Search */}
+              <div className="relative md:w-64 flex-shrink-0">
+                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  className="w-full pl-9 pr-3 py-1.5 rounded-lg border border-stone-200 dark:border-gray-700 bg-stone-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                />
               </div>
             </div>
 
             {/* Results count */}
             {filteredBlogs.length > 0 && (
-              <div className="mt-5 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+              <div className="mt-3 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400" data-aos="fade-up">
                 <span>{startIndex + 1}–{endIndex} of {filteredBlogs.length} articles</span>
               </div>
             )}
           </div>
-        </div>
-      </section>
 
-      {/* Articles list */}
-      <section ref={articlesListRef} className="scroll-mt-32">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="py-12 md:py-20">
+          {/* Compact article collection */}
+          <div ref={articlesListRef} className="scroll-mt-24 py-8 md:py-12">
             {paginatedPosts.length > 0 ? (
               <>
-                {/* Articles grid */}
-                <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 md:gap-y-8 items-start">
-                  {paginatedPosts.map((post, postIndex) => (
-                    <PostItem key={postIndex} {...post} />
-                  ))}
-                </div>
+                {strategicPost && (
+                  <div className="mb-6">
+                    <StrategicCard post={strategicPost} />
+                  </div>
+                )}
+
+                {gridPosts.length > 0 && (
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-start">
+                    {gridPosts.map((post) => (
+                      <ArticleCard key={post.slug} post={post} />
+                    ))}
+                  </div>
+                )}
 
                 {/* Pagination */}
                 {totalPages > 1 && (
-                  <div className="flex flex-wrap justify-center items-center gap-3 mt-12">
+                  <div className="flex flex-wrap justify-center items-center gap-3 mt-10">
                     <button
                       onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                       disabled={currentPage === 1}
-                      className="px-4 py-2 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
+                      className="px-4 py-2 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-stone-200 dark:border-gray-700 hover:bg-stone-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
                     >
                       Previous
                     </button>
@@ -224,7 +269,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
                           className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${
                             currentPage === page
                               ? "bg-teal-600 text-white"
-                              : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
+                              : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-stone-200 dark:border-gray-700 hover:bg-stone-50 dark:hover:bg-gray-700"
                           }`}
                         >
                           {page}
@@ -240,7 +285,7 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
                     <button
                       onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                       disabled={currentPage === totalPages}
-                      className="px-4 py-2 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
+                      className="px-4 py-2 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-stone-200 dark:border-gray-700 hover:bg-stone-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
                     >
                       Next
                     </button>
@@ -248,8 +293,8 @@ export default function ArticlesClient({ allBlogs }: ArticlesClientProps) {
                 )}
               </>
             ) : (
-              <div className="text-center py-12">
-                <p className="text-xl text-gray-600 dark:text-gray-400">No articles found matching your criteria.</p>
+              <div className="text-center py-10">
+                <p className="text-lg text-gray-600 dark:text-gray-400">No articles found matching your criteria.</p>
               </div>
             )}
           </div>

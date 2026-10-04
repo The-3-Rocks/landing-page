@@ -38,7 +38,7 @@ export default function Testimonials() {
               <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold mb-4 dark:bg-teal-900 dark:text-teal-400">
                 Trusted by International Buyers
               </div>
-              <h1 className="h1 font-red-hat-display mb-6">What Our Clients Say About The 3 Rocks</h1>
+              <h2 className="h1 font-red-hat-display mb-6">What Our Clients Say About The 3 Rocks</h2>
             </div>
             <div className="prose prose-lg text-gray-600 dark:text-gray-400 max-w-none prose-p:leading-relaxed prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline">
               <p>

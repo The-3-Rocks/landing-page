@@ -68,7 +68,7 @@ export default function NotFound() {
                 Use these links to navigate directly to the most visited pages on our site. Each section is written and reviewed by our team of Moroccan geologists, mining engineers and export specialists, and is updated regularly to reflect current mining activity, laboratory standards, and international trade requirements.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}

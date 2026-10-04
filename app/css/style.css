@@ -36,6 +36,109 @@
     animation: fadeInUp 0.6s ease-out-sine forwards;
 }
 
+/* Folio reader transition (geological footprint) */
+@keyframes folioFadeOut {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -14px, 0);
+    }
+}
+
+.folio-enter {
+    animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.folio-exit {
+    animation: folioFadeOut 0.28s ease-in forwards;
+}
+
+/* Export process journey stage transition (our-process) */
+.stage-enter {
+    animation: fadeInUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stage-enter {
+        animation: none;
+    }
+}
+
+/* Immersive processing journey — mineral core (our-process) */
+@keyframes journeySpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.journey-spin {
+    animation: journeySpin 48s linear infinite;
+}
+
+.journey-spin-reverse {
+    animation: journeySpin 72s linear infinite reverse;
+}
+
+@keyframes journeySpecks {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translate3d(0, -16px, 0) scale(0.85);
+        opacity: 0.35;
+    }
+}
+
+.journey-speck {
+    animation: journeySpecks 7s ease-in-out infinite;
+}
+
+.journey-tag-enter {
+    animation: fadeInUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .journey-spin,
+    .journey-spin-reverse,
+    .journey-speck,
+    .journey-tag-enter {
+        animation: none;
+    }
+}
+
+/* Step reveal (our-process export steps) */
+html:not(.no-js) .step-reveal {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html:not(.no-js) .step-reveal.is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:not(.no-js) .step-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* AOS under reduced motion: force content visible, no movement */
+@media (prefers-reduced-motion: reduce) {
+    html:not(.no-js) body [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 /* Semantic component classes - reduce repeated Tailwind chains */
 @layer components {
     .text-body {
@@ -69,7 +172,7 @@
         @apply inline-flex items-center px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-sm font-semibold dark:bg-teal-900 dark:text-teal-400;
     }
     .card-feature {
-        @apply flex flex-col p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700;
+        @apply flex flex-col p-6 bg-stone-50 dark:bg-gray-800 shadow-lg rounded-lg border border-stone-300 dark:border-gray-700/60;
     }
     .btn-teal {
         @apply btn text-white bg-teal-500 hover:bg-teal-400;

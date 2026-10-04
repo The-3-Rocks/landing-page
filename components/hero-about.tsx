@@ -11,21 +11,21 @@ export default function HeroAbout() {
     <section className="relative">
       {/* Background gradient */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none -z-10"
+        className="absolute inset-0 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 pointer-events-none -z-10"
         aria-hidden="true"
       ></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-32 pb-8 md:pt-40 md:pb-14">
           {/* Hero content */}
-          <div className="relative max-w-xl mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Content area */}
-            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-              <h1 className="h1 font-red-hat-display mb-4" data-aos="fade-up">
+            <div>
+              <h1 className="h1 font-red-hat-display mb-6" data-aos="fade-up">
                 Morocco's Premier Mining Experts
               </h1>
               <p
-                className="text-xl text-gray-600 dark:text-gray-400 mb-8"
+                className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-6"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -35,17 +35,15 @@ export default function HeroAbout() {
                 sustainable Moroccan mining practices has established us as
                 leaders in                 Morocco's mineral industry.
               </p>
-              <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
+              <p
+                className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-8"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
                 We serve clients across Europe, Asia, and the Americas with a diverse portfolio spanning base metals, industrial minerals, and precious materials. Our operations are guided by ethical mining principles, ensuring that every ton extracted supports local communities and preserves Morocco's mineral heritage for future generations.
               </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-4 -mt-4">
-                From the Anti-Atlas ranges to the Middle Atlas, our team maintains direct relationships with mine operators and cooperative extraction sites. This network allows us to offer consistent volume, transparent pricing, and traceable supply chains — from the mine face to the port of loading.
-              </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
-                Morocco's mining sector produces over 30 different mineral commodities, from phosphates and base metals to industrial minerals and strategic metals essential for the energy transition. The country's strategic location at the crossroads of Africa and Europe, combined with modern port infrastructure and free trade agreements with both the EU and the United States, makes it a natural hub for mineral processing and export. Our company was founded to bridge the gap between Morocco's mineral wealth and the global buyers who need reliable, high-quality raw materials — whether for construction, manufacturing, energy storage, or specialized industrial applications.
-              </p>
               <div
-                className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
+                className="flex flex-col sm:flex-row gap-4"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -65,10 +63,10 @@ export default function HeroAbout() {
             </div>
 
             {/* Image area */}
-            <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="300">
+            <div className="md:max-w-none" data-aos="fade-up" data-aos-delay="300">
               <div className="relative">
                 <Image
-                  className="mx-auto md:max-w-none rounded-lg shadow-xl"
+                  className="w-full rounded-lg shadow-xl"
                   src={MiningHeroImage}
                   width={540}
                   height={405}
@@ -79,7 +77,7 @@ export default function HeroAbout() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="grid grid-cols-2 gap-4 mt-6">
                 <div
                   className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
                   data-aos="fade-up"
@@ -106,6 +104,23 @@ export default function HeroAbout() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Supporting paragraphs - full width, balanced columns */}
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10 mt-10 md:mt-14 border-t border-gray-200 dark:border-gray-800 pt-8 md:pt-10">
+            <p
+              className="text-base text-gray-500 dark:text-gray-400 leading-relaxed"
+              data-aos="fade-up"
+            >
+              From the Anti-Atlas ranges to the Middle Atlas, our team maintains direct relationships with mine operators and cooperative extraction sites. This network allows us to offer consistent volume, transparent pricing, and traceable supply chains — from the mine face to the port of loading.
+            </p>
+            <p
+              className="text-base text-gray-500 dark:text-gray-400 leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Morocco's mining sector produces over 30 different mineral commodities, from phosphates and base metals to industrial minerals and strategic metals essential for the energy transition. The country's strategic location at the crossroads of Africa and Europe, combined with modern port infrastructure and free trade agreements with both the EU and the United States, makes it a natural hub for mineral processing and export. Our company was founded to bridge the gap between Morocco's mineral wealth and the global buyers who need reliable, high-quality raw materials — whether for construction, manufacturing, energy storage, or specialized industrial applications.
+            </p>
           </div>
         </div>
       </div>

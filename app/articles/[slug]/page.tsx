@@ -287,7 +287,7 @@ export default async function SinglePost({
       </section>
       {/* Related Resources Dynamic Section */}
       {relatedPosts.length > 0 && (
-        <aside className="border-t border-gray-100 dark:border-gray-800/80 bg-gray-50/50 dark:bg-gray-900/20 py-16">
+        <aside className="border-t border-gray-200 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/20 py-16">
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mx-auto">
               <h4 className="h4 font-red-hat-display mb-8 text-gray-900 dark:text-white">

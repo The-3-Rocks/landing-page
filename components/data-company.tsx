@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function ContactInfoSection() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-16">
+    <section className="bg-gray-50 dark:bg-gray-900/50 border-t border-gray-200 dark:border-gray-800 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="mb-12 text-center">
-          <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-teal-600 bg-teal-100 rounded-full mb-4">
+          <div className="section-pill">
             Connect With Morocco's Mining Experts
           </div>
           <h2 className="h2 font-red-hat-display mb-4">

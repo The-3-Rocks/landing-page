@@ -729,10 +729,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       </div>
 
       <section className="relative bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+            {/* Product Header */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-200/50 dark:border-gray-700/50">
             {/* Back to Products Button */}
-            <div className="max-w-7xl mx-auto mb-8">
+            <div className="max-w-6xl mx-auto mb-8">
               <Link 
                 href="/products" 
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-teal-500 dark:hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-all duration-300 shadow-sm hover:shadow-md group"
@@ -775,6 +777,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   {details.narrative}
                 </p>
               )}
+            </div>
             </div>
 
             {/* Product overview with image and specs */}
@@ -857,7 +860,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       {/* Additional specs */}
                       <div className="space-y-3 mb-8 p-5 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl border border-gray-200/30 dark:border-gray-700/30">
                         {details.specs.slice(0, 5).map((spec: any, index: number) => (
-                          <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200/50 dark:border-gray-700/50 last:border-0">
+                          <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-800 last:border-0">
                             <span className="text-sm text-gray-600 dark:text-gray-400">
                               {spec.name}
                             </span>
@@ -887,7 +890,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </div>
 
             {/* FAQ Section - Product Specific */}
-            <div className="mb-20" data-aos="fade-up">
+            <div className="mb-20 bg-gray-50/80 dark:bg-gray-900/40 rounded-2xl p-8 md:p-12" data-aos="fade-up">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold font-red-hat-display text-center mb-6 text-gray-900 dark:text-white">
                   Frequently Asked Questions About Moroccan {product.name}
@@ -1187,7 +1190,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </div>
 
             {/* Applications */}
-            <div className="mb-20">
+            <div className="mb-20 bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-sm border border-gray-200/50 dark:border-gray-700/50">
               <h2 className="text-4xl md:text-5xl font-bold font-red-hat-display text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent" data-aos="fade-up">
                 Applications
               </h2>
@@ -1226,7 +1229,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Quality Assurance */}
             <div className="mb-20" data-aos="fade-up">
-              <div className="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+              <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-900/50 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 dark:bg-teal-400/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-600/5 dark:bg-teal-500/5 rounded-full blur-3xl"></div>
@@ -1275,7 +1278,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Industrial Applications Detail */}
             <div className="mb-16" data-aos="fade-up">
-              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+              <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-900/50 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
@@ -1321,7 +1324,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Quality Standards & Certification */}
             <div className="mb-16" data-aos="fade-up">
-              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+              <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-900/50 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
@@ -1364,7 +1367,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Responsible Sourcing & ESG */}
             <div className="mb-16" data-aos="fade-up">
-              <div className="relative overflow-hidden bg-white dark:bg-gray-800/70 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+              <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-900/50 p-10 md:p-12 rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">

@@ -66,7 +66,7 @@ export default function Team() {
   ];
 
   return (
-    <section className="relative border-t border-gray-200 dark:border-gray-800">
+    <section className="relative bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
@@ -85,7 +85,7 @@ export default function Team() {
           </div>
 
           {/* Team members */}
-          <div className="max-w-sm sm:max-w-5xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:gap-16 items-start">
+          <div className="max-w-sm sm:max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:gap-16 items-start">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
@@ -130,7 +130,7 @@ export default function Team() {
 
           {/* Team values */}
           <div className="max-w-3xl mx-auto text-center pt-12 md:pt-20">
-            <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-teal-600 bg-teal-200 rounded-full mb-4">
+            <div className="section-pill">
               Moroccan Mining Values
             </div>
             <h3 className="h3 font-red-hat-display mb-4">
