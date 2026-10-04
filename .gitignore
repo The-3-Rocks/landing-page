@@ -40,3 +40,9 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# dev server logs (covers dev-server.log, dev-server.err.log, dev-server-oct1.*.log)
+*.log
+
+# agent tooling
+.opencode/

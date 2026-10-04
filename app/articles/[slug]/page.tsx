@@ -248,7 +248,7 @@ export default async function SinglePost({
                   (() => {
                     const authorInfo = authorBios[post.metadata.author] || authorBios["The 3 Rocks Company"];
                     return (
-                      <div className="my-12 p-6 sm:p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700/50 flex flex-col sm:flex-row items-center sm:items-start gap-6 transition-all duration-300 hover:shadow-md">
+                      <div className="my-12 p-6 sm:p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 flex flex-col sm:flex-row items-center sm:items-start gap-6 transition-all duration-300 hover:shadow-md">
                         <div className="w-16 h-16 rounded-full overflow-hidden bg-teal-100 dark:bg-teal-900/50 border border-teal-200/50 dark:border-teal-700/50 shrink-0 shadow-inner flex items-center justify-center select-none">
                           <span className="text-xl font-bold text-teal-700 dark:text-teal-400">
                             {authorInfo.initials}
